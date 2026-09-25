@@ -1,0 +1,89 @@
+import { describe, expect, it } from 'vitest'
+import type { Content } from './types.ts'
+import { validateContent } from './validate.ts'
+
+function sample(): Content {
+  return {
+    phraseGroups: [{ id: 'w-purpose', section: 'writing', name: 'Purpose', description: 'Why you write.' }],
+    phrases: [
+      {
+        id: 'p1',
+        group: 'w-purpose',
+        en: 'I am writing to refer',
+        pl: 'Piszę, aby skierować',
+        kind: 'expression',
+        examples: ['I am writing to refer Mr Smith.'],
+        source: 'test',
+      },
+    ],
+    abbreviationGroups: [{ id: 'a-dosing', name: 'Dosing' }],
+    abbreviations: [{ id: 'a1', group: 'a-dosing', abbr: 'BD', expansion: 'twice daily', source: 'test' }],
+    criteria: [
+      {
+        id: 'c1',
+        subtest: 'writing',
+        name: 'Purpose',
+        scaleMax: 3,
+        bScore: 2,
+        summary: 'Clear purpose.',
+        checklist: ['Purpose in the first paragraph.'],
+      },
+    ],
+    guides: [{ id: 'g1', section: 'reading', title: 'Part A', blocks: [{ type: 'text', text: 'Read fast.' }] }],
+  }
+}
+
+describe('validateContent', () => {
+  it('accepts valid content', () => {
+    expect(validateContent(sample())).toEqual([])
+  })
+
+  it('reports a duplicate id across content types', () => {
+    const c = sample()
+    c.abbreviations[0].id = 'p1'
+    expect(validateContent(c)).toContain('abbreviation p1: duplicate id')
+  })
+
+  it('reports a phrase in an unknown group', () => {
+    const c = sample()
+    c.phrases[0].group = 'w-nowhere'
+    expect(validateContent(c)).toContain('phrase p1: unknown group "w-nowhere"')
+  })
+
+  it('reports a group with no phrases', () => {
+    const c = sample()
+    c.phraseGroups.push({ id: 'w-empty', section: 'writing', name: 'Empty', description: 'Nothing.' })
+    expect(validateContent(c)).toContain('group w-empty: has no phrases')
+  })
+
+  it('reports missing translations and examples', () => {
+    const c = sample()
+    c.phrases[0].pl = ' '
+    c.phrases[0].examples = []
+    expect(validateContent(c)).toEqual(['phrase p1: missing pl', 'phrase p1: needs at least one example'])
+  })
+
+  it('reports a B score outside the scale', () => {
+    const c = sample()
+    c.criteria[0].bScore = 5
+    expect(validateContent(c)).toContain('criterion c1: bScore outside the scale')
+  })
+
+  it('reports speaking criteria without a family', () => {
+    const c = sample()
+    c.criteria[0].subtest = 'speaking'
+    expect(validateContent(c)).toContain('criterion c1: speaking criteria need a family')
+  })
+
+  it('reports an abbreviation listed twice', () => {
+    const c = sample()
+    c.abbreviations.push({ id: 'a2', group: 'a-dosing', abbr: 'BD', expansion: 'twice a day', source: 'test' })
+    expect(validateContent(c)).toContain('abbreviation a2: "BD" listed twice')
+  })
+
+  it('reports a fact without a source', () => {
+    const c = sample()
+    c.guides[0].blocks.push({ type: 'fact', text: 'Part A lasts 15 minutes.', source: '' })
+    expect(validateContent(c)).toContain('guide g1 block 1: missing source')
+  })
+})
