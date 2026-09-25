@@ -2,7 +2,7 @@ import { Link } from 'wouter'
 import { BackupPanel, BackupReminder } from '../features/backup/Backup.tsx'
 import NotesView from '../features/notes/NotesView.tsx'
 import { usePersistence } from '../lib/storage.ts'
-import { MATERIAL_VIEWS } from '../sections/views.tsx'
+import { VIEWS, tabsFor } from '../sections/views.tsx'
 import { SECTIONS, TABS, findSection, isTabId, sectionPath } from './sections.ts'
 
 export function Home() {
@@ -33,26 +33,26 @@ export function Home() {
 export function SectionPage({ sectionId, tabId, viewId }: { sectionId: string; tabId: string; viewId?: string }) {
   const section = findSection(sectionId)
   if (!section || !isTabId(tabId)) return <NotFound />
-  const tab = TABS.find((t) => t.id === tabId)!
+  const tabs = TABS.filter((t) => tabsFor(section.id).includes(t.id))
+  if (!tabs.some((t) => t.id === tabId)) return <NotFound />
 
-  let body = (
-    <section className="rounded-lg border border-dashed border-line p-6 text-muted">
-      <h2 className="font-medium text-ink">{tab.name}</h2>
-      <p className="mt-1 text-sm">Nothing here yet. This part is being built.</p>
-    </section>
-  )
-  if (tabId === 'material') {
-    const views = MATERIAL_VIEWS[section.id]
+  let body
+  if (tabId === 'notes') {
+    if (viewId !== undefined) return <NotFound />
+    body = <NotesView section={section.id} />
+  } else {
+    const views = VIEWS[tabId][section.id]!
     const view = viewId === undefined ? views[0] : views.find((v) => v.id === viewId)
     if (!view) return <NotFound />
+    const tabName = tabs.find((t) => t.id === tabId)!.name
     body = (
       <>
         {views.length > 1 && (
-          <nav aria-label={`${section.name} material`} className="mb-5 flex flex-wrap gap-2">
+          <nav aria-label={`${section.name} ${tabName.toLowerCase()}`} className="mb-5 flex flex-wrap gap-2">
             {views.map((v) => (
               <Link
                 key={v.id}
-                href={`${sectionPath(section.id, 'material')}/${v.id}`}
+                href={`${sectionPath(section.id, tabId)}/${v.id}`}
                 aria-current={v.id === view.id ? 'page' : undefined}
                 className={
                   'rounded-md px-3 py-1.5 text-sm ' +
@@ -64,13 +64,10 @@ export function SectionPage({ sectionId, tabId, viewId }: { sectionId: string; t
             ))}
           </nav>
         )}
-        {view.render()}
+        {/* A new key per view resets its state when switching between views. */}
+        <div key={`${section.id}/${tabId}/${view.id}`}>{view.render()}</div>
       </>
     )
-  } else if (viewId !== undefined) {
-    return <NotFound />
-  } else if (tabId === 'notes') {
-    body = <NotesView section={section.id} />
   }
 
   return (
@@ -78,7 +75,7 @@ export function SectionPage({ sectionId, tabId, viewId }: { sectionId: string; t
       <h1 className="text-2xl font-semibold">{section.name}</h1>
       <p className="mt-1 text-muted">{section.blurb}</p>
       <nav aria-label={`${section.name} tabs`} className="mt-5 flex gap-1 border-b border-line">
-        {TABS.map((t) => {
+        {tabs.map((t) => {
           const active = t.id === tabId
           return (
             <Link

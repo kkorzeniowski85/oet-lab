@@ -1,5 +1,6 @@
 import { renderToString } from 'react-dom/server'
 import { describe, expect, it } from 'vitest'
+import { tabsFor } from '../sections/views.tsx'
 import App from './App.tsx'
 import { SECTIONS, TABS } from './sections.ts'
 
@@ -14,7 +15,11 @@ describe('routing', () => {
     expect(render('/settings')).toContain('Your data stays on this device.')
   })
 
-  it.each(SECTIONS.flatMap((s) => TABS.map((t) => [s.id, t.id, s.name, t.name] as const)))(
+  it.each(
+    SECTIONS.flatMap((s) =>
+      TABS.filter((t) => tabsFor(s.id).includes(t.id)).map((t) => [s.id, t.id, s.name, t.name] as const),
+    ),
+  )(
     'opens /%s/%s directly',
     (sectionId, tabId, sectionName, tabName) => {
       const html = render(`/${sectionId}/${tabId}`)
@@ -30,6 +35,19 @@ describe('routing', () => {
 
   it('rejects an unknown tab', () => {
     expect(render('/writing/exam')).toContain('Page not found')
+  })
+
+  it('has Practice only where there is something to practise', () => {
+    expect(tabsFor('writing')).toEqual(['material', 'practice', 'notes'])
+    expect(tabsFor('listening')).toEqual(['material', 'notes'])
+    expect(render('/listening/practice')).toContain('Page not found')
+    expect(render('/listening/material')).not.toContain('>Practice<')
+  })
+
+  it('opens gap-fill in Practice', () => {
+    const html = render('/vocabulary/practice')
+    expect(html).toContain('Fill the gap in real example sentences.')
+    expect(html.replaceAll('<!-- -->', '')).toContain('Start 10 questions')
   })
 
   it('rejects an unknown path', () => {
