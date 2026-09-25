@@ -4,8 +4,8 @@ Stan: **plan do zatwierdzenia** · 25.09.2026 · decyzje i uzasadnienia: [DECISI
 
 Oznaczenia: ✅ ustalone z użytkownikiem · ❓ otwarte, niekrytyczne
 
-**Stan realizacji (25.09.2026):** M0 — 0.1 ✅ · 0.2 ⏸ wstrzymane do decyzji o publikacji (D18) ·
-0.3 ✅ lokalnie (instalacja na S23 po publikacji) · 0.4 ✅ · 0.5 ✅
+**Stan realizacji (25.09.2026):** M0 — 0.1 ✅ · 0.2 ◐ prywatne repo `kkorzeniowski85/oet-lab` + automatyczne testy ✅,
+publiczne repo i Pages ⏸ (D18) · 0.3 ✅ lokalnie (instalacja na S23 po publikacji) · 0.4 ✅ · 0.5 ✅
 
 ---
 
@@ -226,7 +226,7 @@ GitHub (repo, Actions, Pages) i Twój czat Claude (kopiuj–wklej). Nic więcej:
 | Jakość i legalność treści | wyłącznie własne, fikcyjne przypadki; weryfikujesz wiarygodność kliniczną |
 | Narzędzia się rozjeżdżają (TS 7, duże wersje) | przypięte wersje; aktualizacje świadomie, jako osobny krok |
 | 21 tys. plików `node_modules` na Google Drive | kod poza Drive: `D:\OET-Lab` (D10) |
-| Do publikacji kod jest tylko na dysku D: (brak kopii, brak dostępu z laptopa) | decyzja o publikacji po każdym etapie (D18); możliwa prywatna kopia na GitHubie bez publikowania |
+| Do publikacji aplikacji nie da się zainstalować na S23 | decyzja o publikacji po każdym etapie (D18); kopia kodu i dostęp z laptopa przez prywatne repo |
 
 ---
 
@@ -247,7 +247,7 @@ Claude w ramach subskrypcji, a wynik wklejasz z powrotem do aplikacji.
 - Testy uruchamiają się przed każdym wdrożeniem; czerwony test zatrzymuje wdrożenie.
 - Po każdym kamieniu milowym: sprawdzenie w przeglądarce (szerokość telefonu i komputera) i na S23.
 - Nie zaczynam M0 bez Twojej wyraźnej zgody.
-- Publikacja (wysłanie kodu na GitHub, GitHub Pages) tylko za Twoją zgodą. Pytam po każdym kamieniu milowym (D18).
+- Upublicznienie repo i GitHub Pages tylko za Twoją zgodą. Pytam po każdym kamieniu milowym (D18).
 
 ### M0 — Fundament: działająca pusta aplikacja w sieci
 
@@ -257,7 +257,7 @@ Claude w ramach subskrypcji, a wynik wklejasz z powrotem do aplikacji.
 - Akceptacja: `npm run dev` pokazuje stronę; `npm test`, `npm run lint` i `npm run build` przechodzą.
 - Weryfikacja: polecenia w terminalu + podgląd w przeglądarce.
 
-**0.2 GitHub i wdrożenie** ⏸ wstrzymane do decyzji o publikacji (D18); plik wdrożenia gotowy lokalnie
+**0.2 GitHub i wdrożenie** ◐ prywatne repo i automatyczne testy działają (25.09.2026); publiczne repo i Pages czekają na decyzję (D18)
 - Cel: repo `oet-lab`, workflow: testy → budowanie → Pages (`base: /oet-lab/`).
 - Pliki: `.github/workflows/deploy.yml`, `vite.config.ts`.
 - Akceptacja: push na `main` publikuje stronę pod `kkorzeniowski85.github.io/oet-lab`; czerwony test blokuje wdrożenie.

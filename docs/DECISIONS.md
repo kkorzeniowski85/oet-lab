@@ -97,7 +97,8 @@ Status: **przyjęta** (potwierdzona przez użytkownika) · **propozycja** (czeka
 - **Decyzja:** przenosimy `speech.ts`, wzorce z `backup.ts` i `phrase.ts` oraz opublikowaną treść słownika jako materiał startowy. Nie przenosimy Next.js, backendu FastAPI, silnika FSRS ani `listen.ts` (D16).
 - **Dlaczego:** moduły w czystym TypeScript są przetestowane i niezależne od frameworka.
 
-### D18 — Publikacja dopiero na wyraźną zgodę, pytanie po każdym etapie
+### D18 — Repo prywatne; upublicznienie i Pages dopiero na wyraźną zgodę
 **Status:** przyjęta, 25.09.2026 — decyzja użytkownika
-- **Decyzja:** kod zostaje lokalnie w `D:\OET-Lab`. Utworzenie repo na GitHubie, wysłanie kodu i włączenie GitHub Pages następują dopiero po Twojej zgodzie. Pytam o to po każdym kamieniu milowym.
-- **Konsekwencje:** do publikacji aplikacji nie da się zainstalować na S23 (telefon potrzebuje adresu w sieci). Kod nie ma kopii poza dyskiem D:, a laptop nie ma do niego dostępu. Możliwe rozwiązanie pośrednie: prywatne repo na GitHubie (darmowe) jako kopia i droga do laptopa, bez publikowania; publiczne dopiero razem z Pages.
+- **Decyzja:** kod jest w **prywatnym** repo `kkorzeniowski85/oet-lab` (kopia poza dyskiem D:, dostęp z laptopa przez `git clone`). Upublicznienie repo i włączenie GitHub Pages następują dopiero po Twojej zgodzie. Pytam o to po każdym kamieniu milowym.
+- **Jak działa wdrożenie w tym stanie:** workflow przy każdym wysłaniu sprawdza lint, testy i budowanie, a krok Pages pomija, dopóki repo jest prywatne (Pages w darmowym planie wymaga publicznego repo). Po upublicznieniu wdrożenie ruszy bez zmian w pliku.
+- **Konsekwencja:** do upublicznienia aplikacji nie da się zainstalować na S23 (telefon potrzebuje adresu w sieci).
