@@ -57,7 +57,7 @@ Status: **przyjęta** (potwierdzona przez użytkownika) · **propozycja** (czeka
 
 ### D10 — Kod poza Google Drive
 **Status:** przyjęta, 25.09.2026
-- **Decyzja:** repozytorium w `D:\OET-Lab` (komputer stacjonarny) i osobna kopia na laptopie. Oba komputery wymieniają kod przez GitHub. W `APLIKACJE\OET exam` zostaje README ze wskazaniem, gdzie jest kod.
+- **Decyzja:** repozytorium na lokalnym dysku poza Google Drive (komputer stacjonarny) i osobna kopia na laptopie. Oba komputery wymieniają kod przez GitHub. W `APLIKACJE\OET exam` zostaje README ze wskazaniem, gdzie jest kod.
 - **Dlaczego:** Google Drive nie potrafi wykluczać folderów według wzorca, a `node_modules` ma ok. 21 tys. plików (pomiar w Fiszkach). To ten sam problem, dla którego CLAUDE.md zabrania `.venv` na Drive.
 
 ### D11 — Publiczne repo, wyłącznie własna treść

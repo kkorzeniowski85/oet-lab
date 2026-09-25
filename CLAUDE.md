@@ -35,5 +35,5 @@ większymi zmianami.
 
 ## Inne projekty użytkownika (tylko do odczytu, gdy zadanie tego wymaga)
 
-- Fiszki: `C:\Users\HyperWorks\Mój dysk\aplikacja fiszki` — źródło treści startowej i format `fiszki/v1`.
+- Fiszki: repo `kkorzeniowski85/projekt-os-03` (lokalną kopię wskazuje użytkownik) — źródło treści startowej i format `fiszki/v1`.
 - Nie przeszukuj reszty „Mojego dysku” — to prywatne pliki użytkownika.

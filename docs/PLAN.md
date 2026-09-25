@@ -21,7 +21,7 @@ Zbiera zwroty, sposoby pisania i mówienia oraz daje ćwiczenia interaktywne. Dz
 ## 2. Co już istnieje
 
 - Folder `APLIKACJE\OET exam` był pusty.
-- **Fiszki** (`Mój dysk\aplikacja fiszki`, repo `kkorzeniowski85/projekt-os-03`, działa na GitHub Pages):
+- **Fiszki** (repo `kkorzeniowski85/projekt-os-03`, działa na GitHub Pages):
   Next.js 16 + React 19 + Tailwind, PWA bez serwera, dane w IndexedDB, powtórki FSRS-6, testy Vitest,
   wdrożenie przez GitHub Actions. Treść: ok. 305 fiszek OET w 5 plikach (`oet-core` — zwroty do listu,
   `oet-skroty` — 76 skrótów klinicznych, `oet-nhs`, `oet-codziennosc`, `oet-terminologia`).
@@ -228,7 +228,7 @@ GitHub (repo, Actions, Pages) i Twój czat Claude (kopiuj–wklej). Nic więcej:
 | Udostępnianie plików działa różnie na różnych urządzeniach | wybór pliku działa zawsze; Udostępnij to wygoda; test na S23 i Windows |
 | Jakość i legalność treści | wyłącznie własne, fikcyjne przypadki; weryfikujesz wiarygodność kliniczną |
 | Narzędzia się rozjeżdżają (TS 7, duże wersje) | przypięte wersje; aktualizacje świadomie, jako osobny krok |
-| 21 tys. plików `node_modules` na Google Drive | kod poza Drive: `D:\OET-Lab` (D10) |
+| 21 tys. plików `node_modules` na Google Drive | kod na lokalnym dysku poza Drive (D10) |
 
 ---
 
@@ -255,7 +255,7 @@ Claude w ramach subskrypcji, a wynik wklejasz z powrotem do aplikacji.
 
 **0.1 Repozytorium i narzędzia**
 - Cel: projekt Vite + React + TS z przypiętymi wersjami, Tailwind, Vitest, ESLint.
-- Pliki: `D:\OET-Lab\` — `package.json`, `vite.config.ts`, `tsconfig.json`, `eslint.config.js`, `src/main.tsx`, `.gitignore`, `README.md`.
+- Pliki: `package.json`, `vite.config.ts`, `tsconfig.json`, `eslint.config.js`, `src/main.tsx`, `.gitignore`, `README.md`.
 - Akceptacja: `npm run dev` pokazuje stronę; `npm test`, `npm run lint` i `npm run build` przechodzą.
 - Weryfikacja: polecenia w terminalu + podgląd w przeglądarce.
 

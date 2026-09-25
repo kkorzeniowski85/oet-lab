@@ -1,10 +1,14 @@
 // One-time import of the OET material from the Fiszki app into content/*.json.
 // After the import, content/ is the source of truth: the script refuses to overwrite it.
-//   node scripts/import-fiszki.mjs [path-to-fiszki/frontend/public/slownik]
+//   node scripts/import-fiszki.mjs <path-to-fiszki/frontend/public/slownik>
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-const SOURCE = process.argv[2] ?? 'C:/Users/HyperWorks/Mój dysk/aplikacja fiszki/frontend/public/slownik'
+const SOURCE = process.argv[2]
+if (!SOURCE) {
+  console.error('Usage: node scripts/import-fiszki.mjs <path-to-fiszki/frontend/public/slownik>')
+  process.exit(1)
+}
 const OUT = new URL('../content/', import.meta.url)
 
 // Group assignment for oet-core (c/…) and oet-terminologia (t/…), reviewed by the user.
