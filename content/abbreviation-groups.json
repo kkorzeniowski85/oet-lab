@@ -1,0 +1,10 @@
+[
+  { "id": "a-dosing", "name": "Dosing and routes" },
+  { "id": "a-investigations", "name": "Investigations" },
+  { "id": "a-notes", "name": "Case-note shorthand" },
+  { "id": "a-symptoms", "name": "Symptoms" },
+  { "id": "a-time", "name": "Time" },
+  { "id": "a-observations", "name": "Observations" },
+  { "id": "a-services", "name": "NHS services and roles" },
+  { "id": "a-diagnoses", "name": "Diagnoses" }
+]

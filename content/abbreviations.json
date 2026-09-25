@@ -1,0 +1,610 @@
+[
+  {
+    "id": "abbr-od",
+    "group": "a-dosing",
+    "abbr": "OD",
+    "expansion": "once daily",
+    "example": "Ramipril 5 mg PO OD.",
+    "source": "oet-skroty/od"
+  },
+  {
+    "id": "abbr-bd",
+    "group": "a-dosing",
+    "abbr": "BD",
+    "expansion": "twice daily",
+    "example": "Amoxicillin 500 mg PO BD for five days.",
+    "source": "oet-skroty/bd"
+  },
+  {
+    "id": "abbr-tds",
+    "group": "a-dosing",
+    "abbr": "TDS",
+    "expansion": "three times daily",
+    "example": "Ibuprofen 400 mg TDS with food.",
+    "source": "oet-skroty/tds"
+  },
+  {
+    "id": "abbr-qds",
+    "group": "a-dosing",
+    "abbr": "QDS",
+    "expansion": "four times daily",
+    "example": "Paracetamol 1 g QDS, maximum 4 g in 24 hours.",
+    "source": "oet-skroty/qds"
+  },
+  {
+    "id": "abbr-prn",
+    "group": "a-dosing",
+    "abbr": "PRN",
+    "expansion": "as required / when necessary",
+    "example": "Salbutamol inhaler two puffs PRN.",
+    "source": "oet-skroty/prn"
+  },
+  {
+    "id": "abbr-stat",
+    "group": "a-dosing",
+    "abbr": "STAT",
+    "expansion": "immediately, as a single dose",
+    "example": "Give adrenaline 0.5 mg IM STAT.",
+    "source": "oet-skroty/stat"
+  },
+  {
+    "id": "abbr-mane",
+    "group": "a-dosing",
+    "abbr": "mane",
+    "expansion": "in the morning",
+    "example": "Prednisolone 20 mg mane.",
+    "source": "oet-skroty/mane"
+  },
+  {
+    "id": "abbr-nocte",
+    "group": "a-dosing",
+    "abbr": "nocte",
+    "expansion": "at night",
+    "example": "Atorvastatin 40 mg nocte.",
+    "source": "oet-skroty/nocte"
+  },
+  {
+    "id": "abbr-po",
+    "group": "a-dosing",
+    "abbr": "PO",
+    "expansion": "by mouth, orally",
+    "example": "Switch to PO antibiotics once she is eating.",
+    "source": "oet-skroty/po"
+  },
+  {
+    "id": "abbr-iv",
+    "group": "a-dosing",
+    "abbr": "IV",
+    "expansion": "intravenous",
+    "example": "He was started on IV fluids on admission.",
+    "source": "oet-skroty/iv"
+  },
+  {
+    "id": "abbr-im",
+    "group": "a-dosing",
+    "abbr": "IM",
+    "expansion": "intramuscular",
+    "example": "Ceftriaxone 1 g IM was given in the department.",
+    "source": "oet-skroty/im"
+  },
+  {
+    "id": "abbr-sc",
+    "group": "a-dosing",
+    "abbr": "SC",
+    "expansion": "subcutaneous",
+    "example": "Enoxaparin 40 mg SC once daily.",
+    "source": "oet-skroty/sc"
+  },
+  {
+    "id": "abbr-nbm",
+    "group": "a-dosing",
+    "abbr": "NBM",
+    "expansion": "nil by mouth",
+    "example": "Keep her NBM from midnight before theatre.",
+    "source": "oet-skroty/nbm"
+  },
+  {
+    "id": "abbr-tto",
+    "group": "a-dosing",
+    "abbr": "TTO",
+    "expansion": "to take out — discharge medication",
+    "example": "His TTOs were dispensed before he left the ward.",
+    "source": "oet-skroty/tto"
+  },
+  {
+    "id": "abbr-fbc",
+    "group": "a-investigations",
+    "abbr": "FBC",
+    "expansion": "full blood count",
+    "example": "FBC showed a raised white cell count.",
+    "source": "oet-skroty/fbc"
+  },
+  {
+    "id": "abbr-ue",
+    "group": "a-investigations",
+    "abbr": "U&E",
+    "expansion": "urea and electrolytes",
+    "example": "Repeat U&E in 48 hours to monitor renal function.",
+    "source": "oet-skroty/ue"
+  },
+  {
+    "id": "abbr-lft",
+    "group": "a-investigations",
+    "abbr": "LFT",
+    "expansion": "liver function tests",
+    "example": "LFTs were mildly deranged on admission.",
+    "source": "oet-skroty/lft"
+  },
+  {
+    "id": "abbr-crp",
+    "group": "a-investigations",
+    "abbr": "CRP",
+    "expansion": "C-reactive protein — inflammatory marker",
+    "example": "CRP fell from 180 to 40 after three days of antibiotics.",
+    "source": "oet-skroty/crp"
+  },
+  {
+    "id": "abbr-esr",
+    "group": "a-investigations",
+    "abbr": "ESR",
+    "expansion": "erythrocyte sedimentation rate",
+    "example": "A raised ESR supported the diagnosis.",
+    "source": "oet-skroty/esr"
+  },
+  {
+    "id": "abbr-tft",
+    "group": "a-investigations",
+    "abbr": "TFT",
+    "expansion": "thyroid function tests",
+    "example": "TFTs were normal, so thyroid disease was excluded.",
+    "source": "oet-skroty/tft"
+  },
+  {
+    "id": "abbr-abg",
+    "group": "a-investigations",
+    "abbr": "ABG",
+    "expansion": "arterial blood gas",
+    "example": "ABG on air showed type 1 respiratory failure.",
+    "source": "oet-skroty/abg"
+  },
+  {
+    "id": "abbr-msu",
+    "group": "a-investigations",
+    "abbr": "MSU",
+    "expansion": "mid-stream urine (specimen)",
+    "example": "Send an MSU before starting antibiotics.",
+    "source": "oet-skroty/msu"
+  },
+  {
+    "id": "abbr-cxr",
+    "group": "a-investigations",
+    "abbr": "CXR",
+    "expansion": "chest X-ray",
+    "example": "CXR showed consolidation at the right base.",
+    "source": "oet-skroty/cxr"
+  },
+  {
+    "id": "abbr-axr",
+    "group": "a-investigations",
+    "abbr": "AXR",
+    "expansion": "abdominal X-ray",
+    "example": "AXR demonstrated dilated small bowel loops.",
+    "source": "oet-skroty/axr"
+  },
+  {
+    "id": "abbr-ecg",
+    "group": "a-investigations",
+    "abbr": "ECG",
+    "expansion": "electrocardiogram",
+    "example": "ECG on arrival showed atrial fibrillation.",
+    "source": "oet-skroty/ecg"
+  },
+  {
+    "id": "abbr-uss",
+    "group": "a-investigations",
+    "abbr": "USS",
+    "expansion": "ultrasound scan",
+    "example": "An abdominal USS has been requested.",
+    "source": "oet-skroty/uss"
+  },
+  {
+    "id": "abbr-oe",
+    "group": "a-notes",
+    "abbr": "O/E",
+    "expansion": "on examination",
+    "example": "O/E the abdomen was soft and non-tender.",
+    "source": "oet-skroty/oe"
+  },
+  {
+    "id": "abbr-co",
+    "group": "a-notes",
+    "abbr": "C/O",
+    "expansion": "complains of",
+    "example": "She C/O intermittent chest pain for two weeks.",
+    "source": "oet-skroty/co"
+  },
+  {
+    "id": "abbr-hx",
+    "group": "a-notes",
+    "abbr": "Hx",
+    "expansion": "history",
+    "example": "There is a Hx of hypertension and type 2 diabetes.",
+    "source": "oet-skroty/hx"
+  },
+  {
+    "id": "abbr-pmh",
+    "group": "a-notes",
+    "abbr": "PMH",
+    "expansion": "past medical history",
+    "example": "PMH includes asthma and a previous DVT.",
+    "source": "oet-skroty/pmh"
+  },
+  {
+    "id": "abbr-dh",
+    "group": "a-notes",
+    "abbr": "DH",
+    "expansion": "drug history",
+    "example": "DH: amlodipine 5 mg OD, no other regular medication.",
+    "source": "oet-skroty/dh"
+  },
+  {
+    "id": "abbr-fh",
+    "group": "a-notes",
+    "abbr": "FH",
+    "expansion": "family history",
+    "example": "FH of bowel cancer in her mother, diagnosed at 52.",
+    "source": "oet-skroty/fh"
+  },
+  {
+    "id": "abbr-sh",
+    "group": "a-notes",
+    "abbr": "SH",
+    "expansion": "social history",
+    "example": "SH: lives alone, independent with all activities.",
+    "source": "oet-skroty/sh"
+  },
+  {
+    "id": "abbr-nkda",
+    "group": "a-notes",
+    "abbr": "NKDA",
+    "expansion": "no known drug allergies",
+    "example": "NKDA documented in the notes.",
+    "source": "oet-skroty/nkda"
+  },
+  {
+    "id": "abbr-ix",
+    "group": "a-notes",
+    "abbr": "Ix",
+    "expansion": "investigations",
+    "example": "Ix so far: FBC, U&E and a chest X-ray.",
+    "source": "oet-skroty/ix"
+  },
+  {
+    "id": "abbr-dx",
+    "group": "a-notes",
+    "abbr": "Dx",
+    "expansion": "diagnosis",
+    "example": "The working Dx is community-acquired pneumonia.",
+    "source": "oet-skroty/dx"
+  },
+  {
+    "id": "abbr-mx",
+    "group": "a-notes",
+    "abbr": "Mx",
+    "expansion": "management",
+    "example": "Mx: oral antibiotics and review in one week.",
+    "source": "oet-skroty/mx"
+  },
+  {
+    "id": "abbr-rx",
+    "group": "a-notes",
+    "abbr": "Rx",
+    "expansion": "treatment or prescription",
+    "example": "Rx: co-amoxiclav 625 mg TDS for seven days.",
+    "source": "oet-skroty/rx"
+  },
+  {
+    "id": "abbr-nad",
+    "group": "a-notes",
+    "abbr": "NAD",
+    "expansion": "no abnormality detected",
+    "example": "Cardiovascular and respiratory examination: NAD.",
+    "source": "oet-skroty/nad"
+  },
+  {
+    "id": "abbr-dna",
+    "group": "a-notes",
+    "abbr": "DNA",
+    "expansion": "did not attend (an appointment)",
+    "example": "She DNA'd her last two clinic appointments.",
+    "source": "oet-skroty/dna"
+  },
+  {
+    "id": "abbr-adls",
+    "group": "a-notes",
+    "abbr": "ADLs",
+    "expansion": "activities of daily living",
+    "example": "He is independent with ADLs but needs help with shopping.",
+    "source": "oet-skroty/adls"
+  },
+  {
+    "id": "abbr-sob",
+    "group": "a-symptoms",
+    "abbr": "SOB",
+    "expansion": "short of breath",
+    "example": "He has been SOB on climbing one flight of stairs.",
+    "source": "oet-skroty/sob"
+  },
+  {
+    "id": "abbr-soboe",
+    "group": "a-symptoms",
+    "abbr": "SOBOE",
+    "expansion": "short of breath on exertion",
+    "example": "SOBOE for the past three weeks, now limiting her walking.",
+    "source": "oet-skroty/soboe"
+  },
+  {
+    "id": "abbr-nv",
+    "group": "a-symptoms",
+    "abbr": "N&V",
+    "expansion": "nausea and vomiting",
+    "example": "Two-day history of N&V with abdominal pain.",
+    "source": "oet-skroty/nv"
+  },
+  {
+    "id": "abbr-loc",
+    "group": "a-symptoms",
+    "abbr": "LOC",
+    "expansion": "loss of consciousness",
+    "example": "There was no LOC following the fall.",
+    "source": "oet-skroty/loc"
+  },
+  {
+    "id": "abbr-pu",
+    "group": "a-symptoms",
+    "abbr": "PU",
+    "expansion": "passing urine",
+    "example": "She is PU normally and denies dysuria.",
+    "source": "oet-skroty/pu"
+  },
+  {
+    "id": "abbr-bo",
+    "group": "a-symptoms",
+    "abbr": "BO",
+    "expansion": "bowels open",
+    "example": "BO yesterday, stool of normal consistency.",
+    "source": "oet-skroty/bo"
+  },
+  {
+    "id": "abbr-fracture",
+    "group": "a-symptoms",
+    "abbr": "#",
+    "expansion": "fracture",
+    "example": "X-ray confirmed a # of the left neck of femur.",
+    "source": "oet-skroty/fracture"
+  },
+  {
+    "id": "abbr-strzalki",
+    "group": "a-notes",
+    "abbr": "Δ / ↑ / ↓",
+    "expansion": "change / increased / decreased",
+    "example": "↑ CRP and ↓ albumin since admission.",
+    "source": "oet-skroty/strzalki"
+  },
+  {
+    "id": "abbr-dni",
+    "group": "a-time",
+    "abbr": "2/7",
+    "expansion": "two days (the number over 7 means days)",
+    "example": "Symptoms have been present for 2/7.",
+    "source": "oet-skroty/dni"
+  },
+  {
+    "id": "abbr-tygodnie",
+    "group": "a-time",
+    "abbr": "3/52",
+    "expansion": "three weeks (the number over 52 means weeks)",
+    "example": "Follow-up arranged in 3/52.",
+    "source": "oet-skroty/tygodnie"
+  },
+  {
+    "id": "abbr-miesiace",
+    "group": "a-time",
+    "abbr": "6/12",
+    "expansion": "six months (the number over 12 means months)",
+    "example": "He was last reviewed 6/12 ago.",
+    "source": "oet-skroty/miesiace"
+  },
+  {
+    "id": "abbr-bp",
+    "group": "a-observations",
+    "abbr": "BP",
+    "expansion": "blood pressure",
+    "example": "BP 148/92 on arrival, repeated after rest.",
+    "source": "oet-skroty/bp"
+  },
+  {
+    "id": "abbr-hr",
+    "group": "a-observations",
+    "abbr": "HR",
+    "expansion": "heart rate",
+    "example": "HR 112 and regular.",
+    "source": "oet-skroty/hr"
+  },
+  {
+    "id": "abbr-rr",
+    "group": "a-observations",
+    "abbr": "RR",
+    "expansion": "respiratory rate",
+    "example": "RR 24 with oxygen saturations of 92% on air.",
+    "source": "oet-skroty/rr"
+  },
+  {
+    "id": "abbr-sats",
+    "group": "a-observations",
+    "abbr": "sats",
+    "expansion": "oxygen saturations",
+    "example": "His sats dropped to 88% on mobilising.",
+    "source": "oet-skroty/sats"
+  },
+  {
+    "id": "abbr-gcs",
+    "group": "a-observations",
+    "abbr": "GCS",
+    "expansion": "Glasgow Coma Scale",
+    "example": "GCS was 15 throughout the admission.",
+    "source": "oet-skroty/gcs"
+  },
+  {
+    "id": "abbr-obs-skrot",
+    "group": "a-observations",
+    "abbr": "obs",
+    "expansion": "observations — routine vital signs",
+    "example": "Her obs have been stable overnight.",
+    "source": "oet-skroty/obs-skrot"
+  },
+  {
+    "id": "abbr-itu",
+    "group": "a-services",
+    "abbr": "ITU / ICU",
+    "expansion": "intensive therapy unit / intensive care unit",
+    "example": "He was transferred to ITU for ventilatory support.",
+    "source": "oet-skroty/itu"
+  },
+  {
+    "id": "abbr-hdu",
+    "group": "a-services",
+    "abbr": "HDU",
+    "expansion": "high dependency unit",
+    "example": "She was stepped down from ITU to HDU on day three.",
+    "source": "oet-skroty/hdu"
+  },
+  {
+    "id": "abbr-opd",
+    "group": "a-services",
+    "abbr": "OPD",
+    "expansion": "outpatient department",
+    "example": "Review in OPD has been arranged for six weeks' time.",
+    "source": "oet-skroty/opd"
+  },
+  {
+    "id": "abbr-salt",
+    "group": "a-services",
+    "abbr": "SALT",
+    "expansion": "speech and language therapy",
+    "example": "A SALT assessment was requested after the stroke.",
+    "source": "oet-skroty/salt"
+  },
+  {
+    "id": "abbr-ot",
+    "group": "a-services",
+    "abbr": "OT",
+    "expansion": "occupational therapy",
+    "example": "OT assessed her at home before discharge.",
+    "source": "oet-skroty/ot"
+  },
+  {
+    "id": "abbr-dnacpr",
+    "group": "a-services",
+    "abbr": "DNACPR",
+    "expansion": "do not attempt cardiopulmonary resuscitation",
+    "example": "A DNACPR decision was discussed with the family.",
+    "source": "oet-skroty/dnacpr"
+  },
+  {
+    "id": "abbr-mi",
+    "group": "a-diagnoses",
+    "abbr": "MI",
+    "expansion": "myocardial infarction",
+    "example": "He had an MI two years ago, treated with stenting.",
+    "source": "oet-skroty/mi"
+  },
+  {
+    "id": "abbr-af",
+    "group": "a-diagnoses",
+    "abbr": "AF",
+    "expansion": "atrial fibrillation",
+    "example": "AF was newly diagnosed on this admission.",
+    "source": "oet-skroty/af"
+  },
+  {
+    "id": "abbr-ccf",
+    "group": "a-diagnoses",
+    "abbr": "CCF",
+    "expansion": "congestive cardiac failure",
+    "example": "Known CCF, managed with furosemide.",
+    "source": "oet-skroty/ccf"
+  },
+  {
+    "id": "abbr-copd",
+    "group": "a-diagnoses",
+    "abbr": "COPD",
+    "expansion": "chronic obstructive pulmonary disease",
+    "example": "Admitted with an infective exacerbation of COPD.",
+    "source": "oet-skroty/copd"
+  },
+  {
+    "id": "abbr-dvt",
+    "group": "a-diagnoses",
+    "abbr": "DVT",
+    "expansion": "deep vein thrombosis",
+    "example": "A DVT was confirmed on Doppler ultrasound.",
+    "source": "oet-skroty/dvt"
+  },
+  {
+    "id": "abbr-pe",
+    "group": "a-diagnoses",
+    "abbr": "PE",
+    "expansion": "pulmonary embolism",
+    "example": "CTPA excluded a PE.",
+    "source": "oet-skroty/pe"
+  },
+  {
+    "id": "abbr-uti",
+    "group": "a-diagnoses",
+    "abbr": "UTI",
+    "expansion": "urinary tract infection",
+    "example": "Treated for a UTI with a three-day course of nitrofurantoin.",
+    "source": "oet-skroty/uti"
+  },
+  {
+    "id": "abbr-urti",
+    "group": "a-diagnoses",
+    "abbr": "URTI",
+    "expansion": "upper respiratory tract infection",
+    "example": "Symptoms began with a URTI a fortnight ago.",
+    "source": "oet-skroty/urti"
+  },
+  {
+    "id": "abbr-t2dm",
+    "group": "a-diagnoses",
+    "abbr": "T2DM",
+    "expansion": "type 2 diabetes mellitus",
+    "example": "T2DM diagnosed in 2018, diet-controlled.",
+    "source": "oet-skroty/t2dm"
+  },
+  {
+    "id": "abbr-htn",
+    "group": "a-diagnoses",
+    "abbr": "HTN",
+    "expansion": "hypertension",
+    "example": "Long-standing HTN, currently well controlled.",
+    "source": "oet-skroty/htn"
+  },
+  {
+    "id": "abbr-ckd",
+    "group": "a-diagnoses",
+    "abbr": "CKD",
+    "expansion": "chronic kidney disease",
+    "example": "CKD stage 3, followed up by the renal team.",
+    "source": "oet-skroty/ckd"
+  },
+  {
+    "id": "abbr-nof",
+    "group": "a-diagnoses",
+    "abbr": "NOF",
+    "expansion": "neck of femur",
+    "example": "She sustained a fractured NOF after a fall at home.",
+    "source": "oet-skroty/nof"
+  }
+]

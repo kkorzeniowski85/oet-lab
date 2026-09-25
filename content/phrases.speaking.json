@@ -1,0 +1,432 @@
+[
+  {
+    "id": "core-m214",
+    "group": "s-gathering",
+    "en": "to have any concerns",
+    "pl": "mieć jakiekolwiek obawy",
+    "kind": "phrase",
+    "examples": [
+      "Please let us know if you have any concerns before the procedure.",
+      "She had several concerns, which we addressed in detail.",
+      "He was encouraged to raise any concerns at follow-up."
+    ],
+    "synonyms": [
+      "to have worries or questions"
+    ],
+    "source": "oet-core/m214"
+  },
+  {
+    "id": "core-m207",
+    "group": "s-explaining",
+    "en": "to explain in layman's terms",
+    "pl": "wyjaśnić prostym językiem",
+    "kind": "expression",
+    "examples": [
+      "I explained the diagnosis in layman's terms to ensure understanding.",
+      "It is important to explain procedures in layman's terms before consent.",
+      "He appreciated having the results explained in layman's terms."
+    ],
+    "synonyms": [
+      "to explain in simple/plain language"
+    ],
+    "source": "oet-core/m207"
+  },
+  {
+    "id": "core-m217",
+    "group": "s-explaining",
+    "en": "to go through (results/options) with someone",
+    "pl": "omówić (wyniki/opcje) z kimś",
+    "kind": "expression",
+    "examples": [
+      "Let's go through the results together and answer any questions.",
+      "I went through the treatment options with the patient and her husband.",
+      "We went through the discharge instructions before she left the ward."
+    ],
+    "synonyms": [
+      "to discuss in detail with"
+    ],
+    "source": "oet-core/m217"
+  },
+  {
+    "id": "core-m210",
+    "group": "s-explaining",
+    "en": "risks and benefits",
+    "pl": "ryzyka i korzyści",
+    "kind": "phrase",
+    "examples": [
+      "We discussed the risks and benefits of the proposed treatment.",
+      "The risks and benefits of surgery versus conservative management were outlined.",
+      "She was given time to consider the risks and benefits before deciding."
+    ],
+    "synonyms": [
+      "pros and cons",
+      "advantages and disadvantages"
+    ],
+    "source": "oet-core/m210"
+  },
+  {
+    "id": "core-m213",
+    "group": "s-explaining",
+    "en": "side effects",
+    "pl": "skutki uboczne",
+    "kind": "phrase",
+    "examples": [
+      "I explained the common side effects of the new medication.",
+      "He was advised to report any side effects promptly.",
+      "No significant side effects were reported during treatment."
+    ],
+    "synonyms": [
+      "adverse effects"
+    ],
+    "source": "oet-core/m213"
+  },
+  {
+    "id": "core-m208",
+    "group": "s-explaining",
+    "en": "informed consent",
+    "pl": "świadoma zgoda",
+    "kind": "phrase",
+    "examples": [
+      "Informed consent was obtained prior to the procedure.",
+      "We discussed the risks and benefits to ensure informed consent.",
+      "The patient gave informed consent after all questions were answered."
+    ],
+    "synonyms": [
+      "consent following full explanation"
+    ],
+    "source": "oet-core/m208"
+  },
+  {
+    "id": "term-m7",
+    "group": "s-explaining",
+    "en": "Benefits and harms",
+    "pl": "Korzyści i ryzyko / Zalety i wady zabiegu",
+    "kind": "phrase",
+    "examples": [
+      "I explained the benefits and harms of the proposed treatment.",
+      "We discussed the benefits and harms of continuing versus stopping the medication.",
+      "The benefits clearly outweigh the potential harms in this case."
+    ],
+    "synonyms": [
+      "risks and benefits",
+      "potential advantages and disadvantages",
+      "the risk-benefit profile"
+    ],
+    "source": "oet-terminy/m7/benefits-and-harms"
+  },
+  {
+    "id": "core-m212",
+    "group": "s-explaining",
+    "en": "lifestyle advice",
+    "pl": "zalecenia dotyczące stylu życia",
+    "kind": "phrase",
+    "examples": [
+      "Lifestyle advice was given regarding diet and physical activity.",
+      "We provided lifestyle advice to help reduce his cardiovascular risk.",
+      "She was receptive to the lifestyle advice offered during the consultation."
+    ],
+    "synonyms": [
+      "lifestyle modification advice"
+    ],
+    "source": "oet-core/m212"
+  },
+  {
+    "id": "core-m209",
+    "group": "s-explaining",
+    "en": "to break bad news",
+    "pl": "przekazać złe wieści",
+    "kind": "expression",
+    "examples": [
+      "Breaking bad news requires sensitivity and clear communication.",
+      "I broke the news to the family in a private, quiet room.",
+      "He was supported by a nurse while receiving the bad news."
+    ],
+    "synonyms": [
+      "to deliver difficult news"
+    ],
+    "source": "oet-core/m209"
+  },
+  {
+    "id": "core-m206",
+    "group": "s-empathy",
+    "en": "to reassure",
+    "pl": "uspokajać, zapewniać",
+    "kind": "word",
+    "examples": [
+      "I reassured her that the findings were benign.",
+      "He was reassured that this is a common and treatable condition.",
+      "We aimed to reassure the family throughout the procedure."
+    ],
+    "synonyms": [
+      "to put someone's mind at rest",
+      "to comfort"
+    ],
+    "source": "oet-core/m206"
+  },
+  {
+    "id": "core-m216",
+    "group": "s-empathy",
+    "en": "to put your mind at ease",
+    "pl": "uspokoić, rozwiać obawy",
+    "kind": "expression",
+    "examples": [
+      "I hope this explanation has put your mind at ease.",
+      "The consultant's clear explanation put her mind at ease.",
+      "We wanted to put his mind at ease before the operation."
+    ],
+    "synonyms": [
+      "to reassure",
+      "to alleviate worry"
+    ],
+    "source": "oet-core/m216"
+  },
+  {
+    "id": "core-m219",
+    "group": "s-empathy",
+    "en": "at your own pace",
+    "pl": "we własnym tempie",
+    "kind": "expression",
+    "examples": [
+      "Please read through the information at your own pace.",
+      "Recovery will happen at your own pace, so there's no need to rush.",
+      "You can ask questions at your own pace throughout the consultation."
+    ],
+    "synonyms": [
+      "in your own time"
+    ],
+    "source": "oet-core/m219"
+  },
+  {
+    "id": "core-m218",
+    "group": "s-plan",
+    "en": "to weigh up the pros and cons",
+    "pl": "rozważyć za i przeciw",
+    "kind": "expression",
+    "examples": [
+      "Take some time to weigh up the pros and cons before deciding.",
+      "We helped him weigh up the pros and cons of each treatment option.",
+      "She weighed up the pros and cons before consenting to surgery."
+    ],
+    "synonyms": [
+      "to consider the advantages and disadvantages"
+    ],
+    "source": "oet-core/m218"
+  },
+  {
+    "id": "core-m211",
+    "group": "s-plan",
+    "en": "to check understanding",
+    "pl": "sprawdzić zrozumienie",
+    "kind": "phrase",
+    "examples": [
+      "I checked her understanding by asking her to summarise the plan.",
+      "It is good practice to check understanding before ending the consultation.",
+      "He checked the patient's understanding of the medication instructions."
+    ],
+    "synonyms": [
+      "to confirm comprehension"
+    ],
+    "source": "oet-core/m211"
+  },
+  {
+    "id": "core-m215",
+    "group": "s-plan",
+    "en": "to book a follow-up appointment",
+    "pl": "umówić wizytę kontrolną",
+    "kind": "phrase",
+    "examples": [
+      "Please book a follow-up appointment for four weeks' time.",
+      "The receptionist will help you book a follow-up appointment on your way out.",
+      "He was asked to book a follow-up appointment if symptoms persisted."
+    ],
+    "synonyms": [
+      "to arrange a review appointment"
+    ],
+    "source": "oet-core/m215"
+  },
+  {
+    "id": "core-m220",
+    "group": "s-closing",
+    "en": "is there anything you'd like to ask?",
+    "pl": "czy jest coś, o co chciał(a)by Pan/Pani zapytać?",
+    "kind": "sentence",
+    "examples": [
+      "Before we finish, is there anything you'd like to ask?",
+      "Is there anything you'd like to ask about the procedure itself?",
+      "I paused regularly to check: is there anything you'd like to ask?"
+    ],
+    "synonyms": [
+      "do you have any questions?"
+    ],
+    "source": "oet-core/m220"
+  },
+  {
+    "id": "lab-s-open-1",
+    "group": "s-opening",
+    "en": "Hello, I’m Dr …, one of the doctors looking after you.",
+    "pl": "Dzień dobry, jestem dr …, jednym z lekarzy, którzy się Panem/Panią opiekują.",
+    "kind": "sentence",
+    "examples": [
+      "Hello, I’m Dr Nowak, one of the doctors looking after you on the ward.",
+      "Good morning, I’m Dr Nowak, one of the doctors looking after your mother."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-open-2",
+    "group": "s-opening",
+    "en": "How would you like me to address you?",
+    "pl": "Jak mam się do Pana/Pani zwracać?",
+    "kind": "sentence",
+    "examples": [
+      "Before we start, how would you like me to address you?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-open-3",
+    "group": "s-opening",
+    "en": "I’ve been asked to talk to you about…",
+    "pl": "Poproszono mnie, żebym porozmawiał(a) z Panem/Panią o…",
+    "kind": "expression",
+    "examples": [
+      "I’ve been asked to talk to you about the results of your scan.",
+      "I’ve been asked to talk to you about your medication before you go home."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-open-4",
+    "group": "s-opening",
+    "en": "Is now a good time to talk?",
+    "pl": "Czy to dobry moment na rozmowę?",
+    "kind": "sentence",
+    "examples": [
+      "Is now a good time to talk, or would you prefer to wait for your husband?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-gather-1",
+    "group": "s-gathering",
+    "en": "Can you tell me a bit more about…?",
+    "pl": "Czy może Pan/Pani powiedzieć mi coś więcej o…?",
+    "kind": "expression",
+    "examples": [
+      "Can you tell me a bit more about the pain?",
+      "Can you tell me a bit more about what happened last night?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-gather-2",
+    "group": "s-gathering",
+    "en": "What do you think might be causing it?",
+    "pl": "Co Pana/Pani zdaniem może być przyczyną?",
+    "kind": "sentence",
+    "examples": [
+      "You mentioned the headaches get worse at work. What do you think might be causing it?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-gather-3",
+    "group": "s-gathering",
+    "en": "Is there anything in particular that’s worrying you?",
+    "pl": "Czy coś szczególnie Pana/Panią niepokoi?",
+    "kind": "sentence",
+    "examples": [
+      "Is there anything in particular that’s worrying you about the operation?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-gather-4",
+    "group": "s-gathering",
+    "en": "What were you hoping we could do for you today?",
+    "pl": "Na co liczył(a) Pan/Pani, przychodząc dzisiaj?",
+    "kind": "sentence",
+    "examples": [
+      "What were you hoping we could do for you today?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-gather-5",
+    "group": "s-gathering",
+    "en": "So, just to make sure I’ve understood correctly…",
+    "pl": "Czyli, żeby upewnić się, że dobrze zrozumiałem/zrozumiałam…",
+    "kind": "expression",
+    "examples": [
+      "So, just to make sure I’ve understood correctly, the headaches started two weeks ago and are worse in the morning?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-explain-1",
+    "group": "s-explaining",
+    "en": "What do you already know about…?",
+    "pl": "Co już Pan/Pani wie o…?",
+    "kind": "expression",
+    "examples": [
+      "What do you already know about diabetes?",
+      "Before I explain, what do you already know about the procedure?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-explain-2",
+    "group": "s-explaining",
+    "en": "Let me explain what that means.",
+    "pl": "Wyjaśnię, co to oznacza.",
+    "kind": "sentence",
+    "examples": [
+      "Your blood sugar is higher than it should be. Let me explain what that means."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-plan-1",
+    "group": "s-plan",
+    "en": "How does that sound to you?",
+    "pl": "Co Pan/Pani na to?",
+    "kind": "sentence",
+    "examples": [
+      "We could start with tablets and see you again in a month. How does that sound to you?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-plan-2",
+    "group": "s-plan",
+    "en": "Would you like some time to think about it?",
+    "pl": "Czy chciał(a)by Pan/Pani mieć czas do namysłu?",
+    "kind": "sentence",
+    "examples": [
+      "There’s no rush to decide. Would you like some time to think about it?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-close-1",
+    "group": "s-closing",
+    "en": "Just to recap, …",
+    "pl": "Podsumowując, …",
+    "kind": "expression",
+    "examples": [
+      "Just to recap, we’ll arrange a scan and I’ll see you again in two weeks."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-close-2",
+    "group": "s-closing",
+    "en": "If things get worse before then, please come back straight away.",
+    "pl": "Jeśli wcześniej się pogorszy, proszę od razu wrócić.",
+    "kind": "sentence",
+    "examples": [
+      "If things get worse before then, please come back straight away or call 111."
+    ],
+    "source": "oet-lab"
+  }
+]

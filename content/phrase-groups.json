@@ -1,0 +1,22 @@
+[
+  { "id": "w-purpose", "section": "writing", "name": "Purpose", "description": "Say why you are writing, in the first lines of the letter." },
+  { "id": "w-history", "section": "writing", "name": "Background and history", "description": "Present the complaint and the relevant history." },
+  { "id": "w-findings", "section": "writing", "name": "Findings and results", "description": "Report examination findings, test results and the working diagnosis." },
+  { "id": "w-management", "section": "writing", "name": "Treatment and progress", "description": "Describe what was done, how the patient responded and the plan." },
+  { "id": "w-request", "section": "writing", "name": "Requests", "description": "Ask the reader clearly for what you need." },
+  { "id": "w-closing", "section": "writing", "name": "Closing", "description": "End the letter politely and mention enclosures." },
+  { "id": "w-linking", "section": "writing", "name": "Linking and signposting", "description": "Connect ideas so the letter reads as one clear case." },
+
+  { "id": "s-opening", "section": "speaking", "name": "Opening", "description": "Greet, introduce yourself and explain the purpose of the conversation." },
+  { "id": "s-gathering", "section": "speaking", "name": "Gathering information", "description": "Ask open questions first, then closed ones; explore ideas, concerns and expectations." },
+  { "id": "s-explaining", "section": "speaking", "name": "Explaining", "description": "Explain medical matters in plain language, in small steps." },
+  { "id": "s-empathy", "section": "speaking", "name": "Empathy and reassurance", "description": "Show that you understand how the patient feels." },
+  { "id": "s-plan", "section": "speaking", "name": "Agreeing a plan", "description": "Involve the patient in decisions and check they understand." },
+  { "id": "s-closing", "section": "speaking", "name": "Closing", "description": "Summarise, invite questions and say what happens next." },
+
+  { "id": "v-symptoms", "section": "vocabulary", "name": "Symptoms and signs", "description": "Formal terms for symptoms and clinical signs." },
+  { "id": "v-clinical", "section": "vocabulary", "name": "Clinical terms", "description": "Words for the course of disease and its treatment." },
+  { "id": "v-nhs", "section": "vocabulary", "name": "NHS roles and services", "description": "Who is who and where things happen in UK healthcare." },
+  { "id": "v-workplace", "section": "vocabulary", "name": "Hospital talk", "description": "What colleagues say on the ward, with the formal version for writing." },
+  { "id": "v-everyday", "section": "vocabulary", "name": "Everyday British English", "description": "Common informal expressions, with formal equivalents." }
+]

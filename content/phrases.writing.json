@@ -1,0 +1,848 @@
+[
+  {
+    "id": "core-m101",
+    "group": "w-purpose",
+    "en": "I am writing to refer...",
+    "pl": "Piszę, aby skierować...",
+    "kind": "expression",
+    "examples": [
+      "I am writing to refer Mr Kowalski, a 54-year-old man with a two-week history of exertional dyspnoea.",
+      "I am writing to refer this patient for further specialist assessment of her chronic abdominal pain.",
+      "I am writing to refer Mrs Smith to your outpatient clinic for urgent review."
+    ],
+    "synonyms": [
+      "I am writing to request a referral for",
+      "I would like to refer"
+    ],
+    "source": "oet-core/m101"
+  },
+  {
+    "id": "core-m102",
+    "group": "w-purpose",
+    "en": "I am writing to request...",
+    "pl": "Piszę, aby poprosić o...",
+    "kind": "expression",
+    "examples": [
+      "I am writing to request an urgent outpatient appointment for this patient.",
+      "I am writing to request further investigation of his persistent haematuria.",
+      "I am writing to request your assessment regarding suitability for surgery."
+    ],
+    "synonyms": [
+      "I would be grateful if you could arrange",
+      "I am writing to ask for"
+    ],
+    "source": "oet-core/m102"
+  },
+  {
+    "id": "core-m221",
+    "group": "w-history",
+    "en": "presenting complaint",
+    "pl": "dolegliwość zgłaszana (przyczyna wizyty)",
+    "kind": "phrase",
+    "examples": [
+      "His presenting complaint was a two-week history of cough and fever.",
+      "The presenting complaint was acute right-sided abdominal pain.",
+      "Her presenting complaint had gradually worsened over several days."
+    ],
+    "synonyms": [
+      "chief complaint",
+      "reason for presentation"
+    ],
+    "source": "oet-core/m221"
+  },
+  {
+    "id": "core-m222",
+    "group": "w-history",
+    "en": "past medical history (PMH)",
+    "pl": "wywiad chorobowy przebyty",
+    "kind": "phrase",
+    "examples": [
+      "His past medical history includes hypertension and type 2 diabetes.",
+      "There is no significant past medical history of note.",
+      "Her PMH is notable for a previous myocardial infarction."
+    ],
+    "synonyms": [
+      "medical background",
+      "prior health conditions"
+    ],
+    "source": "oet-core/m222"
+  },
+  {
+    "id": "core-m223",
+    "group": "w-history",
+    "en": "social history",
+    "pl": "wywiad społeczny",
+    "kind": "phrase",
+    "examples": [
+      "Social history reveals that he lives alone and is independent with daily activities.",
+      "Her social history includes a 20 pack-year smoking history.",
+      "Social history was unremarkable, with no relevant occupational exposures."
+    ],
+    "synonyms": [
+      "social background"
+    ],
+    "source": "oet-core/m223"
+  },
+  {
+    "id": "core-m224",
+    "group": "w-history",
+    "en": "drug history (DHx)",
+    "pl": "wywiad lekowy",
+    "kind": "phrase",
+    "examples": [
+      "His drug history includes amlodipine and atorvastatin.",
+      "There were no known drug allergies documented in her drug history.",
+      "Drug history was reviewed prior to prescribing the new medication."
+    ],
+    "synonyms": [
+      "medication history"
+    ],
+    "source": "oet-core/m224"
+  },
+  {
+    "id": "core-m225",
+    "group": "w-history",
+    "en": "on admission",
+    "pl": "przy przyjęciu",
+    "kind": "phrase",
+    "examples": [
+      "On admission, his observations were within normal limits.",
+      "Blood tests taken on admission showed a raised white cell count.",
+      "She was afebrile on admission but became pyrexial overnight."
+    ],
+    "synonyms": [
+      "at the time of admission"
+    ],
+    "source": "oet-core/m225"
+  },
+  {
+    "id": "term-m11",
+    "group": "w-findings",
+    "en": "On examination",
+    "pl": "Podczas badania / Przy badaniu fizykalnym",
+    "kind": "expression",
+    "examples": [
+      "On examination, the patient was pyrexial and tachycardic.",
+      "On examination, there was marked abdominal distension.",
+      "On examination, we found a palpable mass in the right upper quadrant."
+    ],
+    "synonyms": [
+      "upon assessment",
+      "at clinical review",
+      "on clinical assessment"
+    ],
+    "source": "oet-terminy/m11/on-examination"
+  },
+  {
+    "id": "core-m170",
+    "group": "w-findings",
+    "en": "on palpation",
+    "pl": "podczas palpacji",
+    "kind": "phrase",
+    "examples": [
+      "On palpation, a firm mass was noted in the left flank.",
+      "The abdomen was soft on palpation, with no organomegaly.",
+      "Tenderness was elicited on palpation of the epigastrium."
+    ],
+    "synonyms": [
+      "on palpating the area",
+      "to palpation"
+    ],
+    "source": "oet-core/m170"
+  },
+  {
+    "id": "term-m6",
+    "group": "w-findings",
+    "en": "Test indicates that…",
+    "pl": "Badanie wskazuje, że… / Wynik pokazuje, że…",
+    "kind": "expression",
+    "examples": [
+      "The CT scan indicates that there is a small effusion.",
+      "Blood tests indicate that his clotting is significantly prolonged.",
+      "Recent imaging indicates a degree of stenosis in the left artery."
+    ],
+    "synonyms": [
+      "findings suggest",
+      "imaging demonstrates",
+      "results reveal",
+      "the investigation confirms"
+    ],
+    "source": "oet-terminy/m6/test-indicates-that"
+  },
+  {
+    "id": "term-m8",
+    "group": "w-findings",
+    "en": "No evidence of…",
+    "pl": "Brak dowodów na… / Nie stwierdzono…",
+    "kind": "expression",
+    "examples": [
+      "There is no evidence of acute pathology on imaging.",
+      "No evidence of infection was found on the blood cultures.",
+      "No evidence of metastatic disease is present."
+    ],
+    "synonyms": [
+      "no features of",
+      "no signs of",
+      "there is an absence of",
+      "we found no indication of"
+    ],
+    "source": "oet-terminy/m8/no-evidence-of"
+  },
+  {
+    "id": "term-m9",
+    "group": "w-findings",
+    "en": "In keeping with",
+    "pl": "Zgodnie z… / Sugerujący / Przy założeniu…",
+    "kind": "expression",
+    "examples": [
+      "The findings are in keeping with viral hepatitis.",
+      "These results are in keeping with our clinical suspicion.",
+      "The presentation is in keeping with acute pancreatitis."
+    ],
+    "synonyms": [
+      "consistent with",
+      "suggestive of",
+      "compatible with",
+      "in line with"
+    ],
+    "source": "oet-terminy/m9/in-keeping-with"
+  },
+  {
+    "id": "term-m10",
+    "group": "w-findings",
+    "en": "Consistent with",
+    "pl": "Zgodnie z… / Wskazujący na…",
+    "kind": "expression",
+    "examples": [
+      "The clinical picture is consistent with sepsis.",
+      "The radiological features are consistent with cirrhosis.",
+      "His symptoms are consistent with a viral prodrome."
+    ],
+    "synonyms": [
+      "in keeping with",
+      "suggestive of",
+      "compatible with",
+      "supportive of"
+    ],
+    "source": "oet-terminy/m10/consistent-with"
+  },
+  {
+    "id": "term-m14",
+    "group": "w-findings",
+    "en": "Unremarkable",
+    "pl": "Bez widocznych zmian / Prawidłowy / Bez cech patologicznych",
+    "kind": "word",
+    "examples": [
+      "The abdominal examination was unremarkable.",
+      "Cardiovascular examination was unremarkable.",
+      "Baseline imaging was unremarkable apart from mild degenerative changes."
+    ],
+    "synonyms": [
+      "normal",
+      "within normal limits",
+      "without abnormality",
+      "showing no significant findings"
+    ],
+    "source": "oet-terminy/m14/unremarkable"
+  },
+  {
+    "id": "term-m15",
+    "group": "w-findings",
+    "en": "Deranged (results)",
+    "pl": "Zaburzony / Nie w normie (np. wyniki)",
+    "kind": "word",
+    "examples": [
+      "His liver function tests were significantly deranged.",
+      "We found deranged coagulation and thrombocytopenia.",
+      "Biochemistry showed deranged renal function."
+    ],
+    "synonyms": [
+      "abnormal",
+      "out of range",
+      "elevated",
+      "impaired",
+      "significantly altered"
+    ],
+    "source": "oet-terminy/m15/deranged-results"
+  },
+  {
+    "id": "core-m226",
+    "group": "w-findings",
+    "en": "impression / working diagnosis",
+    "pl": "rozpoznanie robocze",
+    "kind": "phrase",
+    "examples": [
+      "The working diagnosis was community-acquired pneumonia.",
+      "My impression is that these findings represent a benign lesion.",
+      "The initial impression was later confirmed by biopsy."
+    ],
+    "synonyms": [
+      "provisional diagnosis",
+      "clinical impression"
+    ],
+    "source": "oet-core/m226"
+  },
+  {
+    "id": "core-m227",
+    "group": "w-findings",
+    "en": "differential diagnosis",
+    "pl": "diagnostyka różnicowa",
+    "kind": "phrase",
+    "examples": [
+      "The differential diagnosis includes cholecystitis and peptic ulcer disease.",
+      "Further investigation was needed to narrow the differential diagnosis.",
+      "Appendicitis remained high on the differential diagnosis list."
+    ],
+    "synonyms": [
+      "differentials",
+      "possible diagnoses"
+    ],
+    "source": "oet-core/m227"
+  },
+  {
+    "id": "core-m118",
+    "group": "w-findings",
+    "en": "given the above findings",
+    "pl": "biorąc pod uwagę powyższe wyniki",
+    "kind": "phrase",
+    "examples": [
+      "Given the above findings, I would suggest a change in her antihypertensive regime.",
+      "Given the above findings, further investigation is warranted.",
+      "Given the above findings, I recommend a multidisciplinary team discussion."
+    ],
+    "synonyms": [
+      "on the basis of these findings",
+      "in light of these results"
+    ],
+    "source": "oet-core/m118"
+  },
+  {
+    "id": "core-m112",
+    "group": "w-management",
+    "en": "upon discharge",
+    "pl": "przy wypisie",
+    "kind": "phrase",
+    "examples": [
+      "Upon discharge, she was prescribed a five-day course of antibiotics.",
+      "Upon discharge, the patient was advised to avoid heavy lifting for six weeks.",
+      "Upon discharge, follow-up was arranged with his GP in two weeks."
+    ],
+    "synonyms": [
+      "at the time of discharge",
+      "on discharge"
+    ],
+    "source": "oet-core/m112"
+  },
+  {
+    "id": "core-m171",
+    "group": "w-management",
+    "en": "to be commenced on (medication)",
+    "pl": "zostać włączonym na (lek)",
+    "kind": "expression",
+    "examples": [
+      "He was commenced on a five-day course of amoxicillin.",
+      "She was commenced on low-dose aspirin for secondary prevention.",
+      "The patient was commenced on insulin during the admission."
+    ],
+    "synonyms": [
+      "to be started on",
+      "to be initiated on"
+    ],
+    "source": "oet-core/m171"
+  },
+  {
+    "id": "core-m172",
+    "group": "w-management",
+    "en": "to be weaned off",
+    "pl": "być stopniowo odstawianym",
+    "kind": "expression",
+    "examples": [
+      "He was gradually weaned off the oxygen supplementation.",
+      "Steroids were weaned off over a period of six weeks.",
+      "She was successfully weaned off ventilatory support."
+    ],
+    "synonyms": [
+      "to be gradually discontinued",
+      "to be tapered off"
+    ],
+    "source": "oet-core/m172"
+  },
+  {
+    "id": "core-m173",
+    "group": "w-management",
+    "en": "conservative management",
+    "pl": "leczenie zachowawcze",
+    "kind": "phrase",
+    "examples": [
+      "A trial of conservative management was opted for in the first instance.",
+      "Given the mild symptoms, conservative management was appropriate.",
+      "Conservative management failed, and surgical intervention was required."
+    ],
+    "synonyms": [
+      "non-surgical management",
+      "watchful waiting"
+    ],
+    "source": "oet-core/m173"
+  },
+  {
+    "id": "core-m174",
+    "group": "w-management",
+    "en": "to be reviewed",
+    "pl": "zostać skonsultowanym/ocenionym",
+    "kind": "expression",
+    "examples": [
+      "The patient will need to be reviewed in the outpatient clinic in six weeks.",
+      "He should be reviewed by cardiology prior to discharge.",
+      "She was reviewed by the on-call registrar overnight."
+    ],
+    "synonyms": [
+      "to be assessed",
+      "to be seen (by a specialist)"
+    ],
+    "source": "oet-core/m174"
+  },
+  {
+    "id": "core-m185",
+    "group": "w-management",
+    "en": "to be discharged with...",
+    "pl": "zostać wypisanym z...",
+    "kind": "phrase",
+    "examples": [
+      "He was discharged with a course of oral antibiotics.",
+      "She was discharged with outpatient follow-up arranged.",
+      "The patient was discharged with clear safety-netting advice."
+    ],
+    "synonyms": [
+      "to be sent home with"
+    ],
+    "source": "oet-core/m185"
+  },
+  {
+    "id": "core-m186",
+    "group": "w-management",
+    "en": "to be admitted under (specialty/team)",
+    "pl": "zostać przyjętym pod opiekę (oddziału)",
+    "kind": "expression",
+    "examples": [
+      "He was admitted under the general surgical team for observation.",
+      "She was admitted under cardiology for further investigation.",
+      "The patient was admitted under the medical team overnight."
+    ],
+    "synonyms": [
+      "to be admitted to the care of"
+    ],
+    "source": "oet-core/m186"
+  },
+  {
+    "id": "core-m189",
+    "group": "w-management",
+    "en": "to be commenced empirically",
+    "pl": "włączyć empirycznie",
+    "kind": "phrase",
+    "examples": [
+      "Antibiotics were commenced empirically pending culture results.",
+      "Treatment was commenced empirically given the clinical suspicion of infection.",
+      "He was started empirically on broad-spectrum cover."
+    ],
+    "synonyms": [
+      "to start treatment based on clinical judgement (pending results)"
+    ],
+    "source": "oet-core/m189"
+  },
+  {
+    "id": "core-m180",
+    "group": "w-management",
+    "en": "to titrate (a dose)",
+    "pl": "miareczkować, dostosowywać dawkę",
+    "kind": "word",
+    "examples": [
+      "The insulin dose was titrated according to daily blood glucose readings.",
+      "Analgesia was titrated to achieve adequate pain control.",
+      "The medication was titrated up slowly to minimise side effects."
+    ],
+    "synonyms": [
+      "to gradually adjust the dose"
+    ],
+    "source": "oet-core/m180"
+  },
+  {
+    "id": "core-m187",
+    "group": "w-management",
+    "en": "to optimise (treatment/condition)",
+    "pl": "optymalizować (leczenie/stan)",
+    "kind": "word",
+    "examples": [
+      "His diabetic control was optimised prior to surgery.",
+      "We aim to optimise her pain management before discharge.",
+      "Medication was adjusted to optimise blood pressure control."
+    ],
+    "synonyms": [
+      "to improve",
+      "to fine-tune management"
+    ],
+    "source": "oet-core/m187"
+  },
+  {
+    "id": "core-m190",
+    "group": "w-management",
+    "en": "uneventful (recovery/stay)",
+    "pl": "bez powikłań, niepowikłany (przebieg)",
+    "kind": "word",
+    "examples": [
+      "His postoperative recovery was uneventful.",
+      "The remainder of her hospital stay was uneventful.",
+      "She had an uneventful recovery and was discharged on day three."
+    ],
+    "synonyms": [
+      "without complications",
+      "straightforward"
+    ],
+    "source": "oet-core/m190"
+  },
+  {
+    "id": "core-m228",
+    "group": "w-management",
+    "en": "plan going forward",
+    "pl": "dalszy plan postępowania",
+    "kind": "expression",
+    "examples": [
+      "The plan going forward includes outpatient follow-up in six weeks.",
+      "We discussed the plan going forward with the patient and her family.",
+      "The plan going forward is to continue conservative management."
+    ],
+    "synonyms": [
+      "management plan",
+      "next steps"
+    ],
+    "source": "oet-core/m228"
+  },
+  {
+    "id": "core-m229",
+    "group": "w-management",
+    "en": "as an outpatient",
+    "pl": "w trybie ambulatoryjnym",
+    "kind": "phrase",
+    "examples": [
+      "Further investigations can be arranged as an outpatient.",
+      "He will continue physiotherapy as an outpatient.",
+      "This can be safely managed as an outpatient rather than requiring admission."
+    ],
+    "synonyms": [
+      "on an outpatient basis"
+    ],
+    "source": "oet-core/m229"
+  },
+  {
+    "id": "term-m12",
+    "group": "w-management",
+    "en": "It is recommended that…",
+    "pl": "Rekomenduje się… / Zaleca się…",
+    "kind": "expression",
+    "examples": [
+      "It is recommended that he continues on current antibiotic therapy.",
+      "It is recommended that she undergoes further imaging.",
+      "It is recommended that a follow-up appointment is arranged within two weeks."
+    ],
+    "synonyms": [
+      "we advise",
+      "we suggest",
+      "the recommendation is",
+      "our guidance is that"
+    ],
+    "source": "oet-terminy/m12/it-is-recommended-that"
+  },
+  {
+    "id": "term-m13",
+    "group": "w-management",
+    "en": "We propose to…",
+    "pl": "Proponujemy… / Zamierzamy…",
+    "kind": "expression",
+    "examples": [
+      "We propose to start him on a trial of beta-blockers.",
+      "We propose to review the imaging with radiology before proceeding.",
+      "We propose to monitor him closely over the next 48 hours."
+    ],
+    "synonyms": [
+      "we plan to",
+      "we intend to",
+      "our management plan is to",
+      "we would suggest"
+    ],
+    "source": "oet-terminy/m13/we-propose-to"
+  },
+  {
+    "id": "core-m117",
+    "group": "w-management",
+    "en": "I am pleased to report that",
+    "pl": "z przyjemnością informuję, że",
+    "kind": "expression",
+    "examples": [
+      "I am pleased to report that his symptoms have resolved completely.",
+      "I am pleased to report that she responded well to the treatment.",
+      "I am pleased to report that his recovery has been uneventful."
+    ],
+    "synonyms": [
+      "I am glad to inform you that",
+      "it is encouraging to note that"
+    ],
+    "source": "oet-core/m117"
+  },
+  {
+    "id": "core-m107",
+    "group": "w-request",
+    "en": "I would be grateful if you could...",
+    "pl": "Byłbym wdzięczny, gdyby...",
+    "kind": "expression",
+    "examples": [
+      "I would be grateful if you could see this patient at your earliest convenience.",
+      "I would be grateful if you could review his medication regime.",
+      "I would be grateful if you could arrange further imaging."
+    ],
+    "synonyms": [
+      "I would appreciate it if you could",
+      "I kindly request that you"
+    ],
+    "source": "oet-core/m107"
+  },
+  {
+    "id": "core-m114",
+    "group": "w-request",
+    "en": "kindly advise",
+    "pl": "proszę o poinformowanie",
+    "kind": "phrase",
+    "examples": [
+      "Kindly advise if any further tests are required prior to his appointment.",
+      "Kindly advise on the most appropriate management plan going forward.",
+      "Kindly advise if you require any additional clinical information."
+    ],
+    "synonyms": [
+      "please advise",
+      "please let me know"
+    ],
+    "source": "oet-core/m114"
+  },
+  {
+    "id": "core-m119",
+    "group": "w-request",
+    "en": "at your earliest convenience",
+    "pl": "najszybciej jak to możliwe (formalnie)",
+    "kind": "expression",
+    "examples": [
+      "I would be grateful if you could see this patient at your earliest convenience.",
+      "Please could you arrange the appointment at your earliest convenience.",
+      "We would appreciate a review at your earliest convenience given the urgency."
+    ],
+    "synonyms": [
+      "as soon as possible",
+      "promptly"
+    ],
+    "source": "oet-core/m119"
+  },
+  {
+    "id": "core-m230",
+    "group": "w-request",
+    "en": "to liaise with",
+    "pl": "współpracować/kontaktować się z",
+    "kind": "word",
+    "examples": [
+      "I will liaise with the community team regarding ongoing care.",
+      "Please liaise with the patient's GP prior to any medication changes.",
+      "The ward team liaised closely with physiotherapy throughout her stay."
+    ],
+    "synonyms": [
+      "to coordinate with",
+      "to communicate with"
+    ],
+    "source": "oet-core/m230"
+  },
+  {
+    "id": "core-m106",
+    "group": "w-closing",
+    "en": "should you have any questions, please do not hesitate to contact me",
+    "pl": "w razie pytań proszę o kontakt",
+    "kind": "sentence",
+    "examples": [
+      "Should you have any questions, please do not hesitate to contact me on the number above.",
+      "Should you have any questions regarding this referral, please do not hesitate to contact me.",
+      "Should you have any questions about her medication history, please do not hesitate to contact me."
+    ],
+    "synonyms": [
+      "please feel free to contact me",
+      "do get in touch if you require further information"
+    ],
+    "source": "oet-core/m106"
+  },
+  {
+    "id": "core-m120",
+    "group": "w-closing",
+    "en": "thank you for taking the time to review this referral",
+    "pl": "dziękuję za poświęcenie czasu na rozpatrzenie skierowania",
+    "kind": "sentence",
+    "examples": [
+      "Thank you for taking the time to review this referral.",
+      "Thank you for taking the time to review this referral; I look forward to your response.",
+      "Thank you for taking the time to review this referral and for your continued care of this patient."
+    ],
+    "synonyms": [
+      "thank you for your attention to this matter",
+      "I appreciate your consideration"
+    ],
+    "source": "oet-core/m120"
+  },
+  {
+    "id": "core-m108",
+    "group": "w-closing",
+    "en": "please find enclosed",
+    "pl": "w załączeniu przesyłam",
+    "kind": "expression",
+    "examples": [
+      "Please find enclosed a copy of her recent blood results.",
+      "Please find enclosed the discharge summary from her recent admission.",
+      "Please find enclosed his most recent imaging report."
+    ],
+    "synonyms": [
+      "attached is",
+      "I have enclosed"
+    ],
+    "source": "oet-core/m108"
+  },
+  {
+    "id": "core-m113",
+    "group": "w-closing",
+    "en": "for your information",
+    "pl": "do wiadomości",
+    "kind": "phrase",
+    "examples": [
+      "For your information, a copy of this letter has been sent to the patient.",
+      "For your information, his previous scan was performed in March 2025.",
+      "For your information, the patient's next of kin has been informed."
+    ],
+    "synonyms": [
+      "for reference",
+      "to keep you informed"
+    ],
+    "source": "oet-core/m113"
+  },
+  {
+    "id": "core-m104",
+    "group": "w-linking",
+    "en": "in light of",
+    "pl": "w świetle (czegoś)",
+    "kind": "expression",
+    "examples": [
+      "In light of these findings, I would recommend urgent referral to gastroenterology.",
+      "In light of her deteriorating renal function, the medication dose was reduced.",
+      "In light of the imaging results, surgery was deemed necessary."
+    ],
+    "synonyms": [
+      "given",
+      "considering",
+      "in view of"
+    ],
+    "source": "oet-core/m104"
+  },
+  {
+    "id": "core-m105",
+    "group": "w-linking",
+    "en": "consequently",
+    "pl": "w konsekwencji",
+    "kind": "word",
+    "examples": [
+      "Consequently, his medication was changed to a lower-dose alternative.",
+      "The patient missed several follow-up appointments; consequently, her condition worsened.",
+      "Consequently, we would appreciate your prompt assessment."
+    ],
+    "synonyms": [
+      "as a result",
+      "therefore",
+      "accordingly"
+    ],
+    "source": "oet-core/m105"
+  },
+  {
+    "id": "core-m109",
+    "group": "w-linking",
+    "en": "to that end",
+    "pl": "w tym celu",
+    "kind": "expression",
+    "examples": [
+      "To that end, I have arranged for a follow-up ultrasound in four weeks.",
+      "To that end, we would ask that his blood pressure be monitored weekly.",
+      "To that end, physiotherapy input has already been arranged."
+    ],
+    "synonyms": [
+      "with this in mind",
+      "for this purpose"
+    ],
+    "source": "oet-core/m109"
+  },
+  {
+    "id": "core-m110",
+    "group": "w-linking",
+    "en": "with regard to",
+    "pl": "odnośnie do",
+    "kind": "expression",
+    "examples": [
+      "With regard to her ongoing pain management, please continue the current regime.",
+      "With regard to his surgical history, he underwent an appendicectomy in 2019.",
+      "With regard to the imaging findings, further correlation with symptoms is advised."
+    ],
+    "synonyms": [
+      "regarding",
+      "concerning",
+      "in relation to"
+    ],
+    "source": "oet-core/m110"
+  },
+  {
+    "id": "core-m111",
+    "group": "w-linking",
+    "en": "it is worth noting that",
+    "pl": "warto zauważyć, że",
+    "kind": "expression",
+    "examples": [
+      "It is worth noting that she has a family history of colorectal cancer.",
+      "It is worth noting that his symptoms improved significantly with the new medication.",
+      "It is worth noting that no previous imaging is available for comparison."
+    ],
+    "synonyms": [
+      "it should be noted that",
+      "notably"
+    ],
+    "source": "oet-core/m111"
+  },
+  {
+    "id": "core-m115",
+    "group": "w-linking",
+    "en": "as previously mentioned",
+    "pl": "jak wspomniano wcześniej",
+    "kind": "phrase",
+    "examples": [
+      "As previously mentioned, she has a documented allergy to penicillin.",
+      "As previously mentioned, his symptoms began approximately three weeks ago.",
+      "As previously mentioned, conservative management was trialled without success."
+    ],
+    "synonyms": [
+      "as noted above",
+      "as stated earlier"
+    ],
+    "source": "oet-core/m115"
+  },
+  {
+    "id": "core-m116",
+    "group": "w-linking",
+    "en": "in view of the above",
+    "pl": "biorąc powyższe pod uwagę",
+    "kind": "expression",
+    "examples": [
+      "In view of the above, I would recommend an urgent surgical opinion.",
+      "In view of the above, her medication has been adjusted accordingly.",
+      "In view of the above, further outpatient follow-up is advised."
+    ],
+    "synonyms": [
+      "given the above",
+      "taking the above into account"
+    ],
+    "source": "oet-core/m116"
+  }
+]

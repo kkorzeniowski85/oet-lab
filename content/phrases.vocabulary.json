@@ -1,0 +1,2930 @@
+[
+  {
+    "id": "core-m122",
+    "group": "v-symptoms",
+    "en": "malaise",
+    "pl": "złe samopoczucie",
+    "kind": "word",
+    "examples": [
+      "He presented with a two-day history of malaise and low-grade fever.",
+      "She reported general malaise alongside joint pain.",
+      "The malaise gradually resolved following a course of antibiotics."
+    ],
+    "synonyms": [
+      "feeling generally unwell",
+      "lack of wellbeing"
+    ],
+    "source": "oet-core/m122"
+  },
+  {
+    "id": "core-m123",
+    "group": "v-symptoms",
+    "en": "lethargy",
+    "pl": "ospałość, letarg",
+    "kind": "word",
+    "examples": [
+      "The mother reported increasing lethargy in her child over the past 24 hours.",
+      "He described several weeks of lethargy and reduced appetite.",
+      "Lethargy is a common but non-specific presenting symptom."
+    ],
+    "synonyms": [
+      "fatigue",
+      "tiredness",
+      "low energy"
+    ],
+    "source": "oet-core/m123"
+  },
+  {
+    "id": "core-m124",
+    "group": "v-symptoms",
+    "en": "dyspnoea (on exertion)",
+    "pl": "duszność (wysiłkowa)",
+    "kind": "word",
+    "examples": [
+      "He reports worsening dyspnoea on exertion over the past month.",
+      "She was admitted with acute dyspnoea and chest tightness.",
+      "His dyspnoea limits him to walking short distances on the flat."
+    ],
+    "synonyms": [
+      "shortness of breath",
+      "breathlessness"
+    ],
+    "source": "oet-core/m124"
+  },
+  {
+    "id": "core-m125",
+    "group": "v-symptoms",
+    "en": "palpitations",
+    "pl": "kołatanie serca",
+    "kind": "word",
+    "examples": [
+      "She describes intermittent palpitations lasting several minutes at a time.",
+      "The palpitations are associated with light-headedness.",
+      "He denies any chest pain but reports occasional palpitations."
+    ],
+    "synonyms": [
+      "irregular heartbeat",
+      "racing heart"
+    ],
+    "source": "oet-core/m125"
+  },
+  {
+    "id": "core-m126",
+    "group": "v-symptoms",
+    "en": "tenderness",
+    "pl": "tkliwość, bolesność uciskowa",
+    "kind": "word",
+    "examples": [
+      "There was marked tenderness in the right upper quadrant.",
+      "Mild tenderness was noted over the lumbar spine.",
+      "No tenderness was elicited on abdominal palpation."
+    ],
+    "synonyms": [
+      "pain on palpation",
+      "sensitivity to touch"
+    ],
+    "source": "oet-core/m126"
+  },
+  {
+    "id": "core-m127",
+    "group": "v-symptoms",
+    "en": "distension",
+    "pl": "wzdęcie, rozdęcie",
+    "kind": "word",
+    "examples": [
+      "The abdomen was noted to be distended, with generalised tenderness.",
+      "Abdominal distension had progressively worsened over three days.",
+      "There was no evidence of bowel distension on the scan."
+    ],
+    "synonyms": [
+      "swelling",
+      "bloating",
+      "enlargement"
+    ],
+    "source": "oet-core/m127"
+  },
+  {
+    "id": "core-m128",
+    "group": "v-symptoms",
+    "en": "erythema",
+    "pl": "rumień",
+    "kind": "word",
+    "examples": [
+      "There was erythema surrounding the surgical wound.",
+      "The affected area showed erythema and mild swelling.",
+      "No erythema or discharge was noted at the injection site."
+    ],
+    "synonyms": [
+      "redness",
+      "skin reddening"
+    ],
+    "source": "oet-core/m128"
+  },
+  {
+    "id": "core-m129",
+    "group": "v-symptoms",
+    "en": "pallor",
+    "pl": "bladość",
+    "kind": "word",
+    "examples": [
+      "The patient appeared pale, with noticeable pallor of the conjunctivae.",
+      "Pallor and tachycardia raised concern for significant blood loss.",
+      "There was no pallor or cyanosis on general inspection."
+    ],
+    "synonyms": [
+      "paleness",
+      "pale complexion"
+    ],
+    "source": "oet-core/m129"
+  },
+  {
+    "id": "core-m130",
+    "group": "v-symptoms",
+    "en": "syncope",
+    "pl": "omdlenie",
+    "kind": "word",
+    "examples": [
+      "He experienced a syncopal episode while standing at the bus stop.",
+      "She was referred following a single episode of syncope.",
+      "The syncope was preceded by light-headedness and blurred vision."
+    ],
+    "synonyms": [
+      "fainting",
+      "loss of consciousness (transient)"
+    ],
+    "source": "oet-core/m130"
+  },
+  {
+    "id": "core-m131",
+    "group": "v-symptoms",
+    "en": "insidious onset",
+    "pl": "podstępny/skryty początek",
+    "kind": "phrase",
+    "examples": [
+      "The pain had an insidious onset over several weeks.",
+      "Symptoms of insidious onset are typical of this condition.",
+      "Unlike acute presentations, this was of insidious onset."
+    ],
+    "synonyms": [
+      "gradual onset",
+      "slow-developing"
+    ],
+    "source": "oet-core/m131"
+  },
+  {
+    "id": "core-m132",
+    "group": "v-symptoms",
+    "en": "intermittent",
+    "pl": "przerywany, okresowy",
+    "kind": "word",
+    "examples": [
+      "He describes intermittent abdominal pain over the past month.",
+      "The symptoms are intermittent rather than constant.",
+      "Intermittent claudication was reported on walking uphill."
+    ],
+    "synonyms": [
+      "episodic",
+      "on-and-off",
+      "recurrent"
+    ],
+    "source": "oet-core/m132"
+  },
+  {
+    "id": "core-m133",
+    "group": "v-symptoms",
+    "en": "radiating pain",
+    "pl": "ból promieniujący",
+    "kind": "phrase",
+    "examples": [
+      "The chest pain was radiating to his left arm and jaw.",
+      "She reported lower back pain radiating down her right leg.",
+      "The pain radiates from the epigastrium through to the back."
+    ],
+    "synonyms": [
+      "referred pain",
+      "pain spreading to"
+    ],
+    "source": "oet-core/m133"
+  },
+  {
+    "id": "core-m136",
+    "group": "v-symptoms",
+    "en": "pyrexia",
+    "pl": "gorączka (termin formalny)",
+    "kind": "word",
+    "examples": [
+      "The patient was pyrexial on admission, with a temperature of 38.6°C.",
+      "Pyrexia resolved following the administration of antipyretics.",
+      "He remained pyrexial despite broad-spectrum antibiotics."
+    ],
+    "synonyms": [
+      "fever",
+      "elevated temperature"
+    ],
+    "source": "oet-core/m136"
+  },
+  {
+    "id": "core-m137",
+    "group": "v-symptoms",
+    "en": "nausea and vomiting",
+    "pl": "nudności i wymioty",
+    "kind": "phrase",
+    "examples": [
+      "She presented with a two-day history of nausea and vomiting.",
+      "The nausea and vomiting settled with antiemetic treatment.",
+      "He reports nausea but denies any episodes of vomiting."
+    ],
+    "synonyms": [
+      "feeling sick and being sick",
+      "N&V"
+    ],
+    "source": "oet-core/m137"
+  },
+  {
+    "id": "core-m138",
+    "group": "v-symptoms",
+    "en": "malodorous",
+    "pl": "o nieprzyjemnym zapachu",
+    "kind": "word",
+    "examples": [
+      "The wound discharge was noted to be malodorous.",
+      "She reported malodorous vaginal discharge for one week.",
+      "There was malodorous drainage from the surgical site."
+    ],
+    "synonyms": [
+      "foul-smelling",
+      "offensive-smelling"
+    ],
+    "source": "oet-core/m138"
+  },
+  {
+    "id": "core-m139",
+    "group": "v-symptoms",
+    "en": "oedema",
+    "pl": "obrzęk",
+    "kind": "word",
+    "examples": [
+      "There was bilateral pitting oedema of the lower limbs.",
+      "Periorbital oedema was noted on examination.",
+      "The oedema improved following diuretic treatment."
+    ],
+    "synonyms": [
+      "swelling",
+      "fluid retention"
+    ],
+    "source": "oet-core/m139"
+  },
+  {
+    "id": "core-m140",
+    "group": "v-symptoms",
+    "en": "anorexia (loss of appetite)",
+    "pl": "brak łaknienia",
+    "kind": "word",
+    "examples": [
+      "He describes a three-week history of anorexia and weight loss.",
+      "Anorexia was accompanied by early satiety.",
+      "Her appetite has improved, with resolution of the earlier anorexia."
+    ],
+    "synonyms": [
+      "poor appetite",
+      "reduced oral intake"
+    ],
+    "source": "oet-core/m140"
+  },
+  {
+    "id": "core-m141",
+    "group": "v-symptoms",
+    "en": "pruritus",
+    "pl": "świąd",
+    "kind": "word",
+    "examples": [
+      "She complains of generalised pruritus, worse at night.",
+      "The pruritus was associated with a widespread rash.",
+      "Pruritus can be a symptom of underlying liver disease."
+    ],
+    "synonyms": [
+      "itching",
+      "itchiness"
+    ],
+    "source": "oet-core/m141"
+  },
+  {
+    "id": "core-m142",
+    "group": "v-symptoms",
+    "en": "rigors",
+    "pl": "dreszcze (silne, z drżeniem)",
+    "kind": "word",
+    "examples": [
+      "He experienced rigors associated with a spiking temperature.",
+      "The patient reported rigors the night prior to admission.",
+      "Rigors and pyrexia raised suspicion of sepsis."
+    ],
+    "synonyms": [
+      "shivering episodes",
+      "shaking chills"
+    ],
+    "source": "oet-core/m142"
+  },
+  {
+    "id": "core-m143",
+    "group": "v-symptoms",
+    "en": "diaphoresis",
+    "pl": "nadmierne pocenie się",
+    "kind": "word",
+    "examples": [
+      "The patient was noted to be cool and clammy, with marked diaphoresis.",
+      "Diaphoresis accompanied the episode of chest pain.",
+      "She reported night-time diaphoresis over the past month."
+    ],
+    "synonyms": [
+      "excessive sweating",
+      "profuse sweating"
+    ],
+    "source": "oet-core/m143"
+  },
+  {
+    "id": "core-m144",
+    "group": "v-symptoms",
+    "en": "photophobia",
+    "pl": "światłowstręt",
+    "kind": "word",
+    "examples": [
+      "He reports headache associated with photophobia and neck stiffness.",
+      "Photophobia was a prominent feature of her migraine.",
+      "There was no photophobia or neck stiffness on examination."
+    ],
+    "synonyms": [
+      "light sensitivity"
+    ],
+    "source": "oet-core/m144"
+  },
+  {
+    "id": "core-m145",
+    "group": "v-symptoms",
+    "en": "tachycardia",
+    "pl": "tachykardia, przyspieszona akcja serca",
+    "kind": "word",
+    "examples": [
+      "He was tachycardic on arrival, with a heart rate of 128 beats per minute.",
+      "The tachycardia settled following adequate fluid resuscitation.",
+      "Sinus tachycardia was noted on the ECG."
+    ],
+    "synonyms": [
+      "rapid heart rate",
+      "elevated pulse"
+    ],
+    "source": "oet-core/m145"
+  },
+  {
+    "id": "core-m146",
+    "group": "v-symptoms",
+    "en": "bradycardia",
+    "pl": "bradykardia, zwolniona akcja serca",
+    "kind": "word",
+    "examples": [
+      "The patient developed bradycardia following the procedure.",
+      "Bradycardia was attributed to beta-blocker therapy.",
+      "He remained asymptomatic despite mild bradycardia."
+    ],
+    "synonyms": [
+      "slow heart rate",
+      "low pulse"
+    ],
+    "source": "oet-core/m146"
+  },
+  {
+    "id": "core-m147",
+    "group": "v-symptoms",
+    "en": "hypotension",
+    "pl": "niedociśnienie",
+    "kind": "word",
+    "examples": [
+      "He became hypotensive shortly after induction of anaesthesia.",
+      "The hypotension responded well to intravenous fluids.",
+      "Postural hypotension was confirmed on lying and standing measurements."
+    ],
+    "synonyms": [
+      "low blood pressure"
+    ],
+    "source": "oet-core/m147"
+  },
+  {
+    "id": "core-m148",
+    "group": "v-symptoms",
+    "en": "pyrexia of unknown origin (PUO)",
+    "pl": "gorączka o nieznanej etiologii",
+    "kind": "phrase",
+    "examples": [
+      "She was referred for further investigation of pyrexia of unknown origin.",
+      "Extensive work-up failed to identify a cause for his PUO.",
+      "PUO was eventually attributed to an occult abscess."
+    ],
+    "synonyms": [
+      "fever of unknown origin (FUO)"
+    ],
+    "source": "oet-core/m148"
+  },
+  {
+    "id": "core-m149",
+    "group": "v-symptoms",
+    "en": "abdominal guarding",
+    "pl": "obrona mięśniowa powłok brzusznych",
+    "kind": "phrase",
+    "examples": [
+      "There was marked abdominal guarding in the right iliac fossa.",
+      "Guarding and rebound tenderness raised concern for peritonitis.",
+      "No guarding was elicited on gentle palpation."
+    ],
+    "synonyms": [
+      "muscle guarding",
+      "involuntary abdominal rigidity"
+    ],
+    "source": "oet-core/m149"
+  },
+  {
+    "id": "core-m150",
+    "group": "v-symptoms",
+    "en": "rebound tenderness",
+    "pl": "bolesność uciskowa z objawem Blumberga",
+    "kind": "phrase",
+    "examples": [
+      "Rebound tenderness was positive over McBurney's point.",
+      "The presence of rebound tenderness prompted an urgent surgical review.",
+      "There was no rebound tenderness on examination."
+    ],
+    "synonyms": [
+      "Blumberg's sign",
+      "peritonism"
+    ],
+    "source": "oet-core/m150"
+  },
+  {
+    "id": "core-m151",
+    "group": "v-symptoms",
+    "en": "jaundice",
+    "pl": "żółtaczka",
+    "kind": "word",
+    "examples": [
+      "He presented with painless jaundice and dark urine.",
+      "Jaundice was noted on examination of the sclerae.",
+      "The jaundice gradually improved following biliary drainage."
+    ],
+    "synonyms": [
+      "icterus",
+      "yellowing of the skin and eyes"
+    ],
+    "source": "oet-core/m151"
+  },
+  {
+    "id": "core-m152",
+    "group": "v-symptoms",
+    "en": "cyanosis",
+    "pl": "sinica",
+    "kind": "word",
+    "examples": [
+      "Central cyanosis was noted around the lips.",
+      "Peripheral cyanosis of the fingertips was observed in the cold.",
+      "There was no cyanosis, and oxygen saturations were normal."
+    ],
+    "synonyms": [
+      "bluish discolouration",
+      "hypoxic discolouration"
+    ],
+    "source": "oet-core/m152"
+  },
+  {
+    "id": "core-m153",
+    "group": "v-symptoms",
+    "en": "clubbing (finger clubbing)",
+    "pl": "palce pałeczkowate",
+    "kind": "word",
+    "examples": [
+      "Mild finger clubbing was noted, raising suspicion of chronic lung disease.",
+      "There was no evidence of clubbing on examination of the hands.",
+      "Clubbing can be associated with a variety of cardiopulmonary conditions."
+    ],
+    "synonyms": [
+      "digital clubbing"
+    ],
+    "source": "oet-core/m153"
+  },
+  {
+    "id": "core-m154",
+    "group": "v-symptoms",
+    "en": "haemoptysis",
+    "pl": "krwioplucie",
+    "kind": "word",
+    "examples": [
+      "He was referred urgently following an episode of haemoptysis.",
+      "She reported small volumes of haemoptysis over several days.",
+      "Massive haemoptysis required urgent bronchoscopy."
+    ],
+    "synonyms": [
+      "coughing up blood"
+    ],
+    "source": "oet-core/m154"
+  },
+  {
+    "id": "core-m155",
+    "group": "v-symptoms",
+    "en": "haematemesis",
+    "pl": "krwawe wymioty",
+    "kind": "word",
+    "examples": [
+      "He was admitted following an episode of haematemesis.",
+      "The haematemesis prompted urgent endoscopic assessment.",
+      "She denied haematemesis but reported dark stools."
+    ],
+    "synonyms": [
+      "vomiting blood"
+    ],
+    "source": "oet-core/m155"
+  },
+  {
+    "id": "core-m156",
+    "group": "v-symptoms",
+    "en": "melaena",
+    "pl": "smoliste stolce",
+    "kind": "word",
+    "examples": [
+      "He described a two-day history of melaena.",
+      "Melaena is suggestive of an upper gastrointestinal bleed.",
+      "There was no melaena or fresh rectal bleeding reported."
+    ],
+    "synonyms": [
+      "black, tarry stools"
+    ],
+    "source": "oet-core/m156"
+  },
+  {
+    "id": "core-m157",
+    "group": "v-symptoms",
+    "en": "dysuria",
+    "pl": "bolesne oddawanie moczu",
+    "kind": "word",
+    "examples": [
+      "She reported dysuria and increased urinary frequency.",
+      "Dysuria and fever raised suspicion of a urinary tract infection.",
+      "There was no dysuria or haematuria reported."
+    ],
+    "synonyms": [
+      "painful urination"
+    ],
+    "source": "oet-core/m157"
+  },
+  {
+    "id": "core-m158",
+    "group": "v-symptoms",
+    "en": "polyuria",
+    "pl": "wielomocz",
+    "kind": "word",
+    "examples": [
+      "He presented with polyuria and polydipsia over several weeks.",
+      "Polyuria was one of the initial presenting features of his diabetes.",
+      "The polyuria resolved with improved glycaemic control."
+    ],
+    "synonyms": [
+      "excessive urination"
+    ],
+    "source": "oet-core/m158"
+  },
+  {
+    "id": "core-m159",
+    "group": "v-symptoms",
+    "en": "urinary frequency",
+    "pl": "częstomocz",
+    "kind": "phrase",
+    "examples": [
+      "She complains of urinary frequency, particularly at night.",
+      "Urinary frequency was associated with mild suprapubic discomfort.",
+      "There was no urinary frequency or urgency reported."
+    ],
+    "synonyms": [
+      "increased frequency of micturition"
+    ],
+    "source": "oet-core/m159"
+  },
+  {
+    "id": "core-m160",
+    "group": "v-symptoms",
+    "en": "constipation",
+    "pl": "zaparcie",
+    "kind": "word",
+    "examples": [
+      "He reports a two-week history of constipation.",
+      "The constipation improved following dietary modification.",
+      "She denies any recent constipation or change in bowel habit."
+    ],
+    "synonyms": [
+      "infrequent bowel movements"
+    ],
+    "source": "oet-core/m160"
+  },
+  {
+    "id": "core-m161",
+    "group": "v-symptoms",
+    "en": "diarrhoea",
+    "pl": "biegunka",
+    "kind": "word",
+    "examples": [
+      "She presented with a five-day history of diarrhoea.",
+      "The diarrhoea was associated with abdominal cramping.",
+      "His diarrhoea settled following cessation of the antibiotic."
+    ],
+    "synonyms": [
+      "loose stools",
+      "frequent bowel movements"
+    ],
+    "source": "oet-core/m161"
+  },
+  {
+    "id": "core-m162",
+    "group": "v-symptoms",
+    "en": "weight loss (unintentional)",
+    "pl": "niezamierzona utrata masy ciała",
+    "kind": "phrase",
+    "examples": [
+      "He reports unintentional weight loss of approximately 6kg over three months.",
+      "Unintentional weight loss is a recognised red-flag symptom.",
+      "She denies any deliberate dieting to account for the weight loss."
+    ],
+    "synonyms": [
+      "unexplained weight loss"
+    ],
+    "source": "oet-core/m162"
+  },
+  {
+    "id": "core-m163",
+    "group": "v-symptoms",
+    "en": "malaise and fatigue",
+    "pl": "ogólne złe samopoczucie i zmęczenie",
+    "kind": "phrase",
+    "examples": [
+      "She presented with several weeks of malaise and fatigue.",
+      "Malaise and fatigue were the predominant presenting symptoms.",
+      "His malaise and fatigue improved following correction of his anaemia."
+    ],
+    "synonyms": [
+      "generalised tiredness and unwellness"
+    ],
+    "source": "oet-core/m163"
+  },
+  {
+    "id": "core-m164",
+    "group": "v-symptoms",
+    "en": "dizziness / light-headedness",
+    "pl": "zawroty głowy / uczucie oszołomienia",
+    "kind": "word",
+    "examples": [
+      "He describes episodes of light-headedness on standing.",
+      "The dizziness was associated with mild nausea.",
+      "She denies true vertigo but reports intermittent light-headedness."
+    ],
+    "synonyms": [
+      "vertigo (if rotational)",
+      "feeling faint"
+    ],
+    "source": "oet-core/m164"
+  },
+  {
+    "id": "core-m165",
+    "group": "v-symptoms",
+    "en": "confusion",
+    "pl": "splątanie",
+    "kind": "word",
+    "examples": [
+      "The family reported acute confusion over the preceding 24 hours.",
+      "His confusion resolved following treatment of the underlying infection.",
+      "She was noted to be intermittently confused, particularly at night."
+    ],
+    "synonyms": [
+      "disorientation",
+      "altered mental state"
+    ],
+    "source": "oet-core/m165"
+  },
+  {
+    "id": "core-m166",
+    "group": "v-symptoms",
+    "en": "reduced level of consciousness",
+    "pl": "obniżony poziom świadomości",
+    "kind": "phrase",
+    "examples": [
+      "He was brought in with a reduced level of consciousness following a fall.",
+      "A reduced level of consciousness prompted urgent airway assessment.",
+      "Her level of consciousness improved following correction of hypoglycaemia."
+    ],
+    "synonyms": [
+      "decreased consciousness",
+      "drowsiness"
+    ],
+    "source": "oet-core/m166"
+  },
+  {
+    "id": "core-m167",
+    "group": "v-symptoms",
+    "en": "localised / generalised (pain)",
+    "pl": "zlokalizowany / uogólniony (ból)",
+    "kind": "word",
+    "examples": [
+      "The pain was localised to the right upper quadrant.",
+      "He described generalised abdominal pain rather than a specific focus.",
+      "The tenderness was localised, without generalised peritonism."
+    ],
+    "synonyms": [
+      "focal",
+      "diffuse (pain)"
+    ],
+    "source": "oet-core/m167"
+  },
+  {
+    "id": "core-m168",
+    "group": "v-symptoms",
+    "en": "sharp / dull (pain)",
+    "pl": "ostry / tępy (ból)",
+    "kind": "word",
+    "examples": [
+      "She described the pain as sharp and stabbing in nature.",
+      "He reported a dull, constant ache in the lower back.",
+      "The pain changed from a dull ache to a sharp, severe pain."
+    ],
+    "synonyms": [
+      "stabbing (sharp)",
+      "aching (dull)"
+    ],
+    "source": "oet-core/m168"
+  },
+  {
+    "id": "core-m169",
+    "group": "v-symptoms",
+    "en": "colicky pain",
+    "pl": "ból kolkowy",
+    "kind": "phrase",
+    "examples": [
+      "He described colicky abdominal pain occurring in waves.",
+      "The colicky pain was associated with vomiting.",
+      "Colicky pain radiating to the groin is typical of renal colic."
+    ],
+    "synonyms": [
+      "cramping pain",
+      "spasmodic pain"
+    ],
+    "source": "oet-core/m169"
+  },
+  {
+    "id": "core-m175",
+    "group": "v-clinical",
+    "en": "to deteriorate",
+    "pl": "pogarszać się",
+    "kind": "word",
+    "examples": [
+      "His condition began to deteriorate rapidly overnight.",
+      "Despite treatment, her renal function continued to deteriorate.",
+      "The wound showed no signs of deterioration on review."
+    ],
+    "synonyms": [
+      "to worsen",
+      "to decline"
+    ],
+    "source": "oet-core/m175"
+  },
+  {
+    "id": "core-m176",
+    "group": "v-clinical",
+    "en": "to stabilise",
+    "pl": "ustabilizować się",
+    "kind": "word",
+    "examples": [
+      "His observations stabilised following fluid resuscitation.",
+      "Her condition has now stabilised and she is fit for discharge.",
+      "Blood pressure stabilised within normal range after treatment."
+    ],
+    "synonyms": [
+      "to settle",
+      "to become stable"
+    ],
+    "source": "oet-core/m176"
+  },
+  {
+    "id": "core-m177",
+    "group": "v-clinical",
+    "en": "prophylaxis",
+    "pl": "profilaktyka",
+    "kind": "word",
+    "examples": [
+      "He was commenced on prophylaxis against deep vein thrombosis.",
+      "Antibiotic prophylaxis was given prior to the procedure.",
+      "Prophylaxis is recommended in patients with recurrent infections."
+    ],
+    "synonyms": [
+      "preventive treatment",
+      "prevention"
+    ],
+    "source": "oet-core/m177"
+  },
+  {
+    "id": "core-m178",
+    "group": "v-clinical",
+    "en": "contraindicated",
+    "pl": "przeciwwskazany",
+    "kind": "word",
+    "examples": [
+      "This medication is contraindicated in patients with renal impairment.",
+      "Given her allergy, penicillin-based antibiotics are contraindicated.",
+      "The procedure was contraindicated due to his bleeding disorder."
+    ],
+    "synonyms": [
+      "not recommended",
+      "unsuitable (for a treatment)"
+    ],
+    "source": "oet-core/m178"
+  },
+  {
+    "id": "core-m179",
+    "group": "v-clinical",
+    "en": "compliance / adherence (to treatment)",
+    "pl": "przestrzeganie zaleceń",
+    "kind": "word",
+    "examples": [
+      "Poor adherence to treatment may explain the recurrence of symptoms.",
+      "He reports good compliance with his current medication regime.",
+      "We discussed the importance of adherence to reduce future complications."
+    ],
+    "synonyms": [
+      "concordance with treatment"
+    ],
+    "source": "oet-core/m179"
+  },
+  {
+    "id": "core-m181",
+    "group": "v-clinical",
+    "en": "follow-up",
+    "pl": "kontrola, wizyta kontrolna",
+    "kind": "word",
+    "examples": [
+      "Follow-up has been arranged in the outpatient clinic in four weeks.",
+      "She will require regular follow-up to monitor disease progression.",
+      "No further follow-up is required at this stage."
+    ],
+    "synonyms": [
+      "review appointment",
+      "follow-up visit"
+    ],
+    "source": "oet-core/m181"
+  },
+  {
+    "id": "core-m182",
+    "group": "v-clinical",
+    "en": "referral",
+    "pl": "skierowanie",
+    "kind": "word",
+    "examples": [
+      "I am making this referral for further specialist assessment.",
+      "A referral to the pain clinic has been arranged.",
+      "The referral was accepted, and an appointment has been scheduled."
+    ],
+    "synonyms": [
+      "referral letter",
+      "request for specialist opinion"
+    ],
+    "source": "oet-core/m182"
+  },
+  {
+    "id": "core-m183",
+    "group": "v-clinical",
+    "en": "co-morbidities",
+    "pl": "choroby współistniejące",
+    "kind": "word",
+    "examples": [
+      "His significant co-morbidities include type 2 diabetes and hypertension.",
+      "Given her multiple co-morbidities, a cautious approach is advised.",
+      "There were no significant co-morbidities of note."
+    ],
+    "synonyms": [
+      "coexisting conditions",
+      "associated medical conditions"
+    ],
+    "source": "oet-core/m183"
+  },
+  {
+    "id": "core-m184",
+    "group": "v-clinical",
+    "en": "baseline",
+    "pl": "wartość wyjściowa/wyjściowy stan",
+    "kind": "word",
+    "examples": [
+      "Renal function has returned to baseline following treatment.",
+      "His baseline mobility is with the aid of a walking stick.",
+      "Repeat imaging showed no change compared with the baseline scan."
+    ],
+    "synonyms": [
+      "starting point",
+      "pre-existing level"
+    ],
+    "source": "oet-core/m184"
+  },
+  {
+    "id": "core-m188",
+    "group": "v-clinical",
+    "en": "to resolve (symptoms resolved)",
+    "pl": "ustąpić (o objawach)",
+    "kind": "word",
+    "examples": [
+      "His symptoms fully resolved within 48 hours of treatment.",
+      "The swelling had largely resolved by the follow-up appointment.",
+      "Her fever resolved following the course of antibiotics."
+    ],
+    "synonyms": [
+      "to settle",
+      "to clear up"
+    ],
+    "source": "oet-core/m188"
+  },
+  {
+    "id": "term-m1",
+    "group": "v-clinical",
+    "en": "exacerbation",
+    "pl": "zaostrzenie (choroby)",
+    "kind": "word",
+    "examples": [
+      "The patient was admitted with an acute exacerbation of COPD.",
+      "There has been an exacerbation of her symptoms over the past week.",
+      "We managed to prevent further exacerbation with early intervention."
+    ],
+    "synonyms": [
+      "acute deterioration",
+      "worsening",
+      "decompensation"
+    ],
+    "source": "oet-terminy/m1/exacerbation"
+  },
+  {
+    "id": "term-m2",
+    "group": "v-clinical",
+    "en": "contraindication",
+    "pl": "przeciwwskazanie",
+    "kind": "word",
+    "examples": [
+      "Renal impairment is a contraindication to this contrast agent.",
+      "There are no absolute contraindications to this procedure.",
+      "Pregnancy is an important contraindication for this medication."
+    ],
+    "synonyms": [
+      "reason to avoid",
+      "precaution",
+      "absolute bar to"
+    ],
+    "source": "oet-terminy/m2/contraindication"
+  },
+  {
+    "id": "term-m3",
+    "group": "v-clinical",
+    "en": "prognosis",
+    "pl": "rokowanie",
+    "kind": "word",
+    "examples": [
+      "The prognosis for stage III disease is guarded.",
+      "We discussed a more favourable prognosis if he loses weight.",
+      "The overall prognosis remains uncertain at this stage."
+    ],
+    "synonyms": [
+      "outlook",
+      "expected course",
+      "likely outcome",
+      "clinical trajectory"
+    ],
+    "source": "oet-terminy/m3/prognosis"
+  },
+  {
+    "id": "term-m4",
+    "group": "v-clinical",
+    "en": "palliative",
+    "pl": "paliatywny / objawowy",
+    "kind": "word",
+    "examples": [
+      "The patient has been referred for palliative care input.",
+      "We're taking a palliative approach given his advanced disease.",
+      "Palliative treatment focuses on symptom control rather than cure."
+    ],
+    "synonyms": [
+      "symptomatic",
+      "supportive",
+      "comfort-focused",
+      "non-curative"
+    ],
+    "source": "oet-terminy/m4/palliative"
+  },
+  {
+    "id": "term-m5",
+    "group": "v-clinical",
+    "en": "comorbidity",
+    "pl": "choroba współistniejąca / choroby towarzyszące",
+    "kind": "word",
+    "examples": [
+      "He has multiple comorbidities including diabetes and hypertension.",
+      "Significant comorbidity was noted on examination.",
+      "Her comorbidities will impact the choice of treatment."
+    ],
+    "synonyms": [
+      "coexisting condition",
+      "concurrent illness",
+      "associated condition"
+    ],
+    "source": "oet-terminy/m5/comorbidity"
+  },
+  {
+    "id": "term-m16",
+    "group": "v-clinical",
+    "en": "Surrogate outcome",
+    "pl": "Punkt końcowy zastępczy / Miernik zastępczy",
+    "kind": "phrase",
+    "examples": [
+      "We need to be careful — improving the surrogate outcome doesn't guarantee better patient outcomes.",
+      "The trial used blood pressure as a surrogate outcome for cardiovascular events.",
+      "Surrogate outcomes can be misleading if they don't correlate with true clinical benefit."
+    ],
+    "synonyms": [
+      "indirect endpoint",
+      "proxy measure",
+      "intermediate outcome",
+      "surrogate marker"
+    ],
+    "source": "oet-terminy/m16/surrogate-outcome"
+  },
+  {
+    "id": "term-m17",
+    "group": "v-clinical",
+    "en": "Steeped in complexity",
+    "pl": "Pełne złożoności / Wysoce złożone",
+    "kind": "expression",
+    "examples": [
+      "The ethical considerations surrounding this case are steeped in complexity.",
+      "Decision-making in palliative care is often steeped in complexity.",
+      "The management of this condition is steeped in complexity and requires an MDT approach."
+    ],
+    "synonyms": [
+      "highly complex",
+      "multifaceted",
+      "nuanced",
+      "fraught with complexity"
+    ],
+    "source": "oet-terminy/m17/steeped-in-complexity"
+  },
+  {
+    "id": "core-m191",
+    "group": "v-nhs",
+    "en": "GP (General Practitioner)",
+    "pl": "lekarz rodzinny/POZ",
+    "kind": "word",
+    "examples": [
+      "Please could you arrange follow-up with his GP in two weeks.",
+      "The patient was referred by her GP for further assessment.",
+      "A copy of this letter will be sent to the patient's GP."
+    ],
+    "synonyms": [
+      "family doctor",
+      "primary care physician"
+    ],
+    "source": "oet-core/m191"
+  },
+  {
+    "id": "core-m192",
+    "group": "v-nhs",
+    "en": "consultant",
+    "pl": "lekarz specjalista (starszy, kierujący)",
+    "kind": "word",
+    "examples": [
+      "The consultant reviewed the patient on the ward round.",
+      "This decision was made in discussion with the consultant in charge.",
+      "She will be seen by the consultant at her next outpatient appointment."
+    ],
+    "synonyms": [
+      "senior specialist",
+      "attending physician"
+    ],
+    "source": "oet-core/m192"
+  },
+  {
+    "id": "core-m193",
+    "group": "v-nhs",
+    "en": "registrar",
+    "pl": "lekarz rezydent (starszy stażem)",
+    "kind": "word",
+    "examples": [
+      "The on-call registrar was asked to review the patient overnight.",
+      "He was initially assessed by the surgical registrar in A&E.",
+      "The registrar discussed the case with the consultant before proceeding."
+    ],
+    "synonyms": [
+      "senior trainee doctor"
+    ],
+    "source": "oet-core/m193"
+  },
+  {
+    "id": "core-m194",
+    "group": "v-nhs",
+    "en": "A&E (Accident & Emergency)",
+    "pl": "SOR",
+    "kind": "word",
+    "examples": [
+      "He presented to A&E with acute chest pain.",
+      "She was brought to A&E by ambulance following a fall.",
+      "The patient was discharged from A&E with safety-netting advice."
+    ],
+    "synonyms": [
+      "emergency department",
+      "ED"
+    ],
+    "source": "oet-core/m194"
+  },
+  {
+    "id": "core-m195",
+    "group": "v-nhs",
+    "en": "MDT (multidisciplinary team)",
+    "pl": "zespół wielodyscyplinarny",
+    "kind": "word",
+    "examples": [
+      "This case was discussed at the weekly MDT meeting.",
+      "The MDT recommended proceeding with surgical resection.",
+      "Her case will be presented at the next oncology MDT."
+    ],
+    "synonyms": [
+      "multidisciplinary meeting"
+    ],
+    "source": "oet-core/m195"
+  },
+  {
+    "id": "core-m196",
+    "group": "v-nhs",
+    "en": "discharge summary",
+    "pl": "karta wypisowa",
+    "kind": "phrase",
+    "examples": [
+      "Please find enclosed a copy of his discharge summary.",
+      "The discharge summary outlines his medications and follow-up plan.",
+      "A discharge summary was sent to the GP on the day of discharge."
+    ],
+    "synonyms": [
+      "discharge letter"
+    ],
+    "source": "oet-core/m196"
+  },
+  {
+    "id": "core-m197",
+    "group": "v-nhs",
+    "en": "safeguarding",
+    "pl": "ochrona osób wrażliwych (dzieci/dorosłych)",
+    "kind": "word",
+    "examples": [
+      "A safeguarding referral was made in light of the concerns raised.",
+      "The safeguarding team was informed of the family circumstances.",
+      "Safeguarding concerns should always be documented clearly."
+    ],
+    "synonyms": [
+      "protection of vulnerable individuals"
+    ],
+    "source": "oet-core/m197"
+  },
+  {
+    "id": "core-m198",
+    "group": "v-nhs",
+    "en": "ward round",
+    "pl": "obchód lekarski",
+    "kind": "phrase",
+    "examples": [
+      "The patient was reviewed on the morning ward round.",
+      "His plan was updated following discussion on the ward round.",
+      "She was noted to be clinically improving on the ward round."
+    ],
+    "synonyms": [
+      "daily patient review by the team"
+    ],
+    "source": "oet-core/m198"
+  },
+  {
+    "id": "core-m199",
+    "group": "v-nhs",
+    "en": "next of kin",
+    "pl": "najbliższa rodzina/osoba kontaktowa",
+    "kind": "expression",
+    "examples": [
+      "The next of kin was informed of the change in his condition.",
+      "Contact details for her next of kin are recorded in the notes.",
+      "We discussed the treatment plan with the patient's next of kin."
+    ],
+    "synonyms": [
+      "closest relative",
+      "primary contact"
+    ],
+    "source": "oet-core/m199"
+  },
+  {
+    "id": "core-m200",
+    "group": "v-nhs",
+    "en": "care plan",
+    "pl": "plan opieki",
+    "kind": "phrase",
+    "examples": [
+      "A comprehensive care plan was agreed with the patient and family.",
+      "The care plan includes regular community nurse visits.",
+      "His care plan was reviewed and updated following the recent admission."
+    ],
+    "synonyms": [
+      "management plan"
+    ],
+    "source": "oet-core/m200"
+  },
+  {
+    "id": "core-m201",
+    "group": "v-nhs",
+    "en": "locum",
+    "pl": "lekarz zastępczy (na zastępstwie)",
+    "kind": "word",
+    "examples": [
+      "The locum consultant reviewed the case overnight.",
+      "A locum GP was covering the practice that week.",
+      "He worked as a locum registrar during his first year in the UK."
+    ],
+    "synonyms": [
+      "temporary/covering doctor"
+    ],
+    "source": "oet-core/m201"
+  },
+  {
+    "id": "core-m202",
+    "group": "v-nhs",
+    "en": "out-patient clinic",
+    "pl": "poradnia przyszpitalna",
+    "kind": "phrase",
+    "examples": [
+      "She was seen in the out-patient clinic six weeks after surgery.",
+      "An appointment has been arranged in the respiratory out-patient clinic.",
+      "He was discharged from the out-patient clinic following full recovery."
+    ],
+    "synonyms": [
+      "outpatient appointment",
+      "OPD"
+    ],
+    "source": "oet-core/m202"
+  },
+  {
+    "id": "core-m203",
+    "group": "v-nhs",
+    "en": "in-patient",
+    "pl": "pacjent hospitalizowany",
+    "kind": "word",
+    "examples": [
+      "He remained an in-patient for a total of five days.",
+      "As an in-patient, she received daily physiotherapy input.",
+      "In-patient management was preferred given the severity of symptoms."
+    ],
+    "synonyms": [
+      "hospitalised patient"
+    ],
+    "source": "oet-core/m203"
+  },
+  {
+    "id": "core-m204",
+    "group": "v-nhs",
+    "en": "triage",
+    "pl": "segregacja medyczna, triaż",
+    "kind": "word",
+    "examples": [
+      "He was triaged as a priority case on arrival.",
+      "The triage nurse assessed his observations on arrival.",
+      "Triage helps prioritise patients according to clinical urgency."
+    ],
+    "synonyms": [
+      "initial assessment and prioritisation"
+    ],
+    "source": "oet-core/m204"
+  },
+  {
+    "id": "core-m205",
+    "group": "v-nhs",
+    "en": "community nurse",
+    "pl": "pielęgniarka środowiskowa",
+    "kind": "phrase",
+    "examples": [
+      "The community nurse will visit twice weekly to change the dressing.",
+      "A referral was made to the community nursing team for wound care.",
+      "Community nurse input has been arranged to support her at home."
+    ],
+    "synonyms": [
+      "district nurse"
+    ],
+    "source": "oet-core/m205"
+  },
+  {
+    "id": "everyday-l1",
+    "group": "v-everyday",
+    "en": "to chase up",
+    "pl": "ponaglić / sprawdzić status",
+    "kind": "expression",
+    "examples": [
+      "I'll chase up the estate agent about the contract tomorrow.",
+      "Can you chase up that MRI referral? It's been two weeks.",
+      "She chased up the lab results and they finally came back."
+    ],
+    "formal": [
+      "to follow up on",
+      "to enquire about the status of"
+    ],
+    "pronunciation": "/tə tʃeɪz ʌp/",
+    "source": "oet-frazy/l1/to-chase-up"
+  },
+  {
+    "id": "everyday-l2",
+    "group": "v-everyday",
+    "en": "to crack on (with)",
+    "pl": "brać się do roboty",
+    "kind": "expression",
+    "examples": [
+      "Right, I'll crack on — lots to get through today.",
+      "We cracked on with the list despite being short-staffed.",
+      "I can't stop long — I need to crack on with these reports."
+    ],
+    "formal": [
+      "to proceed with",
+      "to continue with",
+      "to get on with"
+    ],
+    "pronunciation": "/tə kræk ɒn/",
+    "register": "informal",
+    "source": "oet-frazy/l2/to-crack-on-with"
+  },
+  {
+    "id": "everyday-l3",
+    "group": "v-everyday",
+    "en": "to fob someone off",
+    "pl": "zbyć kogoś",
+    "kind": "expression",
+    "examples": [
+      "The council keeps fobbing me off with excuses.",
+      "Don't let them fob you off — ask to speak to the manager.",
+      "I felt like I was being fobbed off without a proper explanation."
+    ],
+    "formal": [
+      "to dismiss",
+      "to deflect",
+      "to give an evasive response"
+    ],
+    "pronunciation": "/tə fɒb ˈsʌmwʌn ɒf/",
+    "register": "informal",
+    "source": "oet-frazy/l3/to-fob-someone-off"
+  },
+  {
+    "id": "everyday-l4",
+    "group": "v-everyday",
+    "en": "to pop to the shops",
+    "pl": "wyskoczyć do sklepu",
+    "kind": "expression",
+    "examples": [
+      "I'm just popping to the shops — need anything?",
+      "She popped to the pharmacy on her lunch break.",
+      "I'll pop out and grab some coffee before the meeting starts."
+    ],
+    "formal": [
+      "to go to the shops",
+      "to visit the pharmacy"
+    ],
+    "pronunciation": "/tə pɒp tə ðə ʃɒps/",
+    "register": "informal",
+    "source": "oet-frazy/l4/to-pop-to-the-shops"
+  },
+  {
+    "id": "everyday-l5",
+    "group": "v-everyday",
+    "en": "it's tipping it down",
+    "pl": "leje jak z cebra",
+    "kind": "expression",
+    "examples": [
+      "Don't go out yet — it's tipping it down.",
+      "It was tipping it down all morning, so the car park was chaos.",
+      "I got soaked — it just started tipping it down out of nowhere."
+    ],
+    "formal": [
+      "it's raining heavily",
+      "there's heavy rainfall"
+    ],
+    "pronunciation": "/ɪts ˈtɪpɪŋ ɪt daʊn/",
+    "register": "informal",
+    "source": "oet-frazy/l5/it-s-tipping-it-down"
+  },
+  {
+    "id": "everyday-l6",
+    "group": "v-everyday",
+    "en": "to be gutted",
+    "pl": "być załamanym / nieziemsko rozczarowanym",
+    "kind": "expression",
+    "examples": [
+      "I was absolutely gutted when I heard the news.",
+      "He was gutted to miss the procedure after preparing all week.",
+      "You must be gutted — that's such a disappointing result."
+    ],
+    "formal": [
+      "to be very disappointed",
+      "to be devastated"
+    ],
+    "pronunciation": "/tə biː ˈɡʌtɪd/",
+    "register": "informal",
+    "source": "oet-frazy/l6/to-be-gutted"
+  },
+  {
+    "id": "everyday-l7",
+    "group": "v-everyday",
+    "en": "to sort something out",
+    "pl": "załatwić / ogarnąć coś",
+    "kind": "expression",
+    "examples": [
+      "I'll sort out the paperwork before the end of the day.",
+      "Can you sort out a bed for the new admission?",
+      "We sorted it out between us — no need to escalate."
+    ],
+    "formal": [
+      "to resolve",
+      "to arrange",
+      "to deal with"
+    ],
+    "pronunciation": "/tə sɔːt ˈsʌmθɪŋ aʊt/",
+    "source": "oet-frazy/l7/to-sort-something-out"
+  },
+  {
+    "id": "everyday-l8",
+    "group": "v-everyday",
+    "en": "fair enough",
+    "pl": "no dobra / rozumiem / przyjmuję",
+    "kind": "expression",
+    "examples": [
+      "Fair enough — I can see why you'd want a second opinion.",
+      "Fair enough, let's give it another 24 hours.",
+      "Fair enough — I'll rebook for next week then."
+    ],
+    "formal": [
+      "I understand",
+      "that's reasonable",
+      "I can see the reasoning"
+    ],
+    "pronunciation": "/feər ɪˈnʌf/",
+    "source": "oet-frazy/l8/fair-enough"
+  },
+  {
+    "id": "everyday-l9",
+    "group": "v-everyday",
+    "en": "to be up for something",
+    "pl": "mieć ochotę na coś",
+    "kind": "expression",
+    "examples": [
+      "Are you up for a coffee after the ward round?",
+      "Is anyone up for covering Saturday morning?",
+      "I'm up for it if the rest of the team agrees."
+    ],
+    "formal": [
+      "to be willing to",
+      "to be happy to",
+      "to be available for"
+    ],
+    "pronunciation": "/tə biː ʌp fə ˈsʌmθɪŋ/",
+    "source": "oet-frazy/l9/to-be-up-for-something"
+  },
+  {
+    "id": "everyday-l10",
+    "group": "v-everyday",
+    "en": "to be chuffed (with something)",
+    "pl": "być zadowolonym / uradowanym",
+    "kind": "expression",
+    "examples": [
+      "She was absolutely chuffed with her exam results.",
+      "The patient was chuffed to hear he could go home.",
+      "I'm really chuffed we managed to finish on time."
+    ],
+    "formal": [
+      "to be very pleased",
+      "to be delighted",
+      "to be thrilled"
+    ],
+    "pronunciation": "/tə biː tʃʌft/",
+    "register": "informal",
+    "source": "oet-frazy/l10/to-be-chuffed-with-something"
+  },
+  {
+    "id": "everyday-l11",
+    "group": "v-everyday",
+    "en": "to be knackered",
+    "pl": "być wykończonym / padniętym",
+    "kind": "expression",
+    "examples": [
+      "I'm absolutely knackered — that was a brutal shift.",
+      "He looked knackered; I don't think he'd slept at all.",
+      "Don't ask me to stay late tonight — I'm completely knackered."
+    ],
+    "formal": [
+      "to be exhausted",
+      "to be very tired"
+    ],
+    "pronunciation": "/tə biː ˈnækəd/",
+    "register": "informal",
+    "source": "oet-frazy/l11/to-be-knackered"
+  },
+  {
+    "id": "everyday-l12",
+    "group": "v-everyday",
+    "en": "to be run off one's feet",
+    "pl": "nie móc złapać oddechu / być zawalonym",
+    "kind": "expression",
+    "examples": [
+      "Sorry I didn't call back — I've been run off my feet all day.",
+      "The A&E team was completely run off their feet last night.",
+      "We've been run off our feet since the new admissions policy changed."
+    ],
+    "formal": [
+      "to be extremely busy",
+      "to have an exceptionally heavy workload"
+    ],
+    "pronunciation": "/tə biː rʌn ɒf wʌnz fiːt/",
+    "source": "oet-frazy/l12/to-be-run-off-one-s-feet"
+  },
+  {
+    "id": "everyday-l13",
+    "group": "v-everyday",
+    "en": "a bit of a nightmare",
+    "pl": "koszmar / draka / nie lada problem",
+    "kind": "expression",
+    "examples": [
+      "Parking near the hospital is a bit of a nightmare.",
+      "The handover was a bit of a nightmare — three unexpected admissions.",
+      "Getting the IT system to work has been a bit of a nightmare, honestly."
+    ],
+    "formal": [
+      "rather challenging",
+      "quite problematic",
+      "far from straightforward"
+    ],
+    "pronunciation": "/ə bɪt əv ə ˈnaɪtmeə/",
+    "source": "oet-frazy/l13/a-bit-of-a-nightmare"
+  },
+  {
+    "id": "everyday-l14",
+    "group": "v-everyday",
+    "en": "to get the hang of something",
+    "pl": "łapać rytm / ogarniać jak coś działa",
+    "kind": "expression",
+    "examples": [
+      "It took me a while, but I'm finally getting the hang of the EPR system.",
+      "Once you get the hang of it, the commute isn't bad at all.",
+      "Don't worry — you'll get the hang of the ward routine within a week."
+    ],
+    "formal": [
+      "to become familiar with",
+      "to master",
+      "to grow accustomed to"
+    ],
+    "pronunciation": "/tə ɡet ðə hæŋ əv ˈsʌmθɪŋ/",
+    "source": "oet-frazy/l14/to-get-the-hang-of-something"
+  },
+  {
+    "id": "everyday-l15",
+    "group": "v-everyday",
+    "en": "to touch base (with someone)",
+    "pl": "skontaktować się / odezwać się",
+    "kind": "expression",
+    "examples": [
+      "I'll touch base with the ward sister before I leave.",
+      "Can we touch base tomorrow morning before the MDT?",
+      "I just wanted to touch base and see how you're settling in."
+    ],
+    "formal": [
+      "to contact",
+      "to follow up with",
+      "to liaise with"
+    ],
+    "pronunciation": "/tə tʌtʃ beɪs/",
+    "source": "oet-frazy/l15/to-touch-base-with-someone"
+  },
+  {
+    "id": "everyday-l16",
+    "group": "v-everyday",
+    "en": "bear with me",
+    "pl": "chwileczkę / proszę o cierpliwość",
+    "kind": "expression",
+    "examples": [
+      "Bear with me — I just need to pull up your notes.",
+      "Bear with me for a moment while I check the scan results.",
+      "Bear with me — the system is running slowly this morning."
+    ],
+    "formal": [
+      "one moment please",
+      "please allow me a moment"
+    ],
+    "pronunciation": "/beə wɪð miː/",
+    "source": "oet-frazy/l16/bear-with-me"
+  },
+  {
+    "id": "everyday-l17",
+    "group": "v-everyday",
+    "en": "to give someone a heads-up",
+    "pl": "uprzedzić kogoś z wyprzedzeniem",
+    "kind": "expression",
+    "examples": [
+      "Just wanted to give you a heads-up — the patient in bay four is quite anxious.",
+      "Thanks for the heads-up about the ward closure.",
+      "Can you give me a heads-up before you send the referral?"
+    ],
+    "formal": [
+      "to notify in advance",
+      "to inform beforehand",
+      "to alert"
+    ],
+    "pronunciation": "/tə ɡɪv ˈsʌmwʌn ə ˈhedz ʌp/",
+    "source": "oet-frazy/l17/to-give-someone-a-heads-up"
+  },
+  {
+    "id": "everyday-l18",
+    "group": "v-everyday",
+    "en": "to be in the same boat",
+    "pl": "być w tej samej sytuacji / mieć ten sam problem",
+    "kind": "expression",
+    "examples": [
+      "We're all in the same boat with the parking situation.",
+      "Everyone here is in the same boat — new city, new system.",
+      "I know it's tough, but we're all in the same boat right now."
+    ],
+    "formal": [
+      "to be in a similar situation",
+      "to face the same challenges"
+    ],
+    "pronunciation": "/tə biː ɪn ðə seɪm bəʊt/",
+    "source": "oet-frazy/l18/to-be-in-the-same-boat"
+  },
+  {
+    "id": "everyday-l19",
+    "group": "v-everyday",
+    "en": "to fancy (something / doing something)",
+    "pl": "mieć ochotę na coś",
+    "kind": "word",
+    "examples": [
+      "Do you fancy a coffee before the ward round?",
+      "I don't fancy another night on call so soon.",
+      "Do you fancy trying that new Italian place near the station?"
+    ],
+    "formal": [
+      "would you like",
+      "would you be interested in"
+    ],
+    "pronunciation": "/tə ˈfænsi/",
+    "source": "oet-frazy/l19/to-fancy-something-doing-something"
+  },
+  {
+    "id": "everyday-l20",
+    "group": "v-everyday",
+    "en": "to nip (out / to somewhere)",
+    "pl": "wyskoczyć na chwilę",
+    "kind": "word",
+    "examples": [
+      "I'm just nipping out to grab a sandwich — back in ten minutes.",
+      "She nipped to the pharmacy on her lunch break.",
+      "Can I nip out for five minutes? I need to make a call."
+    ],
+    "formal": [
+      "to step out briefly",
+      "to go out for a moment"
+    ],
+    "pronunciation": "/tə nɪp aʊt/",
+    "register": "informal",
+    "source": "oet-frazy/l20/to-nip-out-to-somewhere"
+  },
+  {
+    "id": "everyday-l21",
+    "group": "v-everyday",
+    "en": "to come across (as)",
+    "pl": "sprawiać wrażenie / wydawać się",
+    "kind": "expression",
+    "examples": [
+      "He came across as quite anxious during the consultation.",
+      "She comes across as very capable — I think she'll fit in well.",
+      "I hope I didn't come across as dismissive — that wasn't my intention."
+    ],
+    "formal": [
+      "to appear",
+      "to seem",
+      "to present as"
+    ],
+    "pronunciation": "/tə kʌm əˈkrɒs æz/",
+    "source": "oet-frazy/l21/to-come-across-as"
+  },
+  {
+    "id": "everyday-l22",
+    "group": "v-everyday",
+    "en": "to go pear-shaped",
+    "pl": "nie wyjść po bożemu / wziąć w łeb",
+    "kind": "expression",
+    "examples": [
+      "The plan was fine, but things went pear-shaped in theatre.",
+      "It all went pear-shaped when the second cannula failed.",
+      "The day started well, then went completely pear-shaped after lunch."
+    ],
+    "formal": [
+      "to go wrong",
+      "to deteriorate unexpectedly",
+      "to fail"
+    ],
+    "pronunciation": "/tə ɡəʊ ˈpeəʃeɪpt/",
+    "register": "informal",
+    "source": "oet-frazy/l22/to-go-pear-shaped"
+  },
+  {
+    "id": "everyday-l23",
+    "group": "v-everyday",
+    "en": "to catch up (with someone)",
+    "pl": "nadrobić zaległości / spotkać się po czasie",
+    "kind": "expression",
+    "examples": [
+      "Let's catch up properly after the MDT meeting.",
+      "I need to catch up on my paperwork before Friday.",
+      "It was great to catch up with the cardiology team at the conference."
+    ],
+    "formal": [
+      "to meet",
+      "to reconnect",
+      "to review progress with"
+    ],
+    "pronunciation": "/tə kætʃ ʌp/",
+    "source": "oet-frazy/l23/to-catch-up-with-someone"
+  },
+  {
+    "id": "everyday-l24",
+    "group": "v-everyday",
+    "en": "to reckon",
+    "pl": "uważać / myśleć / sądzić",
+    "kind": "word",
+    "examples": [
+      "I reckon we should keep him in overnight just to be safe.",
+      "What do you reckon — is she ready for discharge?",
+      "I reckon the scan will come back clear, but let's wait and see."
+    ],
+    "formal": [
+      "to think",
+      "to believe",
+      "in my view",
+      "in my opinion"
+    ],
+    "pronunciation": "/tə ˈrekən/",
+    "register": "informal",
+    "source": "oet-frazy/l24/to-reckon"
+  },
+  {
+    "id": "everyday-l25",
+    "group": "v-everyday",
+    "en": "to ring someone",
+    "pl": "zadzwonić do kogoś",
+    "kind": "expression",
+    "examples": [
+      "I'll ring the registrar and let them know.",
+      "Ring me if anything changes overnight.",
+      "She rang ahead to warn us the patient was on his way in."
+    ],
+    "formal": [
+      "to telephone",
+      "to contact",
+      "to call"
+    ],
+    "pronunciation": "/tə rɪŋ ˈsʌmwʌn/",
+    "source": "oet-frazy/l25/to-ring-someone"
+  },
+  {
+    "id": "everyday-l26",
+    "group": "v-everyday",
+    "en": "does that suit you?",
+    "pl": "Czy to Panu/Pani odpowiada?",
+    "kind": "expression",
+    "examples": [
+      "I've booked the scan for Thursday — does that suit you?",
+      "We could meet at two o'clock — does that suit you?",
+      "I'll schedule the follow-up for next Tuesday — does that suit?"
+    ],
+    "formal": [
+      "would that be convenient",
+      "would that work for you"
+    ],
+    "pronunciation": "/dʌz ðæt sjuːt juː/",
+    "source": "oet-frazy/l26/does-that-suit-you"
+  },
+  {
+    "id": "everyday-l27",
+    "group": "v-everyday",
+    "en": "to get on (with someone / with something)",
+    "pl": "radzić sobie / dogadywać się",
+    "kind": "expression",
+    "examples": [
+      "How are you getting on with the new medication?",
+      "How are you getting on with the EPR system?",
+      "He gets on well with everyone on the team."
+    ],
+    "formal": [
+      "to manage",
+      "to cope with",
+      "to progress with"
+    ],
+    "pronunciation": "/tə ɡet ɒn wɪð/",
+    "source": "oet-frazy/l27/to-get-on-with-someone-with-something"
+  },
+  {
+    "id": "everyday-l28",
+    "group": "v-everyday",
+    "en": "cheers",
+    "pl": "dzięki (nieformalne)",
+    "kind": "word",
+    "examples": [
+      "Cheers for covering my bleep.",
+      "Cheers — I'll see you at handover.",
+      "Cheers for that, really helpful."
+    ],
+    "formal": [
+      "thank you",
+      "many thanks",
+      "I'm very grateful"
+    ],
+    "pronunciation": "/tʃɪəz/",
+    "register": "informal",
+    "source": "oet-frazy/l28/cheers"
+  },
+  {
+    "id": "everyday-l29",
+    "group": "v-everyday",
+    "en": "to have a go (at something)",
+    "pl": "spróbować / dać próbę",
+    "kind": "expression",
+    "examples": [
+      "Do you want to have a go at cannulating first?",
+      "Have a go at writing up the discharge summary — I'll review it.",
+      "I had a go at fixing the printer but gave up in the end."
+    ],
+    "formal": [
+      "to attempt",
+      "to try"
+    ],
+    "pronunciation": "/tə hæv ə ɡəʊ/",
+    "source": "oet-frazy/l29/to-have-a-go-at-something"
+  },
+  {
+    "id": "everyday-l30",
+    "group": "v-everyday",
+    "en": "I'm not bothered",
+    "pl": "wszystko mi jedno / nie mam zdania",
+    "kind": "expression",
+    "examples": [
+      "Tea or coffee? — I'm not bothered, either is fine.",
+      "Window seat or aisle? — I'm not bothered.",
+      "Which consultant covers it? — Honestly, I'm not bothered either way."
+    ],
+    "formal": [
+      "I have no preference",
+      "either would be fine",
+      "I'm happy with either"
+    ],
+    "pronunciation": "/aɪm nɒt ˈbɒðəd/",
+    "source": "oet-frazy/l30/i-m-not-bothered"
+  },
+  {
+    "id": "everyday-l31",
+    "group": "v-everyday",
+    "en": "do you mind if…?",
+    "pl": "Czy mogę…? / Czy ma Pan/Pani coś przeciwko?",
+    "kind": "expression",
+    "examples": [
+      "Do you mind if I examine your abdomen?",
+      "Do you mind if I ask a colleague to join us?",
+      "Do you mind if I open the window? It's quite warm in here."
+    ],
+    "formal": [
+      "may I",
+      "would it be alright if",
+      "would you be comfortable if"
+    ],
+    "pronunciation": "/duː juː maɪnd ɪf/",
+    "source": "oet-frazy/l31/do-you-mind-if"
+  },
+  {
+    "id": "everyday-l32",
+    "group": "v-everyday",
+    "en": "carry on",
+    "pl": "proszę kontynuować / dalej",
+    "kind": "expression",
+    "examples": [
+      "Carry on — I didn't mean to interrupt.",
+      "Carry on with the examination; I'll just observe.",
+      "Sorry to keep you waiting — please carry on."
+    ],
+    "formal": [
+      "please continue",
+      "do continue",
+      "please proceed"
+    ],
+    "pronunciation": "/ˈkæri ɒn/",
+    "source": "oet-frazy/l32/carry-on"
+  },
+  {
+    "id": "everyday-l33",
+    "group": "v-everyday",
+    "en": "as it happens",
+    "pl": "akurat / jak się składa",
+    "kind": "expression",
+    "examples": [
+      "As it happens, I know that area quite well.",
+      "As it happens, we had a very similar case last week.",
+      "As it happens, the consultant is available this afternoon."
+    ],
+    "formal": [
+      "as it turns out",
+      "coincidentally",
+      "it so happens that"
+    ],
+    "pronunciation": "/æz ɪt ˈhæpənz/",
+    "source": "oet-frazy/l33/as-it-happens"
+  },
+  {
+    "id": "everyday-l34",
+    "group": "v-everyday",
+    "en": "I must say",
+    "pl": "muszę przyznać / przyznam",
+    "kind": "expression",
+    "examples": [
+      "I must say, the flat is much bigger than I expected.",
+      "I must say, the team have handled this very well.",
+      "I must say, I wasn't expecting such a quick recovery."
+    ],
+    "formal": [
+      "I should note",
+      "I have to say",
+      "I find it noteworthy that"
+    ],
+    "pronunciation": "/aɪ mʌst seɪ/",
+    "source": "oet-frazy/l34/i-must-say"
+  },
+  {
+    "id": "everyday-l35",
+    "group": "v-everyday",
+    "en": "if you don't mind me asking",
+    "pl": "jeśli mogę zapytać / nie chcąc być wścibskim",
+    "kind": "expression",
+    "examples": [
+      "If you don't mind me asking, how long have you been in the UK?",
+      "If you don't mind me asking, what brought you to see us today?",
+      "If you don't mind me asking, is there anything worrying you about the procedure?"
+    ],
+    "formal": [
+      "if I may ask",
+      "may I enquire",
+      "if I may"
+    ],
+    "pronunciation": "/ɪf juː dəʊnt maɪnd miː ˈɑːskɪŋ/",
+    "source": "oet-frazy/l35/if-you-don-t-mind-me-asking"
+  },
+  {
+    "id": "everyday-l36",
+    "group": "v-everyday",
+    "en": "that said",
+    "pl": "niemniej jednak / to powiedziawszy",
+    "kind": "expression",
+    "examples": [
+      "It's a long commute. That said, the pay is very good.",
+      "The results aren't ideal. That said, we have good treatment options.",
+      "It's a complex case. That said, I'm cautiously optimistic."
+    ],
+    "formal": [
+      "however",
+      "nevertheless",
+      "nonetheless"
+    ],
+    "pronunciation": "/ðæt sed/",
+    "source": "oet-frazy/l36/that-said"
+  },
+  {
+    "id": "everyday-l37",
+    "group": "v-everyday",
+    "en": "all being well",
+    "pl": "jeśli wszystko pójdzie dobrze",
+    "kind": "expression",
+    "examples": [
+      "All being well, you should be home by the weekend.",
+      "All being well, the results will be back by Thursday.",
+      "We'll discharge her tomorrow, all being well."
+    ],
+    "formal": [
+      "subject to no complications",
+      "provided all proceeds as planned"
+    ],
+    "pronunciation": "/ɔːl ˈbiːɪŋ wel/",
+    "source": "oet-frazy/l37/all-being-well"
+  },
+  {
+    "id": "everyday-l38",
+    "group": "v-everyday",
+    "en": "to be honest (with you)",
+    "pl": "szczerze mówiąc / żeby być szczerym",
+    "kind": "expression",
+    "examples": [
+      "To be honest, I found the commute more manageable than I thought.",
+      "To be honest, I'm not entirely sure — I'd want a second opinion.",
+      "To be honest with you, the prognosis is quite uncertain at this stage."
+    ],
+    "formal": [
+      "frankly",
+      "to be candid",
+      "I should be transparent"
+    ],
+    "pronunciation": "/tə biː ˈɒnɪst/",
+    "source": "oet-frazy/l38/to-be-honest-with-you"
+  },
+  {
+    "id": "everyday-l39",
+    "group": "v-everyday",
+    "en": "I don't suppose you could…",
+    "pl": "Nie mógłby Pan/Pani przypadkiem… (uprzejma prośba)",
+    "kind": "expression",
+    "examples": [
+      "I don't suppose you could recommend a good GP in this area?",
+      "I don't suppose you could cover the ward for an hour?",
+      "I don't suppose you could take a look at this before the meeting?"
+    ],
+    "formal": [
+      "would you be able to",
+      "I wonder whether you could",
+      "could I ask you to"
+    ],
+    "pronunciation": "/aɪ dəʊnt səˈpəʊz juː kʊd/",
+    "source": "oet-frazy/l39/i-don-t-suppose-you-could"
+  },
+  {
+    "id": "everyday-l40",
+    "group": "v-everyday",
+    "en": "mind you",
+    "pl": "co prawda / ale z drugiej strony / swoją drogą",
+    "kind": "expression",
+    "examples": [
+      "It's quite expensive to rent here. Mind you, the transport links are excellent.",
+      "It was a difficult case. Mind you, the outcome was better than expected.",
+      "The ward is busy. Mind you, it's always like this on a Monday."
+    ],
+    "formal": [
+      "however",
+      "I should note",
+      "that said"
+    ],
+    "pronunciation": "/maɪnd juː/",
+    "source": "oet-frazy/l40/mind-you"
+  },
+  {
+    "id": "everyday-l41",
+    "group": "v-everyday",
+    "en": "to take something in one's stride",
+    "pl": "radzić sobie z czymś spokojnie / bez paniki",
+    "kind": "expression",
+    "examples": [
+      "The paperwork was overwhelming at first, but she took it all in her stride.",
+      "He took the bad news remarkably well — completely in his stride.",
+      "Moving to a new country is hard, but you seem to be taking it in your stride."
+    ],
+    "formal": [
+      "to manage",
+      "to cope with composure",
+      "to handle without difficulty"
+    ],
+    "pronunciation": "/tə teɪk ˈsʌmθɪŋ ɪn wʌnz straɪd/",
+    "source": "oet-frazy/l41/to-take-something-in-one-s-stride"
+  },
+  {
+    "id": "everyday-l42",
+    "group": "v-everyday",
+    "en": "quality assured",
+    "pl": "zatwierdzony / zweryfikowany / spełnia standardy",
+    "kind": "expression",
+    "examples": [
+      "The equipment has been quality assured before theatre use.",
+      "All discharge summaries are quality assured by the consultant.",
+      "Your blood results are quality assured — you can trust them."
+    ],
+    "formal": [
+      "verified",
+      "validated",
+      "meets the required standard"
+    ],
+    "pronunciation": "/ˈkwɒlɪti əˈʃɔːd/",
+    "source": "oet-frazy/l42/quality-assured"
+  },
+  {
+    "id": "everyday-l43",
+    "group": "v-everyday",
+    "en": "it boils down to",
+    "pl": "sprowadza się to do… / w gruncie rzeczy chodzi o…",
+    "kind": "expression",
+    "examples": [
+      "It boils down to whether the patient is willing to try the treatment.",
+      "In the end, it boils down to shared decision-making with the patient.",
+      "It boils down to resource constraints and prioritising urgent cases."
+    ],
+    "formal": [
+      "ultimately",
+      "the fundamental issue is",
+      "in essence",
+      "the key consideration is"
+    ],
+    "pronunciation": "/ɪt bɔɪlz daʊn tə/",
+    "source": "oet-frazy/l43/it-boils-down-to"
+  },
+  {
+    "id": "everyday-l44",
+    "group": "v-everyday",
+    "en": "to pivot (to something)",
+    "pl": "zmienić kierunek / przestawić się na coś",
+    "kind": "word",
+    "examples": [
+      "We need to pivot our approach — the current plan isn't working.",
+      "The team pivoted to a palliative strategy after the latest scan results.",
+      "During the pandemic, many services pivoted to remote consultations."
+    ],
+    "formal": [
+      "to shift to",
+      "to transition to",
+      "to redirect our approach towards"
+    ],
+    "pronunciation": "/tə ˈpɪvət/",
+    "source": "oet-frazy/l44/to-pivot-to-something"
+  },
+  {
+    "id": "everyday-l45",
+    "group": "v-everyday",
+    "en": "disingenuous",
+    "pl": "nieszczery / nieuczciwy w argumentacji / udający niewiedzę",
+    "kind": "word",
+    "examples": [
+      "It would be disingenuous to claim that the evidence is conclusive — we need more data.",
+      "I think it's a little disingenuous to suggest that funding wasn't a factor in this decision.",
+      "To be disingenuous here would undermine the patient's trust entirely."
+    ],
+    "formal": [
+      "insincere",
+      "misleading",
+      "lacking candour",
+      "not entirely candid"
+    ],
+    "pronunciation": "/ˌdɪsɪnˈdʒenjuəs/",
+    "source": "oet-frazy/l45/disingenuous"
+  },
+  {
+    "id": "everyday-l46",
+    "group": "v-everyday",
+    "en": "to put someone in the picture",
+    "pl": "wprowadzić kogoś w temat / poinformować",
+    "kind": "expression",
+    "examples": [
+      "Let me put you in the picture — there have been some changes to the rota.",
+      "I'll put the family in the picture once we have the results.",
+      "Can someone put the on-call team in the picture before handover?"
+    ],
+    "formal": [
+      "to brief",
+      "to inform",
+      "to update someone on the situation"
+    ],
+    "pronunciation": "/tə pʊt ˈsʌmwʌn ɪn ðə ˈpɪktʃə/",
+    "source": "oet-frazy/l46/to-put-someone-in-the-picture"
+  },
+  {
+    "id": "everyday-l47",
+    "group": "v-everyday",
+    "en": "to be on the same page",
+    "pl": "mieć wspólne rozumienie / być po tej samej stronie",
+    "kind": "expression",
+    "examples": [
+      "Before we proceed, I want to make sure we're all on the same page.",
+      "Let's just clarify the plan — I want to be on the same page as the family.",
+      "The MDT wasn't quite on the same page, so we deferred the decision."
+    ],
+    "formal": [
+      "to be in agreement",
+      "to share the same understanding"
+    ],
+    "pronunciation": "/tə biː ɒn ðə seɪm peɪdʒ/",
+    "source": "oet-frazy/l47/to-be-on-the-same-page"
+  },
+  {
+    "id": "everyday-l48",
+    "group": "v-everyday",
+    "en": "to take something on board",
+    "pl": "wziąć pod uwagę / przyjąć do wiadomości",
+    "kind": "expression",
+    "examples": [
+      "Thank you for the feedback — I'll take that on board.",
+      "I've taken your concerns on board and we're reviewing the protocol.",
+      "She took the advice on board and made the changes straightaway."
+    ],
+    "formal": [
+      "to consider",
+      "to take into account",
+      "to acknowledge"
+    ],
+    "pronunciation": "/tə teɪk ˈsʌmθɪŋ ɒn bɔːd/",
+    "source": "oet-frazy/l48/to-take-something-on-board"
+  },
+  {
+    "id": "everyday-l49",
+    "group": "v-everyday",
+    "en": "as far as I'm aware",
+    "pl": "o ile mi wiadomo / według mojej wiedzy",
+    "kind": "expression",
+    "examples": [
+      "As far as I'm aware, the scan results haven't come back yet.",
+      "As far as I'm aware, no one has spoken to the family today.",
+      "There are no contraindications, as far as I'm aware."
+    ],
+    "formal": [
+      "to my knowledge",
+      "based on the information available to me"
+    ],
+    "pronunciation": "/æz fɑː æz aɪm əˈweə/",
+    "source": "oet-frazy/l49/as-far-as-i-m-aware"
+  },
+  {
+    "id": "everyday-l50",
+    "group": "v-everyday",
+    "en": "to be tied up",
+    "pl": "być zajętym / niedostępnym",
+    "kind": "expression",
+    "examples": [
+      "The consultant is tied up in theatre — can I take a message?",
+      "I'm tied up until three, but I can call you back after that.",
+      "She was tied up with a complex case and couldn't attend the MDT."
+    ],
+    "formal": [
+      "to be unavailable",
+      "to be occupied",
+      "to be otherwise engaged"
+    ],
+    "pronunciation": "/tə biː taɪd ʌp/",
+    "source": "oet-frazy/l50/to-be-tied-up"
+  },
+  {
+    "id": "everyday-l51",
+    "group": "v-everyday",
+    "en": "to pull something off",
+    "pl": "udać się / wypalić / dokonać czegoś trudnego",
+    "kind": "expression",
+    "examples": [
+      "The procedure was technically demanding, but the team pulled it off.",
+      "I wasn't sure we'd manage the discharge by Friday, but we pulled it off.",
+      "He pulled off a very difficult conversation with the family — handled it beautifully."
+    ],
+    "formal": [
+      "to achieve",
+      "to accomplish",
+      "to succeed in",
+      "to carry out successfully"
+    ],
+    "pronunciation": "/tə pʊl ˈsʌmθɪŋ ɒf/",
+    "source": "oet-frazy/l51/to-pull-something-off"
+  },
+  {
+    "id": "everyday-l52",
+    "group": "v-everyday",
+    "en": "to pull through",
+    "pl": "przeżyć / wyjść z tego / dać radę",
+    "kind": "expression",
+    "examples": [
+      "Against all odds, he pulled through after the surgery.",
+      "She's pulled through some very dark times — she's remarkably strong.",
+      "We weren't sure he'd pull through, but he's stabilising well."
+    ],
+    "formal": [
+      "to survive",
+      "to recover",
+      "to make it through"
+    ],
+    "pronunciation": "/tə pʊl θruː/",
+    "source": "oet-frazy/l52/to-pull-through"
+  },
+  {
+    "id": "everyday-l53",
+    "group": "v-everyday",
+    "en": "to come through (something)",
+    "pl": "przejść przez coś trudnego / wyjść z opałów",
+    "kind": "expression",
+    "examples": [
+      "She's come through a very difficult year — she's incredibly resilient.",
+      "He came through the operation better than we expected.",
+      "It won't be easy, but I'm confident you'll come through this."
+    ],
+    "formal": [
+      "to overcome",
+      "to get through",
+      "to emerge from"
+    ],
+    "pronunciation": "/tə kʌm θruː/",
+    "source": "oet-frazy/l53/to-come-through-something"
+  },
+  {
+    "id": "everyday-l54",
+    "group": "v-everyday",
+    "en": "to see something through",
+    "pl": "doprowadzić do końca / wytrwać do końca",
+    "kind": "expression",
+    "examples": [
+      "It's a long treatment course, but I'd encourage you to see it through.",
+      "We started this together and we'll see it through.",
+      "He was determined to see the rehabilitation programme through despite the setbacks."
+    ],
+    "formal": [
+      "to complete",
+      "to follow through with",
+      "to persist with"
+    ],
+    "pronunciation": "/tə siː ˈsʌmθɪŋ θruː/",
+    "source": "oet-frazy/l54/to-see-something-through"
+  },
+  {
+    "id": "everyday-l55",
+    "group": "v-everyday",
+    "en": "to get away with something",
+    "pl": "ujść na sucho / przepchnąć coś bez konsekwencji",
+    "kind": "expression",
+    "examples": [
+      "We got away with a conservative approach, which I wasn't expecting.",
+      "You can't always get away with delaying the decision — at some point you have to act.",
+      "We got away with it this time, but the protocol needs updating."
+    ],
+    "formal": [
+      "to succeed despite the risks",
+      "to avoid negative consequences"
+    ],
+    "pronunciation": "/tə ɡet əˈweɪ wɪð ˈsʌmθɪŋ/",
+    "source": "oet-frazy/l55/to-get-away-with-something"
+  },
+  {
+    "id": "everyday-l56",
+    "group": "v-everyday",
+    "en": "to bring something off",
+    "pl": "przeprowadzić coś z sukcesem / dokonać czegoś trudnego",
+    "kind": "expression",
+    "examples": [
+      "It was a complicated case — I wasn't sure we'd bring it off.",
+      "The team brought off a really difficult intervention under pressure.",
+      "She brought it off brilliantly — the family were very reassured."
+    ],
+    "formal": [
+      "to accomplish",
+      "to carry out successfully",
+      "to achieve"
+    ],
+    "pronunciation": "/tə brɪŋ ˈsʌmθɪŋ ɒf/",
+    "source": "oet-frazy/l56/to-bring-something-off"
+  },
+  {
+    "id": "ward-n1",
+    "group": "v-workplace",
+    "en": "without any hiccups",
+    "pl": "bez komplikacji",
+    "kind": "expression",
+    "examples": [
+      "We managed to stent the IVC without any hiccups.",
+      "The handover went without any hiccups — very smooth.",
+      "The transfer was completed without any hiccups, thankfully."
+    ],
+    "formal": [
+      "without any complications",
+      "without any difficulties"
+    ],
+    "pronunciation": "/wɪˈðaʊt ˈeni ˈhɪkʌps/",
+    "source": "oet-frazy/n1/without-any-hiccups"
+  },
+  {
+    "id": "ward-n2",
+    "group": "v-workplace",
+    "en": "to hand someone over",
+    "pl": "przekazać pacjenta (np. innemu zespołowi)",
+    "kind": "expression",
+    "examples": [
+      "I'll hand him over to the ward team now.",
+      "She was handed over to the night team at ten o'clock.",
+      "Make sure you hand the patient over properly before you leave."
+    ],
+    "formal": [
+      "to transfer care of",
+      "to formally transfer to the care of"
+    ],
+    "pronunciation": "/tə hænd ˈsʌmwʌn ˈəʊvə/",
+    "source": "oet-frazy/n2/to-hand-someone-over"
+  },
+  {
+    "id": "ward-n3",
+    "group": "v-workplace",
+    "en": "obs",
+    "pl": "parametry życiowe (obserwacje pielęgniarskie)",
+    "kind": "word",
+    "examples": [
+      "Keep an eye on his obs — NEWS2 is creeping up.",
+      "Her obs have been stable all morning.",
+      "Can you do his obs again? I'm not happy with that blood pressure."
+    ],
+    "formal": [
+      "vital signs",
+      "physiological observations",
+      "clinical observations"
+    ],
+    "pronunciation": "/ɒbz/",
+    "register": "informal",
+    "source": "oet-frazy/n3/obs"
+  },
+  {
+    "id": "ward-n4",
+    "group": "v-workplace",
+    "en": "to fast-track",
+    "pl": "przyspieszyć / skierować trybem pilnym",
+    "kind": "word",
+    "examples": [
+      "We need to fast-track a CT scan right away.",
+      "She was fast-tracked to the cardiac unit given her presentation.",
+      "Can we fast-track this referral? I'm worried about the timeline."
+    ],
+    "formal": [
+      "to expedite",
+      "to prioritise urgently"
+    ],
+    "pronunciation": "/tə fɑːst træk/",
+    "source": "oet-frazy/n4/to-fast-track"
+  },
+  {
+    "id": "ward-n5",
+    "group": "v-workplace",
+    "en": "to rule out",
+    "pl": "wykluczyć (rozpoznanie)",
+    "kind": "expression",
+    "examples": [
+      "We need to rule out a bleed before giving pain relief.",
+      "The CT was requested to rule out pulmonary embolism.",
+      "I'd like to rule out infection before we proceed."
+    ],
+    "formal": [
+      "to exclude"
+    ],
+    "pronunciation": "/tə ruːl aʊt/",
+    "source": "oet-frazy/n5/to-rule-out"
+  },
+  {
+    "id": "ward-n6",
+    "group": "v-workplace",
+    "en": "to consent a patient",
+    "pl": "zebrać świadomą zgodę pacjenta",
+    "kind": "expression",
+    "examples": [
+      "I just need to consent the patient in bay three.",
+      "Has she been consented for the procedure?",
+      "Could you consent Mr Johnson while I scrub in?"
+    ],
+    "formal": [
+      "to obtain the patient's informed consent"
+    ],
+    "pronunciation": "/tə kənˈsent ə ˈpeɪʃənt/",
+    "register": "informal",
+    "source": "oet-frazy/n6/to-consent-a-patient"
+  },
+  {
+    "id": "ward-n7",
+    "group": "v-workplace",
+    "en": "clotting profile",
+    "pl": "koagulogram",
+    "kind": "phrase",
+    "examples": [
+      "We need to check his clotting profile before booking.",
+      "Her clotting profile came back deranged — hold the procedure.",
+      "Send a clotting profile along with the routine bloods."
+    ],
+    "formal": [
+      "coagulation screen",
+      "coagulation profile"
+    ],
+    "pronunciation": "/ˈklɒtɪŋ ˈprəʊfaɪl/",
+    "source": "oet-frazy/n7/clotting-profile"
+  },
+  {
+    "id": "ward-n8",
+    "group": "v-workplace",
+    "en": "to bleep someone",
+    "pl": "wywołać kogoś przez pager",
+    "kind": "expression",
+    "examples": [
+      "Can you bleep the on-call reg, please?",
+      "I've been bleeped three times in the last hour.",
+      "Bleep the anaesthetist — we may need their input."
+    ],
+    "formal": [
+      "to contact",
+      "to page"
+    ],
+    "pronunciation": "/tə bliːp ˈsʌmwʌn/",
+    "register": "informal",
+    "source": "oet-frazy/n8/to-bleep-someone"
+  },
+  {
+    "id": "ward-n9",
+    "group": "v-workplace",
+    "en": "to take bloods",
+    "pl": "pobrać krew (do badań)",
+    "kind": "expression",
+    "examples": [
+      "The nurse will take bloods first thing in the morning.",
+      "I've asked the FY1 to take bloods before the ward round.",
+      "We'll take bloods on admission and repeat at six hours."
+    ],
+    "formal": [
+      "to obtain blood samples",
+      "to collect blood specimens"
+    ],
+    "pronunciation": "/tə teɪk blʌdz/",
+    "source": "oet-frazy/n9/to-take-bloods"
+  },
+  {
+    "id": "ward-n10",
+    "group": "v-workplace",
+    "en": "to escalate (to someone)",
+    "pl": "zgłosić wyżej / eskalować sprawę",
+    "kind": "word",
+    "examples": [
+      "If his obs deteriorate, escalate to the registrar.",
+      "I escalated to the consultant when I wasn't happy with the progress.",
+      "Don't hesitate to escalate if you're concerned — that's what we're here for."
+    ],
+    "formal": [
+      "to escalate to a senior clinician",
+      "to seek senior review"
+    ],
+    "pronunciation": "/tə ˈeskəleɪt/",
+    "source": "oet-frazy/n10/to-escalate-to-someone"
+  },
+  {
+    "id": "ward-n11",
+    "group": "v-workplace",
+    "en": "nil by mouth (NBM)",
+    "pl": "nic doustnie / na czczo",
+    "kind": "phrase",
+    "examples": [
+      "Keep him nil by mouth from midnight.",
+      "She's been nil by mouth since eight this morning.",
+      "Make sure the NBM sign is clearly visible above the bed."
+    ],
+    "formal": [
+      "fasting",
+      "no oral intake",
+      "restricted to nil orally"
+    ],
+    "pronunciation": "/nɪl baɪ maʊθ/",
+    "source": "oet-frazy/n11/nil-by-mouth-nbm"
+  },
+  {
+    "id": "ward-n12",
+    "group": "v-workplace",
+    "en": "to write someone up (for a drug)",
+    "pl": "zaordynować lek / wpisać do karty zleceń",
+    "kind": "expression",
+    "examples": [
+      "I'll write him up for some analgesia.",
+      "Can you write her up for antiemetics? She's quite nauseated.",
+      "He's already been written up for heparin — check the drug chart."
+    ],
+    "formal": [
+      "to prescribe",
+      "to chart a medication"
+    ],
+    "pronunciation": "/tə raɪt ˈsʌmwʌn ʌp/",
+    "register": "informal",
+    "source": "oet-frazy/n12/to-write-someone-up-for-a-drug"
+  },
+  {
+    "id": "ward-n13",
+    "group": "v-workplace",
+    "en": "to flag something up",
+    "pl": "zwrócić uwagę / zgłosić coś",
+    "kind": "expression",
+    "examples": [
+      "The nurse flagged up that his urine output had dropped significantly.",
+      "I wanted to flag up a safeguarding concern before discharge.",
+      "Can you flag this up at the MDT? I think it needs discussing."
+    ],
+    "formal": [
+      "to highlight",
+      "to draw attention to",
+      "to raise"
+    ],
+    "pronunciation": "/tə flæɡ ˈsʌmθɪŋ ʌp/",
+    "source": "oet-frazy/n13/to-flag-something-up"
+  },
+  {
+    "id": "ward-n14",
+    "group": "v-workplace",
+    "en": "to be fit for discharge",
+    "pl": "kwalifikować się do wypisu / być gotowym do domu",
+    "kind": "expression",
+    "examples": [
+      "She's medically fit for discharge, but we're waiting on social care.",
+      "He's been fit for discharge since yesterday — it's a bed management issue.",
+      "We'll review her this afternoon and decide if she's fit for discharge."
+    ],
+    "formal": [
+      "medically optimised for discharge",
+      "suitable for discharge"
+    ],
+    "pronunciation": "/tə biː fɪt fə dɪsˈtʃɑːdʒ/",
+    "source": "oet-frazy/n14/to-be-fit-for-discharge"
+  },
+  {
+    "id": "ward-n15",
+    "group": "v-workplace",
+    "en": "to put something on hold",
+    "pl": "wstrzymać / zawiesić (procedurę, decyzję)",
+    "kind": "expression",
+    "examples": [
+      "We've put the procedure on hold until his INR comes down.",
+      "The discharge has been put on hold pending the social work assessment.",
+      "Let's put that on hold and revisit it after the weekend."
+    ],
+    "formal": [
+      "to defer",
+      "to postpone",
+      "to suspend"
+    ],
+    "pronunciation": "/tə pʊt ˈsʌmθɪŋ ɒn həʊld/",
+    "source": "oet-frazy/n15/to-put-something-on-hold"
+  },
+  {
+    "id": "ward-n16",
+    "group": "v-workplace",
+    "en": "to put in a referral",
+    "pl": "wystawić skierowanie",
+    "kind": "expression",
+    "examples": [
+      "I'll put in a referral to vascular surgery today.",
+      "The GP has already put in a referral — we're waiting for the appointment.",
+      "Could you put in an urgent referral to oncology?"
+    ],
+    "formal": [
+      "to submit a referral",
+      "to make a referral"
+    ],
+    "pronunciation": "/tə pʊt ɪn ə rɪˈfɜːrəl/",
+    "source": "oet-frazy/n16/to-put-in-a-referral"
+  },
+  {
+    "id": "ward-n17",
+    "group": "v-workplace",
+    "en": "to be on call",
+    "pl": "być na dyżurze",
+    "kind": "expression",
+    "examples": [
+      "Who's on call tonight — do you know?",
+      "I was on call all weekend and barely slept.",
+      "The on-call registrar dealt with it overnight."
+    ],
+    "formal": [
+      "to be the on-call clinician",
+      "to be covering out-of-hours"
+    ],
+    "pronunciation": "/tə biː ɒn kɔːl/",
+    "source": "oet-frazy/n17/to-be-on-call"
+  },
+  {
+    "id": "ward-n18",
+    "group": "v-workplace",
+    "en": "to chase a result",
+    "pl": "sprawdzać / ponaglać wynik badania",
+    "kind": "expression",
+    "examples": [
+      "Can you chase that CT result? It was requested three hours ago.",
+      "I've been chasing the biopsy result all week.",
+      "Chase the microbiology result — we need it before we can discharge."
+    ],
+    "formal": [
+      "to follow up on",
+      "to request an update on"
+    ],
+    "pronunciation": "/tə tʃeɪs ə rɪˈzʌlt/",
+    "source": "oet-frazy/n18/to-chase-a-result"
+  },
+  {
+    "id": "ward-n19",
+    "group": "v-workplace",
+    "en": "to come off (a medication)",
+    "pl": "odstawić lek",
+    "kind": "expression",
+    "examples": [
+      "He came off warfarin two weeks before the procedure.",
+      "She's been trying to come off the antidepressants gradually.",
+      "We'll come off the IV antibiotics once he can tolerate oral."
+    ],
+    "formal": [
+      "to discontinue",
+      "to withdraw"
+    ],
+    "pronunciation": "/tə kʌm ɒf/",
+    "source": "oet-frazy/n19/to-come-off-a-medication"
+  },
+  {
+    "id": "ward-n20",
+    "group": "v-workplace",
+    "en": "to be on the mend",
+    "pl": "wracać do zdrowia / być na dobrej drodze",
+    "kind": "expression",
+    "examples": [
+      "Good news — he's on the mend and should be home by Friday.",
+      "She's definitely on the mend; her obs have been stable all day.",
+      "It's early days, but he's on the mend."
+    ],
+    "formal": [
+      "to be recovering",
+      "to be improving",
+      "to be making good progress"
+    ],
+    "pronunciation": "/tə biː ɒn ðə mend/",
+    "source": "oet-frazy/n20/to-be-on-the-mend"
+  },
+  {
+    "id": "ward-n21",
+    "group": "v-workplace",
+    "en": "to take a history",
+    "pl": "zebrać wywiad lekarski",
+    "kind": "expression",
+    "examples": [
+      "Has anyone taken a full history from her yet?",
+      "I'll take a history while you set up the trolley.",
+      "The student took a thorough history — very impressive."
+    ],
+    "formal": [
+      "to obtain a clinical history",
+      "to conduct a clinical assessment"
+    ],
+    "pronunciation": "/tə teɪk ə ˈhɪstri/",
+    "source": "oet-frazy/n21/to-take-a-history"
+  },
+  {
+    "id": "ward-n22",
+    "group": "v-workplace",
+    "en": "on the ward round",
+    "pl": "podczas obchodu",
+    "kind": "expression",
+    "examples": [
+      "We'll discuss his management on the ward round tomorrow morning.",
+      "The consultant reviewed all twelve patients on the ward round.",
+      "I'll present the new admission on the ward round."
+    ],
+    "formal": [
+      "during the daily clinical review",
+      "at the morning review"
+    ],
+    "pronunciation": "/ɒn ðə wɔːd raʊnd/",
+    "source": "oet-frazy/n22/on-the-ward-round"
+  },
+  {
+    "id": "ward-n23",
+    "group": "v-workplace",
+    "en": "to be in theatre",
+    "pl": "być na sali operacyjnej / w trakcie zabiegu",
+    "kind": "expression",
+    "examples": [
+      "The consultant is in theatre until three — bleep the registrar instead.",
+      "I'll be in theatre all morning; can someone cover my bleep?",
+      "She's been in theatre since seven — it's a long case."
+    ],
+    "formal": [
+      "to be performing a procedure",
+      "to be in the operating theatre"
+    ],
+    "pronunciation": "/tə biː ɪn ˈθɪətə/",
+    "source": "oet-frazy/n23/to-be-in-theatre"
+  },
+  {
+    "id": "ward-n24",
+    "group": "v-workplace",
+    "en": "to liaise (with someone)",
+    "pl": "współpracować / koordynować / skontaktować się",
+    "kind": "word",
+    "examples": [
+      "Please liaise with the community nurse before we discharge her.",
+      "I've been liaising with the social work team about his housing situation.",
+      "Could you liaise with pharmacy regarding the new prescription?"
+    ],
+    "formal": [
+      "to coordinate with",
+      "to collaborate with",
+      "to work in conjunction with"
+    ],
+    "pronunciation": "/tə liˈeɪz/",
+    "source": "oet-frazy/n24/to-liaise-with-someone"
+  },
+  {
+    "id": "ward-n25",
+    "group": "v-workplace",
+    "en": "to step down (to a lower level of care)",
+    "pl": "przenieść na oddział o niższym stopniu opieki",
+    "kind": "expression",
+    "examples": [
+      "He's stable enough to step down from HDU to the general ward.",
+      "We'll step down the oxygen support gradually over the next 24 hours.",
+      "Once she's stepped down, we can start planning discharge."
+    ],
+    "formal": [
+      "to de-escalate care",
+      "to transfer to a lower level of care"
+    ],
+    "pronunciation": "/tə step daʊn/",
+    "source": "oet-frazy/n25/to-step-down-to-a-lower-level-of-care"
+  },
+  {
+    "id": "ward-n26",
+    "group": "v-workplace",
+    "en": "to keep someone in the loop",
+    "pl": "informować kogoś na bieżąco",
+    "kind": "expression",
+    "examples": [
+      "Keep the family in the loop — they're very anxious.",
+      "Please keep me in the loop if anything changes overnight.",
+      "The GP should be kept in the loop throughout the admission."
+    ],
+    "formal": [
+      "to keep someone informed",
+      "to update someone regularly"
+    ],
+    "pronunciation": "/tə kiːp ˈsʌmwʌn ɪn ðə luːp/",
+    "source": "oet-frazy/n26/to-keep-someone-in-the-loop"
+  },
+  {
+    "id": "ward-n27",
+    "group": "v-workplace",
+    "en": "to go over the notes",
+    "pl": "przejrzeć dokumentację",
+    "kind": "expression",
+    "examples": [
+      "I'll go over the notes before the ward round tomorrow.",
+      "Have you had a chance to go over her notes from the last admission?",
+      "Let me go over the notes — I wasn't here when she came in."
+    ],
+    "formal": [
+      "to review the documentation",
+      "to go through the clinical records"
+    ],
+    "pronunciation": "/tə ɡəʊ ˈəʊvə ðə nəʊts/",
+    "source": "oet-frazy/n27/to-go-over-the-notes"
+  },
+  {
+    "id": "ward-n28",
+    "group": "v-workplace",
+    "en": "to be under the care of",
+    "pl": "być pod opieką (lekarza / oddziału)",
+    "kind": "expression",
+    "examples": [
+      "She is currently under the care of the hepatology team.",
+      "He was under the care of cardiology during his last admission.",
+      "The patient will remain under the care of the surgical team until discharge."
+    ],
+    "formal": [
+      "to be managed by",
+      "to be under the supervision of"
+    ],
+    "pronunciation": "/tə biː ˈʌndə ðə keər ɒv/",
+    "source": "oet-frazy/n28/to-be-under-the-care-of"
+  },
+  {
+    "id": "ward-n29",
+    "group": "v-workplace",
+    "en": "to review a patient",
+    "pl": "ocenić / zbadać pacjenta ponownie",
+    "kind": "expression",
+    "examples": [
+      "Can you review the patient in bay two? I'm not happy with her progress.",
+      "I've asked the registrar to review him before we make a decision.",
+      "She was reviewed by the medical team and found to be improving."
+    ],
+    "formal": [
+      "to assess",
+      "to re-evaluate",
+      "to conduct a clinical review of"
+    ],
+    "pronunciation": "/tə rɪˈvjuː ə ˈpeɪʃənt/",
+    "source": "oet-frazy/n29/to-review-a-patient"
+  },
+  {
+    "id": "ward-n30",
+    "group": "v-workplace",
+    "en": "to take over (from someone)",
+    "pl": "przejąć opiekę / zmianę od kogoś",
+    "kind": "expression",
+    "examples": [
+      "I'll take over from you at eight — go home and get some rest.",
+      "The night team will take over from us at ten.",
+      "She took over the case when the consultant was called away."
+    ],
+    "formal": [
+      "to assume responsibility for",
+      "to take charge of"
+    ],
+    "pronunciation": "/tə teɪk ˈəʊvə/",
+    "source": "oet-frazy/n30/to-take-over-from-someone"
+  }
+]
