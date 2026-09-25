@@ -1,4 +1,5 @@
 import { Link } from 'wouter'
+import NotesView from '../features/notes/NotesView.tsx'
 import { usePersistence } from '../lib/storage.ts'
 import { MATERIAL_VIEWS } from '../sections/views.tsx'
 import { SECTIONS, TABS, findSection, isTabId, sectionPath } from './sections.ts'
@@ -64,6 +65,8 @@ export function SectionPage({ sectionId, tabId, viewId }: { sectionId: string; t
     )
   } else if (viewId !== undefined) {
     return <NotFound />
+  } else if (tabId === 'notes') {
+    body = <NotesView section={section.id} />
   }
 
   return (

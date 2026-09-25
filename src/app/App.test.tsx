@@ -60,6 +60,12 @@ describe('material views', () => {
     expect(render('/vocabulary/material')).not.toContain('aria-label="Vocabulary material"')
   })
 
+  it('shows My notes with the fictional-data warning', () => {
+    const html = render('/speaking/notes')
+    expect(html).toContain('Fictional cases only.')
+    expect(html).toContain('New note')
+  })
+
   it('rejects an unknown view', () => {
     expect(render('/writing/material/nope')).toContain('Page not found')
   })
