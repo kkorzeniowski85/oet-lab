@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import type { SectionId, TabId } from '../app/sections.ts'
 import AbbreviationList from '../features/abbreviations/AbbreviationList.tsx'
 import CriteriaList from '../features/criteria/CriteriaList.tsx'
+import SendToFiszki from '../features/fiszki/SendToFiszki.tsx'
 import GapFill from '../features/gapfill/GapFill.tsx'
 import GuideView from '../features/guides/GuideView.tsx'
 import PhraseBank from '../features/phrase-bank/PhraseBank.tsx'
@@ -32,7 +33,10 @@ export const VIEWS: Record<Exclude<TabId, 'notes'>, Partial<Record<SectionId, Vi
       { id: 'criteria', name: 'Criteria', render: () => <CriteriaList subtest="speaking" /> },
       { id: 'roleplay', name: 'Role-play format', render: () => <GuideView section="speaking" /> },
     ],
-    vocabulary: [{ id: 'phrases', name: 'Phrases', render: () => <PhraseBank section="vocabulary" /> }],
+    vocabulary: [
+      { id: 'phrases', name: 'Phrases', render: () => <PhraseBank section="vocabulary" /> },
+      { id: 'fiszki', name: 'Send to Fiszki', render: () => <SendToFiszki /> },
+    ],
     abbreviations: [{ id: 'list', name: 'Abbreviations', render: () => <AbbreviationList /> }],
   },
   practice: {

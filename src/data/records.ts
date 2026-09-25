@@ -23,6 +23,7 @@ const BLANK: { [S in UserStore]: Partial<UserRecords[S]> } = {
   letters: { text: '', evaluation: undefined },
   customCases: { title: '', task: '', notes: '' },
   roleplaySessions: { reflection: undefined },
+  fiszkiExports: {},
 }
 
 /** Live records, newest change first. */

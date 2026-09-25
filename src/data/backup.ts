@@ -47,6 +47,7 @@ const CHECKS: { [S in UserStore]: Check } = {
   customCases: (r) => stamped(r) && str(r.title) && str(r.task) && str(r.notes),
   roleplaySessions: (r) =>
     stamped(r) && str(r.cardId) && str(r.startedAt) && optStr(r.finishedAt) && strList(r.selfCheck) && optStr(r.reflection),
+  fiszkiExports: (r) => stamped(r) && strList(r.itemIds) && oneOf(r.via, ['share', 'download', 'copy']),
 }
 
 export type Parsed = { ok: true; file: BackupFile } | { ok: false; error: string }
@@ -116,6 +117,7 @@ const NOUNS: { [S in UserStore]: [string, string] } = {
   customCases: ['own case', 'own cases'],
   attempts: ['gap-fill answer', 'gap-fill answers'],
   roleplaySessions: ['role-play', 'role-plays'],
+  fiszkiExports: ['sending to Fiszki', 'sendings to Fiszki'],
 }
 
 /** "2 notes, 1 letter" — or "nothing" when every store is empty. */

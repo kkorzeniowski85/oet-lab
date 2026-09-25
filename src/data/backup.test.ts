@@ -104,7 +104,7 @@ describe('backupDue', () => {
 })
 
 describe('describeCounts', () => {
-  const none = { notes: 0, customPhrases: 0, attempts: 0, letters: 0, customCases: 0, roleplaySessions: 0 }
+  const none = { notes: 0, customPhrases: 0, attempts: 0, letters: 0, customCases: 0, roleplaySessions: 0, fiszkiExports: 0 }
 
   it('lists only what exists, with singular and plural', () => {
     expect(describeCounts({ ...none, notes: 2, letters: 1 })).toBe('2 notes, 1 letter')

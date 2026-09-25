@@ -2,7 +2,15 @@ import { describe, expect, it } from 'vitest'
 import type { NoteRecord } from './db.ts'
 import { merge, totalChanges, winner, type Data } from './merge.ts'
 
-const empty = (): Data => ({ notes: [], customPhrases: [], attempts: [], letters: [], customCases: [], roleplaySessions: [] })
+const empty = (): Data => ({
+  notes: [],
+  customPhrases: [],
+  attempts: [],
+  letters: [],
+  customCases: [],
+  roleplaySessions: [],
+  fiszkiExports: [],
+})
 
 const note = (id: string, updatedAt: string, body = 'text', extra: Partial<NoteRecord> = {}): NoteRecord => ({
   id,

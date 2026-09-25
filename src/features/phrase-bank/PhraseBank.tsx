@@ -6,6 +6,8 @@ import { deleteRecord, saveRecord, useRecords } from '../../data/records.ts'
 import { matches } from '../../lib/search.ts'
 import { FilterChips, SearchInput } from '../../ui/controls.tsx'
 import SpeakButton from '../../ui/SpeakButton.tsx'
+import { Link } from 'wouter'
+import { useFiszkiBasket } from '../fiszki/fiszki.ts'
 import PhraseForm from '../quick-add/PhraseForm.tsx'
 
 type Item = Phrase & { mine?: CustomPhraseRecord }
@@ -52,7 +54,13 @@ function MineActions({ record, section }: { record: CustomPhraseRecord; section:
   )
 }
 
-function PhraseItem({ phrase: p, section }: { phrase: Item; section: PhraseSection }) {
+interface FiszkiState {
+  inList: boolean
+  sentBefore: boolean
+  toggle: () => void
+}
+
+function PhraseItem({ phrase: p, section, fiszki }: { phrase: Item; section: PhraseSection; fiszki: FiszkiState }) {
   return (
     <li className="border-b border-line last:border-b-0">
       <details className="group py-3">
@@ -64,6 +72,9 @@ function PhraseItem({ phrase: p, section }: { phrase: Item; section: PhraseSecti
             )}
             {p.mine && (
               <span className="ml-2 rounded bg-ink px-1.5 py-0.5 align-middle text-xs text-canvas">mine</span>
+            )}
+            {fiszki.sentBefore && (
+              <span className="ml-2 rounded border border-line px-1.5 py-0.5 align-middle text-xs text-muted">in Fiszki</span>
             )}
             <span className="mt-0.5 block text-sm text-muted">{p.pl}</span>
           </span>
@@ -98,6 +109,9 @@ function PhraseItem({ phrase: p, section }: { phrase: Item; section: PhraseSecti
               {p.formal.join(' · ')}
             </p>
           )}
+          <button type="button" onClick={fiszki.toggle} aria-pressed={fiszki.inList} className="text-brand">
+            {fiszki.inList ? '✓ In your Fiszki list — remove' : '+ Add to Fiszki list'}
+          </button>
           {p.mine && <MineActions record={p.mine} section={section} />}
         </div>
       </details>
@@ -109,6 +123,9 @@ export default function PhraseBank({ section }: { section: PhraseSection }) {
   const [query, setQuery] = useState('')
   const [groupId, setGroupId] = useState<string | null>(null)
   const custom = useRecords('customPhrases')
+  const basket = useFiszkiBasket()
+  const exports = useRecords('fiszkiExports')
+  const sent = new Set((exports ?? []).flatMap((e) => e.itemIds))
 
   const groups = groupsFor(section)
   const inSection = new Set(groups.map((g) => g.id))
@@ -126,6 +143,16 @@ export default function PhraseBank({ section }: { section: PhraseSection }) {
         selected={groupId}
         onSelect={setGroupId}
       />
+      {basket.ids.length > 0 && (
+        <p className="text-sm">
+          <span className="text-muted">
+            Fiszki list: {basket.ids.length} {basket.ids.length === 1 ? 'phrase' : 'phrases'} ·{' '}
+          </span>
+          <Link href="/vocabulary/material/fiszki" className="text-brand underline">
+            Send to Fiszki
+          </Link>
+        </p>
+      )}
       {visible.length === 0 && <p className="text-muted">No phrases match.</p>}
       {groups.map((g) => {
         const items = visible.filter((p) => p.group === g.id)
@@ -136,7 +163,12 @@ export default function PhraseBank({ section }: { section: PhraseSection }) {
             <p className="text-sm text-muted">{g.description}</p>
             <ul className="mt-2 rounded-lg border border-line bg-surface px-4">
               {items.map((p) => (
-                <PhraseItem key={p.id} phrase={p} section={section} />
+                <PhraseItem
+                  key={p.id}
+                  phrase={p}
+                  section={section}
+                  fiszki={{ inList: basket.has(p.id), sentBefore: sent.has(p.id), toggle: () => basket.toggle(p.id) }}
+                />
               ))}
             </ul>
           </section>

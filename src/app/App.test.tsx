@@ -81,7 +81,7 @@ describe('material views', () => {
 
   it('shows sub-views only where a section has more than one', () => {
     expect(render('/writing/material')).toContain('aria-label="Writing material"')
-    expect(render('/vocabulary/material')).not.toContain('aria-label="Vocabulary material"')
+    expect(render('/abbreviations/material')).not.toContain('aria-label="Abbreviations material"')
   })
 
   it('shows My notes with the fictional-data warning', () => {
