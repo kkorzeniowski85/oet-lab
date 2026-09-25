@@ -123,6 +123,18 @@ export function validateContent(c: Content): string[] {
     }
   }
 
+  const phraseIds = new Set(c.phrases.map((p) => p.id))
+  for (const r of c.rolePlays) {
+    const at = `role-play ${r.id}`
+    checkId('role-play', r.id)
+    need(at, 'title', r.title)
+    need(at, 'setting', r.setting)
+    for (const side of ['candidate', 'otherParty'] as const) {
+      if (!Array.isArray(r[side]) || r[side].length < 3 || !r[side].every(filled)) errors.push(`${at}: ${side} card needs at least three lines`)
+    }
+    for (const f of r.focus ?? []) if (!phraseIds.has(f)) errors.push(`${at}: unknown focus phrase "${f}"`)
+  }
+
   return errors
 }
 

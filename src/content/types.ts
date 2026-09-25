@@ -85,6 +85,19 @@ export interface WritingCase {
   tags: string[]
 }
 
+/** A fictional Speaking role-play: your card, the other person's card, and phrases worth using. */
+export interface RolePlay {
+  id: string
+  title: string
+  setting: string
+  /** Who you are and the tasks, as on the candidate's card. */
+  candidate: string[]
+  /** The patient's or relative's side, for a practice partner or for review afterwards. */
+  otherParty: string[]
+  /** Ids of phrases from the Speaking bank that fit this role-play. */
+  focus: string[]
+}
+
 export interface Content {
   phraseGroups: PhraseGroup[]
   phrases: Phrase[]
@@ -93,4 +106,5 @@ export interface Content {
   criteria: Criterion[]
   guides: Guide[]
   writingCases: WritingCase[]
+  rolePlays: RolePlay[]
 }

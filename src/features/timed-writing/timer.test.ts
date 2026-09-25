@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { clock, formatClock, writingMinutes } from './timer.ts'
+import { formatClock } from '../../lib/time.ts'
+import { clock, writingMinutes } from './timer.ts'
 
 const T0 = Date.parse('2026-09-25T10:00:00.000Z')
 const iso = (ms: number) => new Date(ms).toISOString()

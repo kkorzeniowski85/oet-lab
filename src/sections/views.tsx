@@ -5,6 +5,7 @@ import CriteriaList from '../features/criteria/CriteriaList.tsx'
 import GapFill from '../features/gapfill/GapFill.tsx'
 import GuideView from '../features/guides/GuideView.tsx'
 import PhraseBank from '../features/phrase-bank/PhraseBank.tsx'
+import RolePlayPractice from '../features/roleplay/RolePlayPractice.tsx'
 import { LetterList, LetterReview } from '../features/timed-writing/Letters.tsx'
 import TimedWriting from '../features/timed-writing/TimedWriting.tsx'
 
@@ -40,7 +41,10 @@ export const VIEWS: Record<Exclude<TabId, 'notes'>, Partial<Record<SectionId, Vi
       { id: 'gapfill', name: 'Gap-fill', render: () => <GapFill section="writing" /> },
       { id: 'letters', name: 'My letters', render: () => <LetterList />, item: (id) => <LetterReview id={id} /> },
     ],
-    speaking: [{ id: 'gapfill', name: 'Gap-fill', render: () => <GapFill section="speaking" /> }],
+    speaking: [
+      { id: 'roleplay', name: 'Role-play', render: () => <RolePlayPractice /> },
+      { id: 'gapfill', name: 'Gap-fill', render: () => <GapFill section="speaking" /> },
+    ],
     vocabulary: [{ id: 'gapfill', name: 'Gap-fill', render: () => <GapFill section="vocabulary" /> }],
   },
 }

@@ -6,6 +6,7 @@ import phraseGroups from '../../content/phrase-groups.json'
 import speaking from '../../content/phrases.speaking.json'
 import vocabulary from '../../content/phrases.vocabulary.json'
 import writing from '../../content/phrases.writing.json'
+import rolePlays from '../../content/roleplays.json'
 import writingCases from '../../content/writing-cases.json'
 import type {
   Abbreviation,
@@ -17,6 +18,7 @@ import type {
   Phrase,
   PhraseGroup,
   PhraseSection,
+  RolePlay,
   WritingCase,
 } from './types.ts'
 
@@ -29,6 +31,7 @@ export const CONTENT: Content = {
   criteria: criteria as Criterion[],
   guides: guides as Guide[],
   writingCases: writingCases as WritingCase[],
+  rolePlays: rolePlays as RolePlay[],
 }
 
 export function groupsFor(section: PhraseSection): PhraseGroup[] {

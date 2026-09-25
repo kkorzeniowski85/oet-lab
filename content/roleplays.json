@@ -1,0 +1,212 @@
+[
+  {
+    "id": "rp-new-diabetes",
+    "title": "New diagnosis of type 2 diabetes",
+    "setting": "General practice",
+    "candidate": [
+      "You are a GP. Your patient, a 52-year-old office manager, has come for the results of a routine blood test.",
+      "The HbA1c is 62 mmol/mol, which confirms type 2 diabetes.",
+      "Find out what the patient already knows about diabetes.",
+      "Explain the diagnosis in plain language.",
+      "Respond to the patient's worry about insulin: most people start with lifestyle changes and tablets.",
+      "Outline the next steps: metformin, diet, activity, a diabetes education course and a review in three months."
+    ],
+    "otherParty": [
+      "You are a 52-year-old office manager. You feel well and expected a normal result.",
+      "Your father had diabetes, needed insulin and later lost a foot. You are frightened.",
+      "At first you do not really listen; you keep asking whether you will need injections.",
+      "You calm down if the doctor explains clearly and asks about your concerns.",
+      "You worry about fitting exercise into long working days."
+    ],
+    "focus": ["lab-s-explain-1", "lab-s-gather-3", "core-m207", "core-m212", "core-m211", "lab-s-close-1"]
+  },
+  {
+    "id": "rp-antibiotics-parent",
+    "title": "A parent asking for antibiotics",
+    "setting": "General practice",
+    "candidate": [
+      "You are a GP. A parent has brought their 4-year-old daughter, who has had a cough, runny nose and a temperature of 38 °C for two days.",
+      "On examination, the child is alert, drinking well, with a red throat and clear chest. This is a viral infection.",
+      "Find out the parent's main concern.",
+      "Explain why antibiotics would not help and could cause side effects.",
+      "Advise on fluids, paracetamol or ibuprofen, and rest.",
+      "Give clear safety-netting advice: when to come back or seek urgent help."
+    ],
+    "otherParty": [
+      "You are the child's parent. You have missed two days of work and need your daughter back at nursery.",
+      "Last winter, antibiotics seemed to help your son quickly.",
+      "You insist on antibiotics and become irritated if you feel dismissed.",
+      "You accept the plan if the doctor listens to you and gives clear advice about warning signs.",
+      "You want to know how long the illness will last."
+    ],
+    "focus": ["lab-s-gather-3", "core-m213", "core-m207", "core-m216", "lab-s-close-2"]
+  },
+  {
+    "id": "rp-contrast-anxiety",
+    "title": "A patient afraid of contrast for a CT scan",
+    "setting": "Radiology department",
+    "candidate": [
+      "You are a doctor in the radiology department. A 60-year-old patient is booked for a CT scan of the abdomen with contrast to investigate weight loss.",
+      "The patient has told the radiographer they do not want the contrast injection.",
+      "Find out why the patient is worried.",
+      "Explain why contrast is needed and what it involves (a warm feeling, a metallic taste).",
+      "Explain the risk of a reaction: serious reactions are rare, and the team is trained to treat them.",
+      "Respect the patient's decision and agree a way forward."
+    ],
+    "otherParty": [
+      "You are 60 years old. Years ago you had an itchy rash after an X-ray dye; nobody told you what it was.",
+      "A friend told you contrast can damage the kidneys.",
+      "You are anxious and want to leave without the scan.",
+      "You agree to the scan if the doctor explains the risks honestly and offers precautions.",
+      "You want to know whether the scan can be done without contrast."
+    ],
+    "focus": ["lab-s-open-3", "lab-s-gather-2", "core-m210", "core-m216", "core-m218", "lab-s-plan-1"]
+  },
+  {
+    "id": "rp-lung-biopsy-consent",
+    "title": "Consent for a CT-guided lung biopsy",
+    "setting": "Interventional radiology day unit",
+    "candidate": [
+      "You are a doctor in interventional radiology. A 67-year-old patient has a 2.5 cm nodule in the right lung, and a CT-guided biopsy is planned for today.",
+      "Check what the patient understands about the procedure.",
+      "Explain the procedure: local anaesthetic, a thin needle, lying still for about 30 minutes.",
+      "Explain the main risks: a collapsed lung (pneumothorax) in about 1 in 5, usually minor; coughing up a little blood.",
+      "Answer the patient's question about cancer honestly, without guessing the result.",
+      "Check understanding and ask whether the patient is happy to go ahead."
+    ],
+    "otherParty": [
+      "You are 67 years old and have smoked all your life. You are sure the nodule is cancer.",
+      "You are frightened of needles and of being awake during the procedure.",
+      "You keep asking the doctor to tell you whether it is cancer.",
+      "You want to know whether you can drive home afterwards.",
+      "You agree to the biopsy if you feel the doctor is honest and patient with you."
+    ],
+    "focus": ["lab-s-open-1", "lab-s-explain-1", "core-m208", "core-m210", "core-m219", "core-m211"]
+  },
+  {
+    "id": "rp-smoking-after-mi",
+    "title": "Stopping smoking after a heart attack",
+    "setting": "Cardiology ward",
+    "candidate": [
+      "You are a doctor on the cardiology ward. A 55-year-old builder had a heart attack three days ago and had a stent. He will go home tomorrow.",
+      "He smokes 20 cigarettes a day.",
+      "Find out how he feels about his smoking.",
+      "Explain how smoking affects his heart and the stent.",
+      "Offer support: nicotine replacement or varenicline, and the local stop-smoking service.",
+      "Agree a realistic plan with him."
+    ],
+    "otherParty": [
+      "You are a 55-year-old builder. You have smoked since you were 15.",
+      "You have tried to stop twice and failed; you feel ashamed about it.",
+      "At first you say smoking is the only way you cope with stress.",
+      "You become more open if the doctor does not lecture you.",
+      "You are worried about gaining weight if you stop."
+    ],
+    "focus": ["lab-s-gather-1", "lab-s-gather-5", "core-m212", "core-m218", "lab-s-plan-1", "lab-s-plan-2"]
+  },
+  {
+    "id": "rp-disc-conservative",
+    "title": "MRI shows a disc prolapse — surgery is not needed yet",
+    "setting": "General practice",
+    "candidate": [
+      "You are a GP. A 41-year-old teacher has sciatica down the left leg for five weeks. The MRI shows an L5/S1 disc prolapse. There is no weakness and no bladder or bowel problem.",
+      "Go through the MRI result with the patient.",
+      "Explain that most disc prolapses improve without surgery within weeks to months.",
+      "Explain the plan: pain relief, staying active, physiotherapy.",
+      "Explain the warning signs that need urgent help (numbness in the saddle area, bladder or bowel problems, new weakness).",
+      "Agree when to review and when surgery might be considered."
+    ],
+    "otherParty": [
+      "You are a 41-year-old teacher. You have read online that a disc prolapse needs an operation.",
+      "You expect to be referred to a surgeon today and feel disappointed.",
+      "You are struggling to stand in class all day.",
+      "You ask for a fit note.",
+      "You accept the plan if the doctor explains why surgery is not the first step."
+    ],
+    "focus": ["core-m217", "core-m207", "lab-s-gather-4", "core-m211", "core-m215", "lab-s-close-2"]
+  },
+  {
+    "id": "rp-back-pain-scan-request",
+    "title": "A patient asking for a scan for back pain",
+    "setting": "General practice",
+    "candidate": [
+      "You are a GP. A 35-year-old warehouse worker has had low back pain for ten days after lifting. There are no red flags and the examination is normal.",
+      "The patient is asking for an MRI scan.",
+      "Find out why the patient wants a scan.",
+      "Explain why a scan would not change the treatment at this stage.",
+      "Advise on staying active, simple pain relief and safe lifting.",
+      "Explain when you would arrange a scan."
+    ],
+    "otherParty": [
+      "You are a 35-year-old warehouse worker. Your employer needs to know when you can return.",
+      "You believe something must be broken, because the pain is so bad.",
+      "You feel the doctor is not taking you seriously if no scan is offered.",
+      "You calm down if the doctor explains what the examination showed.",
+      "You ask whether you should rest in bed."
+    ],
+    "focus": ["lab-s-open-4", "lab-s-gather-2", "core-m216", "core-m207", "lab-s-plan-1"]
+  },
+  {
+    "id": "rp-asthma-discharge",
+    "title": "Going home after an asthma attack",
+    "setting": "Emergency department",
+    "candidate": [
+      "You are a doctor in the emergency department. A 24-year-old student came in with an asthma attack and has improved after treatment.",
+      "The patient uses only a blue reliever inhaler, sometimes several times a day.",
+      "Find out how the patient uses their inhalers.",
+      "Explain the difference between the preventer and the reliever inhaler.",
+      "Explain the prednisolone course for five days.",
+      "Explain the warning signs of a severe attack and arrange a GP review within two days."
+    ],
+    "otherParty": [
+      "You are a 24-year-old student. You stopped your brown preventer inhaler because you felt fine.",
+      "You worry that steroids will make you gain weight.",
+      "You have exams next week and want to go home quickly.",
+      "You did not realise the attack was serious.",
+      "You agree to the plan if it is explained simply."
+    ],
+    "focus": ["lab-s-gather-1", "core-m207", "core-m213", "core-m211", "lab-s-close-1", "lab-s-close-2"]
+  },
+  {
+    "id": "rp-angry-relative",
+    "title": "An angry daughter: surgery delayed",
+    "setting": "Orthopaedic ward",
+    "candidate": [
+      "You are a doctor on the orthopaedic ward. An 84-year-old woman with a hip fracture was admitted 30 hours ago. Her operation was postponed today because a more urgent case needed theatre.",
+      "Her daughter has asked to speak to a doctor.",
+      "Acknowledge the daughter's feelings and apologise for the delay.",
+      "Explain the reason for the delay.",
+      "Explain what is being done to keep her mother comfortable and safe (pain relief, fluids, pressure care).",
+      "Explain the plan: the operation is first on tomorrow's list."
+    ],
+    "otherParty": [
+      "You are the patient's daughter. Your mother has been without food since last night and is in pain.",
+      "You were told this morning that she would have surgery today.",
+      "You are angry at first and say you will make a complaint.",
+      "You calm down if the doctor listens, apologises and explains honestly.",
+      "You want to know whether the delay is dangerous for your mother."
+    ],
+    "focus": ["lab-s-open-1", "lab-s-gather-3", "core-m206", "core-m216", "lab-s-close-1"]
+  },
+  {
+    "id": "rp-anticoagulation",
+    "title": "Starting a blood thinner for atrial fibrillation",
+    "setting": "General practice",
+    "candidate": [
+      "You are a GP. A 72-year-old patient has newly diagnosed atrial fibrillation. You recommend apixaban to reduce the risk of stroke.",
+      "Find out what the patient already knows about atrial fibrillation.",
+      "Explain the link between atrial fibrillation and stroke.",
+      "Explain the benefits and risks of apixaban, including bleeding.",
+      "Explain the signs of serious bleeding and what to do.",
+      "Check understanding and support the patient in making a decision."
+    ],
+    "otherParty": [
+      "You are 72 and still play golf twice a week.",
+      "Your neighbour had a bad bleed on warfarin, and you are reluctant to take a blood thinner.",
+      "You feel well and do not understand why you need tablets.",
+      "You ask whether you can stop the tablet if you get a nosebleed.",
+      "You would like time to think and to talk to your wife."
+    ],
+    "focus": ["lab-s-explain-1", "term-m7", "core-m218", "core-m211", "lab-s-plan-2", "core-m220"]
+  }
+]

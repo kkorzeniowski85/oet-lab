@@ -5,7 +5,8 @@ import { deleteRecord, saveRecord } from '../../data/records.ts'
 import type { ResolvedCase } from './cases.ts'
 import CaseNotes from './CaseNotes.tsx'
 import { bodyWords } from './prompt.ts'
-import { clock, formatClock, useNow, writingStart } from './timer.ts'
+import { formatClock, useNow } from '../../lib/time.ts'
+import { clock, writingStart } from './timer.ts'
 
 const SAVE_AFTER_MS = 800
 

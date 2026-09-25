@@ -43,6 +43,16 @@ function sample(): Content {
         tags: [],
       },
     ],
+    rolePlays: [
+      {
+        id: 'rp1',
+        title: 'New diagnosis',
+        setting: 'General practice',
+        candidate: ['You are a GP.', 'Explain the diagnosis.', 'Check understanding.'],
+        otherParty: ['You are the patient.', 'You are worried.', 'Ask about insulin.'],
+        focus: ['p1'],
+      },
+    ],
   }
 }
 
@@ -115,6 +125,16 @@ describe('validateContent', () => {
     const c = sample()
     c.writingCases[0].notes = c.writingCases[0].notes.slice(0, 1)
     expect(validateContent(c)).toContain('writing case wc1: needs at least two note sections')
+  })
+
+  it('reports a role-play with a thin card or an unknown phrase', () => {
+    const c = sample()
+    c.rolePlays[0].otherParty = ['You are the patient.']
+    c.rolePlays[0].focus = ['nope']
+    expect(validateContent(c)).toEqual([
+      'role-play rp1: otherParty card needs at least three lines',
+      'role-play rp1: unknown focus phrase "nope"',
+    ])
   })
 
   it('reports a fact without a source', () => {
