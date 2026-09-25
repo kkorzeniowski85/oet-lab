@@ -24,10 +24,29 @@ const str = (v: unknown) => typeof v === 'string'
 const optStr = (v: unknown) => v === undefined || typeof v === 'string'
 const stamped: Check = (r) =>
   str(r.id) && (r.id as string).length > 0 && str(r.createdAt) && str(r.updatedAt) && optStr(r.deletedAt)
+const bool = (v: unknown) => typeof v === 'boolean'
+const strList = (v: unknown) => Array.isArray(v) && v.every(str)
+const oneOf = (v: unknown, options: string[]) => options.includes(v as string)
 const SECTION_IDS: string[] = SECTIONS.map((s) => s.id)
 const CHECKS: { [S in UserStore]: Check } = {
   notes: (r) => stamped(r) && SECTION_IDS.includes(r.section as string) && str(r.title) && str(r.body),
   customPhrases: (r) => stamped(r) && str(r.group) && str(r.en) && str(r.pl) && optStr(r.example),
+  attempts: (r) =>
+    stamped(r) && r.exercise === 'gapfill' && str(r.itemId) && bool(r.correct) && str(r.answer) && oneOf(r.mode, ['type', 'choose']),
+  letters: (r) =>
+    stamped(r) &&
+    oneOf(r.caseKind, ['builtin', 'custom']) &&
+    str(r.caseId) &&
+    str(r.text) &&
+    oneOf(r.phase, ['reading', 'writing', 'done']) &&
+    str(r.readingStartedAt) &&
+    optStr(r.writingStartedAt) &&
+    optStr(r.finishedAt) &&
+    strList(r.selfCheck) &&
+    optStr(r.evaluation),
+  customCases: (r) => stamped(r) && str(r.title) && str(r.task) && str(r.notes),
+  roleplaySessions: (r) =>
+    stamped(r) && str(r.cardId) && str(r.startedAt) && optStr(r.finishedAt) && strList(r.selfCheck) && optStr(r.reflection),
 }
 
 export type Parsed = { ok: true; file: BackupFile } | { ok: false; error: string }
@@ -85,10 +104,24 @@ export async function restoreBackup(file: BackupFile): Promise<void> {
 }
 
 export function liveCounts(data: BackupFile['data']): { [S in UserStore]: number } {
-  return {
-    notes: data.notes.filter((r) => !r.deletedAt).length,
-    customPhrases: data.customPhrases.filter((r) => !r.deletedAt).length,
-  }
+  const counts = {} as { [S in UserStore]: number }
+  for (const store of USER_STORES) counts[store] = data[store].filter((r) => !r.deletedAt).length
+  return counts
+}
+
+const NOUNS: { [S in UserStore]: [string, string] } = {
+  notes: ['note', 'notes'],
+  customPhrases: ['phrase', 'phrases'],
+  letters: ['letter', 'letters'],
+  customCases: ['own case', 'own cases'],
+  attempts: ['gap-fill answer', 'gap-fill answers'],
+  roleplaySessions: ['role-play', 'role-plays'],
+}
+
+/** "2 notes, 1 letter" — or "nothing" when every store is empty. */
+export function describeCounts(counts: { [S in UserStore]: number }): string {
+  const parts = USER_STORES.filter((s) => counts[s] > 0).map((s) => `${counts[s]} ${NOUNS[s][counts[s] === 1 ? 0 : 1]}`)
+  return parts.length ? parts.join(', ') : 'nothing'
 }
 
 export function backupFileName(now = new Date()): string {

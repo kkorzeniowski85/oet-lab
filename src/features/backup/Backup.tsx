@@ -1,6 +1,14 @@
 import { useRef, useState } from 'react'
 import { Link } from 'wouter'
-import { backupDue, backupFileName, exportData, liveCounts, parseBackup, restoreBackup } from '../../data/backup.ts'
+import {
+  backupDue,
+  backupFileName,
+  describeCounts,
+  exportData,
+  liveCounts,
+  parseBackup,
+  restoreBackup,
+} from '../../data/backup.ts'
 import { setSetting, useRecords, useSetting } from '../../data/records.ts'
 import { downloadText } from '../../lib/download.ts'
 
@@ -15,18 +23,14 @@ async function downloadBackup(): Promise<void> {
   await setSetting(LAST_BACKUP, file.exportedAt)
 }
 
-const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`
-
+// Work worth backing up; gap-fill answers alone are not.
 function useHasData(): boolean {
-  const notes = useRecords('notes')
-  const phrases = useRecords('customPhrases')
-  return (notes?.length ?? 0) + (phrases?.length ?? 0) > 0
+  const counts = [useRecords('notes'), useRecords('customPhrases'), useRecords('letters'), useRecords('customCases')]
+  return counts.some((list) => (list?.length ?? 0) > 0)
 }
 
 export function BackupPanel() {
   const lastBackupAt = useSetting<string>(LAST_BACKUP)
-  const notes = useRecords('notes')
-  const phrases = useRecords('customPhrases')
   const input = useRef<HTMLInputElement>(null)
   const [message, setMessage] = useState<{ tone: 'ok' | 'error'; text: string } | null>(null)
 
@@ -36,12 +40,13 @@ export function BackupPanel() {
       setMessage({ tone: 'error', text: parsed.error })
       return
     }
-    const incoming = liveCounts(parsed.file.data)
+    const incoming = describeCounts(liveCounts(parsed.file.data))
+    const current = describeCounts(liveCounts((await exportData()).data))
     const from = parsed.file.exportedAt ? ` from ${longDate(parsed.file.exportedAt)}` : ''
     const confirmed = window.confirm(
       `Replace all data on this device with this backup${from}?\n\n` +
-        `The backup has ${plural(incoming.notes, 'note')} and ${plural(incoming.customPhrases, 'phrase')}.\n` +
-        `Your current ${plural(notes?.length ?? 0, 'note')} and ${plural(phrases?.length ?? 0, 'phrase')} will be replaced.`,
+        `The backup has: ${incoming}.\n` +
+        `This device has: ${current}. It will be replaced.`,
     )
     if (!confirmed) return
     await restoreBackup(parsed.file)
@@ -52,7 +57,8 @@ export function BackupPanel() {
     <section className="space-y-3">
       <h2 className="text-lg font-semibold">Backup</h2>
       <p className="text-sm text-muted">
-        A backup file holds your notes and your own phrases. Keep it somewhere safe, off this device.
+        A backup file holds everything you made here: notes, your own phrases and cases, letters and practice results.
+        Keep it somewhere safe, off this device.
       </p>
       <p className="text-sm">Last backup: {lastBackupAt ? longDate(lastBackupAt) : 'never'}</p>
       <div className="flex flex-wrap gap-2">
@@ -95,7 +101,7 @@ export function BackupReminder() {
   return (
     <div role="note" className="rounded-lg border border-line bg-surface p-4 text-sm">
       <p>
-        Your notes and phrases live only in this browser.{' '}
+        Your work lives only in this browser.{' '}
         {due.days === null ? 'You have not made a backup yet.' : `Your last backup was ${due.days} days ago.`}
       </p>
       <div className="mt-3 flex flex-wrap items-center gap-3">

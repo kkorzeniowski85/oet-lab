@@ -19,6 +19,10 @@ export type Draft<S extends UserStore> = Omit<UserRecords[S], keyof Stamped> & {
 const BLANK: { [S in UserStore]: Partial<UserRecords[S]> } = {
   notes: { title: '', body: '' },
   customPhrases: { en: '', pl: '', example: undefined },
+  attempts: { answer: '' },
+  letters: { text: '', evaluation: undefined },
+  customCases: { title: '', task: '', notes: '' },
+  roleplaySessions: { reflection: undefined },
 }
 
 /** Live records, newest change first. */

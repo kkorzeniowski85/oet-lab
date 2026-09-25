@@ -1,7 +1,7 @@
 import 'fake-indexeddb/auto'
 import { IDBFactory } from 'fake-indexeddb'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { backupDue, backupFileName, exportData, liveCounts, parseBackup, restoreBackup } from './backup.ts'
+import { backupDue, backupFileName, describeCounts, exportData, liveCounts, parseBackup, restoreBackup } from './backup.ts'
 import { DB_VERSION, closeDB, db } from './db.ts'
 import { deleteRecord, listRecords, saveRecord } from './records.ts'
 
@@ -35,7 +35,7 @@ describe('backup round trip', () => {
     expect(await database.getAll('notes')).toEqual(exported.data.notes)
     expect(await database.getAll('customPhrases')).toEqual(exported.data.customPhrases)
     expect((await listRecords('notes')).map((n) => n.title)).toEqual(['Purpose'])
-    expect(liveCounts(parsed.file.data)).toEqual({ notes: 1, customPhrases: 1 })
+    expect(liveCounts(parsed.file.data)).toMatchObject({ notes: 1, customPhrases: 1, letters: 0 })
   })
 
   it('declares the format and the schema version', async () => {
@@ -100,6 +100,18 @@ describe('backupDue', () => {
   it('reminds after seven days, not before', () => {
     expect(backupDue('2026-09-19T12:00:01Z', true, now)).toBeNull()
     expect(backupDue('2026-09-18T12:00:00Z', true, now)).toEqual({ days: 7 })
+  })
+})
+
+describe('describeCounts', () => {
+  const none = { notes: 0, customPhrases: 0, attempts: 0, letters: 0, customCases: 0, roleplaySessions: 0 }
+
+  it('lists only what exists, with singular and plural', () => {
+    expect(describeCounts({ ...none, notes: 2, letters: 1 })).toBe('2 notes, 1 letter')
+  })
+
+  it('says nothing for an empty device', () => {
+    expect(describeCounts(none)).toBe('nothing')
   })
 })
 
