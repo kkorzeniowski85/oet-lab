@@ -5,7 +5,8 @@ Stan: **plan do zatwierdzenia** · 25.09.2026 · decyzje i uzasadnienia: [DECISI
 Oznaczenia: ✅ ustalone z użytkownikiem · ❓ otwarte, niekrytyczne
 
 **Stan realizacji (25.09.2026):** M0 ✅ — aplikacja działa pod https://kkorzeniowski85.github.io/oet-lab/ (0.3: instalację na S23
-sprawdzasz Ty) · M1 ✅ — 1.2 czeka na Twój przegląd przypisań do grup · 1.7 test głosu na S23 · M2 w toku
+sprawdzasz Ty) · M1 ✅ — 1.2 czeka na Twój przegląd przypisań do grup · 1.7 test głosu na S23 · M2 ✅ — pobranie kopii
+na S23 do sprawdzenia przez Ciebie · M3 następny
 
 ---
 
@@ -331,6 +332,11 @@ Claude w ramach subskrypcji, a wynik wklejasz z powrotem do aplikacji.
 - Weryfikacja: ręcznie na S23 i PC.
 
 ### M2 — Twoje dane: baza, notatki, kopia
+
+**Wykonanie (25.09.2026) — różnice względem opisu kroków:**
+- 2.1: baza ma na razie magazyny `notes`, `customPhrases` i `settings`. Pozostałe (`letters`, `attempts` itd.) dojdą razem z funkcjami, które ich używają, w kolejnych wersjach bazy z przetestowaną migracją.
+- 2.3: przycisk „+ Add” dodaje zwrot albo notatkę. Stan otwarcia okna trzyma sam element `<dialog>` — wersja z kopią stanu w React przestawała działać po zamknięciu klawiszem Esc lub gestem Wstecz.
+- 2.4: kopia zawiera też znaczniki usunięć (potrzebne w M4). Pobranie sprawdzone w przeglądarce z przechwyceniem pliku; zapis do „Pobranych” na S23 sprawdzasz Ty.
 
 **2.1 Warstwa danych**
 - Cel: baza IndexedDB z magazynami z 4.4, repozytoria, konwencja `id`/`updatedAt`/`deletedAt`, prośba o trwałe przechowywanie.
