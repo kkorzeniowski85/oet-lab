@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link, useLocation } from 'wouter'
+import QuickAdd from '../features/quick-add/QuickAdd.tsx'
 import { SECTIONS } from './sections.ts'
 
 function isActive(location: string, path: string): boolean {
@@ -48,9 +49,10 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-dvh md:flex">
       <aside className="hidden w-56 shrink-0 border-r border-line p-4 md:block">
-        <Link href="/" className="mb-6 block px-3 text-lg font-semibold text-brand">
+        <Link href="/" className="mb-4 block px-3 text-lg font-semibold text-brand">
           OET Lab
         </Link>
+        <QuickAdd className="mb-6 w-full rounded-md bg-brand px-3 py-2 text-left text-sm font-medium text-on-brand" />
         <nav aria-label="Main" className="space-y-6">
           <div className="space-y-1">
             <SideLink to="/" label="Home" />
@@ -78,9 +80,12 @@ export default function Layout({ children }: { children: ReactNode }) {
           <Link href="/" className="text-lg font-semibold text-brand">
             OET Lab
           </Link>
-          <Link href="/settings" className="text-sm text-muted">
-            Settings
-          </Link>
+          <div className="flex items-center gap-4">
+            <QuickAdd className="rounded-md bg-brand px-3 py-1.5 text-sm font-medium text-on-brand" />
+            <Link href="/settings" className="text-sm text-muted">
+              Settings
+            </Link>
+          </div>
         </header>
 
         <main className="mx-auto w-full max-w-3xl flex-1 px-4 pt-6 pb-24 md:px-8 md:pb-10">{children}</main>

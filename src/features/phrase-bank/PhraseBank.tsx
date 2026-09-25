@@ -1,11 +1,58 @@
 import { useState } from 'react'
 import { groupsFor, phrasesFor } from '../../content/index.ts'
 import type { Phrase, PhraseSection } from '../../content/types.ts'
+import type { CustomPhraseRecord } from '../../data/db.ts'
+import { deleteRecord, saveRecord, useRecords } from '../../data/records.ts'
 import { matches } from '../../lib/search.ts'
 import { FilterChips, SearchInput } from '../../ui/controls.tsx'
 import SpeakButton from '../../ui/SpeakButton.tsx'
+import PhraseForm from '../quick-add/PhraseForm.tsx'
 
-function PhraseItem({ phrase: p }: { phrase: Phrase }) {
+type Item = Phrase & { mine?: CustomPhraseRecord }
+
+const fromRecord = (r: CustomPhraseRecord): Item => ({
+  id: r.id,
+  group: r.group,
+  en: r.en,
+  pl: r.pl,
+  kind: 'phrase',
+  examples: r.example ? [r.example] : [],
+  source: 'mine',
+  mine: r,
+})
+
+function MineActions({ record, section }: { record: CustomPhraseRecord; section: PhraseSection }) {
+  const [editing, setEditing] = useState(false)
+  if (editing)
+    return (
+      <div className="rounded-md border border-brand p-3">
+        <PhraseForm
+          section={section}
+          initial={record}
+          onSave={(p) => void saveRecord('customPhrases', { id: record.id, ...p }).then(() => setEditing(false))}
+          onCancel={() => setEditing(false)}
+        />
+      </div>
+    )
+  return (
+    <div className="flex gap-4 pt-1">
+      <button type="button" onClick={() => setEditing(true)} className="text-brand">
+        Edit
+      </button>
+      <button
+        type="button"
+        onClick={() => {
+          if (window.confirm('Delete this phrase?')) void deleteRecord('customPhrases', record.id)
+        }}
+        className="text-muted"
+      >
+        Delete
+      </button>
+    </div>
+  )
+}
+
+function PhraseItem({ phrase: p, section }: { phrase: Item; section: PhraseSection }) {
   return (
     <li className="border-b border-line last:border-b-0">
       <details className="group py-3">
@@ -13,9 +60,10 @@ function PhraseItem({ phrase: p }: { phrase: Phrase }) {
           <span>
             <span className="font-medium">{p.en}</span>
             {p.register === 'informal' && (
-              <span className="ml-2 rounded bg-brand-soft px-1.5 py-0.5 align-middle text-xs text-brand">
-                informal
-              </span>
+              <span className="ml-2 rounded bg-brand-soft px-1.5 py-0.5 align-middle text-xs text-brand">informal</span>
+            )}
+            {p.mine && (
+              <span className="ml-2 rounded bg-ink px-1.5 py-0.5 align-middle text-xs text-canvas">mine</span>
             )}
             <span className="mt-0.5 block text-sm text-muted">{p.pl}</span>
           </span>
@@ -28,14 +76,16 @@ function PhraseItem({ phrase: p }: { phrase: Phrase }) {
             <SpeakButton text={p.en} />
             {p.pronunciation && <span className="text-muted">{p.pronunciation}</span>}
           </div>
-          <ul className="space-y-1.5">
-            {p.examples.map((e) => (
-              <li key={e} className="flex items-start gap-1 border-l-2 border-line pl-3">
-                <span className="flex-1">{e}</span>
-                <SpeakButton text={e} showLabel={false} />
-              </li>
-            ))}
-          </ul>
+          {p.examples.length > 0 && (
+            <ul className="space-y-1.5">
+              {p.examples.map((e) => (
+                <li key={e} className="flex items-start gap-1 border-l-2 border-line pl-3">
+                  <span className="flex-1">{e}</span>
+                  <SpeakButton text={e} showLabel={false} />
+                </li>
+              ))}
+            </ul>
+          )}
           {p.synonyms && (
             <p>
               <span className="text-muted">Similar: </span>
@@ -48,6 +98,7 @@ function PhraseItem({ phrase: p }: { phrase: Phrase }) {
               {p.formal.join(' · ')}
             </p>
           )}
+          {p.mine && <MineActions record={p.mine} section={section} />}
         </div>
       </details>
     </li>
@@ -57,9 +108,13 @@ function PhraseItem({ phrase: p }: { phrase: Phrase }) {
 export default function PhraseBank({ section }: { section: PhraseSection }) {
   const [query, setQuery] = useState('')
   const [groupId, setGroupId] = useState<string | null>(null)
+  const custom = useRecords('customPhrases')
 
   const groups = groupsFor(section)
-  const found = phrasesFor(section).filter((p) => matches(query, [p.en, p.pl, ...(p.synonyms ?? []), ...(p.formal ?? [])]))
+  const inSection = new Set(groups.map((g) => g.id))
+  // Your own phrases come first in each group.
+  const all: Item[] = [...(custom ?? []).filter((r) => inSection.has(r.group)).map(fromRecord), ...phrasesFor(section)]
+  const found = all.filter((p) => matches(query, [p.en, p.pl, ...(p.synonyms ?? []), ...(p.formal ?? [])]))
   const visible = found.filter((p) => groupId === null || p.group === groupId)
 
   return (
@@ -81,7 +136,7 @@ export default function PhraseBank({ section }: { section: PhraseSection }) {
             <p className="text-sm text-muted">{g.description}</p>
             <ul className="mt-2 rounded-lg border border-line bg-surface px-4">
               {items.map((p) => (
-                <PhraseItem key={p.id} phrase={p} />
+                <PhraseItem key={p.id} phrase={p} section={section} />
               ))}
             </ul>
           </section>
