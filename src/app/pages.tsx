@@ -1,4 +1,5 @@
 import { Link } from 'wouter'
+import { usePersistence } from '../lib/storage.ts'
 import { MATERIAL_VIEWS } from '../sections/views.tsx'
 import { SECTIONS, TABS, findSection, isTabId, sectionPath } from './sections.ts'
 
@@ -94,10 +95,18 @@ export function SectionPage({ sectionId, tabId, viewId }: { sectionId: string; t
 
 export function Settings() {
   const built = new Date(__BUILD_TIME__).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' })
+  const persisted = usePersistence()
   return (
     <div>
       <h1 className="text-2xl font-semibold">Settings</h1>
       <p className="mt-4 text-sm text-muted">Your data stays on this device.</p>
+      {persisted !== undefined && (
+        <p className="mt-1 text-sm text-muted">
+          {persisted
+            ? 'Storage is protected: the browser will not clear your data on its own.'
+            : 'Storage is not protected: the browser may clear your data when space runs low. Keep backups.'}
+        </p>
+      )}
       <p className="mt-6 text-sm text-muted">
         Version {__APP_VERSION__} · built {built}
       </p>
