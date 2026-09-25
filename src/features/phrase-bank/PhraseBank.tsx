@@ -3,6 +3,7 @@ import { groupsFor, phrasesFor } from '../../content/index.ts'
 import type { Phrase, PhraseSection } from '../../content/types.ts'
 import { matches } from '../../lib/search.ts'
 import { FilterChips, SearchInput } from '../../ui/controls.tsx'
+import SpeakButton from '../../ui/SpeakButton.tsx'
 
 function PhraseItem({ phrase: p }: { phrase: Phrase }) {
   return (
@@ -23,11 +24,15 @@ function PhraseItem({ phrase: p }: { phrase: Phrase }) {
           </span>
         </summary>
         <div className="mt-3 space-y-2 text-sm">
-          {p.pronunciation && <p className="text-muted">{p.pronunciation}</p>}
+          <div className="flex flex-wrap items-center gap-x-2">
+            <SpeakButton text={p.en} />
+            {p.pronunciation && <span className="text-muted">{p.pronunciation}</span>}
+          </div>
           <ul className="space-y-1.5">
             {p.examples.map((e) => (
-              <li key={e} className="border-l-2 border-line pl-3">
-                {e}
+              <li key={e} className="flex items-start gap-1 border-l-2 border-line pl-3">
+                <span className="flex-1">{e}</span>
+                <SpeakButton text={e} showLabel={false} />
               </li>
             ))}
           </ul>
