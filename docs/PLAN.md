@@ -7,7 +7,8 @@ Oznaczenia: ✅ ustalone z użytkownikiem · ❓ otwarte, niekrytyczne
 **Stan realizacji (25.09.2026):** M0 ✅ — aplikacja działa pod https://kkorzeniowski85.github.io/oet-lab/ (0.3: instalację na S23
 sprawdzasz Ty) · M1 ✅ — 1.2 czeka na Twój przegląd przypisań do grup · 1.7 test głosu na S23 · M2 ✅ — pobranie kopii
 na S23 do sprawdzenia przez Ciebie · M3 ✅ (wersja 0.3.0) — przypadki Writing i karty role-play czekają na Twoją
-weryfikację kliniczną · M4 następny
+weryfikację kliniczną · M4 ✅ (wersja 0.4.0) — Udostępnij plik/tekst i „Udostępnij → OET Lab” do sprawdzenia na S23.
+**Plan MVP zrealizowany.** Dalej: lista „Po M4” — po Twojej decyzji.
 
 ---
 
@@ -410,6 +411,12 @@ Claude w ramach subskrypcji, a wynik wklejasz z powrotem do aplikacji.
 - Weryfikacja: ręcznie.
 
 ### M4 — Przenoszenie między urządzeniami
+
+**Wykonanie (25.09.2026) — różnice względem opisu kroków:**
+- Wysyłka, odbiór i Undo są na osobnym ekranie „Move your work” (`#/transfer`, odnośnik w Settings). Wysłanie pliku liczy się też jako kopia zapasowa dla przypomnienia.
+- 4.4: udostępniony plik trafia przez service worker pod `#/transfer/shared`. Sprawdzone żądaniem POST z przeglądarki. Na S23 opcja „OET Lab” w menu Udostępnij pojawi się, gdy Chrome zaktualizuje zainstalowaną aplikację (może to potrwać do kilku dni; odinstalowanie i ponowna instalacja przyspiesza).
+- 4.5: lista „Add to Fiszki list” w każdym banku zwrotów, wysyłka w Vocabulary → Send to Fiszki (Udostępnij tekst, plik albo schowek). Dziennik wysyłek w bazie w wersji 3. Zgodność sprawdzona na działających Fiszkach (analiza importu, bez zapisu).
+- Przy teście zauważone: Fiszki podają „45 minut” na list i twierdzą, że w liście nie używa się skrótów — obie rzeczy niezgodne z oficjalnymi źródłami (D15, D19). Zgłoszone jako osobne zadanie dla projektu Fiszki.
 
 **4.1 Scalanie**
 - Cel: czysta funkcja `merge` według 4.5.
