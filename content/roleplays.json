@@ -5,7 +5,7 @@
     "setting": "General practice",
     "candidate": [
       "You are a GP. Your patient, a 52-year-old office manager, has come for the results of a routine blood test.",
-      "The HbA1c is 62 mmol/mol, which confirms type 2 diabetes.",
+      "A repeat HbA1c of 62 mmol/mol confirms type 2 diabetes.",
       "Find out what the patient already knows about diabetes.",
       "Explain the diagnosis in plain language.",
       "Respond to the patient's worry about insulin: most people start with lifestyle changes and tablets.",
@@ -51,6 +51,7 @@
       "Find out why the patient is worried.",
       "Explain why contrast is needed and what it involves (a warm feeling, a metallic taste).",
       "Explain the risk of a reaction: serious reactions are rare, and the team is trained to treat them.",
+      "Ask about any previous reaction to contrast. Explain what can be done: precautions such as premedication or a different contrast agent, or a scan without contrast, which shows less.",
       "Respect the patient's decision and agree a way forward."
     ],
     "otherParty": [
@@ -109,7 +110,7 @@
     "title": "MRI shows a disc prolapse — surgery is not needed yet",
     "setting": "General practice",
     "candidate": [
-      "You are a GP. A 41-year-old teacher has sciatica down the left leg for five weeks. The MRI shows an L5/S1 disc prolapse. There is no weakness and no bladder or bowel problem.",
+      "You are a GP. A 41-year-old teacher has had sciatica down the left leg for five weeks. The MRI shows an L5/S1 disc prolapse. There is no weakness and no bladder or bowel problem.",
       "Go through the MRI result with the patient.",
       "Explain that most disc prolapses improve without surgery within weeks to months.",
       "Explain the plan: pain relief, staying active, physiotherapy.",
@@ -144,7 +145,7 @@
       "You calm down if the doctor explains what the examination showed.",
       "You ask whether you should rest in bed."
     ],
-    "focus": ["lab-s-open-4", "lab-s-gather-2", "core-m216", "core-m207", "lab-s-plan-1"]
+    "focus": ["lab-s-gather-4", "lab-s-gather-2", "core-m216", "core-m207", "lab-s-plan-1"]
   },
   {
     "id": "rp-asthma-discharge",
@@ -186,7 +187,7 @@
       "You calm down if the doctor listens, apologises and explains honestly.",
       "You want to know whether the delay is dangerous for your mother."
     ],
-    "focus": ["lab-s-open-1", "lab-s-gather-3", "core-m206", "core-m216", "lab-s-close-1"]
+    "focus": ["lab-s-open-1", "lab-s-emp-1", "lab-s-emp-2", "lab-s-gather-3", "core-m206", "core-m216", "lab-s-close-1"]
   },
   {
     "id": "rp-anticoagulation",

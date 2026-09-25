@@ -20,7 +20,7 @@
     "id": "core-m123",
     "group": "v-symptoms",
     "en": "lethargy",
-    "pl": "ospałość, letarg",
+    "pl": "ospałość, apatia",
     "kind": "word",
     "examples": [
       "The mother reported increasing lethargy in her child over the past 24 hours.",
@@ -213,7 +213,7 @@
     "pl": "gorączka (termin formalny)",
     "kind": "word",
     "examples": [
-      "The patient was pyrexial on admission, with a temperature of 38.6°C.",
+      "The patient was pyrexial on admission, with a temperature of 38.6 °C.",
       "Pyrexia resolved following the administration of antipyretics.",
       "He remained pyrexial despite broad-spectrum antibiotics."
     ],
@@ -329,7 +329,7 @@
     "id": "core-m143",
     "group": "v-symptoms",
     "en": "diaphoresis",
-    "pl": "nadmierne pocenie się",
+    "pl": "nadmierne pocenie się (termin częstszy w USA; w UK zwykle: sweating)",
     "kind": "word",
     "examples": [
       "The patient was noted to be cool and clammy, with marked diaphoresis.",
@@ -445,7 +445,7 @@
     "id": "core-m150",
     "group": "v-symptoms",
     "en": "rebound tenderness",
-    "pl": "bolesność uciskowa z objawem Blumberga",
+    "pl": "objaw Blumberga (ból przy odjęciu ręki)",
     "kind": "phrase",
     "examples": [
       "Rebound tenderness was positive over McBurney's point.",
@@ -644,7 +644,7 @@
     "pl": "niezamierzona utrata masy ciała",
     "kind": "phrase",
     "examples": [
-      "He reports unintentional weight loss of approximately 6kg over three months.",
+      "He reports unintentional weight loss of approximately 6 kg over three months.",
       "Unintentional weight loss is a recognised red-flag symptom.",
       "She denies any deliberate dieting to account for the weight loss."
     ],
@@ -892,15 +892,16 @@
   {
     "id": "core-m183",
     "group": "v-clinical",
-    "en": "co-morbidities",
+    "en": "comorbidities",
     "pl": "choroby współistniejące",
     "kind": "word",
     "examples": [
-      "His significant co-morbidities include type 2 diabetes and hypertension.",
-      "Given her multiple co-morbidities, a cautious approach is advised.",
-      "There were no significant co-morbidities of note."
+      "His significant comorbidities include type 2 diabetes and hypertension.",
+      "Given her multiple comorbidities, a cautious approach is advised.",
+      "There were no significant comorbidities of note."
     ],
     "synonyms": [
+      "comorbidity",
       "coexisting conditions",
       "associated medical conditions"
     ],
@@ -1015,28 +1016,10 @@
     "source": "oet-terminy/m4/palliative"
   },
   {
-    "id": "term-m5",
-    "group": "v-clinical",
-    "en": "comorbidity",
-    "pl": "choroba współistniejąca / choroby towarzyszące",
-    "kind": "word",
-    "examples": [
-      "He has multiple comorbidities including diabetes and hypertension.",
-      "Significant comorbidity was noted on examination.",
-      "Her comorbidities will impact the choice of treatment."
-    ],
-    "synonyms": [
-      "coexisting condition",
-      "concurrent illness",
-      "associated condition"
-    ],
-    "source": "oet-terminy/m5/comorbidity"
-  },
-  {
     "id": "term-m16",
-    "group": "v-clinical",
-    "en": "Surrogate outcome",
-    "pl": "Punkt końcowy zastępczy / Miernik zastępczy",
+    "group": "v-research",
+    "en": "surrogate outcome",
+    "pl": "zastępczy punkt końcowy",
     "kind": "phrase",
     "examples": [
       "We need to be careful — improving the surrogate outcome doesn't guarantee better patient outcomes.",
@@ -1053,9 +1036,9 @@
   },
   {
     "id": "term-m17",
-    "group": "v-clinical",
-    "en": "Steeped in complexity",
-    "pl": "Pełne złożoności / Wysoce złożone",
+    "group": "v-research",
+    "en": "steeped in complexity",
+    "pl": "pełen złożoności / bardzo złożony",
     "kind": "expression",
     "examples": [
       "The ethical considerations surrounding this case are steeped in complexity.",
@@ -1100,7 +1083,7 @@
     ],
     "synonyms": [
       "senior specialist",
-      "attending physician"
+      "attending physician (US)"
     ],
     "source": "oet-core/m192"
   },
@@ -1173,7 +1156,7 @@
     "id": "core-m197",
     "group": "v-nhs",
     "en": "safeguarding",
-    "pl": "ochrona osób wrażliwych (dzieci/dorosłych)",
+    "pl": "ochrona osób narażonych (dzieci/dorosłych)",
     "kind": "word",
     "examples": [
       "A safeguarding referral was made in light of the concerns raised.",
@@ -1253,13 +1236,13 @@
   {
     "id": "core-m202",
     "group": "v-nhs",
-    "en": "out-patient clinic",
+    "en": "outpatient clinic",
     "pl": "poradnia przyszpitalna",
     "kind": "phrase",
     "examples": [
-      "She was seen in the out-patient clinic six weeks after surgery.",
-      "An appointment has been arranged in the respiratory out-patient clinic.",
-      "He was discharged from the out-patient clinic following full recovery."
+      "She was seen in the outpatient clinic six weeks after surgery.",
+      "An appointment has been arranged in the respiratory outpatient clinic.",
+      "He was discharged from the outpatient clinic following full recovery."
     ],
     "synonyms": [
       "outpatient appointment",
@@ -1270,13 +1253,13 @@
   {
     "id": "core-m203",
     "group": "v-nhs",
-    "en": "in-patient",
+    "en": "inpatient",
     "pl": "pacjent hospitalizowany",
     "kind": "word",
     "examples": [
-      "He remained an in-patient for a total of five days.",
-      "As an in-patient, she received daily physiotherapy input.",
-      "In-patient management was preferred given the severity of symptoms."
+      "He remained an inpatient for a total of five days.",
+      "As an inpatient, she received daily physiotherapy input.",
+      "Inpatient management was preferred given the severity of symptoms."
     ],
     "synonyms": [
       "hospitalised patient"
@@ -1548,7 +1531,7 @@
     "id": "everyday-l13",
     "group": "v-everyday",
     "en": "a bit of a nightmare",
-    "pl": "koszmar / draka / nie lada problem",
+    "pl": "koszmar / niezły kłopot",
     "kind": "expression",
     "examples": [
       "Parking near the hospital is a bit of a nightmare.",
@@ -1681,7 +1664,7 @@
     "pl": "wyskoczyć na chwilę",
     "kind": "word",
     "examples": [
-      "I'm just nipping out to grab a sandwich — back in ten minutes.",
+      "I'm just nipping out for a sandwich — back in ten minutes.",
       "She nipped to the pharmacy on her lunch break.",
       "Can I nip out for five minutes? I need to make a call."
     ],
@@ -1716,7 +1699,7 @@
     "id": "everyday-l22",
     "group": "v-everyday",
     "en": "to go pear-shaped",
-    "pl": "nie wyjść po bożemu / wziąć w łeb",
+    "pl": "pójść nie tak / wziąć w łeb",
     "kind": "expression",
     "examples": [
       "The plan was fine, but things went pear-shaped in theatre.",
@@ -1870,7 +1853,7 @@
     "id": "everyday-l30",
     "group": "v-everyday",
     "en": "I'm not bothered",
-    "pl": "wszystko mi jedno / nie mam zdania",
+    "pl": "wszystko mi jedno / bez różnicy",
     "kind": "expression",
     "examples": [
       "Tea or coffee? — I'm not bothered, either is fine.",
@@ -2363,7 +2346,7 @@
     "id": "everyday-l56",
     "group": "v-everyday",
     "en": "to bring something off",
-    "pl": "przeprowadzić coś z sukcesem / dokonać czegoś trudnego",
+    "pl": "doprowadzić coś trudnego do skutku",
     "kind": "expression",
     "examples": [
       "It was a complicated case — I wasn't sure we'd bring it off.",
@@ -2473,7 +2456,7 @@
     "id": "ward-n6",
     "group": "v-workplace",
     "en": "to consent a patient",
-    "pl": "zebrać świadomą zgodę pacjenta",
+    "pl": "uzyskać świadomą zgodę pacjenta",
     "kind": "expression",
     "examples": [
       "I just need to consent the patient in bay three.",
@@ -2926,5 +2909,89 @@
     ],
     "pronunciation": "/tə teɪk ˈəʊvə/",
     "source": "oet-frazy/n30/to-take-over-from-someone"
+  },
+  {
+    "id": "lab-v-res-1",
+    "group": "v-research",
+    "en": "cohort",
+    "pl": "kohorta (badana grupa)",
+    "kind": "word",
+    "examples": [
+      "A cohort of 2,400 patients was followed for five years.",
+      "The cohort included adults aged 50 to 74 with no history of cancer."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-v-res-2",
+    "group": "v-research",
+    "en": "efficacy",
+    "pl": "skuteczność (w warunkach badania)",
+    "kind": "word",
+    "examples": [
+      "The trial showed limited efficacy in patients over 75.",
+      "Efficacy was measured as the reduction in symptom scores at 12 weeks."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-v-res-3",
+    "group": "v-research",
+    "en": "adverse events",
+    "pl": "zdarzenia niepożądane",
+    "kind": "phrase",
+    "examples": [
+      "Serious adverse events were rare and similar in both groups.",
+      "Participants reported adverse events such as nausea and dizziness."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-v-res-4",
+    "group": "v-research",
+    "en": "randomised controlled trial",
+    "pl": "badanie z randomizacją i grupą kontrolną",
+    "kind": "phrase",
+    "examples": [
+      "The evidence comes from a single randomised controlled trial.",
+      "A large randomised controlled trial is now under way in Europe."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-v-res-5",
+    "group": "v-research",
+    "en": "incidence",
+    "pl": "zapadalność (nowe przypadki w danym czasie)",
+    "kind": "word",
+    "examples": [
+      "The incidence of the condition has doubled in two decades.",
+      "Incidence was highest in the first year after diagnosis."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-v-res-6",
+    "group": "v-research",
+    "en": "prevalence",
+    "pl": "chorobowość (wszystkie przypadki w populacji)",
+    "kind": "word",
+    "examples": [
+      "Prevalence is highest among people living in deprived areas.",
+      "The prevalence of obesity in the cohort was 28%."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-v-res-7",
+    "group": "v-research",
+    "en": "confounding factor",
+    "pl": "czynnik zakłócający",
+    "kind": "phrase",
+    "examples": [
+      "Smoking is an obvious confounding factor in this study.",
+      "The authors adjusted for confounding factors such as age and weight."
+    ],
+    "source": "oet-lab"
   }
 ]

@@ -4,6 +4,18 @@
 
 Aplikacja jest **stabilna, bezpieczna i nadaje się do codziennej nauki**. Nie ma problemów krytycznych ani wysokiej wagi. Do naprawy: **5 błędów średniej wagi w kodzie** (łącznie ok. 2 godziny pracy), kilkanaście drobnych, **5 sprzeczności w przypadkach do Writing** oraz lista wątpliwości w treści, o których zdecydujesz Ty jako lekarz.
 
+## Stan napraw (25.09.2026, wersja 0.5.0)
+
+Wszystkie cztery pakiety z części F są wykonane. Decyzje podjęte przy treści (masz prawo weta — każda zmiana to jedna linia w `content/*.json`):
+
+- **Tłumaczenia** z tabeli „do rozważenia” zastosowane w całości; dodatkowo `core-m123` „ospałość, apatia”, `everyday-l56` odróżnione od `l51`.
+- **Wątpliwości kliniczne:** TIA — zakaz jazdy przez co najmniej miesiąc (zasada DVLA); niewydolność serca — w wywiadzie ramipryl i bisoprolol odstawione w 2019 (zawroty), amlodypina zamiast nich, w planie inwazyjna koronarografia; guz nerki — eGFR w „Background”, dopisek „PMH, leki i alergie nieznane radiologii”; list wzorcowy colorectal — NKDA, brak wywiadu rodzinnego, „under the urgent suspected cancer pathway” (199 słów); drenaż dróg żółciowych — wiersz o skierowaniu do pielęgniarek środowiskowych; karta kontrastu — punkt o wcześniejszej reakcji i opcjach; karta bólu pleców — „What were you hoping…” zamiast „Is now a good time…”; `core-m114` → „I would be grateful for your advice on…”; „chief complaint” i „attending physician” oznaczone (US), `core-m143` z dopiskiem.
+- **Duplikaty i przypisania:** `term-m5` scalony z `core-m183` („comorbidities”); `term-m16` i `term-m17` w nowej grupie „Research and journal language” z 7 nowymi hasłami; `#` → Diagnoses, DNACPR → Case-note shorthand; opis grupy Everyday zmieniony; `term-*` w formie słownikowej małą literą; „…”, „outpatient”, „6 kg”, „38.6 °C”, `term-m12` continue/undergo.
+- **Nowe:** 16 skrótów (Δ/ΔΔ, ON, PR, WCC, SpO2, JVP, GTN, PCA, HbA1c, BMI, ABPI, ERCP, DVLA, TIA, ED, IR), Purpose +4, Empathy +4 (w tym przeprosiny dla karty z córką), Closing +3.
+- **Nieruszone:** pary bliskich duplikatów z różnych talii (`term-m9`/`m10`, `core-m210`/`term-m7` itd.) zostają jako osobne hasła; `everyday-l42/l44/l45` zostają w Everyday.
+
+Kod: A1–A5 i listy z pakietów 1, 3 i 4 wykonane; 156 testów, lint i build czyste. Sprawdzone w przeglądarce (360 px): start, kontynuacja i odrzucenie listu pod własnym adresem, zakładka More, okno „+ Add” z nagłówkiem i „Close”, lista Fiszki, nowa grupa i nowe skróty.
+
 ## Jak sprawdzałem
 
 | Obszar | Metoda | Wynik |

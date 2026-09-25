@@ -69,7 +69,7 @@ describe('routing', () => {
 
 describe('material views', () => {
   it.each([
-    ['/writing/material', 'I am writing to refer...'],
+    ['/writing/material', 'I am writing to refer…'],
     ['/writing/material/criteria', 'Conciseness &amp; Clarity'],
     ['/writing/material/structure', 'A typical referral letter'],
     ['/speaking/material', 'How would you like me to address you?'],

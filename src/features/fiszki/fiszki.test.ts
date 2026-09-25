@@ -8,8 +8,8 @@ describe('fiszki/v1 export', () => {
   it('keeps the original Fiszki reference for phrases that came from Fiszki', () => {
     const note = fromPhrase(phrase('core-m101'))
     expect(note).toMatchObject({
-      front: 'I am writing to refer...',
-      back: 'Piszę, aby skierować...',
+      front: 'I am writing to refer…',
+      back: 'Piszę, aby skierować…',
       source_ref: 'oet-core/m101',
       kind: 'expression',
       note_type: 'basic_reversed',

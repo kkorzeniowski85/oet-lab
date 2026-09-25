@@ -377,7 +377,7 @@
   },
   {
     "id": "abbr-fracture",
-    "group": "a-symptoms",
+    "group": "a-diagnoses",
     "abbr": "#",
     "expansion": "fracture",
     "example": "X-ray confirmed a # of the left neck of femur.",
@@ -386,8 +386,8 @@
   {
     "id": "abbr-strzalki",
     "group": "a-notes",
-    "abbr": "Δ / ↑ / ↓",
-    "expansion": "change / increased / decreased",
+    "abbr": "↑ / ↓",
+    "expansion": "increased / decreased",
     "example": "↑ CRP and ↓ albumin since admission.",
     "source": "oet-skroty/strzalki"
   },
@@ -505,7 +505,7 @@
   },
   {
     "id": "abbr-dnacpr",
-    "group": "a-services",
+    "group": "a-notes",
     "abbr": "DNACPR",
     "expansion": "do not attempt cardiopulmonary resuscitation",
     "example": "A DNACPR decision was discussed with the family.",
@@ -606,5 +606,133 @@
     "expansion": "neck of femur",
     "example": "She sustained a fractured NOF after a fall at home.",
     "source": "oet-skroty/nof"
+  },
+  {
+    "id": "abbr-delta",
+    "group": "a-notes",
+    "abbr": "Δ / ΔΔ",
+    "expansion": "diagnosis / differential diagnosis",
+    "example": "Δ community-acquired pneumonia; ΔΔ pulmonary embolism.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-on",
+    "group": "a-dosing",
+    "abbr": "ON",
+    "expansion": "at night (omni nocte)",
+    "example": "Atorvastatin 20 mg ON.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-pr",
+    "group": "a-notes",
+    "abbr": "PR",
+    "expansion": "per rectum (rectal examination)",
+    "example": "PR: no palpable mass; dark blood on glove.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-wcc",
+    "group": "a-investigations",
+    "abbr": "WCC",
+    "expansion": "white cell count",
+    "example": "WCC 15.2 on admission, 9.1 by day 3.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-spo2",
+    "group": "a-observations",
+    "abbr": "SpO2",
+    "expansion": "oxygen saturation measured by pulse oximetry",
+    "example": "SpO2 88% on air, 93% on 2 L of oxygen.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-jvp",
+    "group": "a-notes",
+    "abbr": "JVP",
+    "expansion": "jugular venous pressure",
+    "example": "JVP raised to the angle of the jaw.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-gtn",
+    "group": "a-dosing",
+    "abbr": "GTN",
+    "expansion": "glyceryl trinitrate",
+    "example": "GTN spray PRN for chest pain.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-pca",
+    "group": "a-dosing",
+    "abbr": "PCA",
+    "expansion": "patient-controlled analgesia",
+    "example": "Morphine PCA overnight, stopped the next morning.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-hba1c",
+    "group": "a-investigations",
+    "abbr": "HbA1c",
+    "expansion": "glycated haemoglobin",
+    "example": "HbA1c 62 mmol/mol, confirmed on repeat.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-bmi",
+    "group": "a-observations",
+    "abbr": "BMI",
+    "expansion": "body mass index",
+    "example": "BMI 34 (weight 108 kg, height 1.78 m).",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-abpi",
+    "group": "a-investigations",
+    "abbr": "ABPI",
+    "expansion": "ankle–brachial pressure index",
+    "example": "ABPI 0.55 on the right, 0.92 on the left.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-ercp",
+    "group": "a-investigations",
+    "abbr": "ERCP",
+    "expansion": "endoscopic retrograde cholangiopancreatography",
+    "example": "ERCP attempted, but the stent could not be placed.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-dvla",
+    "group": "a-services",
+    "abbr": "DVLA",
+    "expansion": "Driver and Vehicle Licensing Agency",
+    "example": "Advised to inform the DVLA of the new diagnosis.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-tia",
+    "group": "a-diagnoses",
+    "abbr": "TIA",
+    "expansion": "transient ischaemic attack",
+    "example": "Referred to the TIA clinic for review within 24 hours.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-ed",
+    "group": "a-services",
+    "abbr": "ED",
+    "expansion": "emergency department",
+    "example": "Seen in ED at 10:40 and discharged the same evening.",
+    "source": "oet-lab"
+  },
+  {
+    "id": "abbr-ir",
+    "group": "a-services",
+    "abbr": "IR",
+    "expansion": "interventional radiology",
+    "example": "Biliary drain placed by IR on 15/09.",
+    "source": "oet-lab"
   }
 ]

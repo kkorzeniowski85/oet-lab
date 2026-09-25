@@ -18,5 +18,6 @@
   { "id": "v-clinical", "section": "vocabulary", "name": "Clinical terms", "description": "Words for the course of disease and its treatment." },
   { "id": "v-nhs", "section": "vocabulary", "name": "NHS roles and services", "description": "Who is who and where things happen in UK healthcare." },
   { "id": "v-workplace", "section": "vocabulary", "name": "Hospital talk", "description": "What colleagues say on the ward, with the formal version for writing." },
-  { "id": "v-everyday", "section": "vocabulary", "name": "Everyday British English", "description": "Common informal expressions, with formal equivalents." }
+  { "id": "v-everyday", "section": "vocabulary", "name": "Everyday British English", "description": "Common expressions from everyday and workplace English, with formal equivalents where they exist." },
+  { "id": "v-research", "section": "vocabulary", "name": "Research and journal language", "description": "Words from studies and articles — the language of Reading Part C." }
 ]

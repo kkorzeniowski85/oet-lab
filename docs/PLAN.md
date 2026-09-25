@@ -8,7 +8,8 @@ Oznaczenia: ✅ ustalone z użytkownikiem · ❓ otwarte, niekrytyczne
 sprawdzasz Ty) · M1 ✅ — 1.2 czeka na Twój przegląd przypisań do grup · 1.7 test głosu na S23 · M2 ✅ — pobranie kopii
 na S23 do sprawdzenia przez Ciebie · M3 ✅ (wersja 0.3.0) — przypadki Writing i karty role-play czekają na Twoją
 weryfikację kliniczną · M4 ✅ (wersja 0.4.0) — Udostępnij plik/tekst i „Udostępnij → OET Lab” do sprawdzenia na S23.
-**Plan MVP zrealizowany.** Dalej: lista „Po M4” — po Twojej decyzji.
+**Plan MVP zrealizowany.** Wersja 0.5.0 (25.09.2026): cztery pakiety napraw po diagnostyce ✅ —
+[diagnostyka-2026-09-25.md](diagnostyka-2026-09-25.md), część „Stan napraw”. Dalej: lista „Po M4” — po Twojej decyzji.
 
 ---
 

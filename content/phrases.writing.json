@@ -2,8 +2,8 @@
   {
     "id": "core-m101",
     "group": "w-purpose",
-    "en": "I am writing to refer...",
-    "pl": "Piszę, aby skierować...",
+    "en": "I am writing to refer…",
+    "pl": "Piszę, aby skierować…",
     "kind": "expression",
     "examples": [
       "I am writing to refer Mr Kowalski, a 54-year-old man with a two-week history of exertional dyspnoea.",
@@ -19,8 +19,8 @@
   {
     "id": "core-m102",
     "group": "w-purpose",
-    "en": "I am writing to request...",
-    "pl": "Piszę, aby poprosić o...",
+    "en": "I am writing to request…",
+    "pl": "Piszę, aby poprosić o…",
     "kind": "expression",
     "examples": [
       "I am writing to request an urgent outpatient appointment for this patient.",
@@ -34,6 +34,54 @@
     "source": "oet-core/m102"
   },
   {
+    "id": "lab-w-purpose-1",
+    "group": "w-purpose",
+    "en": "I am writing regarding…",
+    "pl": "piszę w sprawie…",
+    "kind": "expression",
+    "examples": [
+      "I am writing regarding Mrs Carter, who attended the surgery today with a two-week history of dysphagia.",
+      "I am writing regarding the above patient, whom I saw in clinic on 3 September."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-w-purpose-2",
+    "group": "w-purpose",
+    "en": "The purpose of this letter is to…",
+    "pl": "celem tego listu jest…",
+    "kind": "expression",
+    "examples": [
+      "The purpose of this letter is to request an urgent assessment of his renal function.",
+      "The purpose of this letter is to hand over her care following discharge."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-w-purpose-3",
+    "group": "w-purpose",
+    "en": "I am writing to inform you that…",
+    "pl": "piszę, aby poinformować, że…",
+    "kind": "expression",
+    "examples": [
+      "I am writing to inform you that Mr Patel was discharged today after treatment for pneumonia.",
+      "I am writing to inform you that your patient has been started on apixaban."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-w-purpose-4",
+    "group": "w-purpose",
+    "en": "I am writing to update you on…",
+    "pl": "piszę, aby przekazać aktualne informacje o…",
+    "kind": "expression",
+    "examples": [
+      "I am writing to update you on Mrs Evans, who was seen in the emergency department this morning.",
+      "I am writing to update you on his progress since the biopsy."
+    ],
+    "source": "oet-lab"
+  },
+  {
     "id": "core-m221",
     "group": "w-history",
     "en": "presenting complaint",
@@ -45,7 +93,7 @@
       "Her presenting complaint had gradually worsened over several days."
     ],
     "synonyms": [
-      "chief complaint",
+      "chief complaint (US)",
       "reason for presentation"
     ],
     "source": "oet-core/m221"
@@ -54,7 +102,7 @@
     "id": "core-m222",
     "group": "w-history",
     "en": "past medical history (PMH)",
-    "pl": "wywiad chorobowy przebyty",
+    "pl": "przebyte choroby (wywiad chorobowy)",
     "kind": "phrase",
     "examples": [
       "His past medical history includes hypertension and type 2 diabetes.",
@@ -118,8 +166,8 @@
   {
     "id": "term-m11",
     "group": "w-findings",
-    "en": "On examination",
-    "pl": "Podczas badania / Przy badaniu fizykalnym",
+    "en": "on examination",
+    "pl": "podczas badania / w badaniu fizykalnym",
     "kind": "expression",
     "examples": [
       "On examination, the patient was pyrexial and tachycardic.",
@@ -153,8 +201,8 @@
   {
     "id": "term-m6",
     "group": "w-findings",
-    "en": "Test indicates that…",
-    "pl": "Badanie wskazuje, że… / Wynik pokazuje, że…",
+    "en": "the test indicates that…",
+    "pl": "badanie wskazuje, że… / wynik pokazuje, że…",
     "kind": "expression",
     "examples": [
       "The CT scan indicates that there is a small effusion.",
@@ -172,8 +220,8 @@
   {
     "id": "term-m8",
     "group": "w-findings",
-    "en": "No evidence of…",
-    "pl": "Brak dowodów na… / Nie stwierdzono…",
+    "en": "no evidence of…",
+    "pl": "brak cech… / nie stwierdzono…",
     "kind": "expression",
     "examples": [
       "There is no evidence of acute pathology on imaging.",
@@ -191,8 +239,8 @@
   {
     "id": "term-m9",
     "group": "w-findings",
-    "en": "In keeping with",
-    "pl": "Zgodnie z… / Sugerujący / Przy założeniu…",
+    "en": "in keeping with…",
+    "pl": "zgodny z… / odpowiadający… / przemawiający za…",
     "kind": "expression",
     "examples": [
       "The findings are in keeping with viral hepatitis.",
@@ -210,8 +258,8 @@
   {
     "id": "term-m10",
     "group": "w-findings",
-    "en": "Consistent with",
-    "pl": "Zgodnie z… / Wskazujący na…",
+    "en": "consistent with…",
+    "pl": "zgodny z… / wskazujący na…",
     "kind": "expression",
     "examples": [
       "The clinical picture is consistent with sepsis.",
@@ -229,8 +277,8 @@
   {
     "id": "term-m14",
     "group": "w-findings",
-    "en": "Unremarkable",
-    "pl": "Bez widocznych zmian / Prawidłowy / Bez cech patologicznych",
+    "en": "unremarkable",
+    "pl": "bez zmian / prawidłowy / bez cech patologicznych",
     "kind": "word",
     "examples": [
       "The abdominal examination was unremarkable.",
@@ -248,8 +296,8 @@
   {
     "id": "term-m15",
     "group": "w-findings",
-    "en": "Deranged (results)",
-    "pl": "Zaburzony / Nie w normie (np. wyniki)",
+    "en": "deranged (results)",
+    "pl": "nieprawidłowy, zaburzony (o wynikach)",
     "kind": "word",
     "examples": [
       "His liver function tests were significantly deranged.",
@@ -286,7 +334,7 @@
     "id": "core-m227",
     "group": "w-findings",
     "en": "differential diagnosis",
-    "pl": "diagnostyka różnicowa",
+    "pl": "rozpoznanie różnicowe",
     "kind": "phrase",
     "examples": [
       "The differential diagnosis includes cholecystitis and peptic ulcer disease.",
@@ -337,7 +385,7 @@
     "id": "core-m171",
     "group": "w-management",
     "en": "to be commenced on (medication)",
-    "pl": "zostać włączonym na (lek)",
+    "pl": "mieć włączony (lek) / rozpocząć leczenie (lekiem)",
     "kind": "expression",
     "examples": [
       "He was commenced on a five-day course of amoxicillin.",
@@ -404,8 +452,8 @@
   {
     "id": "core-m185",
     "group": "w-management",
-    "en": "to be discharged with...",
-    "pl": "zostać wypisanym z...",
+    "en": "to be discharged with…",
+    "pl": "zostać wypisanym z (zaleceniem, receptą na)…",
     "kind": "phrase",
     "examples": [
       "He was discharged with a course of oral antibiotics.",
@@ -536,12 +584,12 @@
     "id": "term-m12",
     "group": "w-management",
     "en": "It is recommended that…",
-    "pl": "Rekomenduje się… / Zaleca się…",
+    "pl": "zaleca się, aby… / rekomenduje się…",
     "kind": "expression",
     "examples": [
-      "It is recommended that he continues on current antibiotic therapy.",
-      "It is recommended that she undergoes further imaging.",
-      "It is recommended that a follow-up appointment is arranged within two weeks."
+      "It is recommended that he continue on current antibiotic therapy.",
+      "It is recommended that she undergo further imaging.",
+      "It is recommended that a follow-up appointment be arranged within two weeks."
     ],
     "synonyms": [
       "we advise",
@@ -555,7 +603,7 @@
     "id": "term-m13",
     "group": "w-management",
     "en": "We propose to…",
-    "pl": "Proponujemy… / Zamierzamy…",
+    "pl": "proponujemy… / zamierzamy…",
     "kind": "expression",
     "examples": [
       "We propose to start him on a trial of beta-blockers.",
@@ -590,8 +638,8 @@
   {
     "id": "core-m107",
     "group": "w-request",
-    "en": "I would be grateful if you could...",
-    "pl": "Byłbym wdzięczny, gdyby...",
+    "en": "I would be grateful if you could…",
+    "pl": "Byłbym wdzięczny, gdyby…",
     "kind": "expression",
     "examples": [
       "I would be grateful if you could see this patient at your earliest convenience.",
@@ -607,17 +655,18 @@
   {
     "id": "core-m114",
     "group": "w-request",
-    "en": "kindly advise",
-    "pl": "proszę o poinformowanie",
-    "kind": "phrase",
+    "en": "I would be grateful for your advice on…",
+    "pl": "byłbym wdzięczny za poradę w sprawie…",
+    "kind": "expression",
     "examples": [
-      "Kindly advise if any further tests are required prior to his appointment.",
-      "Kindly advise on the most appropriate management plan going forward.",
-      "Kindly advise if you require any additional clinical information."
+      "I would be grateful for your advice on further management.",
+      "I would be grateful for your advice on whether surgery is appropriate for this patient.",
+      "I would be grateful for your advice on her anticoagulation."
     ],
     "synonyms": [
       "please advise",
-      "please let me know"
+      "I would value your opinion on",
+      "kindly advise (business register — avoid)"
     ],
     "source": "oet-core/m114"
   },

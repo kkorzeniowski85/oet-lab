@@ -59,7 +59,7 @@
         ]
       }
     ],
-    "modelLetter": "Mr Daniel Hughes\nConsultant Colorectal Surgeon\nWestbridge General Hospital\n40 Hospital Road\nWestbridge WB2 4RT\n\n14 September 2026\n\nDear Mr Hughes,\n\nRe: Mrs Margaret Carter, DOB 03/05/1958\n\nI am writing to refer Mrs Carter, a 68-year-old retired teacher, for urgent assessment and colonoscopy, as I suspect colorectal cancer.\n\nMrs Carter presented on 2 September with a three-month change in bowel habit, with looser stools three to four times a day and intermittent dark red blood mixed with her stool. Over the same period, she has lost 5 kg unintentionally and has felt increasingly tired. She reports no abdominal pain.\n\nOn examination, she was pale. Her abdomen was soft and non-tender with no palpable masses, and rectal examination revealed no mass, although there was dark blood on the glove.\n\nBlood tests on 9 September showed iron deficiency anaemia, with a haemoglobin of 94 g/L and a ferritin of 8 µg/L. Her faecal immunochemical test was positive at 180 µg/g. Renal and liver function were normal.\n\nHer only significant medical history is hypertension, treated with ramipril. I have started ferrous sulfate 200 mg twice daily.\n\nMrs Carter understands the reason for this referral. She is understandably anxious and will be accompanied by her husband.\n\nI would be grateful if you could see her at your earliest convenience.\n\nYours sincerely,\n\nDoctor\nGeneral Practitioner, Riverside Medical Practice",
+    "modelLetter": "Mr Daniel Hughes\nConsultant Colorectal Surgeon\nWestbridge General Hospital\n40 Hospital Road\nWestbridge WB2 4RT\n\n14 September 2026\n\nDear Mr Hughes,\n\nRe: Mrs Margaret Carter, DOB 03/05/1958\n\nI am writing to refer Mrs Carter, a 68-year-old retired teacher, for urgent assessment and colonoscopy, as I suspect colorectal cancer.\n\nMrs Carter presented on 2 September with a three-month change in bowel habit, with looser stools three to four times a day and intermittent dark red blood mixed with her stool. She has also lost 5 kg unintentionally and feels increasingly tired, but reports no abdominal pain.\n\nOn examination, she was pale. Her abdomen was soft and non-tender with no palpable masses, and rectal examination revealed no mass, although there was dark blood on the glove.\n\nBlood tests on 9 September showed iron deficiency anaemia, with a haemoglobin of 94 g/L and a ferritin of 8 µg/L. Her faecal immunochemical test was positive at 180 µg/g. Renal and liver function were normal.\n\nHer only significant medical history is hypertension, treated with ramipril. She has no known drug allergies and no family history of bowel cancer. I have started ferrous sulfate 200 mg twice daily.\n\nMrs Carter understands the reason for referral and, although anxious, is keen to proceed. Her husband will accompany her.\n\nI would be grateful if you could see her under the urgent suspected cancer pathway.\n\nYours sincerely,\n\nDoctor\nGeneral Practitioner, Riverside Medical Practice",
     "tags": [
       "referral",
       "urgent",
@@ -96,7 +96,7 @@
           "3 days ↑ breathlessness, productive cough (green sputum), fever",
           "O/E: T 38.6 °C, RR 26, SpO2 88% on air, HR 104; coarse crackles R base",
           "CXR: R lower lobe consolidation",
-          "CRP 186; WCC 15.2; CURB-65 score 2"
+          "CRP 186; WCC 15.2; urea 8.4 mmol/L; CURB-65 score 2 (age, urea)"
         ]
       },
       {
@@ -113,7 +113,7 @@
       {
         "heading": "Discharge 21/09/2026",
         "lines": [
-          "Doxycycline 100 mg OD until 23/09 (7 days of antibiotics in total)",
+          "Doxycycline 100 mg OD until 22/09 (7 days of antibiotics in total)",
           "Prednisolone course completed 20/09",
           "Usual inhalers, metformin and amlodipine unchanged",
           "Referred to pulmonary rehabilitation"
@@ -129,7 +129,7 @@
         ]
       }
     ],
-    "modelLetter": "Dr Helen Brooks\nHill Street Surgery\n15 Hill Street\nNorthfield NF3 8PL\n\n21 September 2026\n\nDear Dr Brooks,\n\nRe: Mr Ravi Patel, DOB 17/11/1949\n\nI am writing to inform you that Mr Patel, a 76-year-old man with COPD, is being discharged today after treatment for right lower lobe pneumonia, and to request your follow-up.\n\nMr Patel was admitted on 16 September with three days of increasing breathlessness, a productive cough and fever. He was hypoxic, with oxygen saturations of 88% on air, and a chest X-ray confirmed right lower lobe consolidation. His CURB-65 score was 2.\n\nHe was treated with controlled oxygen, nebulised salbutamol and a five-day course of prednisolone. Because of his penicillin allergy, he received intravenous clarithromycin, followed by oral doxycycline, which he should complete on 23 September. His steroids raised his blood glucose to 14 mmol/L, but metformin alone was sufficient.\n\nHe has improved steadily and is now mobilising independently with a frame. His regular medication is unchanged, and he has been referred for pulmonary rehabilitation.\n\nI would be grateful if you could review him in one week, including his blood glucose, and arrange a repeat chest X-ray in six weeks to confirm resolution. You may also wish to consider a rescue pack for future exacerbations.\n\nYours sincerely,\n\nDoctor\nRespiratory Ward, Northfield Hospital",
+    "modelLetter": "Dr Helen Brooks\nHill Street Surgery\n15 Hill Street\nNorthfield NF3 8PL\n\n21 September 2026\n\nDear Dr Brooks,\n\nRe: Mr Ravi Patel, DOB 17/11/1949\n\nI am writing to inform you that Mr Patel, a 76-year-old man with COPD, is being discharged today after treatment for right lower lobe pneumonia, and to request your follow-up.\n\nMr Patel was admitted on 16 September with three days of increasing breathlessness, a productive cough and fever. He was hypoxic, with oxygen saturations of 88% on air, and a chest X-ray confirmed right lower lobe consolidation. His CURB-65 score was 2.\n\nHe was treated with controlled oxygen, nebulised salbutamol and a five-day course of prednisolone. Because of his penicillin allergy, he received intravenous clarithromycin, followed by oral doxycycline, which he should complete on 22 September. His steroids raised his blood glucose to 14 mmol/L, but metformin alone was sufficient.\n\nHe has improved steadily and is now mobilising independently with a frame. His regular medication is unchanged, and he has been referred for pulmonary rehabilitation.\n\nI would be grateful if you could review him in one week, including his blood glucose, and arrange a repeat chest X-ray in six weeks to confirm resolution. You may also wish to consider a rescue pack for future exacerbations.\n\nYours sincerely,\n\nDoctor\nRespiratory Ward, Northfield Hospital",
     "tags": [
       "discharge",
       "respiratory"
@@ -244,7 +244,7 @@
         "lines": [
           "Aspirin 300 mg given in ED (12:15)",
           "Continue aspirin 300 mg OD until TIA clinic review",
-          "Advised not to drive until seen by the TIA clinic",
+          "Advised not to drive for at least one month (DVLA rule after a TIA)",
           "Discharged home with husband; told to call 999 if symptoms recur"
         ]
       }
@@ -342,6 +342,7 @@
         "lines": [
           "Type 2 diabetes — metformin 1 g BD; HbA1c 62 mmol/mol",
           "Hypertension — ramipril 10 mg OD",
+          "Hypercholesterolaemia — atorvastatin 20 mg ON",
           "Angina (stable) — GTN spray PRN",
           "NKDA"
         ]
@@ -403,7 +404,9 @@
         "lines": [
           "Attended ED 18/09/2026 with 2 days of L iliac fossa pain and fever",
           "CT abdomen and pelvis with contrast requested by ED",
-          "Discharged from ED the same evening on oral co-amoxiclav — before the final report was issued"
+          "Discharged from ED the same evening on oral co-amoxiclav — before the final report was issued",
+          "eGFR 78 mL/min/1.73 m² (blood test in ED)",
+          "Past history, medication and allergies not known to radiology"
         ]
       },
       {
@@ -412,8 +415,7 @@
           "Uncomplicated sigmoid diverticulitis; no abscess, no perforation",
           "Incidental: 4.2 cm solid, enhancing mass, upper pole L kidney — suspicious for renal cell carcinoma",
           "Renal vein patent; no enlarged lymph nodes",
-          "No liver lesions; visualised lung bases clear",
-          "eGFR 78 mL/min/1.73 m²"
+          "No liver lesions; visualised lung bases clear"
         ]
       },
       {
@@ -457,7 +459,7 @@
       {
         "heading": "Medical history",
         "lines": [
-          "Type 2 diabetes (25 years) — insulin glargine 24 units ON; metformin 500 mg BD",
+          "Type 2 diabetes (25 years) — insulin glargine 20 units ON; metformin 500 mg BD",
           "Peripheral neuropathy both feet",
           "Chronic kidney disease stage 3a",
           "NKDA"
@@ -587,8 +589,9 @@
         "heading": "Discharge 25/09/2026",
         "lines": [
           "Drain care by district nurses: flush with 10 mL saline daily; dressing change weekly; bag emptied by wife",
+          "District nurse referral made by the ward; first visit 26/09",
           "Wife trained in bag emptying and signs of blockage",
-          "Meds: colestyramine 4 g BD for itch (take 1 h before/4 h after other meds); Creon with meals; omeprazole 20 mg OD"
+          "Meds: colestyramine 4 g BD for itch (other medicines at least 1 h before or 4–6 h after it); Creon with meals; omeprazole 20 mg OD"
         ]
       },
       {
@@ -639,7 +642,7 @@
       {
         "heading": "Presentation 21/08/2026",
         "lines": [
-          "Lower back pain after lifting a patient at work 3 weeks ago",
+          "Lower back pain since lifting a patient at work on 31/07/2026 (3 weeks ago)",
           "Pain central, no radiation to legs; worse bending and sitting long",
           "No red flags: bladder and bowel normal, no saddle numbness, no weight loss, no fever"
         ]
@@ -692,6 +695,7 @@
         "lines": [
           "Myocardial infarction 2016 — stent to LAD",
           "Hypertension; hypercholesterolaemia",
+          "Ramipril and bisoprolol stopped in 2019 (dizziness); amlodipine started instead",
           "Meds on admission: aspirin 75 mg OD, atorvastatin 80 mg ON, amlodipine 10 mg OD"
         ]
       },
@@ -720,7 +724,7 @@
           "GP: U&E in 1–2 weeks; increase ramipril and bisoprolol every 2 weeks if BP and K⁺ allow",
           "Heart failure nurse referral made",
           "Daily weights: report gain of 2 kg in 3 days; fluid limit 1.5 L/day",
-          "Cardiology clinic 6 weeks; CT coronary angiogram as outpatient"
+          "Cardiology clinic 6 weeks; invasive coronary angiography as outpatient (previous stent)"
         ]
       }
     ],

@@ -99,8 +99,8 @@
   {
     "id": "term-m7",
     "group": "s-explaining",
-    "en": "Benefits and harms",
-    "pl": "Korzyści i ryzyko / Zalety i wady zabiegu",
+    "en": "benefits and harms",
+    "pl": "korzyści i szkody / zalety i wady (leczenia)",
     "kind": "phrase",
     "examples": [
       "I explained the benefits and harms of the proposed treatment.",
@@ -426,6 +426,90 @@
     "kind": "sentence",
     "examples": [
       "If things get worse before then, please come back straight away or call 111."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-emp-1",
+    "group": "s-empathy",
+    "en": "I’m sorry that this has happened.",
+    "pl": "Przykro mi, że tak się stało.",
+    "kind": "sentence",
+    "examples": [
+      "I’m sorry that this has happened, and I understand how frustrating the wait has been.",
+      "I’m sorry that this has happened. Let me explain what we are doing now."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-emp-2",
+    "group": "s-empathy",
+    "en": "I can see why you’re upset.",
+    "pl": "Rozumiem, dlaczego jest Pan/Pani zdenerwowany(a).",
+    "kind": "sentence",
+    "examples": [
+      "I can see why you’re upset. You were told the operation would be today.",
+      "I can see why you’re upset, and I’d feel the same in your position."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-emp-3",
+    "group": "s-empathy",
+    "en": "That must be very worrying for you.",
+    "pl": "To musi być dla Pana/Pani bardzo niepokojące.",
+    "kind": "sentence",
+    "examples": [
+      "That must be very worrying for you, especially with your father’s history.",
+      "That must be very worrying for you. Would it help if I went through the results step by step?"
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-emp-4",
+    "group": "s-empathy",
+    "en": "It’s completely understandable to feel that way.",
+    "pl": "To zupełnie zrozumiałe, że tak się Pan/Pani czuje.",
+    "kind": "sentence",
+    "examples": [
+      "It’s completely understandable to feel that way after news like this.",
+      "It’s completely understandable to feel that way. Many people worry about injections at first."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-close-3",
+    "group": "s-closing",
+    "en": "We’ll see you again in…",
+    "pl": "Zobaczymy się ponownie za…",
+    "kind": "expression",
+    "examples": [
+      "We’ll see you again in two weeks to check how the new tablets are working.",
+      "We’ll see you again in three months for a repeat blood test."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-close-4",
+    "group": "s-closing",
+    "en": "If you have any questions in the meantime, please contact the surgery.",
+    "pl": "Jeśli w międzyczasie pojawią się pytania, proszę skontaktować się z przychodnią.",
+    "kind": "sentence",
+    "examples": [
+      "If you have any questions in the meantime, please contact the surgery and ask for me.",
+      "If you have any questions in the meantime, please contact the surgery — the nurses can also help."
+    ],
+    "source": "oet-lab"
+  },
+  {
+    "id": "lab-s-close-5",
+    "group": "s-closing",
+    "en": "Thank you for coming in today.",
+    "pl": "Dziękuję, że przyszedł Pan / przyszła Pani dzisiaj.",
+    "kind": "sentence",
+    "examples": [
+      "Thank you for coming in today. Take care, and I’ll see you at your next appointment.",
+      "Thank you for coming in today, and please don’t hesitate to come back if anything changes."
     ],
     "source": "oet-lab"
   }
