@@ -10,8 +10,12 @@ export default function App({ ssrPath }: { ssrPath?: string }) {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/settings" component={Settings} />
-          <Route path="/:section/:tab/:view?">
-            {(p) => <SectionPage sectionId={p.section} tabId={p.tab} viewId={p.view} />}
+          <Route path="/:section/:tab/:view?/:item?">
+            {(params) => {
+              // wouter cannot infer the names of more than one optional parameter.
+              const p = params as Record<string, string | undefined>
+              return <SectionPage sectionId={p.section!} tabId={p.tab!} viewId={p.view} itemId={p.item} />
+            }}
           </Route>
           <Route path="/:section">{(p) => <Redirect to={`/${p.section}/material`} replace />}</Route>
           <Route component={NotFound} />

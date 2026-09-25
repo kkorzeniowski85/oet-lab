@@ -44,6 +44,12 @@ describe('routing', () => {
     expect(render('/listening/material')).not.toContain('>Practice<')
   })
 
+  it('opens Timed writing first in Writing practice, with an address for each letter', () => {
+    expect(render('/writing/practice')).toMatch(/aria-current="page"[^>]*>Timed writing</)
+    expect(render('/writing/practice/letters/abc')).not.toContain('Page not found')
+    expect(render('/writing/practice/gapfill/abc')).toContain('Page not found')
+  })
+
   it('opens gap-fill in Practice', () => {
     const html = render('/vocabulary/practice')
     expect(html).toContain('Fill the gap in real example sentences.')

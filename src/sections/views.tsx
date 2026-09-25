@@ -5,11 +5,15 @@ import CriteriaList from '../features/criteria/CriteriaList.tsx'
 import GapFill from '../features/gapfill/GapFill.tsx'
 import GuideView from '../features/guides/GuideView.tsx'
 import PhraseBank from '../features/phrase-bank/PhraseBank.tsx'
+import { LetterList, LetterReview } from '../features/timed-writing/Letters.tsx'
+import TimedWriting from '../features/timed-writing/TimedWriting.tsx'
 
 export interface View {
   id: string
   name: string
   render: () => ReactNode
+  /** Views with their own items (e.g. one letter) take an id from the address. */
+  item?: (id: string) => ReactNode
 }
 
 /** Sub-views of the Material and Practice tabs; the first one is the default. A missing section hides the tab. */
@@ -31,7 +35,11 @@ export const VIEWS: Record<Exclude<TabId, 'notes'>, Partial<Record<SectionId, Vi
     abbreviations: [{ id: 'list', name: 'Abbreviations', render: () => <AbbreviationList /> }],
   },
   practice: {
-    writing: [{ id: 'gapfill', name: 'Gap-fill', render: () => <GapFill section="writing" /> }],
+    writing: [
+      { id: 'timed', name: 'Timed writing', render: () => <TimedWriting /> },
+      { id: 'gapfill', name: 'Gap-fill', render: () => <GapFill section="writing" /> },
+      { id: 'letters', name: 'My letters', render: () => <LetterList />, item: (id) => <LetterReview id={id} /> },
+    ],
     speaking: [{ id: 'gapfill', name: 'Gap-fill', render: () => <GapFill section="speaking" /> }],
     vocabulary: [{ id: 'gapfill', name: 'Gap-fill', render: () => <GapFill section="vocabulary" /> }],
   },

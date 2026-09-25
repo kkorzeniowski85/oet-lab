@@ -30,7 +30,17 @@ export function Home() {
   )
 }
 
-export function SectionPage({ sectionId, tabId, viewId }: { sectionId: string; tabId: string; viewId?: string }) {
+export function SectionPage({
+  sectionId,
+  tabId,
+  viewId,
+  itemId,
+}: {
+  sectionId: string
+  tabId: string
+  viewId?: string
+  itemId?: string
+}) {
   const section = findSection(sectionId)
   if (!section || !isTabId(tabId)) return <NotFound />
   const tabs = TABS.filter((t) => tabsFor(section.id).includes(t.id))
@@ -43,7 +53,7 @@ export function SectionPage({ sectionId, tabId, viewId }: { sectionId: string; t
   } else {
     const views = VIEWS[tabId][section.id]!
     const view = viewId === undefined ? views[0] : views.find((v) => v.id === viewId)
-    if (!view) return <NotFound />
+    if (!view || (itemId !== undefined && !view.item)) return <NotFound />
     const tabName = tabs.find((t) => t.id === tabId)!.name
     body = (
       <>
@@ -65,7 +75,9 @@ export function SectionPage({ sectionId, tabId, viewId }: { sectionId: string; t
           </nav>
         )}
         {/* A new key per view resets its state when switching between views. */}
-        <div key={`${section.id}/${tabId}/${view.id}`}>{view.render()}</div>
+        <div key={`${section.id}/${tabId}/${view.id}/${itemId ?? ''}`}>
+          {itemId !== undefined && view.item ? view.item(itemId) : view.render()}
+        </div>
       </>
     )
   }
