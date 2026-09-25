@@ -102,3 +102,15 @@ Status: **przyjęta** (potwierdzona przez użytkownika) · **propozycja** (czeka
 - **Decyzja:** kod jest w **prywatnym** repo `kkorzeniowski85/oet-lab` (kopia poza dyskiem D:, dostęp z laptopa przez `git clone`). Upublicznienie repo i włączenie GitHub Pages następują dopiero po Twojej zgodzie. Pytam o to po każdym kamieniu milowym.
 - **Jak działa wdrożenie w tym stanie:** workflow przy każdym wysłaniu sprawdza lint, testy i budowanie, a krok Pages pomija, dopóki repo jest prywatne (Pages w darmowym planie wymaga publicznego repo). Po upublicznieniu wdrożenie ruszy bez zmian w pliku.
 - **Konsekwencja:** do upublicznienia aplikacji nie da się zainstalować na S23 (telefon potrzebuje adresu w sieci).
+
+### D19 — Skróty w liście: zasada z kryteriów zamiast zakazu
+**Status:** przyjęta, 25.09.2026 — korekta planu
+- **Decyzja:** lista skrótów nie oznacza pozycji jako „nie używać w liście”. Zamiast tego pokazuje dwie zasady ze źródłem: w liście skróty stosuje się na tyle, na ile odbiorca je zrozumie; w Reading skrót jest przyjmowany tylko wtedy, gdy występuje w tekście.
+- **Dlaczego:** oficjalne kryteria Writing (Genre & Style) dopuszczają rozsądne użycie skrótów przy lekarzu tej samej dziedziny, a więcej wyjaśnień zalecają przy GP lub innej specjalności. Zakaz, przyjęty wcześniej w Fiszkach, był zbyt mocny i uczyłby nieprawdy.
+- **Źródła:** https://cdn-aus.aglty.io/oet/pdf-files/Writing%20assessment%20criteria.pdf · https://oet.com/ready/reading
+
+### D20 — Kryteria i przewodniki: własne słowa, fakty ze źródłem
+**Status:** przyjęta, 25.09.2026
+- **Decyzja:** opisy kryteriów i przewodniki są napisane własnymi słowami, krócej niż oryginał, z odnośnikiem do oficjalnego PDF. Każde zdanie o formacie egzaminu to w treści blok typu `fact` z adresem źródła, pokazywanym w aplikacji. Porady to osobny typ `tip`, bez udawania faktów. Walidator odrzuca fakt bez źródła.
+- **Dlaczego:** oficjalne deskryptory OET są chronione prawem autorskim (repo jest docelowo publiczne — D11). Rozdzielenie faktów od porad pozwala sprawdzić każdą informację o egzaminie.
+- **Sprawdzone źródła (25.09.2026):** oet.com/ready/{listening,reading,writing,speaking}; oficjalne PDF-y z kryteriami Writing i Speaking; poradniki OET „The Complete Guide” do Listening A/B/C i Reading A/B/C.

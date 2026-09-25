@@ -6,6 +6,7 @@ Oznaczenia: ✅ ustalone z użytkownikiem · ❓ otwarte, niekrytyczne
 
 **Stan realizacji (25.09.2026):** M0 — 0.1 ✅ · 0.2 ◐ prywatne repo `kkorzeniowski85/oet-lab` + automatyczne testy ✅,
 publiczne repo i Pages ⏸ (D18) · 0.3 ✅ lokalnie (instalacja na S23 po publikacji) · 0.4 ✅ · 0.5 ✅
+M1 ✅ — 1.2 czeka na Twój przegląd przypisań do grup · 1.7 test głosu na S23 po publikacji
 
 ---
 
@@ -100,7 +101,7 @@ i teksty OET (prawa autorskie) · ocena wymowy · własny system powtórek w MVP
 
 | # | Założenie | Stan |
 |---|---|---|
-| Z1 | Struktura OET | **Sprawdzone na oet.com (25.09.2026):** Listening ok. 40 min, 42 pkt (A 24, B 6, C 12), w części A dokładnie te słowa, które słychać. Reading 60 min, 42 pkt (A 20 w sztywne 15 min, B 6, C 16), skróty niedozwolone, jeśli nie ma ich w tekście. B ≈ 30/42. Writing: 5 min czytania + 40 min pisania, 180–200 słów bez automatycznej kary, 6 kryteriów; na B 2/3 za Purpose i 5/7 za pozostałe. Speaking: ok. 20 min, 2 role-play po ok. 5 min, kryteria językowe i kliniczno-komunikacyjne; na B głównie 5/6 i 2/3. **Niesprawdzone:** dokładne nazwy kryteriów Speaking i czas przygotowania — do potwierdzenia z oficjalnych PDF-ów w kroku 1.4 |
+| Z1 | Struktura OET | **Sprawdzone na oet.com (25.09.2026):** Listening ok. 40 min, 42 pkt (A 24, B 6, C 12), w części A dokładnie te słowa, które słychać. Reading 60 min, 42 pkt (A 20 w sztywne 15 min, B 6, C 16), skróty niedozwolone, jeśli nie ma ich w tekście. B ≈ 30/42. Writing: 5 min czytania + 40 min pisania, 180–200 słów bez automatycznej kary, 6 kryteriów; na B 2/3 za Purpose i 5/7 za pozostałe. Speaking: ok. 20 min, 2 role-play po ok. 5 min, kryteria językowe i kliniczno-komunikacyjne; na B głównie 5/6 i 2/3. Nazwy i skale kryteriów Writing i Speaking potwierdzone z oficjalnych PDF-ów (M1); format części B i C z oficjalnych poradników OET. **Niesprawdzone:** czas przygotowania do role-play |
 | Z2 | Wersja egzaminu: Medicine, przypadki pod lekarza z domieszką radiologii | założenie |
 | Z3 | Treść startową banków można zbudować z Twoich talii Fiszek | założenie; mapowanie przejrzysz w kroku 1.2 |
 | Z4 | Postęp w gap-fill to proste liczniki, bez algorytmu powtórek | założenie |
@@ -282,6 +283,13 @@ Claude w ramach subskrypcji, a wynik wklejasz z powrotem do aplikacji.
 
 ### M1 — Treść i przeglądanie (zakładki Material)
 
+**Wykonanie (25.09.2026) — różnice względem opisu kroków:**
+- 1.1: typy przypadków Writing i kart role-play oraz sprawdzenie „zwrot występuje w zdaniu z luką” przeniesione do M3, gdzie powstają przypadki i gap-fill.
+- 1.2: `oet-core` i `oet-terminologia` → Writing (49), Speaking (16), Vocabulary (78); `oet-codziennosc` i `oet-nhs` → Vocabulary („Everyday British English”, „Hospital talk”), a nie Speaking. Dopisane 15 zwrotów Speaking ze źródłem `oet-lab` (brakowało otwarcia rozmowy). Przegląd: `przeglad-grup.md` wysłany 25.09.2026.
+- 1.3–1.5: Vocabulary też dostało bank zwrotów. Źródło każdego faktu o egzaminie jest przy nim w aplikacji (D20), nie w DECISIONS.md.
+- 1.6: zamiast etykiety „nie używać w liście” — zasada z oficjalnych kryteriów (D19).
+- 1.7: na komputerze stacjonarnym podgląd ma tylko polskie głosy, więc przycisk jest ukryty (tak ma działać). Głos en-GB sprawdzimy na S23 po publikacji.
+
 **1.1 Schemat treści i walidacja**
 - Cel: typy TS dla 6 rodzajów treści, wczytywanie, test integralności (unikalne `id`, wymagane pola, istniejące odwołania, zwrot faktycznie występuje w zdaniu z luką).
 - Pliki: `src/content/types.ts`, `src/content/load.ts`, `src/content/integrity.test.ts`, `content/*.json` (próbka).
@@ -313,7 +321,7 @@ Claude w ramach subskrypcji, a wynik wklejasz z powrotem do aplikacji.
 - Weryfikacja: przegląd treści przez Ciebie.
 
 **1.6 Abbreviations**
-- Cel: skróty w grupach, wyszukiwanie, oznaczenie „nie używać w liście”.
+- Cel: skróty w grupach, wyszukiwanie, zasada użycia skrótów w liście i w Reading (D19).
 - Pliki: `src/sections/abbreviations/*`.
 - Akceptacja: wszystkie 76 skrótów widoczne i wyszukiwalne.
 - Weryfikacja: podgląd.
