@@ -6,7 +6,8 @@ Oznaczenia: ✅ ustalone z użytkownikiem · ❓ otwarte, niekrytyczne
 
 **Stan realizacji (25.09.2026):** M0 ✅ — aplikacja działa pod https://kkorzeniowski85.github.io/oet-lab/ (0.3: instalację na S23
 sprawdzasz Ty) · M1 ✅ — 1.2 czeka na Twój przegląd przypisań do grup · 1.7 test głosu na S23 · M2 ✅ — pobranie kopii
-na S23 do sprawdzenia przez Ciebie · M3 następny
+na S23 do sprawdzenia przez Ciebie · M3 ✅ (wersja 0.3.0) — przypadki Writing i karty role-play czekają na Twoją
+weryfikację kliniczną · M4 następny
 
 ---
 
@@ -363,6 +364,14 @@ Claude w ramach subskrypcji, a wynik wklejasz z powrotem do aplikacji.
 - Weryfikacja: test automatyczny „w tę i z powrotem” + ręcznie na S23.
 
 ### M3 — Ćwiczenia
+
+**Wykonanie (25.09.2026) — różnice względem opisu kroków:**
+- Zakładka Practice jest tylko w Writing, Speaking i Vocabulary; Listening, Reading i Abbreviations mają Material i My notes.
+- Baza w wersji 2 (magazyny `letters`, `customCases`, `attempts`, `roleplaySessions`); migrację z wersji 1 sprawdza test i przejście aktualizacji w przeglądarce na danych z M2.
+- 3.1: luka wychodzi w 240 z 244 zwrotów (odmiana czasowników, a/an/the, „someone”, wielokropek jako miejsce na słowa); reszta nie trafia do ćwiczenia. Do wpisywania tylko odpowiedzi do 6 słów, dłuższe w trybie wyboru.
+- 3.4 i 3.5 w jednym commicie. Writing → Practice otwiera się na Timed writing; każdy list ma swój adres (`#/writing/practice/letters/<id>`). Prompt oceny pozwala wybrać język odpowiedzi (angielski/polski); gdy schowek jest zablokowany, pokazuje tekst do ręcznego skopiowania.
+- 3.6: 3 minuty przygotowania to ustawienie ćwiczenia, nie informacja o egzaminie (niesprawdzone, Z1). Sesja zapisuje się po zakończeniu, nie w trakcie.
+- Treść do przejrzenia przez Ciebie: `przypadki-writing.md` i `karty-roleplay.md` (wysłane 25.09.2026).
 
 **3.1 Silnik gap-fill**
 - Cel: wybór zdania, luka w miejscu zwrotu, sprawdzanie odpowiedzi (bez względu na wielkość liter, interpunkcję i spacje; pokazanie różnicy).
