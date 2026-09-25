@@ -1,4 +1,5 @@
 import { Link } from 'wouter'
+import { BackupPanel, BackupReminder } from '../features/backup/Backup.tsx'
 import NotesView from '../features/notes/NotesView.tsx'
 import { usePersistence } from '../lib/storage.ts'
 import { MATERIAL_VIEWS } from '../sections/views.tsx'
@@ -9,6 +10,9 @@ export function Home() {
     <div>
       <h1 className="text-2xl font-semibold">OET Lab</h1>
       <p className="mt-1 text-muted">Preparation for the Occupational English Test (Medicine).</p>
+      <div className="mt-6">
+        <BackupReminder />
+      </div>
       <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
         {SECTIONS.map((s) => (
           <li key={s.id}>
@@ -110,7 +114,10 @@ export function Settings() {
             : 'Storage is not protected: the browser may clear your data when space runs low. Keep backups.'}
         </p>
       )}
-      <p className="mt-6 text-sm text-muted">
+      <div className="mt-8">
+        <BackupPanel />
+      </div>
+      <p className="mt-10 text-sm text-muted">
         Version {__APP_VERSION__} · built {built}
       </p>
     </div>
