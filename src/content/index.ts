@@ -6,6 +6,7 @@ import phraseGroups from '../../content/phrase-groups.json'
 import speaking from '../../content/phrases.speaking.json'
 import vocabulary from '../../content/phrases.vocabulary.json'
 import writing from '../../content/phrases.writing.json'
+import writingCases from '../../content/writing-cases.json'
 import type {
   Abbreviation,
   AbbreviationGroup,
@@ -16,6 +17,7 @@ import type {
   Phrase,
   PhraseGroup,
   PhraseSection,
+  WritingCase,
 } from './types.ts'
 
 // The JSON shapes are checked by validate.test.ts, which runs before every deploy.
@@ -26,6 +28,7 @@ export const CONTENT: Content = {
   abbreviations: abbreviations as Abbreviation[],
   criteria: criteria as Criterion[],
   guides: guides as Guide[],
+  writingCases: writingCases as WritingCase[],
 }
 
 export function groupsFor(section: PhraseSection): PhraseGroup[] {

@@ -1,3 +1,4 @@
+import { countWords, letterBody } from '../lib/wordcount.ts'
 import type { Content } from './types.ts'
 
 const PHRASE_SECTIONS = ['writing', 'speaking', 'vocabulary']
@@ -100,5 +101,31 @@ export function validateContent(c: Content): string[] {
     }
   }
 
+  for (const w of c.writingCases) {
+    const at = `writing case ${w.id}`
+    checkId('writing case', w.id)
+    need(at, 'title', w.title)
+    need(at, 'writer', w.writer)
+    need(at, 'task', w.task)
+    if (!Array.isArray(w.notes) || w.notes.length < 2) errors.push(`${at}: needs at least two note sections`)
+    for (const s of w.notes ?? []) {
+      need(`${at} notes`, 'heading', s.heading)
+      if (!Array.isArray(s.lines) || s.lines.length === 0 || !s.lines.every(filled))
+        errors.push(`${at} section "${s.heading}": empty lines`)
+    }
+    if (w.modelLetter !== undefined) {
+      const body = letterBody(w.modelLetter)
+      if (body === null) errors.push(`${at}: model letter needs a "Dear" line and a "Yours" line`)
+      else {
+        const n = countWords(body)
+        if (n < MODEL_MIN || n > MODEL_MAX) errors.push(`${at}: model letter body has ${n} words (${MODEL_MIN}–${MODEL_MAX} expected)`)
+      }
+    }
+  }
+
   return errors
 }
+
+// The test asks for about 180–200 words; a model letter should stay close to that.
+const MODEL_MIN = 170
+const MODEL_MAX = 210

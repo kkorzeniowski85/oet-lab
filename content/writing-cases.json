@@ -1,0 +1,732 @@
+[
+  {
+    "id": "wc-colorectal-referral",
+    "title": "Suspected bowel cancer — GP to colorectal surgeon",
+    "writer": "You are a GP at Riverside Medical Practice.",
+    "task": "Today's date is 14 September 2026. Using the case notes, write a letter of referral to Mr Daniel Hughes, Consultant Colorectal Surgeon, Westbridge General Hospital, 40 Hospital Road, Westbridge WB2 4RT, asking for urgent assessment of Mrs Carter. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Margaret Carter (Mrs)",
+          "DOB: 03/05/1958 (68 y.o.)",
+          "Retired primary school teacher; lives with husband",
+          "Non-smoker; alcohol 4–6 units/week"
+        ]
+      },
+      {
+        "heading": "Medical history",
+        "lines": [
+          "Hypertension (2015) — ramipril 5 mg OD",
+          "Osteoarthritis R knee — paracetamol PRN",
+          "No family history of bowel cancer",
+          "NKDA"
+        ]
+      },
+      {
+        "heading": "02/09/2026",
+        "lines": [
+          "C/O 3-month change in bowel habit: looser stools, 3–4×/day (previously 1×/day)",
+          "Intermittent dark red blood mixed with stool",
+          "Fatigue; unintentional weight loss 5 kg in 3 months (68 → 63 kg)",
+          "No abdominal pain; appetite reduced",
+          "O/E: pale; abdomen soft, non-tender, no masses",
+          "PR: no palpable mass; dark blood on glove",
+          "BP 132/78, HR 88 regular, afebrile"
+        ]
+      },
+      {
+        "heading": "Results 09/09/2026",
+        "lines": [
+          "Hb 94 g/L (ref 115–165); MCV 72 fL; ferritin 8 µg/L → iron deficiency anaemia",
+          "FIT: 180 µg Hb/g faeces (positive; threshold 10)",
+          "U&E and LFTs normal; CRP 12"
+        ]
+      },
+      {
+        "heading": "Assessment",
+        "lines": [
+          "Suspected colorectal cancer — meets criteria for urgent suspected cancer referral"
+        ]
+      },
+      {
+        "heading": "Plan",
+        "lines": [
+          "Urgent referral to colorectal surgeons for colonoscopy",
+          "Started ferrous sulfate 200 mg BD",
+          "Reason for referral explained; patient anxious but keen to proceed",
+          "Husband will accompany her to appointments"
+        ]
+      }
+    ],
+    "modelLetter": "Mr Daniel Hughes\nConsultant Colorectal Surgeon\nWestbridge General Hospital\n40 Hospital Road\nWestbridge WB2 4RT\n\n14 September 2026\n\nDear Mr Hughes,\n\nRe: Mrs Margaret Carter, DOB 03/05/1958\n\nI am writing to refer Mrs Carter, a 68-year-old retired teacher, for urgent assessment and colonoscopy, as I suspect colorectal cancer.\n\nMrs Carter presented on 2 September with a three-month change in bowel habit, with looser stools three to four times a day and intermittent dark red blood mixed with her stool. Over the same period, she has lost 5 kg unintentionally and has felt increasingly tired. She reports no abdominal pain.\n\nOn examination, she was pale. Her abdomen was soft and non-tender with no palpable masses, and rectal examination revealed no mass, although there was dark blood on the glove.\n\nBlood tests on 9 September showed iron deficiency anaemia, with a haemoglobin of 94 g/L and a ferritin of 8 µg/L. Her faecal immunochemical test was positive at 180 µg/g. Renal and liver function were normal.\n\nHer only significant medical history is hypertension, treated with ramipril. I have started ferrous sulfate 200 mg twice daily.\n\nMrs Carter understands the reason for this referral. She is understandably anxious and will be accompanied by her husband.\n\nI would be grateful if you could see her at your earliest convenience.\n\nYours sincerely,\n\nDoctor\nGeneral Practitioner, Riverside Medical Practice",
+    "tags": [
+      "referral",
+      "urgent",
+      "gastroenterology"
+    ]
+  },
+  {
+    "id": "wc-pneumonia-discharge",
+    "title": "Pneumonia with COPD — hospital discharge to GP",
+    "writer": "You are a doctor on the respiratory ward at Northfield Hospital.",
+    "task": "Today's date is 21 September 2026. Mr Patel is being discharged today. Using the case notes, write a letter to his GP, Dr Helen Brooks, Hill Street Surgery, 15 Hill Street, Northfield NF3 8PL, summarising his admission and the follow-up he needs. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Ravi Patel (Mr)",
+          "DOB: 17/11/1949 (76 y.o.)",
+          "Widower; lives alone in ground-floor flat; daughter visits daily",
+          "Ex-smoker (40 pack-years, stopped 2019)"
+        ]
+      },
+      {
+        "heading": "Medical history",
+        "lines": [
+          "COPD (2012) — tiotropium/olodaterol inhaler OD, salbutamol PRN",
+          "Type 2 diabetes — metformin 1 g BD",
+          "Hypertension — amlodipine 5 mg OD",
+          "Allergy: penicillin (rash)"
+        ]
+      },
+      {
+        "heading": "Admission 16/09/2026",
+        "lines": [
+          "3 days ↑ breathlessness, productive cough (green sputum), fever",
+          "O/E: T 38.6 °C, RR 26, SpO2 88% on air, HR 104; coarse crackles R base",
+          "CXR: R lower lobe consolidation",
+          "CRP 186; WCC 15.2; CURB-65 score 2"
+        ]
+      },
+      {
+        "heading": "Hospital course",
+        "lines": [
+          "Controlled O2 (target SpO2 88–92%)",
+          "IV clarithromycin (penicillin allergy) → oral doxycycline from day 3",
+          "Nebulised salbutamol; prednisolone 30 mg OD × 5 days",
+          "Blood glucose up to 14 mmol/L on steroids — metformin continued",
+          "Afebrile from day 3; SpO2 93% on air at rest; CRP 34 (20/09)",
+          "Mobilising independently with a frame (seen by physio)"
+        ]
+      },
+      {
+        "heading": "Discharge 21/09/2026",
+        "lines": [
+          "Doxycycline 100 mg OD until 23/09 (7 days of antibiotics in total)",
+          "Prednisolone course completed 20/09",
+          "Usual inhalers, metformin and amlodipine unchanged",
+          "Referred to pulmonary rehabilitation"
+        ]
+      },
+      {
+        "heading": "Plan for GP",
+        "lines": [
+          "Review in 1 week: symptoms, blood glucose",
+          "Repeat CXR in 6 weeks to confirm resolution (ex-smoker, over 50)",
+          "Consider rescue pack (antibiotic + steroid) for future exacerbations",
+          "Daughter aware of discharge; safety-net advice given"
+        ]
+      }
+    ],
+    "modelLetter": "Dr Helen Brooks\nHill Street Surgery\n15 Hill Street\nNorthfield NF3 8PL\n\n21 September 2026\n\nDear Dr Brooks,\n\nRe: Mr Ravi Patel, DOB 17/11/1949\n\nI am writing to inform you that Mr Patel, a 76-year-old man with COPD, is being discharged today after treatment for right lower lobe pneumonia, and to request your follow-up.\n\nMr Patel was admitted on 16 September with three days of increasing breathlessness, a productive cough and fever. He was hypoxic, with oxygen saturations of 88% on air, and a chest X-ray confirmed right lower lobe consolidation. His CURB-65 score was 2.\n\nHe was treated with controlled oxygen, nebulised salbutamol and a five-day course of prednisolone. Because of his penicillin allergy, he received intravenous clarithromycin, followed by oral doxycycline, which he should complete on 23 September. His steroids raised his blood glucose to 14 mmol/L, but metformin alone was sufficient.\n\nHe has improved steadily and is now mobilising independently with a frame. His regular medication is unchanged, and he has been referred for pulmonary rehabilitation.\n\nI would be grateful if you could review him in one week, including his blood glucose, and arrange a repeat chest X-ray in six weeks to confirm resolution. You may also wish to consider a rescue pack for future exacerbations.\n\nYours sincerely,\n\nDoctor\nRespiratory Ward, Northfield Hospital",
+    "tags": [
+      "discharge",
+      "respiratory"
+    ]
+  },
+  {
+    "id": "wc-af-referral",
+    "title": "New atrial fibrillation — GP to cardiologist",
+    "writer": "You are a GP at Oakfield Surgery.",
+    "task": "Today's date is 8 September 2026. Using the case notes, write a letter of referral to Dr Priya Shah, Consultant Cardiologist, Cardiology Outpatients, Oakfield District Hospital, Station Road, Oakfield OK4 1DD, asking for assessment of Mr Wilson. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: George Wilson (Mr)",
+          "DOB: 22/01/1959 (67 y.o.)",
+          "Bus driver (Group 2 licence); married",
+          "Smoker 10/day; alcohol 20 units/week"
+        ]
+      },
+      {
+        "heading": "Medical history",
+        "lines": [
+          "Hypertension (2019) — amlodipine 10 mg OD",
+          "Hypercholesterolaemia — atorvastatin 20 mg ON",
+          "NKDA"
+        ]
+      },
+      {
+        "heading": "01/09/2026",
+        "lines": [
+          "C/O 2 weeks of intermittent palpitations, worse on exertion; mild breathlessness climbing stairs",
+          "No chest pain, no syncope",
+          "O/E: irregularly irregular pulse 118; BP 146/88; chest clear; no oedema",
+          "ECG: atrial fibrillation, ventricular rate 118; no ischaemic changes"
+        ]
+      },
+      {
+        "heading": "Investigations",
+        "lines": [
+          "TFTs, U&E, FBC normal; HbA1c 41 mmol/mol",
+          "CHA2DS2-VASc score 2 (age 65–74, hypertension); ORBIT bleeding score low"
+        ]
+      },
+      {
+        "heading": "Management",
+        "lines": [
+          "Started apixaban 5 mg BD",
+          "Started bisoprolol 2.5 mg OD",
+          "Review 08/09: HR 92, palpitations less frequent, tolerating medication",
+          "Advised to stop driving buses and to inform the DVLA; currently off work"
+        ]
+      },
+      {
+        "heading": "Plan",
+        "lines": [
+          "Referral to cardiology: echocardiogram; consider rhythm control",
+          "Smoking cessation and alcohol reduction advice given",
+          "Patient keen to return to work as soon as possible"
+        ]
+      }
+    ],
+    "tags": [
+      "referral",
+      "cardiology"
+    ]
+  },
+  {
+    "id": "wc-tia-referral",
+    "title": "Suspected TIA — emergency department to TIA clinic",
+    "writer": "You are a doctor in the Emergency Department at Kingsway University Hospital.",
+    "task": "Today's date is 18 September 2026. Using the case notes, write a letter to Dr Mark Ellis, Consultant Stroke Physician, TIA Clinic, Kingsway University Hospital, referring Mrs Evans for specialist assessment within 24 hours. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Susan Evans (Mrs)",
+          "DOB: 12/06/1955 (71 y.o.)",
+          "Lives with husband; independent; drives",
+          "Never smoked; alcohol occasionally"
+        ]
+      },
+      {
+        "heading": "Medical history",
+        "lines": [
+          "Hypertension — losartan 50 mg OD",
+          "Type 2 diabetes (diet-controlled)",
+          "NKDA"
+        ]
+      },
+      {
+        "heading": "Presentation 18/09/2026",
+        "lines": [
+          "At 09:30: sudden weakness of R arm and slurred speech while gardening",
+          "Symptoms lasted about 20 minutes; fully resolved before arrival (10:40)",
+          "No headache, no loss of consciousness, no chest pain",
+          "Husband witnessed episode"
+        ]
+      },
+      {
+        "heading": "Examination and tests",
+        "lines": [
+          "Neurological examination normal; NIHSS 0",
+          "BP 158/92; HR 76 regular; glucose 6.1 mmol/L",
+          "ECG: sinus rhythm",
+          "CT head: no haemorrhage, no acute changes",
+          "FBC, U&E, lipids sent"
+        ]
+      },
+      {
+        "heading": "Management",
+        "lines": [
+          "Aspirin 300 mg given in ED (12:15)",
+          "Continue aspirin 300 mg OD until TIA clinic review",
+          "Advised not to drive until seen by the TIA clinic",
+          "Discharged home with husband; told to call 999 if symptoms recur"
+        ]
+      }
+    ],
+    "tags": [
+      "referral",
+      "urgent",
+      "neurology"
+    ]
+  },
+  {
+    "id": "wc-uae-discharge",
+    "title": "Uterine artery embolisation — interventional radiology to GP",
+    "writer": "You are a doctor in the Interventional Radiology department at Kingsway University Hospital.",
+    "task": "Today's date is 23 September 2026. Ms Kowalczyk is being discharged today after uterine artery embolisation. Using the case notes, write a letter to her GP, Dr Samuel Reed, Parkside Health Centre, 2 Park Lane, Kingsway KW1 3AB, explaining the procedure and her follow-up. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Anna Kowalczyk (Ms)",
+          "DOB: 04/03/1981 (45 y.o.)",
+          "Accountant; 2 children; no plans for further pregnancy",
+          "Lives with partner"
+        ]
+      },
+      {
+        "heading": "Background",
+        "lines": [
+          "Symptomatic uterine fibroids: heavy menstrual bleeding, pelvic pressure, urinary frequency",
+          "Hb 102 g/L (07/2026) on oral iron",
+          "MRI pelvis (06/2026): multiple fibroids, dominant 8 cm intramural",
+          "Discussed options with gynaecology; chose UAE instead of hysterectomy"
+        ]
+      },
+      {
+        "heading": "Procedure 22/09/2026",
+        "lines": [
+          "Bilateral uterine artery embolisation via R common femoral artery",
+          "Technically successful; no complications",
+          "Closure device used at puncture site"
+        ]
+      },
+      {
+        "heading": "Recovery",
+        "lines": [
+          "Severe pelvic pain overnight — morphine PCA, stopped next morning",
+          "Nausea settled with ondansetron",
+          "Low-grade temperature 37.8 °C on day 1 — expected post-embolisation syndrome",
+          "Groin site clean, no haematoma"
+        ]
+      },
+      {
+        "heading": "Discharge medication",
+        "lines": [
+          "Paracetamol 1 g QDS",
+          "Ibuprofen 400 mg TDS with food for 7 days",
+          "Codeine 30 mg QDS PRN + senna",
+          "Continue ferrous fumarate"
+        ]
+      },
+      {
+        "heading": "Plan",
+        "lines": [
+          "Expect pain, low-grade fever and vaginal discharge for up to 2 weeks",
+          "Contact us if fever above 38 °C, offensive discharge or worsening pain (possible infection)",
+          "Off work for 2 weeks — fit note provided",
+          "IR clinic in 6 weeks; MRI pelvis at 6 months",
+          "GP: FBC in 3 months"
+        ]
+      }
+    ],
+    "modelLetter": "Dr Samuel Reed\nParkside Health Centre\n2 Park Lane\nKingsway KW1 3AB\n\n23 September 2026\n\nDear Dr Reed,\n\nRe: Ms Anna Kowalczyk, DOB 04/03/1981\n\nI am writing to let you know that Ms Kowalczyk, a 45-year-old accountant, is being discharged today following uterine artery embolisation for symptomatic fibroids, and to ask for your help with her follow-up.\n\nMs Kowalczyk had heavy menstrual bleeding and pelvic pressure caused by multiple fibroids, the largest measuring 8 cm. She chose embolisation rather than hysterectomy. On 22 September, both uterine arteries were embolised through the right femoral artery, without complications.\n\nShe had severe pelvic pain overnight, which was controlled with morphine, and a low-grade temperature, which is expected after this procedure. Her groin puncture site is healthy.\n\nShe has been discharged on regular paracetamol, ibuprofen for seven days and codeine as required, with senna. She should continue her iron supplement, and she has a fit note for two weeks.\n\nShe may experience pain, low-grade fever and vaginal discharge for up to two weeks. However, fever above 38 °C, offensive discharge or worsening pain could indicate infection, and she should then contact us urgently.\n\nWe will see her in six weeks and repeat her MRI at six months. I would be grateful if you could check her full blood count in three months.\n\nYours sincerely,\n\nDoctor\nInterventional Radiology, Kingsway University Hospital",
+    "tags": [
+      "discharge",
+      "radiology"
+    ]
+  },
+  {
+    "id": "wc-claudication-referral",
+    "title": "Worsening claudication — GP to vascular surgeon",
+    "writer": "You are a GP at Millbrook Medical Centre.",
+    "task": "Today's date is 10 September 2026. Using the case notes, write a letter of referral to Ms Claire Watson, Consultant Vascular Surgeon, Vascular Unit, Eastgate Hospital, 7 Eastgate Road, Millbrook MB6 2EE, asking for assessment of Mr Morgan. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Peter Morgan (Mr)",
+          "DOB: 30/08/1964 (62 y.o.)",
+          "Postman; lives with wife",
+          "Smoker 30/day (45 pack-years)"
+        ]
+      },
+      {
+        "heading": "Medical history",
+        "lines": [
+          "Type 2 diabetes — metformin 1 g BD; HbA1c 62 mmol/mol",
+          "Hypertension — ramipril 10 mg OD",
+          "Angina (stable) — GTN spray PRN",
+          "NKDA"
+        ]
+      },
+      {
+        "heading": "Presentation",
+        "lines": [
+          "6 months: cramping pain R calf on walking, relieved by rest in 2–3 minutes",
+          "Walking distance ↓ from 100 m to 50 m over last month",
+          "No rest pain; no ulcers",
+          "Struggling to complete delivery round; worried about his job"
+        ]
+      },
+      {
+        "heading": "Examination 03/09/2026",
+        "lines": [
+          "R foot cool; R popliteal and foot pulses absent; L pulses present",
+          "No tissue loss; capillary refill 3 s R, 2 s L",
+          "ABPI: R 0.55, L 0.92"
+        ]
+      },
+      {
+        "heading": "Management",
+        "lines": [
+          "Started clopidogrel 75 mg OD; atorvastatin increased 20 → 80 mg",
+          "Referred to smoking cessation service — patient willing to try",
+          "Advised supervised exercise programme"
+        ]
+      },
+      {
+        "heading": "Plan",
+        "lines": [
+          "Referral to vascular surgery: imaging and assessment for revascularisation"
+        ]
+      }
+    ],
+    "tags": [
+      "referral",
+      "vascular",
+      "radiology"
+    ]
+  },
+  {
+    "id": "wc-incidental-renal-mass",
+    "title": "Incidental kidney mass on CT — radiologist to GP",
+    "writer": "You are a consultant radiologist at Eastgate Hospital.",
+    "task": "Today's date is 19 September 2026. Using the case notes, write a letter to Mr Green's GP, Dr Laura Fox, Millbrook Medical Centre, 12 Church Street, Millbrook MB6 1AA, informing her of an unexpected finding on his CT scan and recommending further action. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Thomas Green (Mr)",
+          "DOB: 15/02/1968 (58 y.o.)",
+          "Builder; lives with partner"
+        ]
+      },
+      {
+        "heading": "Background",
+        "lines": [
+          "Attended ED 18/09/2026 with 2 days of L iliac fossa pain and fever",
+          "CT abdomen and pelvis with contrast requested by ED",
+          "Discharged from ED the same evening on oral co-amoxiclav — before the final report was issued"
+        ]
+      },
+      {
+        "heading": "CT findings 18/09/2026",
+        "lines": [
+          "Uncomplicated sigmoid diverticulitis; no abscess, no perforation",
+          "Incidental: 4.2 cm solid, enhancing mass, upper pole L kidney — suspicious for renal cell carcinoma",
+          "Renal vein patent; no enlarged lymph nodes",
+          "No liver lesions; visualised lung bases clear",
+          "eGFR 78 mL/min/1.73 m²"
+        ]
+      },
+      {
+        "heading": "Actions",
+        "lines": [
+          "ED team informed 19/09; ED unable to contact patient",
+          "Patient not yet aware of the kidney finding",
+          "Report flagged as unexpected significant finding"
+        ]
+      },
+      {
+        "heading": "Recommendations",
+        "lines": [
+          "Urgent suspected cancer referral to urology",
+          "CT chest for staging (urology usually arranges)",
+          "Diverticulitis: complete antibiotics; ED advised GP review if not improving"
+        ]
+      }
+    ],
+    "tags": [
+      "radiology",
+      "urgent",
+      "urology"
+    ]
+  },
+  {
+    "id": "wc-foot-ulcer-district-nurse",
+    "title": "Diabetic foot ulcer — hospital to district nurses",
+    "writer": "You are a doctor on the diabetes ward at Northfield Hospital.",
+    "task": "Today's date is 24 September 2026. Mrs Taylor is being discharged tomorrow. Using the case notes, write a letter to Ms Rachel Hill, District Nursing Team Leader, Northfield Community Health Centre, 3 Mill Lane, Northfield NF1 2CC, asking the team to continue her wound care at home. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Joan Taylor (Mrs)",
+          "DOB: 09/10/1946 (79 y.o.)",
+          "Lives alone in a bungalow; son lives nearby",
+          "Walks with a stick"
+        ]
+      },
+      {
+        "heading": "Medical history",
+        "lines": [
+          "Type 2 diabetes (25 years) — insulin glargine 24 units ON; metformin 500 mg BD",
+          "Peripheral neuropathy both feet",
+          "Chronic kidney disease stage 3a",
+          "NKDA"
+        ]
+      },
+      {
+        "heading": "Admission 17/09/2026",
+        "lines": [
+          "Infected neuropathic ulcer under R big toe (2 × 1.5 cm), spreading redness to midfoot",
+          "T 38.1 °C; CRP 145; blood glucose 18–22 mmol/L",
+          "Foot X-ray: no osteomyelitis",
+          "IV flucloxacillin → oral flucloxacillin 1 g QDS from 22/09"
+        ]
+      },
+      {
+        "heading": "Progress",
+        "lines": [
+          "Redness settled; ulcer now 1.5 × 1 cm, clean, granulating",
+          "Glucose 7–11 mmol/L after insulin adjustment (glargine ↑ 20 → 24 units)",
+          "Mobilising with offloading shoe; seen by podiatry"
+        ]
+      },
+      {
+        "heading": "Discharge plan",
+        "lines": [
+          "Flucloxacillin until 01/10/2026",
+          "Dressing: clean with saline; non-adherent dressing; change every 2 days",
+          "Offloading shoe whenever walking",
+          "Check glucose twice daily; contact GP if repeatedly above 15 mmol/L",
+          "Podiatry clinic weekly (first appointment 30/09)",
+          "Red flags: new redness, swelling, discharge, fever → urgent GP or hospital review"
+        ]
+      }
+    ],
+    "tags": [
+      "discharge",
+      "community",
+      "diabetes"
+    ]
+  },
+  {
+    "id": "wc-diabetes-dietitian",
+    "title": "New type 2 diabetes — GP to dietitian",
+    "writer": "You are a GP at Oakfield Surgery.",
+    "task": "Today's date is 16 September 2026. Using the case notes, write a letter of referral to Ms Emily Clarke, Community Dietitian, Oakfield Community Nutrition Service, 9 Market Street, Oakfield OK2 5BB, asking her to see Mr O'Brien. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Kevin O'Brien (Mr)",
+          "DOB: 21/07/1977 (49 y.o.)",
+          "Taxi driver, works night shifts; married, 2 teenage children",
+          "Non-smoker; alcohol 10 units/week"
+        ]
+      },
+      {
+        "heading": "Medical history",
+        "lines": [
+          "Hypertension — ramipril 5 mg OD",
+          "Knee pain (early osteoarthritis) limits running",
+          "NKDA"
+        ]
+      },
+      {
+        "heading": "Consultation 09/09/2026",
+        "lines": [
+          "Routine check: HbA1c 58 mmol/mol (repeat confirmed) → type 2 diabetes",
+          "Weight 108 kg, height 1.78 m, BMI 34; waist 112 cm",
+          "BP 138/86",
+          "Diet: irregular meals on night shifts, takeaways 4–5×/week, 1.5 L of sugary drinks daily, little fruit or vegetables"
+        ]
+      },
+      {
+        "heading": "Management",
+        "lines": [
+          "Started metformin 500 mg OD with evening meal; increase gradually",
+          "Diabetes education course offered — on waiting list",
+          "Patient motivated: wants to lose weight and avoid insulin; wife supportive"
+        ]
+      },
+      {
+        "heading": "Plan",
+        "lines": [
+          "Referral to dietitian: meal planning around night shifts; reduce sugary drinks and takeaways; weight loss target 5–10%",
+          "Review with practice nurse in 3 months (HbA1c, weight)"
+        ]
+      }
+    ],
+    "modelLetter": "Ms Emily Clarke\nCommunity Dietitian\nOakfield Community Nutrition Service\n9 Market Street\nOakfield OK2 5BB\n\n16 September 2026\n\nDear Ms Clarke,\n\nRe: Mr Kevin O'Brien, DOB 21/07/1977\n\nI am writing to refer Mr O'Brien, a 49-year-old taxi driver who has recently been diagnosed with type 2 diabetes, for dietary assessment and advice on weight loss.\n\nA routine blood test this month showed an HbA1c of 58 mmol/mol, which was confirmed on repeat testing. Mr O'Brien weighs 108 kg and has a BMI of 34. He also has hypertension, which is treated with ramipril, and early osteoarthritis of the knees, which limits his exercise.\n\nHis diet is currently a major concern. Because he works night shifts, his meals are irregular, and he eats takeaway food four to five times a week. In addition, he drinks about 1.5 litres of sugary drinks a day and eats little fruit or vegetables.\n\nI have started metformin 500 mg once daily, which will be increased gradually, and he is on the waiting list for a diabetes education course.\n\nMr O'Brien is motivated to lose weight and avoid insulin, and his wife is supportive. I would be grateful if you could help him plan healthy meals around his shifts, with a target of losing 5–10% of his weight.\n\nYours sincerely,\n\nDoctor\nGeneral Practitioner, Oakfield Surgery",
+    "tags": [
+      "referral",
+      "community",
+      "diabetes"
+    ]
+  },
+  {
+    "id": "wc-biliary-drain",
+    "title": "Biliary drain in pancreatic cancer — hospital to GP",
+    "writer": "You are a doctor on the hepatobiliary ward at Kingsway University Hospital.",
+    "task": "Today's date is 25 September 2026. Mr Price is being discharged today. Using the case notes, write a letter to his GP, Dr Olivia Grant, Parkside Health Centre, 2 Park Lane, Kingsway KW1 3AB, summarising his admission and arranging his care at home. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Alan Price (Mr)",
+          "DOB: 05/12/1951 (74 y.o.)",
+          "Retired engineer; lives with wife (main carer)"
+        ]
+      },
+      {
+        "heading": "Background",
+        "lines": [
+          "Carcinoma of the pancreatic head (diagnosed 08/2026); not suitable for surgery (vascular involvement)",
+          "Admitted 12/09/2026 with obstructive jaundice and itching; bilirubin 312 µmol/L"
+        ]
+      },
+      {
+        "heading": "Hospital course",
+        "lines": [
+          "ERCP 13/09: unable to place stent (duodenal narrowing)",
+          "15/09: percutaneous transhepatic biliary drain (internal-external) placed by interventional radiology",
+          "Bilirubin 312 → 140 µmol/L (24/09); itching improved",
+          "No bleeding or bile leak; drain site clean"
+        ]
+      },
+      {
+        "heading": "Discharge 25/09/2026",
+        "lines": [
+          "Drain care by district nurses: flush with 10 mL saline daily; dressing change weekly; bag emptied by wife",
+          "Wife trained in bag emptying and signs of blockage",
+          "Meds: colestyramine 4 g BD for itch (take 1 h before/4 h after other meds); Creon with meals; omeprazole 20 mg OD"
+        ]
+      },
+      {
+        "heading": "Follow-up",
+        "lines": [
+          "IR in 2 weeks: internal stent and drain removal if possible",
+          "Oncology to discuss palliative chemotherapy once bilirubin below 50",
+          "Community palliative care team referral made",
+          "Patient and wife aware of prognosis; DNACPR in place"
+        ]
+      },
+      {
+        "heading": "Warning signs",
+        "lines": [
+          "Fever, rigors, new jaundice or no drainage → contact hepatobiliary team urgently (possible cholangitis or blocked drain)"
+        ]
+      }
+    ],
+    "tags": [
+      "discharge",
+      "palliative",
+      "radiology"
+    ]
+  },
+  {
+    "id": "wc-back-pain-physio",
+    "title": "Low back pain after a lifting injury — GP to physiotherapist",
+    "writer": "You are a GP at Millbrook Medical Centre.",
+    "task": "Today's date is 11 September 2026. Using the case notes, write a letter of referral to Mr James Carter, Musculoskeletal Physiotherapist, Millbrook Physiotherapy Service, 20 High Street, Millbrook MB6 3HS, asking him to assess and treat Ms Bennett. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Laura Bennett (Ms)",
+          "DOB: 19/04/1990 (36 y.o.)",
+          "Staff nurse on an orthopaedic ward; lives with partner",
+          "Runs 3×/week (stopped since injury)"
+        ]
+      },
+      {
+        "heading": "Medical history",
+        "lines": [
+          "Asthma — salbutamol PRN (no NSAID sensitivity)",
+          "No previous back problems",
+          "NKDA"
+        ]
+      },
+      {
+        "heading": "Presentation 21/08/2026",
+        "lines": [
+          "Lower back pain after lifting a patient at work 3 weeks ago",
+          "Pain central, no radiation to legs; worse bending and sitting long",
+          "No red flags: bladder and bowel normal, no saddle numbness, no weight loss, no fever"
+        ]
+      },
+      {
+        "heading": "Examination",
+        "lines": [
+          "Tender lumbar paraspinal muscles; reduced flexion",
+          "Straight leg raise normal both sides; reflexes, power and sensation normal"
+        ]
+      },
+      {
+        "heading": "Management",
+        "lines": [
+          "Naproxen 500 mg BD + omeprazole 20 mg OD for 2 weeks",
+          "Off work 1 week; now on light duties (no lifting)",
+          "STarT Back score: medium risk",
+          "Anxious about recurrence and returning to full duties; wants to run again"
+        ]
+      },
+      {
+        "heading": "Plan",
+        "lines": [
+          "Referral to physiotherapy: exercise programme, advice on safe lifting and return to running"
+        ]
+      }
+    ],
+    "tags": [
+      "referral",
+      "musculoskeletal"
+    ]
+  },
+  {
+    "id": "wc-heart-failure-discharge",
+    "title": "New heart failure — cardiology discharge to GP",
+    "writer": "You are a doctor on the cardiology ward at Oakfield District Hospital.",
+    "task": "Today's date is 22 September 2026. Mr Lewis is being discharged today. Using the case notes, write a letter to his GP, Dr Nathan Price, Oakfield Surgery, 1 Green Lane, Oakfield OK4 7GL, summarising his admission and asking him to continue his treatment. Expand the relevant notes into full sentences, do not use note form, and use letter format. The body of the letter should be about 180–200 words.",
+    "notes": [
+      {
+        "heading": "Patient details",
+        "lines": [
+          "Name: Frank Lewis (Mr)",
+          "DOB: 14/03/1954 (72 y.o.)",
+          "Retired lorry driver; lives with wife",
+          "Ex-smoker"
+        ]
+      },
+      {
+        "heading": "Medical history",
+        "lines": [
+          "Myocardial infarction 2016 — stent to LAD",
+          "Hypertension; hypercholesterolaemia",
+          "Meds on admission: aspirin 75 mg OD, atorvastatin 80 mg ON, amlodipine 10 mg OD"
+        ]
+      },
+      {
+        "heading": "Admission 15/09/2026",
+        "lines": [
+          "4 weeks of worsening breathlessness, orthopnoea and ankle swelling",
+          "O/E: bilateral crackles, pitting oedema to knees, JVP raised",
+          "NT-proBNP 4,200 ng/L; CXR: pulmonary oedema",
+          "Echo: LV ejection fraction 30%, dilated LV — heart failure with reduced ejection fraction, likely ischaemic"
+        ]
+      },
+      {
+        "heading": "Treatment",
+        "lines": [
+          "IV furosemide; weight 92 → 86 kg",
+          "Amlodipine stopped",
+          "Started: ramipril 2.5 mg OD, bisoprolol 1.25 mg OD, dapagliflozin 10 mg OD, spironolactone 25 mg OD",
+          "Discharge furosemide 40 mg OD",
+          "K⁺ 4.6 mmol/L; creatinine 118 µmol/L (baseline 105)"
+        ]
+      },
+      {
+        "heading": "Plan",
+        "lines": [
+          "GP: U&E in 1–2 weeks; increase ramipril and bisoprolol every 2 weeks if BP and K⁺ allow",
+          "Heart failure nurse referral made",
+          "Daily weights: report gain of 2 kg in 3 days; fluid limit 1.5 L/day",
+          "Cardiology clinic 6 weeks; CT coronary angiogram as outpatient"
+        ]
+      }
+    ],
+    "tags": [
+      "discharge",
+      "cardiology"
+    ]
+  }
+]

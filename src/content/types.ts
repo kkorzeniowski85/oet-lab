@@ -67,6 +67,24 @@ export interface Guide {
   blocks: GuideBlock[]
 }
 
+export interface CaseNotesSection {
+  heading: string
+  lines: string[]
+}
+
+/** A fictional Writing task: case notes, who writes to whom, and optionally a model letter. */
+export interface WritingCase {
+  id: string
+  title: string
+  /** Who you are in this task, e.g. "You are a GP at Riverside Medical Practice." */
+  writer: string
+  task: string
+  notes: CaseNotesSection[]
+  /** Full letter as plain text; the body runs from the "Dear" line to the "Yours" line. */
+  modelLetter?: string
+  tags: string[]
+}
+
 export interface Content {
   phraseGroups: PhraseGroup[]
   phrases: Phrase[]
@@ -74,4 +92,5 @@ export interface Content {
   abbreviations: Abbreviation[]
   criteria: Criterion[]
   guides: Guide[]
+  writingCases: WritingCase[]
 }

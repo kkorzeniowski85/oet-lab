@@ -30,8 +30,24 @@ function sample(): Content {
       },
     ],
     guides: [{ id: 'g1', section: 'reading', title: 'Part A', blocks: [{ type: 'text', text: 'Read fast.' }] }],
+    writingCases: [
+      {
+        id: 'wc1',
+        title: 'Referral',
+        writer: 'You are a GP.',
+        task: 'Write a referral letter.',
+        notes: [
+          { heading: 'Patient', lines: ['Mrs Smith, 68'] },
+          { heading: 'Plan', lines: ['Refer'] },
+        ],
+        tags: [],
+      },
+    ],
   }
 }
+
+const letter = (words: number) =>
+  `Dr Jones\n\nDear Dr Jones,\n\n${Array.from({ length: words }, () => 'word').join(' ')}\n\nYours sincerely,\n\nDoctor`
 
 describe('validateContent', () => {
   it('accepts valid content', () => {
@@ -79,6 +95,26 @@ describe('validateContent', () => {
     const c = sample()
     c.abbreviations.push({ id: 'a2', group: 'a-dosing', abbr: 'BD', expansion: 'twice a day', source: 'test' })
     expect(validateContent(c)).toContain('abbreviation a2: "BD" listed twice')
+  })
+
+  it('accepts a model letter of the right length', () => {
+    const c = sample()
+    c.writingCases[0].modelLetter = letter(190)
+    expect(validateContent(c)).toEqual([])
+  })
+
+  it('reports a model letter that is too long or has no closing', () => {
+    const c = sample()
+    c.writingCases[0].modelLetter = letter(240)
+    expect(validateContent(c)).toContain('writing case wc1: model letter body has 240 words (170–210 expected)')
+    c.writingCases[0].modelLetter = 'Dear Dr Jones, no closing'
+    expect(validateContent(c)).toContain('writing case wc1: model letter needs a "Dear" line and a "Yours" line')
+  })
+
+  it('reports a writing case with too few note sections', () => {
+    const c = sample()
+    c.writingCases[0].notes = c.writingCases[0].notes.slice(0, 1)
+    expect(validateContent(c)).toContain('writing case wc1: needs at least two note sections')
   })
 
   it('reports a fact without a source', () => {
