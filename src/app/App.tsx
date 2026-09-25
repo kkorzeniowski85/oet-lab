@@ -1,5 +1,6 @@
 import { Redirect, Route, Router, Switch } from 'wouter'
 import { useHashLocation } from 'wouter/use-hash-location'
+import TransferPage from '../features/transfer/Transfer.tsx'
 import Layout from './Layout.tsx'
 import { Home, NotFound, SectionPage, Settings } from './pages.tsx'
 
@@ -10,6 +11,7 @@ export default function App({ ssrPath }: { ssrPath?: string }) {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/settings" component={Settings} />
+          <Route path="/transfer/:from?">{(p) => <TransferPage from={p.from} />}</Route>
           <Route path="/:section/:tab/:view?/:item?">
             {(params) => {
               // wouter cannot infer the names of more than one optional parameter.

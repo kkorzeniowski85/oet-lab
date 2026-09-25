@@ -123,6 +123,10 @@ export function Settings() {
             : 'Storage is not protected: the browser may clear your data when space runs low. Keep backups.'}
         </p>
       )}
+      <Link href="/transfer" className="mt-8 block rounded-lg border border-line bg-surface p-4 hover:border-brand">
+        <span className="font-medium">Move your work between devices</span>
+        <span className="mt-1 block text-sm text-muted">Send a file from one device and merge it on the other.</span>
+      </Link>
       <div className="mt-8">
         <BackupPanel />
       </div>
