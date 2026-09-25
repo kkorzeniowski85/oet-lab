@@ -4,6 +4,8 @@ Aplikacja do przygotowania do egzaminu OET (Medicine): zwroty, sposoby pisania i
 podzielone na sekcje jak egzamin. Działa w przeglądarce telefonu i komputera, także bez internetu.
 Dane zostają na urządzeniu.
 
+Plan i stan realizacji: [docs/PLAN.md](docs/PLAN.md) · decyzje: [docs/DECISIONS.md](docs/DECISIONS.md)
+
 ## Praca nad kodem
 
 ```bash
