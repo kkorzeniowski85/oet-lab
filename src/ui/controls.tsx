@@ -1,3 +1,5 @@
+import { field } from './buttons.ts'
+
 export function SearchInput({
   value,
   onChange,
@@ -14,7 +16,7 @@ export function SearchInput({
       onChange={(e) => onChange(e.target.value)}
       placeholder={label}
       aria-label={label}
-      className="w-full rounded-md border border-line bg-surface px-3 py-2 text-base outline-none focus:border-brand"
+      className={field + ' text-base'}
     />
   )
 }
@@ -50,11 +52,11 @@ export function FilterChips({
             aria-pressed={active}
             onClick={() => onSelect(c.value)}
             className={
-              'rounded-full border px-3 py-1 text-sm ' +
-              (active ? 'border-brand bg-brand-soft text-brand' : 'border-line text-muted')
+              'inline-flex min-h-10 items-center rounded-full border px-3 text-sm ' +
+              (active ? 'border-brand bg-brand-soft text-brand' : 'border-field text-muted')
             }
           >
-            {c.label} <span className="opacity-70">{c.count}</span>
+            {c.label}&nbsp;<span className={active ? 'text-brand' : 'text-muted'}>{c.count}</span>
           </button>
         )
       })}
@@ -63,11 +65,33 @@ export function FilterChips({
 }
 
 export function SourceLink({ href }: { href: string }) {
-  const host = new URL(href).hostname.replace(/^www\./, '')
-  const label = host.endsWith('aglty.io') ? 'OET (PDF)' : host
+  let label = 'link'
+  try {
+    const host = new URL(href).hostname.replace(/^www\./, '')
+    label = host.endsWith('aglty.io') ? 'OET (PDF)' : host
+  } catch {
+    // A malformed source in content is caught by the content test; show a plain label.
+  }
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="text-xs text-muted underline">
       Source: {label}
+      <span className="sr-only"> (opens in a new tab)</span>
     </a>
+  )
+}
+
+/**
+ * One always-present line for messages, so screen readers hear each change.
+ * Errors are announced at once; other messages wait for a pause.
+ */
+export function StatusLine({ message, tone = 'ok' }: { message: string | null; tone?: 'ok' | 'error' }) {
+  const error = tone === 'error' && message
+  return (
+    <p
+      role={error ? 'alert' : 'status'}
+      className={'min-h-5 text-sm ' + (error ? 'text-red-700 dark:text-red-400' : 'text-brand')}
+    >
+      {message}
+    </p>
   )
 }

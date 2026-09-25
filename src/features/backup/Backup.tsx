@@ -5,12 +5,15 @@ import {
   backupFileName,
   describeCounts,
   exportData,
+  fileTooLarge,
   liveCounts,
   parseBackup,
-  restoreBackup,
 } from '../../data/backup.ts'
 import { setSetting, useRecords, useSetting } from '../../data/records.ts'
+import { applyRestore, undoLastChange } from '../../data/transfer.ts'
 import { downloadText } from '../../lib/download.ts'
+import { primaryButton, secondaryButton, smallButton, textButton } from '../../ui/buttons.ts'
+import { StatusLine } from '../../ui/controls.tsx'
 
 const LAST_BACKUP = 'lastBackupAt'
 
@@ -33,8 +36,15 @@ export function BackupPanel() {
   const lastBackupAt = useSetting<string>(LAST_BACKUP)
   const input = useRef<HTMLInputElement>(null)
   const [message, setMessage] = useState<{ tone: 'ok' | 'error'; text: string } | null>(null)
+  const [restored, setRestored] = useState(false)
 
   async function restoreFrom(fileToRead: File) {
+    setRestored(false)
+    const tooLarge = fileTooLarge(fileToRead)
+    if (tooLarge) {
+      setMessage({ tone: 'error', text: tooLarge })
+      return
+    }
     const parsed = parseBackup(await fileToRead.text())
     if (!parsed.ok) {
       setMessage({ tone: 'error', text: parsed.error })
@@ -46,11 +56,23 @@ export function BackupPanel() {
     const confirmed = window.confirm(
       `Replace all data on this device with this backup${from}?\n\n` +
         `The backup has: ${incoming}.\n` +
-        `This device has: ${current}. It will be replaced.`,
+        `This device has: ${current}. It will be replaced. You can undo this afterwards.`,
     )
     if (!confirmed) return
-    await restoreBackup(parsed.file)
-    setMessage({ tone: 'ok', text: 'Backup restored.' })
+    try {
+      await applyRestore(parsed.file, fileToRead.name)
+      setMessage({ tone: 'ok', text: 'Backup restored.' })
+      setRestored(true)
+    } catch {
+      setMessage({ tone: 'error', text: 'The backup could not be restored. Nothing was changed.' })
+    }
+  }
+
+  async function undo() {
+    if (!window.confirm('Undo the restore? Everything goes back to how it was before it.')) return
+    await undoLastChange()
+    setRestored(false)
+    setMessage({ tone: 'ok', text: 'Restore undone.' })
   }
 
   return (
@@ -65,11 +87,11 @@ export function BackupPanel() {
         <button
           type="button"
           onClick={() => void downloadBackup().then(() => setMessage({ tone: 'ok', text: 'Backup downloaded.' }))}
-          className="rounded-md bg-brand px-4 py-2 font-medium text-on-brand"
+          className={primaryButton}
         >
           Download backup
         </button>
-        <button type="button" onClick={() => input.current?.click()} className="rounded-md border border-line px-4 py-2">
+        <button type="button" onClick={() => input.current?.click()} className={secondaryButton}>
           Restore from a backup…
         </button>
         <input
@@ -84,11 +106,14 @@ export function BackupPanel() {
           }}
         />
       </div>
-      {message && (
-        <p role="status" className={'text-sm ' + (message.tone === 'error' ? 'text-red-700 dark:text-red-400' : 'text-brand')}>
-          {message.text}
-        </p>
-      )}
+      <div className="flex flex-wrap items-center gap-2">
+        <StatusLine message={message?.text ?? null} tone={message?.tone} />
+        {restored && (
+          <button type="button" onClick={() => void undo()} className={textButton + ' text-brand'}>
+            Undo restore
+          </button>
+        )}
+      </div>
     </section>
   )
 }
@@ -105,7 +130,7 @@ export function BackupReminder() {
         {due.days === null ? 'You have not made a backup yet.' : `Your last backup was ${due.days} days ago.`}
       </p>
       <div className="mt-3 flex flex-wrap items-center gap-3">
-        <button type="button" onClick={() => void downloadBackup()} className="rounded-md bg-brand px-3 py-1.5 font-medium text-on-brand">
+        <button type="button" onClick={() => void downloadBackup()} className={smallButton}>
           Download a backup
         </button>
         <Link href="/settings" className="text-muted underline">

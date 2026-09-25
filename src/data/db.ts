@@ -126,9 +126,10 @@ export function db(): Promise<IDBPDatabase<OetLabDB>> {
         database.createObjectStore('fiszkiExports', { keyPath: 'id' })
       }
     },
-    // A newer version of the app opened in another tab: step aside so its upgrade can run.
+    // A newer version of the app opened in another tab: step aside so its upgrade can run,
+    // then reload — this tab's code would not be able to reopen the upgraded database.
     blocking() {
-      void closeDB()
+      void closeDB().then(() => location.reload())
     },
   })
   return connection

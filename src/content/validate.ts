@@ -96,7 +96,8 @@ export function validateContent(c: Content): string[] {
         if (b.items.length === 0 || !b.items.every(filled)) errors.push(`${at} block ${i}: empty list`)
       } else {
         need(`${at} block ${i}`, 'text', b.text)
-        if (b.type === 'fact') need(`${at} block ${i}`, 'source', b.source)
+        if (b.type === 'fact' && !/^https:\/\/[^\s/]+\.[^\s/]+/.test(b.source ?? ''))
+          errors.push(`${at} block ${i}: fact needs an https source`)
       }
     }
   }

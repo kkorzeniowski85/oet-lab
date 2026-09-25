@@ -3,6 +3,7 @@ import type { SectionId } from '../../app/sections.ts'
 import type { NoteRecord } from '../../data/db.ts'
 import { deleteRecord, saveRecord, useRecords } from '../../data/records.ts'
 import { matches } from '../../lib/search.ts'
+import { field, primaryButton, textButton } from '../../ui/buttons.ts'
 import { SearchInput } from '../../ui/controls.tsx'
 import FictionalWarning from '../../ui/FictionalWarning.tsx'
 
@@ -32,7 +33,7 @@ export function NoteForm({
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Title (optional)"
         aria-label="Title"
-        className="w-full rounded-md border border-line bg-surface px-3 py-2 outline-none focus:border-brand"
+        className={field}
       />
       <textarea
         value={body}
@@ -41,17 +42,13 @@ export function NoteForm({
         aria-label="Note"
         rows={6}
         required
-        className="w-full rounded-md border border-line bg-surface px-3 py-2 outline-none focus:border-brand"
+        className={field}
       />
       <div className="flex gap-2">
-        <button
-          type="submit"
-          disabled={!body.trim()}
-          className="rounded-md bg-brand px-4 py-2 font-medium text-on-brand disabled:opacity-40"
-        >
+        <button type="submit" disabled={!body.trim()} className={primaryButton}>
           Save
         </button>
-        <button type="button" onClick={onCancel} className="rounded-md px-4 py-2 text-muted">
+        <button type="button" onClick={onCancel} className={textButton + ' text-muted'}>
           Cancel
         </button>
       </div>
@@ -63,10 +60,10 @@ function NoteItem({ note, onEdit }: { note: NoteRecord; onEdit: () => void }) {
   return (
     <li className="rounded-lg border border-line bg-surface p-4">
       {note.title && <h3 className="font-semibold">{note.title}</h3>}
-      <p className="mt-1 whitespace-pre-wrap">{note.body}</p>
-      <div className="mt-3 flex items-center gap-3 text-sm">
+      <p className="mt-1 break-words whitespace-pre-wrap">{note.body}</p>
+      <div className="mt-2 flex items-center gap-2 text-sm">
         <span className="flex-1 text-muted">Edited {edited(note.updatedAt)}</span>
-        <button type="button" onClick={onEdit} className="text-brand">
+        <button type="button" onClick={onEdit} className={textButton + ' text-brand'}>
           Edit
         </button>
         <button
@@ -74,7 +71,7 @@ function NoteItem({ note, onEdit }: { note: NoteRecord; onEdit: () => void }) {
           onClick={() => {
             if (window.confirm('Delete this note?')) void deleteRecord('notes', note.id)
           }}
-          className="text-muted"
+          className={textButton + ' -mr-2 text-muted'}
         >
           Delete
         </button>
@@ -100,11 +97,7 @@ export default function NotesView({ section }: { section: SectionId }) {
           onCancel={() => setEditing(null)}
         />
       ) : (
-        <button
-          type="button"
-          onClick={() => setEditing('new')}
-          className="rounded-md bg-brand px-4 py-2 font-medium text-on-brand"
-        >
+        <button type="button" onClick={() => setEditing('new')} className={primaryButton}>
           New note
         </button>
       )}

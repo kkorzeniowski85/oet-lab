@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { Link } from 'wouter'
 import { criteriaFor } from '../../content/index.ts'
 import type { LetterRecord } from '../../data/db.ts'
-import { deleteRecord, saveRecord, setSetting, useRecords, useSetting } from '../../data/records.ts'
+import { deleteRecord, patchRecord, setSetting, useRecords, useSetting } from '../../data/records.ts'
+import { chip, chipOff, chipOn, primaryButton, secondaryButton, textButton } from '../../ui/buttons.ts'
 import { resolveCase, type ResolvedCase } from './cases.ts'
 import CaseNotes from './CaseNotes.tsx'
 import { bodyWords, evaluationPrompt, type FeedbackLanguage } from './prompt.ts'
@@ -10,14 +11,11 @@ import { writingMinutes } from './timer.ts'
 
 const LETTERS = '/writing/practice/letters'
 const shortDate = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
-const button = 'rounded-md bg-brand px-4 py-2 font-medium text-on-brand disabled:opacity-40'
-const quiet = 'rounded-md border border-line px-4 py-2'
+const button = primaryButton
+const quiet = secondaryButton
 
-type Draft = Omit<LetterRecord, 'createdAt' | 'updatedAt' | 'deletedAt'>
-const update = (l: LetterRecord, changes: Partial<Draft>) => {
-  const { createdAt, updatedAt, deletedAt, ...draft } = l
-  return saveRecord('letters', { ...draft, ...changes })
-}
+const update = (l: LetterRecord, changes: Partial<Pick<LetterRecord, 'selfCheck' | 'evaluation'>>) =>
+  patchRecord('letters', l.id, changes)
 
 function SelfCheck({ letter }: { letter: LetterRecord }) {
   const ticked = new Set(letter.selfCheck)
@@ -33,8 +31,9 @@ function SelfCheck({ letter }: { letter: LetterRecord }) {
       {criteriaFor('writing').map((c) => (
         <fieldset key={c.id} className="rounded-lg border border-line bg-surface p-3">
           <legend className="px-1 text-sm font-semibold">{c.name}</legend>
-          {c.checklist.map((item, i) => {
-            const key = `${c.id}:${i}`
+          {c.checklist.map((item) => {
+            // Keyed by the text, so reordering a checklist in content keeps the ticks.
+            const key = `${c.id}:${item}`
             return (
               <label key={key} className="flex items-start gap-2 py-1 text-sm">
                 <input type="checkbox" checked={ticked.has(key)} onChange={() => toggle(key)} className="mt-0.5 accent-[var(--brand)]" />
@@ -77,7 +76,7 @@ function Feedback({ letter, kase }: { letter: LetterRecord; kase: ResolvedCase }
             type="button"
             aria-pressed={language === l}
             onClick={() => void setSetting('feedbackLanguage', l)}
-            className={'rounded-md px-3 py-1 ' + (language === l ? 'bg-ink text-canvas' : 'bg-surface text-muted')}
+            className={chip + ' ' + (language === l ? chipOn : chipOff)}
           >
             {l}
           </button>
@@ -95,7 +94,14 @@ function Feedback({ letter, kase }: { letter: LetterRecord; kase: ResolvedCase }
       {copied === 'manual' && (
         <div className="space-y-1">
           <p role="status" className="text-sm">Copying is blocked here. Select the text below and copy it.</p>
-          <textarea readOnly value={prompt} rows={8} className="w-full rounded-md border border-line bg-surface p-2 text-sm" onFocus={(e) => e.target.select()} />
+          <textarea
+            readOnly
+            value={prompt}
+            rows={8}
+            aria-label="Evaluation prompt"
+            className="w-full rounded-md border border-field bg-surface p-2 text-sm"
+            onFocus={(e) => e.target.select()}
+          />
         </div>
       )}
 
@@ -107,7 +113,7 @@ function Feedback({ letter, kase }: { letter: LetterRecord; kase: ResolvedCase }
             rows={12}
             aria-label="Feedback"
             placeholder="Paste Claude's feedback here"
-            className="w-full rounded-md border border-line bg-surface p-3 text-sm outline-none focus:border-brand"
+            className="w-full rounded-md border border-field bg-surface p-3 text-sm outline-none focus:border-brand"
           />
           <div className="flex gap-2">
             <button
@@ -118,15 +124,15 @@ function Feedback({ letter, kase }: { letter: LetterRecord; kase: ResolvedCase }
             >
               Save feedback
             </button>
-            <button type="button" onClick={() => setDraft(null)} className="rounded-md px-4 py-2 text-muted">
+            <button type="button" onClick={() => setDraft(null)} className={textButton + ' text-muted'}>
               Cancel
             </button>
           </div>
         </div>
       ) : letter.evaluation ? (
         <div className="space-y-2">
-          <div className="whitespace-pre-wrap rounded-lg border border-line bg-surface p-4 text-sm">{letter.evaluation}</div>
-          <button type="button" onClick={() => setDraft(letter.evaluation ?? '')} className="text-sm text-brand">
+          <div className="break-words whitespace-pre-wrap rounded-lg border border-line bg-surface p-4 text-sm">{letter.evaluation}</div>
+          <button type="button" onClick={() => setDraft(letter.evaluation ?? '')} className={textButton + ' -ml-2 text-brand'}>
             Edit feedback
           </button>
         </div>
@@ -165,7 +171,7 @@ export function LetterReview({ id }: { id: string }) {
           {minutes !== null && ` · ${minutes} min of writing`}
         </p>
         {letter.phase !== 'done' && (
-          <Link href="/writing/practice/timed" className="text-sm text-brand underline">
+          <Link href={`/writing/practice/timed/${letter.id}`} className="text-sm text-brand underline">
             Continue writing
           </Link>
         )}
@@ -173,7 +179,7 @@ export function LetterReview({ id }: { id: string }) {
 
       <section className="space-y-2">
         <h2 className="text-lg font-semibold">Your letter</h2>
-        <div className="whitespace-pre-wrap rounded-lg border border-line bg-surface p-4">{letter.text || '(empty)'}</div>
+        <div className="break-words whitespace-pre-wrap rounded-lg border border-line bg-surface p-4">{letter.text || '(empty)'}</div>
       </section>
 
       {letter.phase === 'done' && <SelfCheck letter={letter} />}
@@ -190,7 +196,7 @@ export function LetterReview({ id }: { id: string }) {
       {kase?.modelLetter && (
         <details className="rounded-lg border border-line bg-surface p-4">
           <summary className="cursor-pointer font-medium">Compare with a model letter</summary>
-          <p className="mt-3 whitespace-pre-wrap text-sm">{kase.modelLetter}</p>
+          <p className="mt-3 break-words whitespace-pre-wrap text-sm">{kase.modelLetter}</p>
         </details>
       )}
 
@@ -206,7 +212,7 @@ export function LetterReview({ id }: { id: string }) {
           onClick={() => {
             if (window.confirm('Delete this letter and its feedback?')) void deleteRecord('letters', letter.id)
           }}
-          className="text-sm text-muted"
+          className={textButton + ' text-muted'}
         >
           Delete letter
         </button>

@@ -41,7 +41,7 @@ export const VIEWS: Record<Exclude<TabId, 'notes'>, Partial<Record<SectionId, Vi
   },
   practice: {
     writing: [
-      { id: 'timed', name: 'Timed writing', render: () => <TimedWriting /> },
+      { id: 'timed', name: 'Timed writing', render: () => <TimedWriting />, item: (id) => <TimedWriting letterId={id} /> },
       { id: 'gapfill', name: 'Gap-fill', render: () => <GapFill section="writing" /> },
       { id: 'letters', name: 'My letters', render: () => <LetterList />, item: (id) => <LetterReview id={id} /> },
     ],

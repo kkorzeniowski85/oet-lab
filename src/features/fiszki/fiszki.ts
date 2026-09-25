@@ -1,6 +1,6 @@
 import type { Phrase } from '../../content/types.ts'
 import type { CustomPhraseRecord } from '../../data/db.ts'
-import { setSetting, useSetting } from '../../data/records.ts'
+import { getSetting, setSetting, useSetting } from '../../data/records.ts'
 
 export const FISZKI_URL = 'https://kkorzeniowski85.github.io/projekt-os-03/'
 /** Above this, the shared text gets too long for the share sheet; use a file instead. */
@@ -57,13 +57,29 @@ export function fiszkiFile(notes: FiszkiNote[]): { format: 'fiszki/v1'; deck: st
 
 const BASKET = 'fiszkiBasket'
 
+export interface Basket {
+  ids: string[]
+  has: (id: string) => boolean
+  toggle: (id: string) => void
+  /** Drops ids that no longer resolve to a phrase (the phrase was deleted). */
+  prune: (keep: string[]) => void
+  clear: () => void
+}
+
+// Each change reads the stored list first, so two quick taps cannot lose one.
+async function change(update: (ids: string[]) => string[]): Promise<void> {
+  const current = (await getSetting<string[]>(BASKET)) ?? []
+  await setSetting(BASKET, update(current))
+}
+
 /** The phrases picked for Fiszki on this device. */
-export function useFiszkiBasket(): { ids: string[]; has: (id: string) => boolean; toggle: (id: string) => void; clear: () => void } {
+export function useFiszkiBasket(): Basket {
   const ids = useSetting<string[]>(BASKET) ?? []
   return {
     ids,
     has: (id) => ids.includes(id),
-    toggle: (id) => void setSetting(BASKET, ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]),
+    toggle: (id) => void change((cur) => (cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id])),
+    prune: (keep) => void change((cur) => cur.filter((x) => keep.includes(x))),
     clear: () => void setSetting(BASKET, []),
   }
 }

@@ -5,7 +5,7 @@ import { exportData, type BackupFile } from './backup.ts'
 import { closeDB } from './db.ts'
 import { totalChanges } from './merge.ts'
 import { listRecords, saveRecord } from './records.ts'
-import { applyImport, getSnapshot, previewImport, undoImport } from './transfer.ts'
+import { applyImport, applyRestore, getSnapshot, previewImport, undoLastChange } from './transfer.ts'
 
 beforeEach(() => {
   globalThis.indexedDB = new IDBFactory()
@@ -59,11 +59,25 @@ describe('import with merge', () => {
     const before = await exportData()
 
     await applyImport(file, 'progress.txt')
-    expect(await undoImport()).toBe(true)
+    expect(await undoLastChange()).toBe(true)
 
     const after = await exportData()
     expect(after.data).toEqual(before.data)
     expect(await getSnapshot()).toBeNull()
-    expect(await undoImport()).toBe(false)
+    expect(await undoLastChange()).toBe(false)
+  })
+
+  it('a restore can be undone too, and replaces the snapshot of an earlier import', async () => {
+    const file = await fileFromAnotherDevice()
+    await saveRecord('notes', { section: 'writing', title: 'On the phone', body: 'Purpose first.' })
+    await applyImport(file, 'progress.txt')
+    const afterImport = await exportData()
+
+    await applyRestore(file, 'backup.json')
+    expect((await getSnapshot())?.kind).toBe('restore')
+    expect((await listRecords('notes')).map((n) => n.title)).toEqual(['From the laptop'])
+
+    expect(await undoLastChange()).toBe(true)
+    expect((await exportData()).data).toEqual(afterImport.data)
   })
 })

@@ -4,9 +4,10 @@ import type { Phrase, PhraseSection } from '../../content/types.ts'
 import type { CustomPhraseRecord } from '../../data/db.ts'
 import { deleteRecord, saveRecord, useRecords } from '../../data/records.ts'
 import { matches } from '../../lib/search.ts'
+import { Link } from 'wouter'
+import { textButton } from '../../ui/buttons.ts'
 import { FilterChips, SearchInput } from '../../ui/controls.tsx'
 import SpeakButton from '../../ui/SpeakButton.tsx'
-import { Link } from 'wouter'
 import { useFiszkiBasket } from '../fiszki/fiszki.ts'
 import PhraseForm from '../quick-add/PhraseForm.tsx'
 
@@ -37,8 +38,8 @@ function MineActions({ record, section }: { record: CustomPhraseRecord; section:
       </div>
     )
   return (
-    <div className="flex gap-4 pt-1">
-      <button type="button" onClick={() => setEditing(true)} className="text-brand">
+    <div className="-ml-2 flex gap-2">
+      <button type="button" onClick={() => setEditing(true)} className={textButton + ' text-brand'}>
         Edit
       </button>
       <button
@@ -46,7 +47,7 @@ function MineActions({ record, section }: { record: CustomPhraseRecord; section:
         onClick={() => {
           if (window.confirm('Delete this phrase?')) void deleteRecord('customPhrases', record.id)
         }}
-        className="text-muted"
+        className={textButton + ' text-muted'}
       >
         Delete
       </button>
@@ -76,7 +77,9 @@ function PhraseItem({ phrase: p, section, fiszki }: { phrase: Item; section: Phr
             {fiszki.sentBefore && (
               <span className="ml-2 rounded border border-line px-1.5 py-0.5 align-middle text-xs text-muted">in Fiszki</span>
             )}
-            <span className="mt-0.5 block text-sm text-muted">{p.pl}</span>
+            <span lang="pl" className="mt-0.5 block text-sm text-muted">
+              {p.pl}
+            </span>
           </span>
           <span aria-hidden="true" className="mt-0.5 text-muted transition-transform group-open:rotate-90">
             ›
@@ -109,7 +112,7 @@ function PhraseItem({ phrase: p, section, fiszki }: { phrase: Item; section: Phr
               {p.formal.join(' · ')}
             </p>
           )}
-          <button type="button" onClick={fiszki.toggle} aria-pressed={fiszki.inList} className="text-brand">
+          <button type="button" onClick={fiszki.toggle} className={textButton + ' -ml-2 text-brand'}>
             {fiszki.inList ? '✓ In your Fiszki list — remove' : '+ Add to Fiszki list'}
           </button>
           {p.mine && <MineActions record={p.mine} section={section} />}

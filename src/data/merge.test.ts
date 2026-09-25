@@ -53,7 +53,7 @@ describe('merge', () => {
     const file = withNotes(note('a', T1), note('b', T2))
     const { data, report } = merge(empty(), file)
     expect(sorted(data)).toEqual(sorted(file))
-    expect(report.notes).toEqual({ added: 2, updated: 0, kept: 0, unchanged: 0 })
+    expect(report.notes).toEqual({ added: 2, updated: 0, removed: 0, kept: 0, unchanged: 0 })
   })
 
   it('changes nothing when the same file is imported twice', () => {
@@ -76,7 +76,15 @@ describe('merge', () => {
     const laptop = withNotes(note('a', T2, '', { deletedAt: T2 }))
     const { data, report } = merge(phone, laptop)
     expect(data.notes[0].deletedAt).toBe(T2)
-    expect(report.notes.updated).toBe(1)
+    expect(report.notes).toMatchObject({ updated: 0, removed: 1 })
+  })
+
+  it('does not count a deletion of something this device never had', () => {
+    const laptop = withNotes(note('x', T2, '', { deletedAt: T2 }))
+    const { data, report } = merge(empty(), laptop)
+    expect(data.notes).toHaveLength(1)
+    expect(report.notes).toMatchObject({ added: 0, removed: 0, unchanged: 1 })
+    expect(totalChanges(report)).toBe(0)
   })
 
   it('keeps a newer local edit over an older deletion', () => {

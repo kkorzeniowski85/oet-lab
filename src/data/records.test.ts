@@ -2,7 +2,7 @@ import 'fake-indexeddb/auto'
 import { IDBFactory } from 'fake-indexeddb'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { closeDB, db } from './db.ts'
-import { deleteRecord, getSetting, listRecords, onChange, saveRecord, setSetting } from './records.ts'
+import { deleteRecord, getSetting, listRecords, onChange, patchRecord, saveRecord, setSetting } from './records.ts'
 
 beforeEach(() => {
   globalThis.indexedDB = new IDBFactory()
@@ -51,6 +51,24 @@ describe('records', () => {
     const tombstone = await (await db()).get('notes', saved.id)
     expect(tombstone).toMatchObject({ id: saved.id, title: '', body: '', section: 'writing' })
     expect(tombstone?.deletedAt).toBeTruthy()
+  })
+
+  it('never brings a deleted record back through a late save', async () => {
+    const saved = await saveRecord('notes', note)
+    await deleteRecord('notes', saved.id)
+    const result = await saveRecord('notes', { ...note, id: saved.id, body: 'typed just before Discard' })
+    expect(result.deletedAt).toBeTruthy()
+    expect(await listRecords('notes')).toEqual([])
+    expect(await patchRecord('notes', saved.id, { body: 'late autosave' })).toBeNull()
+    expect((await (await db()).get('notes', saved.id))?.body).toBe('')
+  })
+
+  it('patches fields onto the stored record, not onto a stale copy', async () => {
+    const saved = await saveRecord('notes', note)
+    await patchRecord('notes', saved.id, { title: 'Renamed' })
+    const patched = await patchRecord('notes', saved.id, { body: 'New body' })
+    expect(patched).toMatchObject({ id: saved.id, title: 'Renamed', body: 'New body', createdAt: saved.createdAt })
+    expect(await patchRecord('notes', 'no-such-id', { body: 'x' })).toBeNull()
   })
 
   it('announces changes to listeners', async () => {

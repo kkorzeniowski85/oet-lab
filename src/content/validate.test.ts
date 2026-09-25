@@ -137,9 +137,13 @@ describe('validateContent', () => {
     ])
   })
 
-  it('reports a fact without a source', () => {
+  it('reports a fact without an https source', () => {
     const c = sample()
     c.guides[0].blocks.push({ type: 'fact', text: 'Part A lasts 15 minutes.', source: '' })
-    expect(validateContent(c)).toContain('guide g1 block 1: missing source')
+    c.guides[0].blocks.push({ type: 'fact', text: 'Part B has six extracts.', source: 'oet.com/ready/reading' })
+    expect(validateContent(c)).toEqual([
+      'guide g1 block 1: fact needs an https source',
+      'guide g1 block 2: fact needs an https source',
+    ])
   })
 })

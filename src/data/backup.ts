@@ -19,11 +19,21 @@ export async function exportData(): Promise<BackupFile> {
   return { format: FORMAT, schema: DB_VERSION, exportedAt: new Date().toISOString(), data }
 }
 
+/** Larger files are not backups of this app; reading them could freeze the tab. */
+export const MAX_FILE_BYTES = 20 * 1024 * 1024
+
+export function fileTooLarge(file: { size: number }): string | null {
+  return file.size > MAX_FILE_BYTES ? 'This file is too large to be an OET Lab backup. Nothing was changed.' : null
+}
+
 type Check = (r: Record<string, unknown>) => boolean
 const str = (v: unknown) => typeof v === 'string'
 const optStr = (v: unknown) => v === undefined || typeof v === 'string'
-const stamped: Check = (r) =>
-  str(r.id) && (r.id as string).length > 0 && str(r.createdAt) && str(r.updatedAt) && optStr(r.deletedAt)
+// Ids become part of addresses; dates take part in "newer wins", so they must be real dates.
+const id = (v: unknown) => str(v) && /^[\w-]{1,64}$/.test(v)
+const date = (v: unknown) => str(v) && !Number.isNaN(Date.parse(v))
+const optDate = (v: unknown) => v === undefined || date(v)
+const stamped: Check = (r) => id(r.id) && date(r.createdAt) && date(r.updatedAt) && optDate(r.deletedAt)
 const bool = (v: unknown) => typeof v === 'boolean'
 const strList = (v: unknown) => Array.isArray(v) && v.every(str)
 const oneOf = (v: unknown, options: string[]) => options.includes(v as string)
@@ -117,7 +127,7 @@ const NOUNS: { [S in UserStore]: [string, string] } = {
   customCases: ['own case', 'own cases'],
   attempts: ['gap-fill answer', 'gap-fill answers'],
   roleplaySessions: ['role-play', 'role-plays'],
-  fiszkiExports: ['sending to Fiszki', 'sendings to Fiszki'],
+  fiszkiExports: ['export to Fiszki', 'exports to Fiszki'],
 }
 
 /** "2 notes, 1 letter" — or "nothing" when every store is empty. */

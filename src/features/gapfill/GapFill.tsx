@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { groupsFor, phrasesFor } from '../../content/index.ts'
 import type { PhraseSection } from '../../content/types.ts'
 import { saveRecord, useRecords } from '../../data/records.ts'
+import { chip, chipOff, chipOn, field, primaryButton, secondaryButton } from '../../ui/buttons.ts'
 import SpeakButton from '../../ui/SpeakButton.tsx'
 import { checkAnswer, type Verdict } from './engine.ts'
 import { ROUND_SIZE, buildPool, choices, pickRound, weakIds, type GapItem, type Mode, type Source } from './round.ts'
@@ -11,9 +12,6 @@ interface Answered {
   given: string
   verdict: Verdict
 }
-
-const button = 'rounded-md bg-brand px-4 py-2 font-medium text-on-brand disabled:opacity-40'
-const quiet = 'rounded-md border border-line px-4 py-2'
 
 function Toggle<T extends string>({
   label,
@@ -27,22 +25,22 @@ function Toggle<T extends string>({
   onChange: (v: T) => void
 }) {
   return (
-    <div role="group" aria-label={label} className="flex flex-wrap gap-2">
-      {options.map((o) => (
-        <button
-          key={o.id}
-          type="button"
-          aria-pressed={value === o.id}
-          disabled={o.disabled}
-          onClick={() => onChange(o.id)}
-          className={
-            'rounded-md px-3 py-1.5 text-sm disabled:opacity-40 ' +
-            (value === o.id ? 'bg-ink text-canvas' : 'bg-surface text-muted')
-          }
-        >
-          {o.name}
-        </button>
-      ))}
+    <div className="space-y-2">
+      <p className="text-sm font-medium">{label}</p>
+      <div role="group" aria-label={label} className="flex flex-wrap gap-2">
+        {options.map((o) => (
+          <button
+            key={o.id}
+            type="button"
+            aria-pressed={value === o.id}
+            disabled={o.disabled}
+            onClick={() => onChange(o.id)}
+            className={chip + ' ' + (value === o.id ? chipOn : chipOff)}
+          >
+            {o.name}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }
@@ -54,9 +52,12 @@ function Sentence({ item, reveal }: { item: GapItem; reveal: boolean }) {
       {reveal ? (
         <strong className="text-brand">{item.gap.answer}</strong>
       ) : (
-        <span aria-label="blank" className="inline-block min-w-16 border-b-2 border-ink">
-          &nbsp;
-        </span>
+        <>
+          <span className="sr-only">(blank)</span>
+          <span aria-hidden="true" className="inline-block min-w-16 border-b-2 border-ink">
+            &nbsp;
+          </span>
+        </>
       )}
       {item.gap.after}
     </p>
@@ -95,7 +96,7 @@ function Question({
       </p>
       <p className="text-sm">
         <span className="text-muted">Hint: </span>
-        {item.pl}
+        <span lang="pl">{item.pl}</span>
       </p>
       <Sentence item={item} reveal={verdict !== null} />
 
@@ -116,9 +117,9 @@ function Question({
             autoCapitalize="none"
             spellCheck={false}
             autoFocus
-            className="w-full rounded-md border border-line bg-surface px-3 py-2 text-base outline-none focus:border-brand"
+            className={field + ' text-base'}
           />
-          <button type="submit" disabled={!given.trim()} className={button}>
+          <button type="submit" disabled={!given.trim()} className={primaryButton}>
             Check
           </button>
         </form>
@@ -127,7 +128,7 @@ function Question({
       {verdict === null && mode === 'choose' && (
         <div className="grid gap-2">
           {options.map((o) => (
-            <button key={o} type="button" onClick={() => check(o)} className={quiet + ' text-left'}>
+            <button key={o} type="button" onClick={() => check(o)} className={secondaryButton + ' justify-start text-left'}>
               {o}
             </button>
           ))}
@@ -145,7 +146,7 @@ function Question({
             <SpeakButton text={item.sentence} />
             <span className="text-sm text-muted">{item.en}</span>
           </div>
-          <button type="button" onClick={() => onAnswered({ item, given, verdict })} className={button} autoFocus>
+          <button type="button" onClick={() => onAnswered({ item, given, verdict })} className={primaryButton} autoFocus>
             {number === total ? 'See results' : 'Next'}
           </button>
         </div>
@@ -176,8 +177,8 @@ export default function GapFill({ section }: { section: PhraseSection }) {
   const pool = useMemo(() => buildPool(sources, mode, Math.random), [sources, mode])
   const weak = useMemo(() => weakIds(attempts ?? []), [attempts])
   const inGroup = pool.filter((p) => groupId === null || p.group === groupId)
-  const candidates = focus === 'weak' ? inGroup.filter((p) => weak.has(p.id)) : inGroup
   const weakCount = inGroup.filter((p) => weak.has(p.id)).length
+  const candidates = focus === 'weak' && weakCount > 0 ? inGroup.filter((p) => weak.has(p.id)) : inGroup
 
   const start = (items: GapItem[]) => {
     setAnswered([])
@@ -204,7 +205,7 @@ export default function GapFill({ section }: { section: PhraseSection }) {
     const missed = answered.filter((a) => a.verdict !== 'correct')
     return (
       <div className="space-y-4">
-        <h2 className="text-lg font-semibold">
+        <h2 className="text-lg font-semibold" tabIndex={-1} autoFocus>
           {right} of {answered.length} correct
         </h2>
         {missed.length > 0 && (
@@ -218,15 +219,15 @@ export default function GapFill({ section }: { section: PhraseSection }) {
           </ul>
         )}
         <div className="flex flex-wrap gap-2">
-          <button type="button" onClick={() => start(pickRound(candidates, Math.random))} className={button}>
+          <button type="button" onClick={() => start(pickRound(candidates, Math.random))} className={primaryButton}>
             Practise again
           </button>
           {missed.length > 0 && (
-            <button type="button" onClick={() => start(missed.map((a) => a.item))} className={quiet}>
+            <button type="button" onClick={() => start(missed.map((a) => a.item))} className={secondaryButton}>
               Practise the missed ones
             </button>
           )}
-          <button type="button" onClick={() => setRound(null)} className={quiet}>
+          <button type="button" onClick={() => setRound(null)} className={secondaryButton}>
             Change settings
           </button>
         </div>
@@ -240,55 +241,44 @@ export default function GapFill({ section }: { section: PhraseSection }) {
         Fill the gap in real example sentences. The Polish meaning is your hint. Answers are saved, so the app knows which
         phrases need more work.
       </p>
-      <div className="space-y-2">
-        <h2 className="text-sm font-medium">Answer by</h2>
-        <Toggle
-          label="Answer by"
-          value={mode}
-          onChange={setMode}
-          options={[
-            { id: 'type', name: 'Typing' },
-            { id: 'choose', name: 'Choosing from four' },
-          ]}
-        />
-      </div>
-      <div className="space-y-2">
-        <h2 className="text-sm font-medium">Phrases</h2>
-        <Toggle
-          label="Phrases"
-          value={focus}
-          onChange={setFocus}
-          options={[
-            { id: 'all', name: 'All' },
-            { id: 'weak', name: `Weak only (${weakCount})`, disabled: weakCount === 0 },
-          ]}
-        />
-      </div>
-      <div className="space-y-2">
-        <h2 className="text-sm font-medium">Group</h2>
-        <Toggle
-          label="Group"
-          value={groupId ?? 'all'}
-          onChange={(v) => setGroupId(v === 'all' ? null : v)}
-          options={[
-            { id: 'all', name: 'All groups' },
-            ...groups
-              .filter((g) => pool.some((p) => p.group === g.id))
-              .map((g) => ({ id: g.id, name: g.name })),
-          ]}
-        />
-      </div>
+      <Toggle
+        label="Answer by"
+        value={mode}
+        onChange={setMode}
+        options={[
+          { id: 'type', name: 'Typing' },
+          { id: 'choose', name: 'Multiple choice' },
+        ]}
+      />
+      <Toggle
+        label="Phrases"
+        value={focus}
+        onChange={setFocus}
+        options={[
+          { id: 'all', name: 'All' },
+          { id: 'weak', name: `Weak only (${weakCount})`, disabled: weakCount === 0 },
+        ]}
+      />
+      {weakCount === 0 && (
+        <p className="text-sm text-muted">Weak phrases are the ones you got wrong lately. None here yet — practise all phrases first.</p>
+      )}
+      <Toggle
+        label="Group"
+        value={groupId ?? 'all'}
+        onChange={(v) => setGroupId(v === 'all' ? null : v)}
+        options={[
+          { id: 'all', name: 'All groups' },
+          ...groups.filter((g) => pool.some((p) => p.group === g.id)).map((g) => ({ id: g.id, name: g.name })),
+        ]}
+      />
       <button
         type="button"
         disabled={candidates.length === 0}
         onClick={() => start(pickRound(candidates, Math.random))}
-        className={button}
+        className={primaryButton}
       >
         Start {Math.min(ROUND_SIZE, candidates.length)} questions
       </button>
-      {focus === 'weak' && weakCount === 0 && (
-        <p className="text-sm text-muted">No weak phrases here yet. Practise all phrases first.</p>
-      )}
     </div>
   )
 }

@@ -15,6 +15,12 @@ describe('routing', () => {
     expect(render('/settings')).toContain('Your data stays on this device.')
   })
 
+  it('shows More with the tools, transfer and settings', () => {
+    const html = render('/more')
+    for (const text of ['Vocabulary', 'Abbreviations', 'Move your work', 'Settings']) expect(html).toContain(text)
+    expect(html).toContain('Skip to content')
+  })
+
   it.each(
     SECTIONS.flatMap((s) =>
       TABS.filter((t) => tabsFor(s.id).includes(t.id)).map((t) => [s.id, t.id, s.name, t.name] as const),

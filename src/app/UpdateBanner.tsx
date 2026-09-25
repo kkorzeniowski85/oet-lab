@@ -1,4 +1,6 @@
 import { useRegisterSW } from 'virtual:pwa-register/react'
+import { smallButton, textButton } from '../ui/buttons.ts'
+import { useWritingSession } from './session.ts'
 
 const HOUR = 60 * 60 * 1000
 
@@ -23,32 +25,29 @@ export default function UpdateBanner() {
       if (registration) watchForUpdates(registration)
     },
   })
+  // A reload would interrupt a timed letter; the banner waits until the letter is closed.
+  const writing = useWritingSession()
 
   if (!needRefresh && !offlineReady) return null
+  if (needRefresh && writing) return null
 
   return (
     <div
       role="status"
-      className="fixed inset-x-3 bottom-20 z-10 mx-auto flex max-w-md items-center gap-3 rounded-lg border border-line bg-surface p-3 text-sm shadow-lg md:bottom-6"
+      className="fixed inset-x-3 bottom-20 z-10 mx-auto flex max-w-md items-center gap-2 rounded-lg border border-line bg-surface p-3 text-sm shadow-lg md:bottom-6"
     >
-      <span className="flex-1">
-        {needRefresh ? 'A new version is available.' : 'Ready to work offline.'}
-      </span>
+      <span className="flex-1">{needRefresh ? 'A new version is available.' : 'Ready to work offline.'}</span>
       {needRefresh ? (
         <>
-          <button type="button" className="text-muted" onClick={() => setNeedRefresh(false)}>
+          <button type="button" className={textButton + ' text-muted'} onClick={() => setNeedRefresh(false)}>
             Later
           </button>
-          <button
-            type="button"
-            className="rounded-md bg-brand px-3 py-1.5 font-medium text-on-brand"
-            onClick={() => void updateServiceWorker(true)}
-          >
+          <button type="button" className={smallButton} onClick={() => void updateServiceWorker(true)}>
             Reload
           </button>
         </>
       ) : (
-        <button type="button" className="font-medium text-brand" onClick={() => setOfflineReady(false)}>
+        <button type="button" className={textButton + ' text-brand'} onClick={() => setOfflineReady(false)}>
           OK
         </button>
       )}

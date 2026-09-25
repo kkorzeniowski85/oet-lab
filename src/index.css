@@ -6,6 +6,7 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-line: var(--line);
+  --color-field: var(--field);
   --color-brand: var(--brand);
   --color-brand-soft: var(--brand-soft);
   --color-on-brand: var(--on-brand);
@@ -17,6 +18,8 @@
   --ink: #1c1917;
   --muted: #6b6560;
   --line: #e4e2de;
+  /* Borders of inputs and secondary buttons: at least 3:1 against the surface. */
+  --field: #8f8a84;
   --brand: #0f766e;
   --brand-soft: #e6f2f0;
   --on-brand: #ffffff;
@@ -29,6 +32,7 @@
     --ink: #ecebe8;
     --muted: #a19d97;
     --line: #2d3130;
+    --field: #7a817d;
     --brand: #4fb8ac;
     --brand-soft: #1d2f2c;
     --on-brand: #0b1413;

@@ -1,5 +1,5 @@
 import type { AttemptRecord } from '../../data/db.ts'
-import { findGap, type Gap } from './engine.ts'
+import { findGap, isExactForm, type Gap } from './engine.ts'
 
 export interface GapItem {
   id: string
@@ -38,7 +38,11 @@ export function shuffle<T>(items: T[], rng: Rng): T[] {
 
 const words = (s: string) => s.trim().split(/\s+/).length
 
-/** One item per phrase, from a random example in which the phrase can be found. */
+/**
+ * One item per phrase, from a random example in which the phrase can be found.
+ * Examples that contain the phrase word for word are preferred to inflected ones
+ * ("pyrexia" before "pyrexial"), so the expected answer is what the learner studied.
+ */
 export function buildPool(sources: Source[], mode: Mode, rng: Rng): GapItem[] {
   const pool: GapItem[] = []
   for (const s of sources) {
@@ -47,7 +51,9 @@ export function buildPool(sources: Source[], mode: Mode, rng: Rng): GapItem[] {
       .filter((c): c is { sentence: string; gap: Gap } => c.gap !== null)
       .filter((c) => mode === 'choose' || words(c.gap.answer) <= MAX_TYPED_WORDS)
     if (candidates.length === 0) continue
-    const pick = candidates[Math.floor(rng() * candidates.length)]
+    const exact = candidates.filter((c) => isExactForm(s.en, c.gap.answer))
+    const from = exact.length > 0 ? exact : candidates
+    const pick = from[Math.floor(rng() * from.length)]
     pool.push({ id: s.id, group: s.group, en: s.en, pl: s.pl, ...pick })
   }
   return pool

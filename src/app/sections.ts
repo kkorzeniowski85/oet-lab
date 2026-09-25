@@ -1,6 +1,6 @@
 export const SECTIONS = [
-  { id: 'listening', name: 'Listening', short: 'Listen', blurb: 'Strategies for Parts A, B and C.', exam: true },
-  { id: 'reading', name: 'Reading', short: 'Read', blurb: 'Strategies for Parts A, B and C.', exam: true },
+  { id: 'listening', name: 'Listening', short: 'Listen', blurb: 'Consultation notes, workplace extracts, presentations: what to listen for.', exam: true },
+  { id: 'reading', name: 'Reading', short: 'Read', blurb: 'Fast reading of guidelines, short workplace texts and articles.', exam: true },
   { id: 'writing', name: 'Writing', short: 'Write', blurb: 'Referral letters: phrases, model letters, timed practice.', exam: true },
   { id: 'speaking', name: 'Speaking', short: 'Speak', blurb: 'Role-play phrases and practice cards.', exam: true },
   { id: 'vocabulary', name: 'Vocabulary', short: 'Words', blurb: 'Medical terms, hospital talk and everyday British English.', exam: false },

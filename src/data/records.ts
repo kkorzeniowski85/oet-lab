@@ -32,16 +32,40 @@ export async function listRecords<S extends UserStore>(store: S): Promise<UserRe
   return all.filter((r) => !r.deletedAt).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
 }
 
+/**
+ * Creates or replaces a record. A deleted record stays deleted: a late autosave
+ * must never bring back what the user has just discarded.
+ */
 export async function saveRecord<S extends UserStore>(store: S, draft: Draft<S>): Promise<UserRecords[S]> {
   const database = await db()
   const now = new Date().toISOString()
   const existing = draft.id ? ((await database.get(store, draft.id)) as UserRecords[S] | undefined) : undefined
+  if (existing?.deletedAt) return existing
   const record = {
     ...draft,
     id: draft.id ?? crypto.randomUUID(),
     createdAt: existing?.createdAt ?? now,
     updatedAt: now,
   } as UserRecords[S]
+  await database.put(store, record as never)
+  notify(store)
+  return record
+}
+
+/**
+ * Changes some fields of an existing record, reading the rest from the database
+ * at the moment of writing. Safer than saveRecord for edits made from a screen
+ * whose copy of the record may lag behind. Returns null if the record is gone.
+ */
+export async function patchRecord<S extends UserStore>(
+  store: S,
+  id: string,
+  patch: Partial<Omit<UserRecords[S], keyof Stamped>>,
+): Promise<UserRecords[S] | null> {
+  const database = await db()
+  const existing = (await database.get(store, id)) as UserRecords[S] | undefined
+  if (!existing || existing.deletedAt) return null
+  const record = { ...existing, ...patch, updatedAt: new Date().toISOString() } as UserRecords[S]
   await database.put(store, record as never)
   notify(store)
   return record

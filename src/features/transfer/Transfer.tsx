@@ -1,15 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Link } from 'wouter'
-import { describeCounts, exportData, parseBackup, type BackupFile } from '../../data/backup.ts'
+import { Link, useLocation } from 'wouter'
+import { describeCounts, exportData, fileTooLarge, parseBackup, type BackupFile } from '../../data/backup.ts'
 import { USER_STORES } from '../../data/db.ts'
 import { totalChanges, type MergeReport, type StoreReport } from '../../data/merge.ts'
 import { setSetting } from '../../data/records.ts'
-import { applyImport, getSnapshot, previewImport, undoImport, type Snapshot } from '../../data/transfer.ts'
+import { applyImport, getSnapshot, previewImport, undoLastChange, type Snapshot } from '../../data/transfer.ts'
 import { downloadText } from '../../lib/download.ts'
 import { canShareFiles, shareFile, takeSharedFile } from '../../lib/share.ts'
+import { primaryButton, secondaryButton, textButton } from '../../ui/buttons.ts'
+import { StatusLine } from '../../ui/controls.tsx'
 
-const button = 'rounded-md bg-brand px-4 py-2 font-medium text-on-brand disabled:opacity-40'
-const quiet = 'rounded-md border border-line px-4 py-2'
 const when = (iso: string) =>
   new Date(iso).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
 
@@ -24,9 +24,10 @@ function column(report: MergeReport, field: keyof StoreReport) {
 
 function ReportLines({ report }: { report: MergeReport }) {
   const lines = [
-    ['Adds', column(report, 'added')],
-    ['Updates', column(report, 'updated')],
-    ['Newer on this device, so kept', column(report, 'kept')],
+    ['Added', column(report, 'added')],
+    ['Updated', column(report, 'updated')],
+    ['Deleted (removed on the other device)', column(report, 'removed')],
+    ['Kept (newer here)', column(report, 'kept')],
     ['Already here', column(report, 'unchanged')],
   ] as const
   return (
@@ -77,19 +78,15 @@ function Send() {
       </p>
       <div className="flex flex-wrap gap-2">
         {shareable && (
-          <button type="button" onClick={() => void share()} className={button}>
+          <button type="button" onClick={() => void share()} className={primaryButton}>
             Share…
           </button>
         )}
-        <button type="button" onClick={() => void download()} className={shareable ? quiet : button}>
+        <button type="button" onClick={() => void download()} className={shareable ? secondaryButton : primaryButton}>
           Download file
         </button>
       </div>
-      {status && (
-        <p role="status" className="text-sm text-brand">
-          {status}
-        </p>
-      )}
+      <StatusLine message={status} />
     </section>
   )
 }
@@ -97,6 +94,7 @@ function Send() {
 type Pending = { file: BackupFile; name: string; report: MergeReport }
 
 function Receive({ fromShare }: { fromShare: boolean }) {
+  const [, navigate] = useLocation()
   const input = useRef<HTMLInputElement>(null)
   const [pending, setPending] = useState<Pending | null>(null)
   const [done, setDone] = useState<MergeReport | null>(null)
@@ -109,6 +107,11 @@ function Receive({ fromShare }: { fromShare: boolean }) {
   const open = useCallback(async (chosen: File) => {
     setDone(null)
     setError(null)
+    const tooLarge = fileTooLarge(chosen)
+    if (tooLarge) {
+      setError(tooLarge)
+      return
+    }
     const parsed = parseBackup(await chosen.text())
     if (!parsed.ok) {
       setError(parsed.error)
@@ -117,27 +120,39 @@ function Receive({ fromShare }: { fromShare: boolean }) {
     setPending({ file: parsed.file, name: chosen.name, report: await previewImport(parsed.file) })
   }, [])
 
-  // A file shared to the app arrives through the service worker.
+  // A file shared to the app arrives through the service worker; a reload must not look for it again.
   useEffect(() => {
     if (!fromShare) return
     void takeSharedFile().then((f) => {
+      navigate('/transfer', { replace: true })
       if (f) void open(f)
       else setError('No shared file was found. Try sharing it again, or choose it below.')
     })
-  }, [fromShare, open])
+  }, [fromShare, open, navigate])
 
   const merge = async () => {
     if (!pending) return
-    setDone(await applyImport(pending.file, pending.name))
-    setPending(null)
+    try {
+      setDone(await applyImport(pending.file, pending.name))
+      setPending(null)
+    } catch {
+      setError('The file could not be merged. Nothing was changed. Free up storage on this device and try again.')
+    }
   }
 
   const undo = async () => {
-    if (!window.confirm('Undo the last import? Everything goes back to how it was before it, including changes you made since.')) return
-    await undoImport()
-    setDone(null)
+    if (!snapshot) return
+    const what = snapshot.kind === 'restore' ? 'restore' : 'import'
+    if (!window.confirm(`Undo the last ${what}? Everything goes back to how it was before the ${what}, including any changes made since.`))
+      return
+    try {
+      await undoLastChange()
+      setDone(null)
+      setError(null)
+    } catch {
+      setError('Undo did not work. Nothing was changed.')
+    }
     refreshSnapshot()
-    setError(null)
   }
 
   return (
@@ -147,7 +162,7 @@ function Receive({ fromShare }: { fromShare: boolean }) {
         Choose a file sent from OET Lab. Your work here is merged with it: where both devices changed the same thing, the
         newer change wins. Nothing else is removed.
       </p>
-      <button type="button" onClick={() => input.current?.click()} className={pending ? quiet : button}>
+      <button type="button" onClick={() => input.current?.click()} className={pending ? secondaryButton : primaryButton}>
         Choose a file
       </button>
       <input
@@ -162,16 +177,12 @@ function Receive({ fromShare }: { fromShare: boolean }) {
         }}
       />
 
-      {error && (
-        <p role="status" className="text-sm text-red-700 dark:text-red-400">
-          {error}
-        </p>
-      )}
+      <StatusLine message={error} tone="error" />
 
       {pending && (
         <div className="space-y-3 rounded-lg border border-line bg-surface p-4">
           <p className="text-sm">
-            <span className="font-medium">{pending.name}</span>
+            <span className="font-medium break-words">{pending.name}</span>
             {pending.file.exportedAt && <span className="text-muted"> · made {when(pending.file.exportedAt)}</span>}
           </p>
           {totalChanges(pending.report) === 0 ? (
@@ -181,11 +192,11 @@ function Receive({ fromShare }: { fromShare: boolean }) {
           )}
           <div className="flex gap-2">
             {totalChanges(pending.report) > 0 && (
-              <button type="button" onClick={() => void merge()} className={button}>
+              <button type="button" onClick={() => void merge()} className={primaryButton}>
                 Merge
               </button>
             )}
-            <button type="button" onClick={() => setPending(null)} className="rounded-md px-4 py-2 text-muted">
+            <button type="button" onClick={() => setPending(null)} className={textButton + ' text-muted'}>
               {totalChanges(pending.report) > 0 ? 'Cancel' : 'Close'}
             </button>
           </div>
@@ -202,10 +213,10 @@ function Receive({ fromShare }: { fromShare: boolean }) {
       {snapshot && (
         <div className="space-y-2 border-t border-line pt-3 text-sm">
           <p className="text-muted">
-            Last import: {when(snapshot.takenAt)} from {snapshot.source}.
+            Last {snapshot.kind}: {when(snapshot.takenAt)} from <span className="break-words">{snapshot.source}</span>.
           </p>
-          <button type="button" onClick={() => void undo()} className={quiet}>
-            Undo last import
+          <button type="button" onClick={() => void undo()} className={secondaryButton}>
+            Undo last {snapshot.kind}
           </button>
         </div>
       )}

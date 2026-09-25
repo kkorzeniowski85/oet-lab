@@ -8,6 +8,8 @@ export interface StoreReport {
   added: number
   /** Replaced by a newer version from the file. */
   updated: number
+  /** Deletions carried over from the other device. */
+  removed: number
   /** This device already had a newer version. */
   kept: number
   /** Identical on both sides. */
@@ -45,20 +47,25 @@ export function merge(local: Data, incoming: Data): { data: Data; report: MergeR
   for (const store of USER_STORES) {
     const byId = new Map<string, Stamped>(local[store].map((r) => [r.id, r]))
     const changed: Stamped[] = []
-    const r: StoreReport = { added: 0, updated: 0, kept: 0, unchanged: 0 }
+    const r: StoreReport = { added: 0, updated: 0, removed: 0, kept: 0, unchanged: 0 }
     for (const theirs of incoming[store] as Stamped[]) {
       const mine = byId.get(theirs.id)
-      if (!mine) {
+      const take = () => {
         byId.set(theirs.id, theirs)
         changed.push(theirs)
-        r.added++
+      }
+      if (!mine) {
+        take()
+        // A deletion of something this device never had changes nothing visible.
+        if (theirs.deletedAt) r.unchanged++
+        else r.added++
         continue
       }
       const w = winner(mine, theirs)
       if (w === 'theirs') {
-        byId.set(theirs.id, theirs)
-        changed.push(theirs)
-        r.updated++
+        take()
+        if (theirs.deletedAt) r.removed++
+        else r.updated++
       } else if (w === 'mine') r.kept++
       else r.unchanged++
     }
@@ -70,5 +77,5 @@ export function merge(local: Data, incoming: Data): { data: Data; report: MergeR
 }
 
 export function totalChanges(report: MergeReport): number {
-  return USER_STORES.reduce((n, s) => n + report[s].added + report[s].updated, 0)
+  return USER_STORES.reduce((n, s) => n + report[s].added + report[s].updated + report[s].removed, 0)
 }

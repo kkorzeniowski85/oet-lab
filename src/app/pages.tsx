@@ -3,6 +3,7 @@ import { BackupPanel, BackupReminder } from '../features/backup/Backup.tsx'
 import NotesView from '../features/notes/NotesView.tsx'
 import { usePersistence } from '../lib/storage.ts'
 import { VIEWS, tabsFor } from '../sections/views.tsx'
+import { chip, chipOff, chipOn } from '../ui/buttons.ts'
 import { SECTIONS, TABS, findSection, isTabId, sectionPath } from './sections.ts'
 
 export function Home() {
@@ -22,6 +23,30 @@ export function Home() {
             >
               <span className="font-medium">{s.name}</span>
               <span className="mt-1 block text-sm text-muted">{s.blurb}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+/** The phone's "More" tab: everything that is not one of the four exam sections. */
+export function More() {
+  const items = [
+    ...SECTIONS.filter((s) => !s.exam).map((s) => ({ href: sectionPath(s.id), name: s.name, blurb: s.blurb })),
+    { href: '/transfer', name: 'Move your work', blurb: 'Send a file to your other device and merge what it brings.' },
+    { href: '/settings', name: 'Settings', blurb: 'Backup, storage and the app version.' },
+  ]
+  return (
+    <div>
+      <h1 className="text-2xl font-semibold">More</h1>
+      <ul className="mt-6 space-y-3">
+        {items.map((i) => (
+          <li key={i.href}>
+            <Link href={i.href} className="block rounded-lg border border-line bg-surface p-4 hover:border-brand">
+              <span className="font-medium">{i.name}</span>
+              <span className="mt-1 block text-sm text-muted">{i.blurb}</span>
             </Link>
           </li>
         ))}
@@ -64,10 +89,7 @@ export function SectionPage({
                 key={v.id}
                 href={`${sectionPath(section.id, tabId)}/${v.id}`}
                 aria-current={v.id === view.id ? 'page' : undefined}
-                className={
-                  'rounded-md px-3 py-1.5 text-sm ' +
-                  (v.id === view.id ? 'bg-ink text-canvas' : 'bg-surface text-muted')
-                }
+                className={chip + ' ' + (v.id === view.id ? chipOn : chipOff)}
               >
                 {v.name}
               </Link>
@@ -95,7 +117,7 @@ export function SectionPage({
               href={sectionPath(section.id, t.id)}
               aria-current={active ? 'page' : undefined}
               className={
-                '-mb-px border-b-2 px-3 py-2 text-sm ' +
+                '-mb-px inline-flex min-h-11 items-center border-b-2 px-3 text-sm ' +
                 (active ? 'border-brand font-medium text-brand' : 'border-transparent text-muted')
               }
             >

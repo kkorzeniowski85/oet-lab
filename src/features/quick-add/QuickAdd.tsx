@@ -4,12 +4,12 @@ import { SECTIONS, findSection, type SectionId } from '../../app/sections.ts'
 import { CONTENT } from '../../content/index.ts'
 import type { PhraseSection } from '../../content/types.ts'
 import { saveRecord } from '../../data/records.ts'
-import { NoteForm } from '../notes/NotesView.tsx'
+import { chip, chipOff, chipOn, field, primaryButton, textButton } from '../../ui/buttons.ts'
 import FictionalWarning from '../../ui/FictionalWarning.tsx'
+import { NoteForm } from '../notes/NotesView.tsx'
 import PhraseForm from './PhraseForm.tsx'
 
 const PHRASE_SECTIONS: PhraseSection[] = ['writing', 'speaking', 'vocabulary']
-const field = 'w-full rounded-md border border-line bg-surface px-3 py-2 outline-none focus:border-brand'
 
 function useCurrentSection(): SectionId | undefined {
   const [location] = useLocation()
@@ -28,12 +28,12 @@ function AddForm({ onDone }: { onDone: () => void }) {
   if (saved) {
     return (
       <div className="space-y-3">
-        <p>Saved to {saved}.</p>
+        <p role="status">Saved to {saved}.</p>
         <div className="flex gap-2">
-          <button type="button" onClick={() => setSaved(null)} className="rounded-md bg-brand px-4 py-2 font-medium text-on-brand">
+          <button type="button" onClick={() => setSaved(null)} className={primaryButton} autoFocus>
             Add another
           </button>
-          <button type="button" onClick={onDone} className="rounded-md px-4 py-2 text-muted">
+          <button type="button" onClick={onDone} className={textButton + ' text-muted'}>
             Close
           </button>
         </div>
@@ -52,7 +52,7 @@ function AddForm({ onDone }: { onDone: () => void }) {
             type="button"
             aria-pressed={kind === k}
             onClick={() => setKind(k)}
-            className={'rounded-md px-3 py-1.5 text-sm ' + (kind === k ? 'bg-ink text-canvas' : 'bg-canvas text-muted')}
+            className={chip + ' ' + (kind === k ? chipOn : chipOff)}
           >
             {k === 'phrase' ? 'Phrase' : 'Note'}
           </button>
@@ -129,9 +129,17 @@ export default function QuickAdd({ className }: { className?: string }) {
       </button>
       <dialog
         ref={dialog}
-        aria-label="Add a phrase or note"
+        aria-labelledby="quick-add-title"
         className="m-auto w-[min(32rem,calc(100vw-2rem))] rounded-lg border border-line bg-surface p-4 text-ink backdrop:bg-black/40"
       >
+        <div className="mb-3 flex items-center justify-between">
+          <h2 id="quick-add-title" className="text-lg font-semibold">
+            Add
+          </h2>
+          <button type="button" onClick={() => dialog.current?.close()} aria-label="Close" className={textButton + ' -mr-2 text-muted'}>
+            ✕
+          </button>
+        </div>
         {/* A new key on every visit starts with an empty form. */}
         <AddForm key={visit} onDone={() => dialog.current?.close()} />
       </dialog>

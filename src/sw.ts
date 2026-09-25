@@ -3,6 +3,8 @@ import { SHARED_FILE_CACHE, SHARED_FILE_KEY } from './lib/shared-file.ts'
 
 declare const self: ServiceWorkerGlobalScope & { __WB_MANIFEST: Array<PrecacheEntry | string> }
 
+const MAX_SHARED_BYTES = 20 * 1024 * 1024
+
 cleanupOutdatedCaches()
 precacheAndRoute(self.__WB_MANIFEST)
 
@@ -18,7 +20,9 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     (async () => {
       try {
-        const file = (await event.request.formData()).get('file')
+        // A progress file is a few hundred kilobytes; anything huge is not ours and would only freeze the page.
+        const size = Number(event.request.headers.get('content-length') ?? 0)
+        const file = size > MAX_SHARED_BYTES ? null : (await event.request.formData()).get('file')
         if (file instanceof File) {
           const cache = await caches.open(SHARED_FILE_CACHE)
           await cache.put(

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { groupsFor } from '../../content/index.ts'
 import type { PhraseSection } from '../../content/types.ts'
+import { field, primaryButton, textButton } from '../../ui/buttons.ts'
 
 export interface PhraseDraft {
   group: string
@@ -8,8 +9,6 @@ export interface PhraseDraft {
   pl: string
   example?: string
 }
-
-const field = 'w-full rounded-md border border-line bg-surface px-3 py-2 outline-none focus:border-brand'
 
 export default function PhraseForm({
   section,
@@ -53,7 +52,7 @@ export default function PhraseForm({
         </select>
       </label>
       <input value={en} onChange={(e) => setEn(e.target.value)} placeholder="English" aria-label="English" className={field} />
-      <input value={pl} onChange={(e) => setPl(e.target.value)} placeholder="Polish" aria-label="Polish" className={field} />
+      <input value={pl} onChange={(e) => setPl(e.target.value)} placeholder="Polish" aria-label="Polish" lang="pl" className={field} />
       <textarea
         value={example}
         onChange={(e) => setExample(e.target.value)}
@@ -63,10 +62,10 @@ export default function PhraseForm({
         className={field}
       />
       <div className="flex gap-2">
-        <button type="submit" disabled={!ready} className="rounded-md bg-brand px-4 py-2 font-medium text-on-brand disabled:opacity-40">
+        <button type="submit" disabled={!ready} className={primaryButton}>
           Save
         </button>
-        <button type="button" onClick={onCancel} className="rounded-md px-4 py-2 text-muted">
+        <button type="button" onClick={onCancel} className={textButton + ' text-muted'}>
           Cancel
         </button>
       </div>

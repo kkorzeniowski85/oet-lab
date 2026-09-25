@@ -1,19 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { CONTENT, criteriaFor } from '../../content/index.ts'
 import type { RolePlay } from '../../content/types.ts'
 import { saveRecord, useRecords } from '../../data/records.ts'
 import { formatClock, useNow } from '../../lib/time.ts'
+import { field, primaryButton, secondaryButton, smallButton, textButton } from '../../ui/buttons.ts'
+import { StatusLine } from '../../ui/controls.tsx'
 import SpeakButton from '../../ui/SpeakButton.tsx'
 import { stage } from './stage.ts'
 
-const button = 'rounded-md bg-brand px-4 py-2 font-medium text-on-brand disabled:opacity-40'
-const shortDate = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
+const shortDate = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
 
 interface Run {
   card: RolePlay
   startedAt: number
   speakingAt: number | null
   finishedAt: number | null
+}
+
+/** Moves keyboard and screen-reader focus to a heading when a new screen appears. */
+function useFocusHeading() {
+  const ref = useRef<HTMLHeadingElement>(null)
+  useEffect(() => {
+    ref.current?.focus({ preventScroll: true })
+  }, [])
+  return ref
 }
 
 function Card({ card }: { card: RolePlay }) {
@@ -54,6 +64,7 @@ function Timer({ label, ms, over }: { label: string; ms: number; over: boolean }
 }
 
 function Review({ run, onDone }: { run: Run; onDone: (saved: boolean) => void }) {
+  const heading = useFocusHeading()
   const [ticked, setTicked] = useState<Set<string>>(new Set())
   const [reflection, setReflection] = useState('')
   const phrases = run.card.focus.map((id) => CONTENT.phrases.find((p) => p.id === id)!)
@@ -76,20 +87,22 @@ function Review({ run, onDone }: { run: Run; onDone: (saved: boolean) => void })
 
   return (
     <div className="space-y-6">
-      <h2 className="text-lg font-semibold">How did it go?</h2>
+      <h2 ref={heading} tabIndex={-1} className="text-lg font-semibold outline-none">
+        How did it go?
+      </h2>
       {(['clinical', 'linguistic'] as const).map((family) => (
         <section key={family} className="space-y-2">
-          <h3 className="font-semibold">{family === 'clinical' ? 'Clinical communication' : 'Language'}</h3>
+          <h3 className="font-semibold">{family === 'clinical' ? 'Clinical communication' : 'Linguistic criteria'}</h3>
           {criteriaFor('speaking')
             .filter((c) => c.family === family)
             .map((c) => (
               <fieldset key={c.id} className="rounded-lg border border-line bg-surface p-3">
                 <legend className="px-1 text-sm font-semibold">{c.name}</legend>
-                {c.checklist.map((item, i) => {
-                  const key = `${c.id}:${i}`
+                {c.checklist.map((item) => {
+                  const key = `${c.id}:${item}`
                   return (
-                    <label key={key} className="flex items-start gap-2 py-1 text-sm">
-                      <input type="checkbox" checked={ticked.has(key)} onChange={() => toggle(key)} className="mt-0.5 accent-[var(--brand)]" />
+                    <label key={key} className="flex min-h-10 items-center gap-2 text-sm">
+                      <input type="checkbox" checked={ticked.has(key)} onChange={() => toggle(key)} className="accent-[var(--brand)]" />
                       <span>{item}</span>
                     </label>
                   )
@@ -102,10 +115,12 @@ function Review({ run, onDone }: { run: Run; onDone: (saved: boolean) => void })
         <h3 className="font-semibold">Useful phrases for this role-play</h3>
         <ul className="divide-y divide-line rounded-lg border border-line bg-surface px-4">
           {phrases.map((p) => (
-            <li key={p.id} className="flex items-start gap-2 py-2 text-sm">
-              <span className="flex-1">
+            <li key={p.id} className="flex items-center gap-2 py-1 text-sm">
+              <span className="flex-1 py-1">
                 <span className="font-medium">{p.en}</span>
-                <span className="block text-muted">{p.pl}</span>
+                <span lang="pl" className="block text-muted">
+                  {p.pl}
+                </span>
               </span>
               <SpeakButton text={p.en} showLabel={false} />
             </li>
@@ -115,18 +130,13 @@ function Review({ run, onDone }: { run: Run; onDone: (saved: boolean) => void })
       <OtherPartyCard card={run.card} />
       <label className="block space-y-1 text-sm">
         <span className="font-semibold">What would you do differently next time? (optional)</span>
-        <textarea
-          value={reflection}
-          onChange={(e) => setReflection(e.target.value)}
-          rows={3}
-          className="w-full rounded-md border border-line bg-surface p-2 outline-none focus:border-brand"
-        />
+        <textarea value={reflection} onChange={(e) => setReflection(e.target.value)} rows={3} className={field} />
       </label>
       <div className="flex gap-2">
-        <button type="button" onClick={save} className={button}>
+        <button type="button" onClick={save} className={primaryButton}>
           Save and finish
         </button>
-        <button type="button" onClick={() => onDone(false)} className="rounded-md px-4 py-2 text-muted">
+        <button type="button" onClick={() => onDone(false)} className={textButton + ' text-muted'}>
           Don’t save
         </button>
       </div>
@@ -135,6 +145,7 @@ function Review({ run, onDone }: { run: Run; onDone: (saved: boolean) => void })
 }
 
 function Session({ run, setRun, onDone }: { run: Run; setRun: (r: Run) => void; onDone: (saved: boolean) => void }) {
+  const heading = useFocusHeading()
   const now = useNow()
   if (run.finishedAt !== null) return <Review run={run} onDone={onDone} />
   const { speakingAt, left } = stage(run, now)
@@ -144,7 +155,9 @@ function Session({ run, setRun, onDone }: { run: Run; setRun: (r: Run) => void; 
     <div className="space-y-4">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h2 className="font-semibold">{run.card.title}</h2>
+          <h2 ref={heading} tabIndex={-1} className="font-semibold outline-none">
+            {run.card.title}
+          </h2>
           <p className="text-sm text-muted">
             {preparing ? 'Read the card and plan what you will say.' : 'Speak out loud, as if the patient were in front of you.'}
           </p>
@@ -159,15 +172,21 @@ function Session({ run, setRun, onDone }: { run: Run; setRun: (r: Run) => void; 
       <Card card={run.card} />
       <div className="flex flex-wrap gap-2">
         {preparing ? (
-          <button type="button" onClick={() => setRun({ ...run, speakingAt: Date.now() })} className={button}>
+          <button type="button" onClick={() => setRun({ ...run, speakingAt: Date.now() })} className={primaryButton}>
             Start the role-play
           </button>
         ) : (
-          <button type="button" onClick={() => setRun({ ...run, speakingAt, finishedAt: Date.now() })} className={button}>
+          <button type="button" onClick={() => setRun({ ...run, speakingAt, finishedAt: Date.now() })} className={primaryButton}>
             Finish
           </button>
         )}
-        <button type="button" onClick={() => onDone(false)} className="rounded-md px-4 py-2 text-muted">
+        <button
+          type="button"
+          onClick={() => {
+            if (window.confirm('Stop this role-play without saving?')) onDone(false)
+          }}
+          className={secondaryButton}
+        >
           Stop
         </button>
       </div>
@@ -200,11 +219,7 @@ export default function RolePlayPractice() {
         Pick a card: 3 minutes to prepare, then 5 minutes to speak. Practise out loud — with a partner reading the patient’s
         card, or on your own.
       </p>
-      {saved && (
-        <p role="status" className="text-sm text-brand">
-          Saved.
-        </p>
-      )}
+      <StatusLine message={saved ? 'Saved.' : null} />
       <ul className="space-y-2">
         {CONTENT.rolePlays.map((card) => {
           const done = (sessions ?? []).filter((s) => s.cardId === card.id)
@@ -224,7 +239,7 @@ export default function RolePlayPractice() {
                   setSaved(false)
                   setRun({ card, startedAt: Date.now(), speakingAt: null, finishedAt: null })
                 }}
-                className="shrink-0 rounded-md bg-brand px-3 py-1.5 text-sm font-medium text-on-brand"
+                className={smallButton}
               >
                 Start
               </button>

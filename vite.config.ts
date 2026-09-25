@@ -8,7 +8,7 @@ const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
   "script-src 'self'",
   "style-src 'self'",
-  "img-src 'self' data:",
+  "img-src 'self'",
   "font-src 'self'",
   "connect-src 'self'",
   "manifest-src 'self'",
@@ -51,6 +51,8 @@ export default defineConfig({
       registerType: 'prompt',
       injectRegister: false,
       manifest: {
+        // A fixed id keeps the installed app the same app if start_url ever changes.
+        id: '.',
         name: 'OET Lab',
         short_name: 'OET Lab',
         description: 'Preparation for the Occupational English Test (Medicine).',
@@ -58,8 +60,9 @@ export default defineConfig({
         start_url: '.',
         scope: '.',
         display: 'standalone',
+        // Same as the page's light theme, so the splash screen does not flash a different colour.
         background_color: '#f7f7f5',
-        theme_color: '#0f766e',
+        theme_color: '#f7f7f5',
         // Android lists the installed app under "Share" for progress files (D4: shared as .txt).
         share_target: {
           action: 'share-target',

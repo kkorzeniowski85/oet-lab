@@ -7,6 +7,8 @@ const SNAPSHOT = 'importSnapshot'
 
 export interface Snapshot {
   takenAt: string
+  /** What replaced the data: an import (merge) or a restore. */
+  kind: 'import' | 'restore'
   source: string
   file: BackupFile
 }
@@ -15,13 +17,17 @@ export async function previewImport(file: BackupFile): Promise<MergeReport> {
   return merge((await exportData()).data, file.data).report
 }
 
+async function takeSnapshot(kind: Snapshot['kind'], source: string, before: BackupFile): Promise<void> {
+  await setSetting(SNAPSHOT, { takenAt: new Date().toISOString(), kind, source, file: before } satisfies Snapshot)
+}
+
 /** Merges the file into this device, keeping a snapshot of the state before it for Undo. */
 export async function applyImport(file: BackupFile, source: string): Promise<MergeReport> {
   const before = await exportData()
   const { report, changes } = merge(before.data, file.data)
   if (totalChanges(report) === 0) return report
 
-  await setSetting(SNAPSHOT, { takenAt: new Date().toISOString(), source, file: before } satisfies Snapshot)
+  await takeSnapshot('import', source, before)
   const tx = (await db()).transaction([...USER_STORES], 'readwrite')
   await Promise.all(USER_STORES.flatMap((store) => changes[store].map((r) => tx.objectStore(store).put(r as never))))
   await tx.done
@@ -29,12 +35,19 @@ export async function applyImport(file: BackupFile, source: string): Promise<Mer
   return report
 }
 
+/** Replaces everything with the file, keeping a snapshot of the state before it for Undo. */
+export async function applyRestore(file: BackupFile, source: string): Promise<void> {
+  const before = await exportData()
+  await takeSnapshot('restore', source, before)
+  await restoreBackup(file)
+}
+
 export function getSnapshot(): Promise<Snapshot | null | undefined> {
   return getSetting<Snapshot | null>(SNAPSHOT)
 }
 
-/** Puts everything back as it was before the last import. */
-export async function undoImport(): Promise<boolean> {
+/** Puts everything back as it was before the last import or restore. */
+export async function undoLastChange(): Promise<boolean> {
   const snapshot = await getSnapshot()
   if (!snapshot) return false
   await restoreBackup(snapshot.file)

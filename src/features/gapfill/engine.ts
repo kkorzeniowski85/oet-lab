@@ -63,9 +63,10 @@ export function phraseForms(phrase: string): Form[] {
     .filter((f) => f.text.length > 0)
 }
 
-function wordPattern(word: string, verb: boolean): string {
+function wordPattern(word: string, verb: boolean, inflect: boolean): string {
   const lower = word.toLowerCase()
   if (PLACEHOLDERS[lower]) return PLACEHOLDERS[lower]
+  if (!inflect) return escape(word).replace(/['’]/g, "['’]")
   if (verb && IRREGULAR[lower]) return IRREGULAR[lower]
   if (/^[a-z]+$/.test(lower)) {
     // Longer words may inflect (deteriorate → deteriorated); short verbs double their consonant (pop → popping).
@@ -75,25 +76,36 @@ function wordPattern(word: string, verb: boolean): string {
   return escape(word).replace(/['’]/g, "['’]")
 }
 
-function formPattern(form: Form): RegExp {
+function formPattern(form: Form, inflect: boolean): RegExp {
   // Hyphens separate words ("follow-up" = "follow up"); punctuation is not part of a word.
   const words = form.text
     .split(/[\s-]+/)
     .map((w) => (w === WILDCARD ? w : w.replace(/^[^\w'’…]+|[^\w'’…]+$/g, '')))
     .filter(Boolean)
-  const parts = words.map((w, i) => wordPattern(w, form.verbFirst && i === 0))
+  const parts = words.map((w, i) => wordPattern(w, form.verbFirst && i === 0, inflect))
   return new RegExp(`(?<![\\w-])${parts.join('[\\s,;:—–-]+')}(?![\\w-])`, 'i')
 }
 
-/** Finds the phrase in the sentence; null when it cannot be located reliably. */
+/**
+ * Finds the phrase in the sentence; null when it cannot be located reliably.
+ * The exact words are tried first, so "care" is found before "cardiac" could be.
+ */
 export function findGap(phrase: string, sentence: string): Gap | null {
-  for (const form of phraseForms(phrase)) {
-    const m = formPattern(form).exec(sentence)
-    if (m && m[0].trim().length > 0) {
-      return { before: sentence.slice(0, m.index), answer: m[0], after: sentence.slice(m.index + m[0].length) }
+  const forms = phraseForms(phrase)
+  for (const inflect of [false, true]) {
+    for (const form of forms) {
+      const m = formPattern(form, inflect).exec(sentence)
+      if (m && m[0].trim().length > 0) {
+        return { before: sentence.slice(0, m.index), answer: m[0], after: sentence.slice(m.index + m[0].length) }
+      }
     }
   }
   return null
+}
+
+/** Whether the gap is the phrase itself, not an inflected or derived form of it. */
+export function isExactForm(phrase: string, answer: string): boolean {
+  return phraseForms(phrase).some((f) => formPattern(f, false).test(answer) && normalise(answer).length <= normalise(f.text).length + 6)
 }
 
 const normalise = (s: string) =>

@@ -9,7 +9,10 @@ export default function SpeakButton({ text, showLabel = true }: { text: string; 
       type="button"
       onClick={() => speak(text)}
       aria-label={`Listen: ${text}`}
-      className="inline-flex shrink-0 items-center gap-1 rounded-md px-1.5 py-1 text-brand hover:bg-brand-soft"
+      className={
+        'inline-flex min-h-10 shrink-0 items-center justify-center gap-1 rounded-md px-2 text-brand hover:bg-brand-soft' +
+        (showLabel ? '' : ' min-w-10')
+      }
     >
       <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
         <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" />

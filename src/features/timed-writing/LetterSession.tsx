@@ -1,28 +1,17 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLocation } from 'wouter'
+import { setWritingSession } from '../../app/session.ts'
 import type { LetterRecord } from '../../data/db.ts'
-import { deleteRecord, saveRecord } from '../../data/records.ts'
+import { deleteRecord, patchRecord } from '../../data/records.ts'
+import { formatClock, useNow } from '../../lib/time.ts'
+import { chip, chipOff, chipOn, smallButton, textButton } from '../../ui/buttons.ts'
 import type { ResolvedCase } from './cases.ts'
 import CaseNotes from './CaseNotes.tsx'
 import { bodyWords } from './prompt.ts'
-import { formatClock, useNow } from '../../lib/time.ts'
 import { clock, writingStart } from './timer.ts'
 
 const SAVE_AFTER_MS = 800
-
-type Draft = Omit<LetterRecord, 'createdAt' | 'updatedAt' | 'deletedAt'>
-const draftOf = (l: LetterRecord): Draft => ({
-  id: l.id,
-  caseKind: l.caseKind,
-  caseId: l.caseId,
-  text: l.text,
-  phase: l.phase,
-  readingStartedAt: l.readingStartedAt,
-  writingStartedAt: l.writingStartedAt,
-  finishedAt: l.finishedAt,
-  selfCheck: l.selfCheck,
-  evaluation: l.evaluation,
-})
+type Patch = Partial<Pick<LetterRecord, 'text' | 'phase' | 'writingStartedAt' | 'finishedAt'>>
 
 function WordCount({ text }: { text: string }) {
   const n = bodyWords(text)
@@ -40,22 +29,36 @@ export default function LetterSession({ letter, kase }: { letter: LetterRecord; 
   const time = clock(letter, now)
   const [text, setText] = useState(letter.text)
   const [pane, setPane] = useState<'notes' | 'letter' | null>(null)
+  const [saveError, setSaveError] = useState<string | null>(null)
   const shown = pane ?? (time.phase === 'reading' ? 'notes' : 'letter')
 
-  // The latest record and text, for saves triggered by timers and page events.
-  const latest = useRef({ letter, text })
+  // The latest text, for saves triggered by timers and page events.
+  const latestText = useRef(text)
   useLayoutEffect(() => {
-    latest.current = { letter, text }
+    latestText.current = text
   })
   const pending = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // After Finish or Discard nothing may be written any more, whatever timers are still alive.
+  const stopped = useRef(false)
   const switching = useRef(false)
 
-  const save = useCallback((changes: Partial<Draft> = {}) => {
-    if (pending.current) clearTimeout(pending.current)
-    pending.current = null
-    const { letter: l, text: t } = latest.current
-    return saveRecord('letters', { ...draftOf(l), text: t, ...changes })
-  }, [])
+  // Fields are patched onto the stored record, so a screen that lags behind cannot undo a newer change.
+  const save = useCallback(
+    async (changes: Patch = {}) => {
+      if (pending.current) clearTimeout(pending.current)
+      pending.current = null
+      if (stopped.current) return null
+      try {
+        const saved = await patchRecord('letters', letter.id, { text: latestText.current, ...changes })
+        setSaveError(null)
+        return saved
+      } catch {
+        setSaveError('Your letter could not be saved. Free up storage on this device, then keep writing.')
+        return null
+      }
+    },
+    [letter.id],
+  )
 
   // Reading time runs out on its own; record once when writing started.
   useEffect(() => {
@@ -65,17 +68,24 @@ export default function LetterSession({ letter, kase }: { letter: LetterRecord; 
     }
   }, [letter, time.phase, save])
 
-  // Save when the app is hidden (phone locked, app switched) and when leaving the screen.
+  // Save when the app is hidden (phone locked, app switched), on reload or close, and when leaving the screen.
   useEffect(() => {
     const flush = () => {
       if (pending.current) void save()
     }
     document.addEventListener('visibilitychange', flush)
+    window.addEventListener('pagehide', flush)
     return () => {
       document.removeEventListener('visibilitychange', flush)
+      window.removeEventListener('pagehide', flush)
       flush()
     }
   }, [save])
+
+  useEffect(() => {
+    setWritingSession(true)
+    return () => setWritingSession(false)
+  }, [])
 
   const edit = (value: string) => {
     setText(value)
@@ -85,24 +95,30 @@ export default function LetterSession({ letter, kase }: { letter: LetterRecord; 
 
   const finish = async () => {
     if (!window.confirm('Finish this letter? You can still read it and add feedback afterwards.')) return
-    await save({ phase: 'done', finishedAt: new Date().toISOString() })
+    const saved = await save({ phase: 'done', finishedAt: new Date().toISOString() })
+    if (!saved) return
+    stopped.current = true
     navigate(`/writing/practice/letters/${letter.id}`)
   }
 
   const discard = () => {
-    if (window.confirm('Discard this letter? It will be deleted.')) void deleteRecord('letters', letter.id)
+    if (!window.confirm('Discard this letter? It will be deleted.')) return
+    stopped.current = true
+    if (pending.current) clearTimeout(pending.current)
+    pending.current = null
+    void deleteRecord('letters', letter.id).then(() => navigate('/writing/practice/timed'))
   }
 
   const reading = time.phase === 'reading'
 
   return (
     <div className="space-y-4">
-      <div className="sticky top-0 z-10 -mx-4 space-y-2 border-b border-line bg-canvas px-4 py-3 md:mx-0 md:px-0">
-        <div className="flex items-baseline justify-between gap-3">
-          <p className="text-sm font-medium">{kase.title}</p>
+      <div className="sticky top-0 z-10 -mx-4 space-y-2 border-b border-line bg-canvas px-4 py-2 md:mx-0 md:px-0">
+        <div className="flex items-center justify-between gap-3">
+          <p className="min-w-0 truncate text-sm font-medium">{kase.title}</p>
           <p className="shrink-0 text-right">
             <span className="block text-xs text-muted">{reading ? 'Reading time' : 'Writing time'}</span>
-            <span className="font-mono text-2xl tabular-nums" role="timer" aria-live="off">
+            <span className="font-mono text-2xl leading-none tabular-nums" role="timer" aria-live="off">
               {time.phase === 'writing' && time.overtimeMs > 0
                 ? `+${formatClock(time.overtimeMs)}`
                 : formatClock(time.phase === 'done' ? 0 : time.remainingMs)}
@@ -114,31 +130,38 @@ export default function LetterSession({ letter, kase }: { letter: LetterRecord; 
             Time is up. In the test you would stop now.
           </p>
         )}
-        <div className="flex flex-wrap items-center gap-2">
+        {saveError && (
+          <p role="alert" className="text-sm font-medium text-red-700 dark:text-red-400">
+            {saveError}
+          </p>
+        )}
+        <div className="flex items-center gap-2">
+          <button type="button" onClick={discard} className={textButton + ' -ml-2 text-muted'}>
+            Discard
+          </button>
+          <span className="flex-1 text-center">{!reading && <WordCount text={text} />}</span>
           {reading ? (
-            <button type="button" onClick={() => void save({ phase: 'writing', writingStartedAt: new Date().toISOString() })} className="rounded-md bg-brand px-3 py-1.5 text-sm font-medium text-on-brand">
+            <button
+              type="button"
+              onClick={() => void save({ phase: 'writing', writingStartedAt: new Date().toISOString() })}
+              className={smallButton}
+            >
               Start writing now
             </button>
           ) : (
-            <>
-              <WordCount text={text} />
-              <button type="button" onClick={() => void finish()} className="ml-auto rounded-md bg-brand px-3 py-1.5 text-sm font-medium text-on-brand">
-                Finish
-              </button>
-            </>
+            <button type="button" onClick={() => void finish()} className={smallButton}>
+              Finish
+            </button>
           )}
-          <button type="button" onClick={discard} className="text-sm text-muted">
-            Discard
-          </button>
         </div>
-        <div role="group" aria-label="Show" className="flex gap-2 md:hidden">
+        <div role="group" aria-label="Show notes or letter" className="flex gap-2 md:hidden">
           {(['notes', 'letter'] as const).map((p) => (
             <button
               key={p}
               type="button"
               aria-pressed={shown === p}
               onClick={() => setPane(p)}
-              className={'rounded-md px-3 py-1 text-sm ' + (shown === p ? 'bg-ink text-canvas' : 'bg-surface text-muted')}
+              className={chip + ' ' + (shown === p ? chipOn : chipOff)}
             >
               {p === 'notes' ? 'Case notes' : 'Your letter'}
             </button>
@@ -151,16 +174,21 @@ export default function LetterSession({ letter, kase }: { letter: LetterRecord; 
           <CaseNotes kase={kase} />
         </div>
         <div className={shown === 'letter' ? 'block' : 'hidden md:block'}>
+          {reading && (
+            <p className="mb-2 text-sm text-muted">
+              Reading time: you can start writing in {formatClock(time.remainingMs)}, or now with “Start writing now”.
+            </p>
+          )}
           <textarea
             value={text}
             onChange={(e) => edit(e.target.value)}
             readOnly={reading}
             aria-label="Your letter"
-            placeholder={reading ? `You can start writing in ${formatClock(time.remainingMs)}, or now with “Start writing now”.` : 'Dear …'}
+            placeholder="Dear …"
             spellCheck={false}
             autoCorrect="off"
             autoComplete="off"
-            className="min-h-[60vh] w-full rounded-md border border-line bg-surface p-3 text-base leading-relaxed outline-none focus:border-brand read-only:opacity-60"
+            className="min-h-[50vh] w-full rounded-md border border-field bg-surface p-3 text-base leading-relaxed outline-none focus:border-brand read-only:bg-canvas"
           />
           <p className="mt-1 text-xs text-muted">Spell check is off, as in the test. Your text is saved as you type.</p>
         </div>

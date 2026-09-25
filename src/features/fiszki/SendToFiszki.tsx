@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'wouter'
 import { CONTENT } from '../../content/index.ts'
 import type { FiszkiExportRecord } from '../../data/db.ts'
 import { saveRecord, useRecords } from '../../data/records.ts'
 import { downloadText } from '../../lib/download.ts'
 import { shareText } from '../../lib/share.ts'
+import { primaryButton, secondaryButton, textButton } from '../../ui/buttons.ts'
+import { StatusLine } from '../../ui/controls.tsx'
 import { FISZKI_URL, SHARE_LIMIT, fiszkiFile, fromOwnPhrase, fromPhrase, useFiszkiBasket, type FiszkiNote } from './fiszki.ts'
 
-const button = 'rounded-md bg-brand px-4 py-2 font-medium text-on-brand disabled:opacity-40'
-const quiet = 'rounded-md border border-line px-4 py-2 disabled:opacity-40'
 const VIA: Record<FiszkiExportRecord['via'], string> = { share: 'shared', download: 'file', copy: 'copied' }
 const when = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
 
@@ -26,6 +26,14 @@ export default function SendToFiszki() {
       return mine ? { id, en: mine.en, pl: mine.pl, note: fromOwnPhrase(mine) } : null
     })
     .filter((i): i is NonNullable<typeof i> => i !== null)
+
+  // A phrase deleted after it was picked would otherwise sit in the list forever.
+  const { prune } = basket
+  const missing = own !== undefined && items.length < basket.ids.length
+  const keep = items.map((i) => i.id).join(',')
+  useEffect(() => {
+    if (missing) prune(keep.split(',').filter(Boolean))
+  }, [missing, keep, prune])
 
   const text = JSON.stringify(fiszkiFile(items.map((i) => i.note)), null, 1)
 
@@ -50,21 +58,21 @@ export default function SendToFiszki() {
     }
   }
 
+  const clear = () => {
+    if (window.confirm(`Clear the list of ${items.length} ${items.length === 1 ? 'phrase' : 'phrases'}?`)) basket.clear()
+  }
+
   return (
     <div className="space-y-6">
       <p className="text-sm text-muted">
         Fiszki is your flashcard app with spaced repetition. In any phrase bank, open a phrase and tap “Add to Fiszki list”;
         then send the list from here.{' '}
         <a href={FISZKI_URL} target="_blank" rel="noopener noreferrer" className="text-brand underline">
-          Open Fiszki
+          Open Fiszki<span className="sr-only"> (opens in a new tab)</span>
         </a>
       </p>
 
-      {status && (
-        <p role="status" className="text-sm text-brand">
-          {status}
-        </p>
-      )}
+      <StatusLine message={status} />
 
       {items.length === 0 ? (
         <p className="text-muted">
@@ -81,19 +89,21 @@ export default function SendToFiszki() {
           </h2>
           <ul className="divide-y divide-line rounded-lg border border-line bg-surface px-4">
             {items.map((i) => (
-              <li key={i.id} className="flex items-start gap-3 py-2 text-sm">
-                <span className="flex-1">
+              <li key={i.id} className="flex items-center gap-3 py-1 text-sm">
+                <span className="flex-1 py-1">
                   <span className="font-medium">{i.en}</span>
-                  <span className="block text-muted">{i.pl}</span>
+                  <span lang="pl" className="block text-muted">
+                    {i.pl}
+                  </span>
                 </span>
-                <button type="button" onClick={() => basket.toggle(i.id)} className="text-muted">
+                <button type="button" onClick={() => basket.toggle(i.id)} className={textButton + ' -mr-2 text-muted'}>
                   Remove
                 </button>
               </li>
             ))}
           </ul>
           <div className="flex flex-wrap gap-2">
-            <button type="button" onClick={() => void share()} disabled={items.length > SHARE_LIMIT} className={button}>
+            <button type="button" onClick={() => void share()} disabled={items.length > SHARE_LIMIT} className={primaryButton}>
               Share to Fiszki
             </button>
             <button
@@ -102,21 +112,21 @@ export default function SendToFiszki() {
                 downloadText(`fiszki-oet-lab-${new Date().toISOString().slice(0, 10)}.json`, text)
                 void sent('download', 'Downloaded. In Fiszki, open Import and choose the file.')
               }}
-              className={quiet}
+              className={secondaryButton}
             >
               Download file
             </button>
-            <button type="button" onClick={() => void copy()} className={quiet}>
+            <button type="button" onClick={() => void copy()} className={secondaryButton}>
               Copy
             </button>
-            <button type="button" onClick={basket.clear} className="px-2 text-sm text-muted">
+            <button type="button" onClick={clear} className={textButton + ' text-muted'}>
               Clear list
             </button>
           </div>
           <p className="text-xs text-muted">
             On the phone, choose Fiszki in the share menu.
             {items.length > SHARE_LIMIT && ` For more than ${SHARE_LIMIT} phrases, use Download file.`} Phrases Fiszki
-            already has are recognised, not doubled.
+            already has are recognised, not duplicated.
           </p>
         </section>
       )}

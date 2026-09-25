@@ -1,7 +1,16 @@
 import 'fake-indexeddb/auto'
 import { IDBFactory } from 'fake-indexeddb'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { backupDue, backupFileName, describeCounts, exportData, liveCounts, parseBackup, restoreBackup } from './backup.ts'
+import {
+  backupDue,
+  backupFileName,
+  describeCounts,
+  exportData,
+  fileTooLarge,
+  liveCounts,
+  parseBackup,
+  restoreBackup,
+} from './backup.ts'
 import { DB_VERSION, closeDB, db } from './db.ts'
 import { deleteRecord, listRecords, saveRecord } from './records.ts'
 
@@ -51,7 +60,16 @@ describe('parseBackup', () => {
     schema: 1,
     exportedAt: '2026-09-25T10:00:00.000Z',
     data: {
-      notes: [{ id: 'n1', section: 'writing', title: 't', body: 'b', createdAt: 'x', updatedAt: 'x' }],
+      notes: [
+        {
+          id: 'n1',
+          section: 'writing',
+          title: 't',
+          body: 'b',
+          createdAt: '2026-09-20T10:00:00.000Z',
+          updatedAt: '2026-09-20T10:00:00.000Z',
+        },
+      ],
       customPhrases: [],
     },
   })
@@ -76,6 +94,24 @@ describe('parseBackup', () => {
     ;(f.data.notes[0] as Record<string, unknown>).section = 'chemistry'
     const r = parseBackup(JSON.stringify(f))
     expect(r).toEqual({ ok: false, error: 'This backup is damaged: 1 entry cannot be read. Nothing was changed.' })
+  })
+
+  it('refuses ids that cannot be part of an address and dates that are not dates', () => {
+    const bad1 = valid()
+    bad1.data.notes[0].id = 'a/b#c'
+    expect(parseBackup(JSON.stringify(bad1)).ok).toBe(false)
+    const bad2 = valid()
+    bad2.data.notes[0].updatedAt = 'z'
+    expect(parseBackup(JSON.stringify(bad2)).ok).toBe(false)
+    const good = valid()
+    good.data.notes[0].createdAt = '2026-09-25T10:00:00.000Z'
+    good.data.notes[0].updatedAt = '2026-09-25T10:00:00.000Z'
+    expect(parseBackup(JSON.stringify(good)).ok).toBe(true)
+  })
+
+  it('refuses oversized files before reading them', () => {
+    expect(fileTooLarge({ size: 21 * 1024 * 1024 })).toMatch(/too large/)
+    expect(fileTooLarge({ size: 500 })).toBeNull()
   })
 
   it('treats a store missing from an older backup as empty', () => {
