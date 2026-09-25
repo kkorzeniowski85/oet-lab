@@ -3,7 +3,7 @@ export const SECTIONS = [
   { id: 'reading', name: 'Reading', short: 'Read', blurb: 'Strategies for Parts A, B and C.', exam: true },
   { id: 'writing', name: 'Writing', short: 'Write', blurb: 'Referral letters: phrases, model letters, timed practice.', exam: true },
   { id: 'speaking', name: 'Speaking', short: 'Speak', blurb: 'Role-play phrases and practice cards.', exam: true },
-  { id: 'vocabulary', name: 'Vocabulary', short: 'Words', blurb: 'Words and phrases to send to Fiszki.', exam: false },
+  { id: 'vocabulary', name: 'Vocabulary', short: 'Words', blurb: 'Medical terms, hospital talk and everyday British English.', exam: false },
   { id: 'abbreviations', name: 'Abbreviations', short: 'Abbr.', blurb: 'Clinical abbreviations you will meet in the test.', exam: false },
 ] as const
 

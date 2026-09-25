@@ -1,1 +1,102 @@
-[]
+[
+  {
+    "id": "guide-listening",
+    "section": "listening",
+    "title": "Listening at a glance",
+    "blocks": [
+      { "type": "fact", "text": "About 40 minutes, three parts, 42 questions. Part A gives 24 marks, Part B 6 and Part C 12.", "source": "https://oet.com/ready/listening" },
+      { "type": "fact", "text": "Grade B (350) typically needs at least 30 of 42 marks. The exact boundary varies slightly from test to test.", "source": "https://oet.com/ready/listening" },
+      { "type": "fact", "text": "You hear each recording once only. On paper you get two minutes at the end to check your answers; on computer there is a short pause after each question.", "source": "https://oet.com/ready/listening" },
+
+      { "type": "heading", "text": "Part A — consultation notes" },
+      { "type": "fact", "text": "Two consultations between a health professional and a patient, 4–5 minutes each, with 12 gaps each. You complete the professional's notes as you listen, and you get 30 seconds to read the notes first.", "source": "https://oet.com/en-us/post/listening-part-a-the-complete-guide" },
+      { "type": "fact", "text": "Write the words you hear. Do not paraphrase, repeat words already in the notes, or add information that is not in the recording.", "source": "https://oet.com/ready/listening" },
+      { "type": "fact", "text": "Spelling matters, especially for common medical words such as diabetes or cholesterol. UK and US spellings are both accepted.", "source": "https://oet.com/en-us/post/listening-part-a-the-complete-guide" },
+      { "type": "tip", "text": "In the 30 seconds, predict what fits each gap: a number, a symptom, a drug, a time, a place." },
+      { "type": "tip", "text": "The gaps follow the order of the conversation. If you miss one, leave it and catch the next." },
+
+      { "type": "heading", "text": "Part B — workplace extracts" },
+      { "type": "fact", "text": "Six short extracts from healthcare workplaces, about 45 seconds each, each with one three-option multiple-choice question. You get 15 seconds to read the question first.", "source": "https://oet.com/en-us/post/listening-part-b-the-complete-guide" },
+      { "type": "tip", "text": "Read the question for who is speaking and what the extract is for. The question usually tests the main point, not a single detail." },
+
+      { "type": "heading", "text": "Part C — presentations and interviews" },
+      { "type": "fact", "text": "Two recordings of 4–5 minutes (presentations, interviews or one of each), each with six three-option multiple-choice questions. You get 90 seconds to read the questions.", "source": "https://oet.com/en-us/post/listening-part-c-the-complete-guide" },
+      { "type": "tip", "text": "Listen for opinion and attitude. Wrong options often repeat words you hear but change the meaning." },
+      { "type": "tip", "text": "Questions follow the order of the recording: when the speaker moves on, move on too." }
+    ]
+  },
+  {
+    "id": "guide-reading",
+    "section": "reading",
+    "title": "Reading at a glance",
+    "blocks": [
+      { "type": "fact", "text": "60 minutes, three parts, 42 questions. Part A gives 20 marks, Part B 6 and Part C 16.", "source": "https://oet.com/ready/reading" },
+      { "type": "fact", "text": "Grade B (350) typically needs at least 30 of 42 marks. The exact boundary varies slightly from test to test.", "source": "https://oet.com/ready/reading" },
+
+      { "type": "heading", "text": "Part A — expeditious reading (15 minutes)" },
+      { "type": "fact", "text": "Four short texts on one healthcare topic, such as dosage tables, guidelines or flowcharts, with 20 questions: matching, short answer and sentence completion. Part A is collected after exactly 15 minutes.", "source": "https://oet.com/en-us/post/reading-part-a-the-complete-guide" },
+      { "type": "fact", "text": "Use exactly the word or short phrase from the texts. A misspelt answer gets no mark; UK and US spellings are both accepted.", "source": "https://oet.com/ready/reading" },
+      { "type": "fact", "text": "Abbreviations are not accepted unless they appear in the texts.", "source": "https://oet.com/ready/reading" },
+      { "type": "tip", "text": "First look at titles and layout, so you know which text holds which kind of information." },
+      { "type": "tip", "text": "Don't read every word: scan for key words from the question, then read that sentence carefully." },
+
+      { "type": "heading", "text": "Part B — short workplace texts" },
+      { "type": "fact", "text": "Six short extracts of about 100–140 words, such as policies, emails or guidelines, each with one three-option multiple-choice question. They test the main idea, the purpose and important details.", "source": "https://oet.com/en-us/post/reading-part-b-the-complete-guide" },
+      { "type": "tip", "text": "Ask what the text is for: to inform, to instruct, to warn? The answer is often about purpose." },
+
+      { "type": "heading", "text": "Part C — longer texts" },
+      { "type": "fact", "text": "Two texts of about 800 words, similar to journal or review articles, each with eight four-option multiple-choice questions in the order of the text. Parts B and C together take 45 minutes.", "source": "https://oet.com/en-us/post/reading-part-c-the-complete-guide" },
+      { "type": "tip", "text": "Watch for the writer's opinion and for what is implied, not only what is stated." },
+      { "type": "tip", "text": "If a question asks what a word or phrase refers to, read the sentences just before it." }
+    ]
+  },
+  {
+    "id": "guide-writing-structure",
+    "section": "writing",
+    "title": "Letter structure",
+    "blocks": [
+      { "type": "fact", "text": "You get 5 minutes to read the case notes without writing, then 40 minutes to write. You can look at the notes the whole time.", "source": "https://oet.com/ready/writing" },
+      { "type": "fact", "text": "Aim for 180–200 words. There is no automatic penalty outside that range, but a much longer or shorter letter usually loses marks on other criteria.", "source": "https://oet.com/ready/writing" },
+      { "type": "fact", "text": "No particular layout is required, but it must be clear. Use the title and address given in the task.", "source": "https://oet.com/ready/writing" },
+      { "type": "fact", "text": "Abbreviations: some are fine for a colleague in the same field; for a GP or another specialty, write more in full and explain.", "source": "https://cdn-aus.aglty.io/oet/pdf-files/Writing%20assessment%20criteria.pdf" },
+
+      { "type": "heading", "text": "A typical referral letter" },
+      { "type": "list", "items": [
+        "Recipient's name, title and address, then the date.",
+        "Re: the patient's name and date of birth.",
+        "Dear Dr …,",
+        "Purpose: who the patient is and what you are asking for, in the first two lines.",
+        "Relevant history and findings, most important first.",
+        "Treatment so far and the current situation.",
+        "The request in detail: what you want the reader to do, and how urgently.",
+        "A closing line, then \"Yours sincerely\", your name and your role."
+      ] },
+      { "type": "tip", "text": "Select, don't copy. Include only what this reader needs to continue care." },
+      { "type": "tip", "text": "Turn note form into full sentences, and group related facts instead of following the notes line by line." },
+      { "type": "tip", "text": "Use \"Yours sincerely\" after \"Dear Dr Smith\", and \"Yours faithfully\" after \"Dear Sir or Madam\"." }
+    ]
+  },
+  {
+    "id": "guide-speaking-roleplay",
+    "section": "speaking",
+    "title": "Role-play format",
+    "blocks": [
+      { "type": "fact", "text": "About 20 minutes in total, with two profession-specific role-plays of about 5 minutes each.", "source": "https://oet.com/ready/speaking" },
+      { "type": "fact", "text": "You can make notes on the role-play card and look at it during the role-play. You hand it back at the end.", "source": "https://oet.com/ready/speaking" },
+      { "type": "fact", "text": "There is no penalty for not covering every point on the card, but covering more gives more evidence of your English.", "source": "https://oet.com/ready/speaking" },
+      { "type": "fact", "text": "Role-plays may include tension: an anxious or angry patient, a misunderstanding, or little time to explain.", "source": "https://oet.com/ready/speaking" },
+      { "type": "fact", "text": "Two assessors mark the recording on four linguistic criteria and five areas of clinical communication. Grade B needs mostly 5 of 6 on the linguistic criteria and 2 of 3 on clinical communication.", "source": "https://oet.com/ready/speaking" },
+      { "type": "tip", "text": "Use the preparation time to decide which points need a longer explanation and where to ask questions." },
+
+      { "type": "heading", "text": "A simple shape for each role-play" },
+      { "type": "list", "items": [
+        "Greet, introduce yourself, and confirm who you are talking to and why.",
+        "Ask open questions and listen.",
+        "Explore the patient's ideas, concerns and expectations.",
+        "Explain in small chunks, in plain language, and check understanding.",
+        "Agree a plan together.",
+        "Summarise and invite questions."
+      ] }
+    ]
+  }
+]

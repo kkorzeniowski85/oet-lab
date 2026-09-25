@@ -1,1 +1,213 @@
-[]
+[
+  {
+    "id": "crit-w-purpose",
+    "subtest": "writing",
+    "name": "Purpose",
+    "scaleMax": 3,
+    "bScore": 2,
+    "summary": "The reader sees at once what you want from them. State the purpose early and expand on it later, usually near the end.",
+    "checklist": [
+      "The purpose is clear in the opening lines.",
+      "The request is expanded on later in the letter.",
+      "The reader does not have to search for what you are asking."
+    ]
+  },
+  {
+    "id": "crit-w-content",
+    "subtest": "writing",
+    "name": "Content",
+    "scaleMax": 7,
+    "bScore": 5,
+    "summary": "Include everything this reader needs to continue care, and report the case notes accurately.",
+    "checklist": [
+      "All key information for continuing care is there.",
+      "Facts from the notes are accurate: doses, dates, results.",
+      "The detail suits what this reader already knows."
+    ]
+  },
+  {
+    "id": "crit-w-conciseness",
+    "subtest": "writing",
+    "name": "Conciseness & Clarity",
+    "scaleMax": 7,
+    "bScore": 5,
+    "summary": "Leave out what the reader does not need and summarise the case clearly.",
+    "checklist": [
+      "No irrelevant details copied from the notes.",
+      "The case is summarised, not listed line by line.",
+      "Length is about 180–200 words."
+    ]
+  },
+  {
+    "id": "crit-w-genre",
+    "subtest": "writing",
+    "name": "Genre & Style",
+    "scaleMax": 7,
+    "bScore": 5,
+    "summary": "A clinical, factual, professional letter suited to the reader. Use technical terms and abbreviations only as far as this reader will follow them.",
+    "checklist": [
+      "Factual tone, no personal feelings or judgements.",
+      "Professional register throughout.",
+      "Fewer abbreviations and more explanation for a GP or another specialty; plain words if the patient will read it."
+    ]
+  },
+  {
+    "id": "crit-w-organisation",
+    "subtest": "writing",
+    "name": "Organisation & Layout",
+    "scaleMax": 7,
+    "bScore": 5,
+    "summary": "Logical paragraphs, key information easy to find, and a clear layout.",
+    "checklist": [
+      "Paragraphs follow a logical order.",
+      "Key information stands out and is not buried.",
+      "The letter does not simply follow the order of the case notes.",
+      "The layout is clear."
+    ]
+  },
+  {
+    "id": "crit-w-language",
+    "subtest": "writing",
+    "name": "Language",
+    "scaleMax": 7,
+    "bScore": 5,
+    "summary": "Accurate grammar, vocabulary, spelling and punctuation that never get in the way of meaning.",
+    "checklist": [
+      "Spelling and punctuation are correct.",
+      "Longer sentences are grammatical too.",
+      "Word choice is precise."
+    ]
+  },
+
+  {
+    "id": "crit-s-intelligibility",
+    "subtest": "speaking",
+    "family": "linguistic",
+    "name": "Intelligibility",
+    "scaleMax": 6,
+    "bScore": 5,
+    "summary": "You are easy to understand: clear sounds, stress, intonation and rhythm.",
+    "checklist": [
+      "Key words and medical terms are pronounced clearly.",
+      "Stress and intonation help the listener.",
+      "Your accent does not make you hard to follow."
+    ]
+  },
+  {
+    "id": "crit-s-fluency",
+    "subtest": "speaking",
+    "family": "linguistic",
+    "name": "Fluency",
+    "scaleMax": 6,
+    "bScore": 5,
+    "summary": "Speech flows at a normal speed without long searches for words.",
+    "checklist": [
+      "Normal speaking speed.",
+      "Few pauses to search for words.",
+      "Little repetition or self-correction."
+    ]
+  },
+  {
+    "id": "crit-s-appropriateness",
+    "subtest": "speaking",
+    "family": "linguistic",
+    "name": "Appropriateness of Language",
+    "scaleMax": 6,
+    "bScore": 5,
+    "summary": "Register, tone and words suit a conversation with a patient; technical matters are explained in lay terms.",
+    "checklist": [
+      "Plain words instead of jargon.",
+      "A polite, respectful tone.",
+      "Explanations the patient can follow."
+    ]
+  },
+  {
+    "id": "crit-s-resources",
+    "subtest": "speaking",
+    "family": "linguistic",
+    "name": "Resources of Grammar and Expression",
+    "scaleMax": 6,
+    "bScore": 5,
+    "summary": "A wide, flexible range of grammar and vocabulary, used accurately.",
+    "checklist": [
+      "Varied sentence structures.",
+      "Accurate grammar in longer sentences.",
+      "Natural, idiomatic expressions where they fit."
+    ]
+  },
+  {
+    "id": "crit-s-relationship",
+    "subtest": "speaking",
+    "family": "clinical",
+    "name": "Relationship building",
+    "scaleMax": 3,
+    "bScore": 2,
+    "summary": "Start well and stay respectful, non-judgemental and empathic.",
+    "checklist": [
+      "Greet, introduce yourself and explain the purpose.",
+      "Stay attentive and respectful.",
+      "Do not judge the patient.",
+      "Acknowledge feelings and worries."
+    ]
+  },
+  {
+    "id": "crit-s-perspective",
+    "subtest": "speaking",
+    "family": "clinical",
+    "name": "Understanding and incorporating the patient's perspective",
+    "scaleMax": 3,
+    "bScore": 2,
+    "summary": "Find out the patient's ideas, concerns and expectations, and use them.",
+    "checklist": [
+      "Ask about ideas, concerns and expectations.",
+      "Notice and respond to the patient's cues.",
+      "Link your explanations to what the patient told you."
+    ]
+  },
+  {
+    "id": "crit-s-structure",
+    "subtest": "speaking",
+    "family": "clinical",
+    "name": "Providing structure",
+    "scaleMax": 3,
+    "bScore": 2,
+    "summary": "A purposeful, logical conversation with clear signposting.",
+    "checklist": [
+      "Work through the task in a logical order.",
+      "Signpost when you change topic.",
+      "Organise explanations: first…, then…, finally…"
+    ]
+  },
+  {
+    "id": "crit-s-gathering",
+    "subtest": "speaking",
+    "family": "clinical",
+    "name": "Information gathering",
+    "scaleMax": 3,
+    "bScore": 2,
+    "summary": "Let the patient talk, move from open to closed questions, clarify and summarise.",
+    "checklist": [
+      "Listen actively; don't interrupt.",
+      "Open questions first, then closed ones.",
+      "No leading or double questions.",
+      "Clarify vague answers.",
+      "Summarise so the patient can correct you."
+    ]
+  },
+  {
+    "id": "crit-s-giving",
+    "subtest": "speaking",
+    "family": "clinical",
+    "name": "Information giving",
+    "scaleMax": 3,
+    "bScore": 2,
+    "summary": "Give information in small chunks, checking what the patient knows, feels and understands.",
+    "checklist": [
+      "Ask what the patient already knows.",
+      "Give information in small chunks and pause.",
+      "Invite the patient's reactions.",
+      "Check understanding.",
+      "Ask what else they would like to know."
+    ]
+  }
+]

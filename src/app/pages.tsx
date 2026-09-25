@@ -1,4 +1,5 @@
 import { Link } from 'wouter'
+import { MATERIAL_VIEWS } from '../sections/views.tsx'
 import { SECTIONS, TABS, findSection, isTabId, sectionPath } from './sections.ts'
 
 export function Home() {
@@ -23,10 +24,46 @@ export function Home() {
   )
 }
 
-export function SectionPage({ sectionId, tabId }: { sectionId: string; tabId: string }) {
+export function SectionPage({ sectionId, tabId, viewId }: { sectionId: string; tabId: string; viewId?: string }) {
   const section = findSection(sectionId)
   if (!section || !isTabId(tabId)) return <NotFound />
   const tab = TABS.find((t) => t.id === tabId)!
+
+  let body = (
+    <section className="rounded-lg border border-dashed border-line p-6 text-muted">
+      <h2 className="font-medium text-ink">{tab.name}</h2>
+      <p className="mt-1 text-sm">Nothing here yet. This part is being built.</p>
+    </section>
+  )
+  if (tabId === 'material') {
+    const views = MATERIAL_VIEWS[section.id]
+    const view = viewId === undefined ? views[0] : views.find((v) => v.id === viewId)
+    if (!view) return <NotFound />
+    body = (
+      <>
+        {views.length > 1 && (
+          <nav aria-label={`${section.name} material`} className="mb-5 flex flex-wrap gap-2">
+            {views.map((v) => (
+              <Link
+                key={v.id}
+                href={`${sectionPath(section.id, 'material')}/${v.id}`}
+                aria-current={v.id === view.id ? 'page' : undefined}
+                className={
+                  'rounded-md px-3 py-1.5 text-sm ' +
+                  (v.id === view.id ? 'bg-ink text-canvas' : 'bg-surface text-muted')
+                }
+              >
+                {v.name}
+              </Link>
+            ))}
+          </nav>
+        )}
+        {view.render()}
+      </>
+    )
+  } else if (viewId !== undefined) {
+    return <NotFound />
+  }
 
   return (
     <div>
@@ -50,10 +87,7 @@ export function SectionPage({ sectionId, tabId }: { sectionId: string; tabId: st
           )
         })}
       </nav>
-      <section className="mt-6 rounded-lg border border-dashed border-line p-6 text-muted">
-        <h2 className="font-medium text-ink">{tab.name}</h2>
-        <p className="mt-1 text-sm">Nothing here yet. This part is being built.</p>
-      </section>
+      <div className="mt-6">{body}</div>
     </div>
   )
 }

@@ -37,6 +37,38 @@ describe('routing', () => {
   })
 })
 
+describe('material views', () => {
+  it.each([
+    ['/writing/material', 'I am writing to refer...'],
+    ['/writing/material/criteria', 'Conciseness &amp; Clarity'],
+    ['/writing/material/structure', 'A typical referral letter'],
+    ['/speaking/material', 'How would you like me to address you?'],
+    ['/speaking/material/criteria', 'Clinical communication'],
+    ['/speaking/material/roleplay', 'Role-play format'],
+    ['/vocabulary/material', 'Everyday British English'],
+    ['/listening/material', 'Part A — consultation notes'],
+    ['/reading/material', 'Abbreviations are not accepted unless they appear in the texts.'],
+    ['/abbreviations/material', 'once daily'],
+  ])('%s shows its content', (path, text) => {
+    const html = render(path)
+    expect(html).toContain(text)
+    expect(html).not.toContain('Page not found')
+  })
+
+  it('shows sub-views only where a section has more than one', () => {
+    expect(render('/writing/material')).toContain('aria-label="Writing material"')
+    expect(render('/vocabulary/material')).not.toContain('aria-label="Vocabulary material"')
+  })
+
+  it('rejects an unknown view', () => {
+    expect(render('/writing/material/nope')).toContain('Page not found')
+  })
+
+  it('rejects a view on a tab that has none', () => {
+    expect(render('/writing/practice/criteria')).toContain('Page not found')
+  })
+})
+
 describe('sections', () => {
   it('has four exam sections and two tools, with unique ids', () => {
     expect(SECTIONS.filter((s) => s.exam)).toHaveLength(4)
