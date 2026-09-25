@@ -97,11 +97,12 @@ Status: **przyjęta** (potwierdzona przez użytkownika) · **propozycja** (czeka
 - **Decyzja:** przenosimy `speech.ts`, wzorce z `backup.ts` i `phrase.ts` oraz opublikowaną treść słownika jako materiał startowy. Nie przenosimy Next.js, backendu FastAPI, silnika FSRS ani `listen.ts` (D16).
 - **Dlaczego:** moduły w czystym TypeScript są przetestowane i niezależne od frameworka.
 
-### D18 — Repo prywatne; upublicznienie i Pages dopiero na wyraźną zgodę
-**Status:** przyjęta, 25.09.2026 — decyzja użytkownika
-- **Decyzja:** kod jest w **prywatnym** repo `kkorzeniowski85/oet-lab` (kopia poza dyskiem D:, dostęp z laptopa przez `git clone`). Upublicznienie repo i włączenie GitHub Pages następują dopiero po Twojej zgodzie. Pytam o to po każdym kamieniu milowym.
-- **Jak działa wdrożenie w tym stanie:** workflow przy każdym wysłaniu sprawdza lint, testy i budowanie, a krok Pages pomija, dopóki repo jest prywatne (Pages w darmowym planie wymaga publicznego repo). Po upublicznieniu wdrożenie ruszy bez zmian w pliku.
-- **Konsekwencja:** do upublicznienia aplikacji nie da się zainstalować na S23 (telefon potrzebuje adresu w sieci).
+### D18 — Publikacja: publiczne repo z oczyszczoną historią; wysyłka po każdym etapie za zgodą
+**Status:** przyjęta, 25.09.2026 — decyzje użytkownika (najpierw repo prywatne, po M1 upublicznienie)
+- **Stan:** repo `kkorzeniowski85/oet-lab` jest publiczne, a aplikacja działa pod https://kkorzeniowski85.github.io/oet-lab/. Nowa wersja trafia na telefon po wysłaniu zmian na GitHub; wysyłam po każdym kamieniu milowym, po zapytaniu.
+- **Oczyszczenie przed upublicznieniem:** `CLAUDE.md` zawierał zdanie o prywatnych plikach użytkownika, które nie powinno być publiczne. Historia została przepisana lokalnie, a publiczne repo założone od nowa, bez wymuszonego nadpisania (force push zostawiłby ślad starych commitów w publicznym dzienniku aktywności). Poprzednie prywatne repo przemianowane na `oet-lab-archiwum` — zostaje prywatne; można je usunąć ręcznie w ustawieniach GitHuba.
+- **Zasada na przyszłość:** w repo nie opisujemy, co leży na dyskach użytkownika ani gdzie są dane zawodowe.
+- **Wdrożenie:** workflow sprawdza lint, testy i budowanie; dopóki repo byłoby prywatne, krok Pages jest pomijany. Blokada sprawdzona 25.09.2026: zepsuty test na tymczasowej gałęzi zatrzymał build, a wdrożenie zostało pominięte.
 
 ### D19 — Skróty w liście: zasada z kryteriów zamiast zakazu
 **Status:** przyjęta, 25.09.2026 — korekta planu

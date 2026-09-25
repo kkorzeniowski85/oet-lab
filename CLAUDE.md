@@ -15,9 +15,9 @@ większymi zmianami.
 - **Żadnych danych pacjentów** — tylko fikcyjne przypadki (D13).
 - **Żadnego Claude API ani płatnych usług AI w aplikacji.** Gdzie pomaga Claude, aplikacja buduje prompt do
   skopiowania do czatu Claude (D16).
-- **Repo `kkorzeniowski85/oet-lab` jest prywatne** (kopia i dostęp z laptopa). Nie upubliczniaj go i nie włączaj
-  Pages bez wyraźnej zgody — po każdym kamieniu milowym zapytaj o publikację (D18). Wysyłanie (`git push`) do
-  prywatnego repo: po każdym kamieniu milowym, za zgodą.
+- **Repo `kkorzeniowski85/oet-lab` jest publiczne**, aplikacja: https://kkorzeniowski85.github.io/oet-lab/.
+  `git push` na `main` = nowa wersja na telefonie. Wysyłaj po każdym kamieniu milowym, po zapytaniu (D18).
+- W repo nie opisuj, co leży na dyskach użytkownika ani gdzie są dane zawodowe — repo jest publiczne.
 - Aplikacja działa bez serwera i bez sieci; dane użytkownika tylko w IndexedDB na urządzeniu (D2).
 - Wersje zależności przypięte dokładnie (`.npmrc`: `save-exact`). Nowa zależność tylko wtedy, gdy naprawdę
   potrzebna; jej wersję i zgodność sprawdź w rejestrze npm, nie z pamięci.
